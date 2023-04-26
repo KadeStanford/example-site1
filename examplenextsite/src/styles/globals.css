@@ -73,9 +73,9 @@ button {
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 0%;
   margin-top: 265px;
   margin-left: 10px;
+  width: 100%;
   align-items: center;
 }
 
