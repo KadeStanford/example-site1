@@ -25,7 +25,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
+     
+      <div id="headertext">
+  <h1 id="title">Liberty House Specialties</h1>
+  <h2 id="location">11652 Liberty Street, Clinton LA</h2>
+  <div className="topbuttons">
+  <button  id="about" onClick={handleAboutButtonClick}>
+    About Us
+  </button>
+  <button id="menu" onClick={handleMenuButtonClick}>
+    Our Menu
+  </button>
+  <a href="tel:+1234567890" id="call">
+    <button  id="call">
+      Call in your order
+    </button>
+  </a>
+  </div>
+</div>
+<div
         id="images"
         style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
@@ -37,35 +55,19 @@ export default function Home() {
           src="/images/coffee.jpg"
           alt=""
           width={367}
-          height={250}
+          height={350}
         ></Image>
       </div>
-      <div id="headertext">
-  <h1 id="title">Liberty House Specialties</h1>
-  <h2 id="location">11652 Liberty Street, Clinton LA</h2>
-  <button id="about" onClick={handleAboutButtonClick}>
-    About Us
-  </button>
-  <button id="menu" onClick={handleMenuButtonClick}>
-    Our Menu
-  </button>
-  <a href="tel:+1234567890" id="call">
-    <button id="call">
-      Call in your order
-    </button>
-  </a>
-</div>
-
 
       <div id="menucontents" style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
           transition: 'opacity 0.5s ease-in-out',
         }}>
         <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
-        <li className="coffeelisttwelve">12oz.<ul className="subtwelvehot">(Hot) ...2.95</ul><ul className="subtwelvecold">(Iced)** ...3.35</ul> </li> <li className="coffeelistsix">16oz. <ul className="subsixhot">(Hot) ...3.95</ul><ul className="subsixcold">(Iced)** ...4.25</ul></li>
+        <li className="coffeelisttwelve">12oz.<ul className="subtwelvehot">(Hot) ...2.95</ul><ul className="subtwelvecold">(Iced)** ...3.35</ul></li><li className="coffeelistsix">16oz. <ul className="subsixhot">(Hot) ...3.95</ul><ul className="subsixcold">(Iced)** ...4.25</ul></li>
         <h2 id="milknote">**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
-        </div>
-      </div>
+       </div>
+     </div>
     </>
   );
 }

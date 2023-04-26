@@ -8,26 +8,49 @@
   font-style: normal;
   font-display: swap;
 }
+@media only screen and (max-width: 600px) {
 
 body {
   background-color: #baddbe;
-  margin: 0;
   font-family: "Blacksword";
-}
-
-#headertext {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  background-color: #b0d5b4;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  height: 200px;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
  
 }
+
+
+#headertext {
+  display: flex;
+  position: relative;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #b0d5b4;
+  padding-top: 5%;
+  flex-direction: column;
+  border-radius: 1vh;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  margin-bottom: 3%;
+  box-sizing: border-box;
+  overflow: auto;
+ 
+}
+
+.topbuttons{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: auto;
+  width: 100vw;
+}
+
 
 #title {
   text-align: center;
@@ -35,28 +58,23 @@ body {
 }
 
 #location {
-  font-size: 18px;
   text-align: center;
-  margin-top: 0.5rem;
 }
 
 #about{
-  position: absolute;
-  top: 120px;
-  left: 65px;
-}
+  position: inherit;
+  }
 
 #menu{
-  position: absolute;
-  top: 120px;
-  left: 200px;
-}
+  position: inherit;
+  }
+  
 
 #call{
-  position: absolute;
-  top: 87px;
-  left: 48px;
-  width: 200px; 
+  position: inherit;
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  width: 50vw; 
 }
 
 button {
@@ -71,52 +89,51 @@ button {
 
 #images {
   position: absolute;
-  display: flex;
+  z-index: -1;
   flex-direction: column;
-  margin-top: 265px;
-  margin-left: 0px;
   width: 100%;
-  align-items: center;
+  
 }
 
 #coffeeimage {
+  z-index: -1;
   opacity: 0.73;
   background-color: #87b38b;
   height: 250px;
   border-radius: 10px;
   scale: 93%;
-  width: 100%;
   box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
   outline: #67906c solid 10px;
+  width: 100vw;
+  height: 55vh;
+  margin-left: -2vw ;
 }
 
 #menucontents {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   color: #ffffff;
 }
 
 #menucoffeeheader {
-  position: absolute;
-  font-size: 25px;
+  position: inherit;
+  font-size: 7vw;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
   color: #baddbe;
-  margin-top: 40px;
-  margin-left: -195px;
   text-align: center;
-  width: 100%;
+  margin-top: 1.9vh;
+  margin-bottom: 1vh;
 }
 
 #milknote{
+  position: inherit;
   font-weight: 100;
-  position: absolute;
-  top: 419px;
-  left: 85px;
-  width: 100%;
-  font-size: 20px;
+  text-align: center;
+  font-size: 7vw;
   color: #ffffff;
   text-shadow: 2px 4px 4px rgb(0, 0, 0);
+  margin-top: -1vh;
 }
 
 
@@ -125,57 +142,57 @@ button {
   
 }
 
-.coffeelisttwelve {
-  position: absolute;
-  top: 330px;
-  left: 93px;
-  width: 100%;
-  font-size: 22px;
+li{
+  position: inherit;
+  font-size: 6.3vw;
   list-style: none;
-  text-decoration: underline;
-  text-underline-position: under;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0vw;
+  scale: 80%;
+  outline-width: 1vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 15vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.coffeelisttwelve {
+  background-color: #baddbe;
+  border-radius: 1vh;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  
+  
 }
 
 .coffeelistsix {
-  position: absolute;
-  top: 330px;
-  left: 275px;
-  width: 100%;
-  font-size: 22px;
-  list-style: none;
-  
-  text-decoration: underline;
-  text-underline-position: under;
+  margin-top: -2vh;
+  background-color: #baddbe;
+  border-radius: 1vh;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .subtwelvehot{
-  position: absolute;
-  top: 10px;
-  left: -95px;
-  width: 100%;
+ position: inherit;
+ margin-top: -1.5vh;
+ margin-left: 0vw;
 }
 
 .subtwelvecold{
-  position: absolute;
-  top: 40px;
-  left: -111px;
-  
-  text-decoration: underline;
-  text-underline-position: under;
+ position: inherit;
+ margin-top: -1.5vh;
 }
 
 .subsixhot{
-  position: absolute;
-  top: 10px;
-  left: -95px;
-  width: 100%;
+  position: inherit;
+ margin-top: -1.5vh;
+ margin-left: 0vw;
 }
 
 .subsixcold{
-  position: absolute;
-  top: 40px;
-  left: -111px;
-  
-  text-decoration: underline;
-  text-underline-position: under;
+  position: inherit;
+ margin-top: -1.5vh;
+}
 }
