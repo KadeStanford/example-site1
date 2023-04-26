@@ -1,177 +1,153 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-
-#pageheader {
-  font-family: "Alfa Slab One", cursive;
-  align-self: center;
-  text-align: center;
+@font-face {
+  font-family: 'Blacksword';
+  src: url('/Blacksword.woff2') format('woff2'),
+       url('/Blacksword.woff') format('woff'),
+       url('/Blacksword.ttf') format('truetype'),
+       url('/Blacksword.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-#pageheadershadow {
-  background-color: #519247;
-  border-radius: 50%;
-  box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
-  height: 14%;
-  width: 85%;
+
+
+#coffeeimage{
   position: absolute;
-  font-family: "Alfa Slab One", cursive;
-  align-self: center;
-  text-align: center;
-  top: -15.9px;
-  left: 25px;
-  color: rgb(232, 237, 139);
+  top: 22%;
+  opacity: .73;
+  outline: #ffffff solid 12px;
+  left: 12px;
 }
 
-#pageheaderinfoshadow {
+#title{
+  font-family: 'Blacksword';
   position: absolute;
-  font-family: "Alfa Slab One", cursive;
-  align-self: center;
+  top: 0%;
   text-align: center;
-  top: 19.9px;
-  left: 45px;
-  color: rgb(232, 237, 139);
+  left: 29px;
 }
 
-#pageheaderinfo {
-  font-family: "Alfa Slab One", cursive;
-  align-self: center;
+#location{
+  font-family: 'Blacksword';
+  position: absolute;
+  top: 6%;
+  font-size: 18px;
   text-align: center;
-  margin-top: -7%;
-  font-size: 24px;
+  right: 70px;
+}
+body{
+  background-color: #baddbe;
 }
 
-body {
-  background-color: #f1fab3;
-}
-
-#topheader {
-  color: #0c0800;
-  text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
-  background-color: #74d765;
+#headertext{
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 10.5);
+  font-family: 'Blacksword';
+  top: 0%;
   width: 100%;
+  text-align: center;
+  background-color: #b0d5b4;
   height: 150px;
-  margin-top: -20px;
-  overflow: hidden;
-  width: 120%;
-  margin-left: -12%;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 50.5);
+  color: #ffffff;
 }
 
-#call {
+#about{
+  font-family: 'Blacksword';
   position: absolute;
-  font-family: "Alfa Slab One", cursive;
-  color: rgb(232, 237, 139);
-  font-size: 17px;
-  margin-left: 67px;
-  top: 75px;
-  text-shadow: 5px 1px 1px rgba(0, 0, 0, 90);
-}
-
-#menu {
-  border-radius: 50%;
-  position: absolute;
-  font-family: "Alfa Slab One", cursive;
-  font-size: 20px;
-  color: rgb(232, 237, 139);
-  text-shadow: 5px 1px 1px rgba(0, 0, 0, 90);
+  top: 12.5%;
   text-align: center;
-  left: 0%;
+  left: 218px;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgb(195, 237, 194);
+  width: 150px;
+  border-radius: 10px;
+}
+
+#menu{
+  font-family: 'Blacksword';
+  position: absolute;
+  top: 12.5%;
+  text-align: center;
+  left: 24px;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgb(195, 237, 194);
+  width: 150px;
+  border-radius: 10px;
+}
+
+#menucontents{
+  position: absolute;
+  font-family: 'Blacksword';
+  color: aliceblue;
   width: 100%;
 }
 
-li {
+#menucoffeeheader{
   position: absolute;
+  font-size: 27px;
+  top: 20px;
+  left: -5px;
+  width: 100%;
+  height: 50px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 100);
+  color: #baddbe;
   align-items: center;
-  left: -45%;
-}
-
-#WWB {
-  top: 5px;
-  left: -30px;
-  font-size: 25px;
-  color: #dfb134;
-}
-
-#drinks {
-  color: #f9b821;
-  top: 2px;
-  left: 225px;
-  font-size: 30px;
-}
-
-ul {
-  margin-left: -10px;
-  position: relative;
-  text-align: center;
-  align-content: center;
-  align-items: center;
-}
-
-#specialbrew {
-  left: -37px;
   align-self: center;
-  background-color: #74d765;
-  font-size: 30px;
-  width: 105%;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+  text-align: center;
 }
 
-#tea {
-  background-color: #74d765;
-  font-size: 30px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.coffeelisttwelve{
+  position: absolute;
+  top: 99px;
+  left: 10px;
+  font-size: 35px;
+  width: 100%;
 }
 
-#orangejuice {
-  width: 105%;
-  left: -47px;
-  background-color: #74d765;
-  font-size: 30px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.coffeelistsix{
+  position: absolute;
+  top: 99px;
+  left: 200px;
+  width: 100%;
+  
+  font-size: 35px;
 }
 
-#coffeeinfo {
-  width: 105%;
-  left: -47px;
-  background-color: #c0c674;
-  font-size: 18px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.subtwelvehot{
+  position: absolute;
+  top: 29px;
+  font-size: 20px;
+  left: -19px;
+  width: 100%;
 }
 
-#teainfo {
-  width: 105%;
-  left: -47px;
-  background-color: #c0c674;
-  font-size: 18px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.subtwelvecold{
+  position: absolute;
+  top: 65px;
+  font-size: 20px;
+  left: -40px;
+  width: 100%;
 }
 
-#hotchocinfo {
-  width: 105%;
-  left: -47px;
-  background-color: #c0c674;
-  font-size: 18px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.subsixhot{
+  position: absolute;
+  top: 29px;
+  font-size: 20px;
+  left: -19px;
+  width: 100%;
 }
 
-#hotchocolate {
-  width: 105%;
-  left: -47px;
-  background-color: #74d765;
-  font-size: 25px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+.subsixcold{
+  position: absolute;
+  top: 65px;
+  font-size: 20px;
+  left: -40px;
+  width: 100%;
 }
 
-#bottledwater {
-  width: 105%;
-  left: -47px;
-  background-color: #74d765;
-  font-size: 30px;
-  color: rgb(232, 237, 139);
-  outline: 10px solid rgb(232, 237, 139);
+#menucoffee{
+  text-shadow: 2px 4px 1px rgba(0, 0, 0, 100);
 }
