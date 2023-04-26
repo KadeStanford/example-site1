@@ -51,7 +51,7 @@ export default function Home() {
   </button>
   <a href="tel:+1234567890" id="call">
     <button id="call">
-      Call in your order!
+      Call in your order
     </button>
   </a>
 </div>
