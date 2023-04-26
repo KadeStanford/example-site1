@@ -81,20 +81,26 @@ button {
 
 #coffeeimage {
   opacity: 0.73;
-  outline: #ffffff solid 12px;
+  background-color: #87b38b;
+  height: 250px;
+  border-radius: 10px;
+  scale: 93%;
+  width: 100%;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+  outline: #67906c solid 10px;
 }
 
 #menucontents {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: aliceblue;
+  color: #ffffff;
 }
 
 #menucoffeeheader {
   position: absolute;
   font-size: 25px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
   color: #baddbe;
   margin-top: 40px;
   margin-left: -195px;
@@ -102,49 +108,74 @@ button {
   width: 100%;
 }
 
+#milknote{
+  font-weight: 100;
+  position: absolute;
+  top: 419px;
+  left: 85px;
+  width: 100%;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 2px 4px 4px rgb(0, 0, 0);
+}
+
 
 #menucoffee {
-  text-shadow: 2px 4px 1px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+  
 }
 
 .coffeelisttwelve {
   position: absolute;
   top: 330px;
-  left: 45px;
+  left: 93px;
   width: 100%;
-  font-size: 21px;
+  font-size: 22px;
+  list-style: none;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .coffeelistsix {
   position: absolute;
   top: 330px;
-  left: 235px;
+  left: 275px;
   width: 100%;
-  font-size: 21px;
+  font-size: 22px;
+  list-style: none;
+  
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .subtwelvehot{
   position: absolute;
   top: 10px;
-  left: -55px;
+  left: -95px;
   width: 100%;
 }
 
 .subtwelvecold{
   position: absolute;
   top: 40px;
-  left: -68px;
+  left: -111px;
+  
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .subsixhot{
   position: absolute;
   top: 10px;
-  left: -55px;
+  left: -95px;
   width: 100%;
 }
 
 .subsixcold{
   position: absolute;
   top: 40px;
-  left: -68px;
+  left: -111px;
+  
+  text-decoration: underline;
+  text-underline-position: under;
 }

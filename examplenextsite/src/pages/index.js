@@ -62,7 +62,9 @@ export default function Home() {
           transition: 'opacity 0.5s ease-in-out',
         }}>
         <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
-        <li className="coffeelisttwelve">12oz.<ul className="subtwelvehot">(Hot) ...2.95</ul><ul className="subtwelvecold">(Iced)** ...3.35</ul> </li> <li className="coffeelistsix">16oz. <ul className="subsixhot">(Hot) ...3.95</ul><ul className="subsixcold">(Iced)** ...4.25</ul></li></div>
+        <li className="coffeelisttwelve">12oz.<ul className="subtwelvehot">(Hot) ...2.95</ul><ul className="subtwelvecold">(Iced)** ...3.35</ul> </li> <li className="coffeelistsix">16oz. <ul className="subsixhot">(Hot) ...3.95</ul><ul className="subsixcold">(Iced)** ...4.25</ul></li>
+        <h2 id="milknote">**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
+        </div>
       </div>
     </>
   );
