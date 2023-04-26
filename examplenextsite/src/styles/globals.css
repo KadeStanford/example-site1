@@ -1,153 +1,150 @@
 @font-face {
-  font-family: 'Blacksword';
-  src: url('/Blacksword.woff2') format('woff2'),
-       url('/Blacksword.woff') format('woff'),
-       url('/Blacksword.ttf') format('truetype'),
-       url('/Blacksword.svg') format('svg');
+  font-family: "Blacksword";
+  src: url("/Blacksword.woff2") format("woff2"),
+    url("/Blacksword.woff") format("woff"),
+    url("/Blacksword.ttf") format("truetype"),
+    url("/Blacksword.svg") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-
-
-#coffeeimage{
-  position: absolute;
-  top: 22%;
-  opacity: .73;
-  outline: #ffffff solid 12px;
-  left: 12px;
+body {
+  background-color: #baddbe;
+  margin: 0;
+  font-family: "Blacksword";
 }
 
-#title{
-  font-family: 'Blacksword';
-  position: absolute;
-  top: 0%;
+#headertext {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #b0d5b4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  height: 200px;
+ 
+}
+
+#title {
   text-align: center;
-  left: 29px;
+  margin: 0;
 }
 
-#location{
-  font-family: 'Blacksword';
-  position: absolute;
-  top: 6%;
+#location {
   font-size: 18px;
   text-align: center;
-  right: 70px;
-}
-body{
-  background-color: #baddbe;
-}
-
-#headertext{
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 10.5);
-  font-family: 'Blacksword';
-  top: 0%;
-  width: 100%;
-  text-align: center;
-  background-color: #b0d5b4;
-  height: 150px;
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 50.5);
-  color: #ffffff;
+  margin-top: 0.5rem;
 }
 
 #about{
-  font-family: 'Blacksword';
   position: absolute;
-  top: 12.5%;
-  text-align: center;
-  left: 218px;
-  width: 100%;
-  font-size: 20px;
-  background-color: rgb(195, 237, 194);
-  width: 150px;
-  border-radius: 10px;
+  top: 120px;
+  left: 65px;
 }
 
 #menu{
-  font-family: 'Blacksword';
   position: absolute;
-  top: 12.5%;
-  text-align: center;
-  left: 24px;
-  width: 100%;
+  top: 120px;
+  left: 200px;
+}
+
+#call{
+  position: absolute;
+  top: 87px;
+  left: 48px;
+  width: 200px; 
+}
+
+button {
+  font-family: "Blacksword";
   font-size: 20px;
   background-color: rgb(195, 237, 194);
-  width: 150px;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 
-#menucontents{
+#images {
   position: absolute;
-  font-family: 'Blacksword';
-  color: aliceblue;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+  margin-top: 265px;
+  margin-left: 10px;
+  align-items: center;
 }
 
-#menucoffeeheader{
+#coffeeimage {
+  opacity: 0.73;
+  outline: #ffffff solid 12px;
+}
+
+#menucontents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+}
+
+#menucoffeeheader {
   position: absolute;
   font-size: 27px;
-  top: 20px;
-  left: -5px;
-  width: 100%;
-  height: 50px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 100);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   color: #baddbe;
-  align-items: center;
-  align-self: center;
+  margin-top: 40px;
+  margin-left: -195px;
   text-align: center;
-}
-
-.coffeelisttwelve{
-  position: absolute;
-  top: 99px;
-  left: 10px;
-  font-size: 35px;
   width: 100%;
 }
 
-.coffeelistsix{
+
+#menucoffee {
+  text-shadow: 2px 4px 1px rgba(0, 0, 0, 1);
+}
+
+.coffeelisttwelve {
   position: absolute;
-  top: 99px;
-  left: 200px;
+  top: 330px;
+  left: 45px;
   width: 100%;
-  
-  font-size: 35px;
+  font-size: 21px;
+}
+
+.coffeelistsix {
+  position: absolute;
+  top: 330px;
+  left: 235px;
+  width: 100%;
+  font-size: 21px;
 }
 
 .subtwelvehot{
   position: absolute;
-  top: 29px;
-  font-size: 20px;
-  left: -19px;
+  top: 10px;
+  left: -55px;
   width: 100%;
 }
 
 .subtwelvecold{
   position: absolute;
-  top: 65px;
-  font-size: 20px;
-  left: -40px;
-  width: 100%;
+  top: 40px;
+  left: -68px;
 }
 
 .subsixhot{
   position: absolute;
-  top: 29px;
-  font-size: 20px;
-  left: -19px;
+  top: 10px;
+  left: -55px;
   width: 100%;
 }
 
 .subsixcold{
   position: absolute;
-  top: 65px;
-  font-size: 20px;
-  left: -40px;
-  width: 100%;
-}
-
-#menucoffee{
-  text-shadow: 2px 4px 1px rgba(0, 0, 0, 100);
+  top: 40px;
+  left: -68px;
 }

@@ -41,16 +41,18 @@ export default function Home() {
         ></Image>
       </div>
       <div id="headertext">
-        <h1 id="title">Liberty House Specialties</h1>
-        <h2 id="location">11652 Liberty Street, Clinton LA</h2>
-        <button id="about" onClick={handleAboutButtonClick}>
-          About Us
-        </button>
-        <button id="menu" onClick={handleMenuButtonClick}>
-          Our Menu
-        </button>
-      </div>
-
+  <h1 id="title">Liberty House Specialties</h1>
+  <h2 id="location">11652 Liberty Street, Clinton LA</h2>
+  <button id="about" onClick={handleAboutButtonClick}>
+    About Us
+  </button>
+  <button id="menu" onClick={handleMenuButtonClick}>
+    Our Menu
+  </button>
+    <button id="call">
+      Call Us
+    </button>
+</div>
       <div id="menucontents" style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
           transition: 'opacity 0.5s ease-in-out',
