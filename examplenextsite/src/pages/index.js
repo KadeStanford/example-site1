@@ -52,7 +52,7 @@ export default function Home() {
       >
         <Image
           id="coffeeimage"
-          src="/images/coffee.jpg"
+          src="/images/coffee.png"
           alt=""
           width={367}
           height={350}
@@ -71,6 +71,21 @@ export default function Home() {
         width={387}
         height={350}
         ></Image>
+
+        <Image id="waterimage"
+        alt=""
+        src="/images/water.png"
+        width={387}
+        height={300}
+        ></Image>
+
+        <Image id="hotchocimage"
+        alt=""
+        src="/images/hotchoc.png"
+        width={387}
+        height={300}
+        ></Image>
+
               </div>
 
       <div id="menucontents" style={{
@@ -79,7 +94,7 @@ export default function Home() {
         }}>
         <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
         <li className="coffeelist coffeelisttwelve">Hot<ul className="coffeelist subtwelvehot">(12oz.) ...2.95</ul><ul className="subtwelvecold">(16oz) ...3.95</ul></li><li className="coffeelistsix">Iced** <ul className="subsixhot">(12oz.) ...3.35</ul><ul className="subsixcold">(16oz.) ...4.25</ul></li>
-        <h2 id="milknote">**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
+        <h2 id="milknote">Add Stroopwafel  ...1.15<br></br>**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
        </div>
 
         <div className="menutea">
@@ -88,8 +103,18 @@ export default function Home() {
 
         </div>
           <div id="menuorange"> <h1 id="orangeheader">Orange Juice</h1>
-          <li id="orangeprice"><div id="wholeorange"><div id="glass">By the glass</div><div id="op">...2.29</div></div></li>
+          <li id="orangeprice"><div id="wholeorange"><div id="glass">By the glass</div><div id="op">...1.89</div></div></li>
           </div>
+
+        <div id="menuwater"><h1 id="waterheader">Bottled Water</h1>
+        <li id="waterprice"><div id="wholewater"><div id="glasswater">By the bottle</div><div id="wp">...0.99</div></div></li>
+        </div>
+
+        <div id="menuhotchoc"> 
+        <h1 id="hotchocheader">Hot Chocolate</h1> <h3 id="limited">(Oct. - Mar)</h3> 
+        <li id="hotchocprice"> <h2 id="regormint">Regular or Mint<span> </span></h2> <h2 id="addins">Add-ins:<br></br>Cinnamon Chips <br></br>or<br></br> Mini-Marshmellows</h2> <div id="wholehotchoc"><div id="glasshotchoc">12oz.</div><div id="hcp">...2.49</div></div></li>
+        </div>
+
      </div>
     </>
   );

@@ -8,7 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 
 body {
   background-color: #baddbe;
@@ -104,6 +104,165 @@ button {
   margin-left: 2.7vw ;
 } 
 
+#hotchocimage{
+  z-index: -1;
+  opacity: 0.73;
+  background-color: #87b38b;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+  width: 90vw;
+  height: 55vh;
+  margin-left: 2.7vw ;
+  margin-top: 1vh;
+}
+
+#hotchocheader{
+  position: inherit;
+  font-size: 9vw;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  color: #baddbe;
+  margin-top: 42vh;
+  margin-bottom: 100px;
+  width: 100vw;
+}
+
+#menuhotchoc{
+  position: inherit;
+  font-size: 6vw;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  color: #baddbe;
+  text-align: center;
+  margin-top: -30vh;
+  margin-bottom: 1vh;
+  margin-left: -5.7vw;
+  width: 100%;
+}
+
+#hotchocprice{
+  position: inherit;
+  font-weight: 100;
+  font-size: 6vw;
+  color: #ffffff;
+  text-shadow: 2px 4px 4px rgb(0, 0, 0);
+  line-height: 2px;
+  height: 27vh;
+  background-color: #baddbe;
+  margin-top: 3vh;
+  width: 74vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  margin-left: 9.5vw;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+#limited{
+  margin-top: -13vh;
+  margin-left: 3vh;
+  font-size: 5vw;
+}
+
+#regormint{
+  margin-top: -19vh;
+  font-size:7vw;
+  margin-left: -3vw;
+  width: 100vw;
+  color: #ffffff;
+  margin-right: -76vw;
+}
+
+#addins{
+  position: relative;
+  font-size: 5.6vw;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  color: #ffffff;
+  margin-top: 15.4vh;
+  margin-left: 0vw;
+  width: 100vw;
+  line-height: 20px;
+}
+
+#glasshotchoc{
+  position: relative;
+  margin-left: -128.7vw;
+  margin-top: -3vh;
+  font-size: 7vw;
+}
+
+#hcp{
+  position: relative;
+  margin-left: -20.7vw;
+}
+
+
+
+#waterimage{
+  z-index: -1;
+  opacity: 0.73;
+  background-color: #87b38b;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+  width: 90vw;
+  height: 38vh;
+  margin-left: 2.7vw ;
+  margin-top: 1vh;
+}
+
+#waterheader{
+  position: inherit;
+  font-size: 9vw;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  color: #baddbe;
+  margin-top: 42vh;
+  margin-bottom: 100px;
+  width: 100vw;
+}
+
+#menuwater{
+  position: inherit;
+  font-size: 6vw;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  color: #baddbe;
+  text-align: center;
+  margin-top: -30vh;
+  margin-bottom: 1vh;
+  margin-left: -5.7vw;
+  width: 100%;
+}
+
+#waterprice{
+  position: inherit;
+  font-weight: 100;
+  font-size: 6vw;
+  color: #ffffff;
+  text-shadow: 2px 4px 4px rgb(0, 0, 0);
+  line-height: 2px;
+  height: 10vh;
+  background-color: #baddbe;
+  margin-top: -3vh;
+  width: 70vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  margin-left: 11.5vw;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+} 
+
+#glasswater{
+  margin-left: -18vh;
+}
+
+#wp{
+  margin-left: 41vw;
+}
+
 #orangeimage{
   z-index: -1;
   opacity: 0.73;
@@ -148,10 +307,10 @@ button {
   line-height: 2px;
   height: 10vh;
   background-color: #baddbe;
-  margin-top: 0vh;
+  margin-top: -4vh;
   width: 70vw;
   padding-right: 13vw;
-  margin-left: 38px;
+  margin-left: 42px;
   border-radius: 10px;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -198,14 +357,13 @@ button {
 }
 
 #menucoffeeheader {
-  position: inherit;
-  font-size: 7vw;
+  position: relative;
+  font-size: 6vw;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
   color: #baddbe;
-  text-align: center;
-  margin-top: -18.9vh;
+  margin-top: -20.9vh;
   margin-bottom: 1vh;
-  margin-left: 1vw;
+  margin-left: 14vw;
   width: 100vw;
 }
 
@@ -213,11 +371,11 @@ button {
   position: inherit;
   font-weight: 100;
   text-align: center;
-  font-size: 6vw;
+  font-size: 7vw;
   color: #ffffff;
   text-shadow: 2px 4px 4px rgb(0, 0, 0);
-  margin-top: 3vh;
-  line-height: 26px;
+  margin-top: 1vh;
+  line-height: 32px;
 }
 
 
@@ -303,7 +461,7 @@ font-size: 5.2vw;
   padding-right: 18vw;
   height: 10vh;
   width: 50vw;
-  margin-left: 8.5vw;
+  margin-left: 15.5vw;
   outline-width: 1vw;
   font-size: 8.3vw;
 }
@@ -318,7 +476,7 @@ font-size: 5.2vw;
   padding-right: 18vw;
   height: 10vh;
   width: 50vw;
-  margin-left: 8.5vw;
+  margin-left: 15.5vw;
   outline-width: 1vw;
   font-size: 8.3vw;
   
