@@ -90,6 +90,8 @@ button {
   position: absolute;
   z-index: -1;
   flex-direction: column;
+  display: flex;
+  
 }
 
 #coffeeimage {
@@ -98,12 +100,10 @@ button {
   background-color: #87b38b;
   height: 250px;
   border-radius: 10px;
-  scale: 93%;
   box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
-  outline: #67906c solid 10px;
-  width: 100vw;
+  width: 90vw;
   height: 55vh;
-  margin-left: -2vw ;
+  margin-left: 2.7vw ;
 }
 
 #menucontents {
@@ -115,12 +115,13 @@ button {
 
 #menucoffeeheader {
   position: inherit;
-  font-size: 7vw;
+  font-size: 6vw;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
   color: #baddbe;
   text-align: center;
   margin-top: 1.9vh;
   margin-bottom: 1vh;
+  margin-left: 4.7vw;
 }
 
 #milknote{
@@ -141,32 +142,29 @@ button {
 
 li{
   position: inherit;
-  font-size: 10.3vw;
+  font-size: 8.3vw;
   list-style: none;
   display: flex;
   flex-direction: row;
-  margin-left: -6vw;
-  scale: 80%;
+  margin-left: 5vw;
   outline-width: 1vw;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 15vh;
-  width: 100vw;
+  height: 10vh;
+  width: 50vw;
   text-align: center;
-  padding-top: 2.5vh;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-top: 2.9vh;
+  padding-left: 17vw;
+  padding-right: 18vw;
 }
 
-#nottop{
-  scale: 70%;
-}
 
 .coffeelisttwelve {
   background-color: #baddbe;
   border-radius: 1vh;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10%;
 }
 
 .coffeelistsix {
@@ -181,25 +179,25 @@ li{
  position: inherit;
  margin-top: -1.5vh;
  margin-left: 0vw;
- font-size: 7.3vw;
+ font-size: 6.3vw;
 }
 
 .subtwelvecold{
  position: inherit;
  margin-top: -1.5vh;
- font-size: 7.3vw;
+ font-size: 6.3vw;
 }
 
 .subsixhot{
   position: inherit;
  margin-top: -1.5vh;
  margin-left: 0vw;
- font-size: 7.3vw;
+ font-size: 6.3vw;
 }
 
 .subsixcold{
   position: inherit;
  margin-top: -1.5vh;
- font-size: 7.3vw;
+ font-size: 6.3vw;
 }
 }
