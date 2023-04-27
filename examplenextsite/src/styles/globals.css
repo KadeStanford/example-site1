@@ -18,9 +18,6 @@ body {
   justify-content: center;
   align-self: center;
   overflow-x: hidden;
-  overflow-y: hidden;
-  
- 
 }
 
 
@@ -91,6 +88,7 @@ button {
   z-index: -1;
   flex-direction: column;
   display: flex;
+  margin-left: 1%;
   
 }
 
@@ -102,14 +100,28 @@ button {
   border-radius: 10px;
   box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
   width: 90vw;
-  height: 55vh;
+  height: 48vh;
   margin-left: 2.7vw ;
+}
+
+#teaimage{
+  z-index: -1;
+  opacity: 0.73;
+  background-color: #87b38b;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+  width: 90vw;
+  height: 48vh;
+  margin-left: 2.7vw ;
+  margin-top: 1vh;
 }
 
 #menucontents {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-self: center;
   color: #ffffff;
 }
 
@@ -119,19 +131,21 @@ button {
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
   color: #baddbe;
   text-align: center;
-  margin-top: 1.9vh;
+  margin-top: -18.9vh;
   margin-bottom: 1vh;
-  margin-left: 4.7vw;
+  margin-left: -1.7vw;
+  width: 100vw;
 }
 
 #milknote{
   position: inherit;
   font-weight: 100;
   text-align: center;
-  font-size: 7vw;
+  font-size: 6vw;
   color: #ffffff;
   text-shadow: 2px 4px 4px rgb(0, 0, 0);
-  margin-top: -1vh;
+  margin-top: 3vh;
+  line-height: 26px;
 }
 
 
@@ -142,21 +156,70 @@ button {
 
 li{
   position: inherit;
-  font-size: 8.3vw;
   list-style: none;
   display: flex;
   flex-direction: row;
-  margin-left: 5vw;
-  outline-width: 1vw;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 10vh;
-  width: 50vw;
   text-align: center;
-  padding-top: 2.9vh;
-  padding-left: 17vw;
-  padding-right: 18vw;
+  
+}
+
+.tealist{
+  line-height: 30px;
+  position: inherit;
+  font-size: 6.9vw;
+  list-style: none;
+  margin-left: -87vw;
+  margin-right: -10vw;
+  text-align: center;
+  margin-top: 55vh;
+  color: #baddbe;
+  font-weight: 200;
+  width: max-content;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+#teasix{
+  position: inherit;
+  font-size: 4.9vw;
+  list-style: none;
+  margin-top: 85vh;
+  color: #ffffff;
+  font-weight: 200;
+  background-color: #baddbe;
+  border-radius:10px;
+  margin-left: -54vw;
+  width: 80vw;
+  height: 10vh;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#teaspan{
+
+}
+
+#teaprice{
+margin-left: 35px;
+}
+
+#teatype{
+margin-left: -2px;
+font-size: 5.2vw;
+}
+
+.menutea{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 65vh;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 
@@ -165,13 +228,29 @@ li{
   border-radius: 1vh;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 10%;
+  padding-top: 2.9vh;
+  padding-left: 17vw;
+  padding-right: 18vw;
+  height: 10vh;
+  width: 50vw;
+  margin-left: 6vw;
+  outline-width: 1vw;
+  font-size: 8.3vw;
 }
 
 .coffeelistsix {
-  margin-top: -2vh;
+  margin-top: -4vh;
   background-color: #baddbe;
   border-radius: 1vh;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-top: 2.9vh;
+  padding-left: 17vw;
+  padding-right: 18vw;
+  height: 10vh;
+  width: 50vw;
+  margin-left: 6vw;
+  outline-width: 1vw;
+  font-size: 8.3vw;
   
 }
 
@@ -191,7 +270,7 @@ li{
 .subsixhot{
   position: inherit;
  margin-top: -1.5vh;
- margin-left: 0vw;
+ margin-left: -13vw;
  font-size: 6.3vw;
 }
 

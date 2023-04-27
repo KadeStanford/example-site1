@@ -57,16 +57,30 @@ export default function Home() {
           width={367}
           height={350}
         ></Image>
-      </div>
+
+        <Image id="teaimage"
+        alt=""
+        src="/images/tea.png"
+        width={367}
+        height={350}
+        ></Image>
+              </div>
 
       <div id="menucontents" style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
           transition: 'opacity 0.5s ease-in-out',
         }}>
         <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
-        <li className="coffeelisttwelve">12oz.<ul className="subtwelvehot">(Hot) ...2.95</ul><ul className="subtwelvecold">(Iced)** ...3.35</ul></li><li className="coffeelistsix">16oz. <ul className="subsixhot">(Hot) ...3.95</ul><ul className="subsixcold">(Iced)** ...4.25</ul></li>
+        <li className="coffeelist coffeelisttwelve">Hot<ul className="coffeelist subtwelvehot">(12oz.) ...2.95</ul><ul className="subtwelvecold">(16oz) ...3.95</ul></li><li className="coffeelistsix">Iced** <ul className="subsixhot">(12oz.) ...3.35</ul><ul className="subsixcold">(16oz.) ...4.25</ul></li>
         <h2 id="milknote">**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
        </div>
+
+        <div className="menutea">
+          <h1 className="tealist">Premium,<br></br> Organic Iced Tea</h1>
+          <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div><div id="teaprice">...2.29 </div></li>
+
+        </div>
+
      </div>
     </>
   );
