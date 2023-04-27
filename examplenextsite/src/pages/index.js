@@ -64,6 +64,13 @@ export default function Home() {
         width={367}
         height={350}
         ></Image>
+
+       <Image id="orangeimage"
+        alt=""
+        src="/images/orange.png"
+        width={387}
+        height={350}
+        ></Image>
               </div>
 
       <div id="menucontents" style={{
@@ -80,7 +87,9 @@ export default function Home() {
           <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div><div id="teaprice">...2.29 </div></li>
 
         </div>
-
+          <div id="menuorange"> <h1 id="orangeheader">Orange Juice</h1>
+          <li id="orangeprice"><div id="wholeorange"><div id="glass">By the glass</div><div id="op">...2.29</div></div></li>
+          </div>
      </div>
     </>
   );
