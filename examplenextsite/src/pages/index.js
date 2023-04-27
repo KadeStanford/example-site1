@@ -86,12 +86,28 @@ export default function Home() {
         height={300}
         ></Image>
 
+        <Image id="croissantimage"
+        alt=""
+        src="/images/croissant.png"
+        width={387}
+        height={320}
+        ></Image>
+
+        <Image id="blueberryimage"
+        alt=""
+        src="/images/blueberry.png"
+        width={387}
+        height={320}
+        ></Image>
+
+
               </div>
 
       <div id="menucontents" style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
           transition: 'opacity 0.5s ease-in-out',
         }}>
+
         <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
         <li className="coffeelist coffeelisttwelve">Hot<ul className="coffeelist subtwelvehot">(12oz.) ...2.95</ul><ul className="subtwelvecold">(16oz) ...3.95</ul></li><li className="coffeelistsix">Iced** <ul className="subsixhot">(12oz.) ...3.35</ul><ul className="subsixcold">(16oz.) ...4.25</ul></li>
         <h2 id="milknote">Add Stroopwafel  ...1.15<br></br>**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
@@ -115,7 +131,23 @@ export default function Home() {
         <li id="hotchocprice"> <h2 id="regormint">Regular or Mint<span> </span></h2> <h2 id="addins">Add-ins:<br></br>Cinnamon Chips <br></br>or<br></br> Mini-Marshmellows</h2> <div id="wholehotchoc"><div id="glasshotchoc">12oz.</div><div id="hcp">...2.49</div></div></li>
         </div>
 
-     </div>
+        <div id="menucroissant"><h1 id="croissantheader">Croissants</h1>
+        <div id="croissantflavors">
+        <li id="buttered">
+        <div id="croissantflavor">Buttered</div><div id="cp">...2.95</div></li>  
+        <li id="ham">
+        <div id="croissantflavor">Ham and Swiss</div><div id="cp">...5.75</div></li>
+        <li id="almond">
+        <div id="croissantflavor">Almond</div><div id="cp">...3.95</div></li>
+        <li id="chocolate">
+        <div id="croissantflavor">Chocolate</div><div id="cp">...3.25</div></li>
+       </div>
+       </div> 
+       
+      <div id="menuscone"><h1 id="scones">Scones</h1>
+      <li id="sconeprice"><div id="blueberry">Blueberry</div><div id="bp">...3.75</div></li>
+      </div>
+      </div>
     </>
   );
 }
