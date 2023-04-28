@@ -27,8 +27,8 @@ export default function Home() {
       </Head>
      
       <div id="headertext">
-  <h1 id="title">Liberty House Specialties</h1>
-  <h2 id="location">11652 Liberty Street, Clinton LA</h2>
+  <div id="title">Liberty House Specialties</div>
+  <div id="location">11652 Liberty Street, Clinton LA</div>
   <div className="topbuttons">
   <button  id="about" onClick={handleAboutButtonClick}>
     About Us
@@ -50,104 +50,168 @@ export default function Home() {
           transition: 'opacity 0.5s ease-in-out',
         }}
       >
-        <Image
-          id="coffeeimage"
-          src="/images/coffee.png"
-          alt=""
-          width={367}
-          height={350}
-        ></Image>
+  <div class="image-container">
+    <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
+    <div class="menu-content">
+    <div id="menucoffeeheader">Liberty House Special Brew:</div><div id="menucoffee">
+        <li className="coffeelist coffeelisttwelve"><div id="hot">Hot</div><ul className="coffeelist subtwelvehot">(12oz.)<br></br>  ...2.95</ul>
+        <ul className="subtwelvecold">(16oz) <br></br> ...3.95</ul></li>
+        <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.35</ul>
+        <ul className="subsixcold">(16oz.) <br></br> ...4.25</ul>
+        </li>
+        <div id="milknote"><div id="stroop">Add Stroopwafel  ...1.15</div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
+       </div>
+    </div>
+  </div>
 
-        <Image id="teaimage"
-        alt=""
-        src="/images/tea.png"
-        width={367}
-        height={350}
-        ></Image>
+  <div class="image-container">
+    <img id="teaimage" src="/images/tea.png" alt="Tea"></img>
+    <div class="menu-content">
+    <div className="tealist">Premium,<br></br> Organic Iced Tea</div> 
+       <div className="menutea">
+          
+          <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div>
+          <div id="teaprice">...2.29 </div></li>
 
-       <Image id="orangeimage"
-        alt=""
-        src="/images/orange.png"
-        width={387}
-        height={350}
-        ></Image>
+    </div>
+  </div>
 
-        <Image id="waterimage"
-        alt=""
-        src="/images/water.png"
-        width={387}
-        height={300}
-        ></Image>
+    <div class="image-container">
+    <img id="orangeimage" src="/images/orange.png" alt="Orange Juice"></img>
+    <div class="menu-content"><div id="orangeheader">Orange Juice</div>
+          <div id="menuorange"> 
+          <li id="orangeprice">
+            <div id="wholeorange"><div id="glass">By the glass</div>
+            <div id="op">...1.89</div></div></li>
+          </div>
+    </div>
+          
+    </div>
+    </div>
 
-        <Image id="hotchocimage"
-        alt=""
-        src="/images/hotchoc.png"
-        width={387}
-        height={300}
-        ></Image>
+    <div class="image-container">
+    <img id="waterimage" src="/images/water.png" alt="Water"></img>
+    <div class="menu-content">
+    <div id="waterheader">Bottled Water</div><div id="menuwater">
+        <li id="waterprice"><div id="wholewater">
+          <div id="glasswater">By the bottle</div>
+          <div id="wp">...0.99</div></div></li>
+        </div>
+    </div>
+    </div>
 
-        <Image id="croissantimage"
-        alt=""
-        src="/images/croissant.png"
-        width={387}
-        height={320}
-        ></Image>
+<div class="image-container">
+    <img id="hotchocimage" src="/images/hotchoc.png" alt="Hot Chocolate"></img>
+    <div class="menu-content">
+    <div id="hotchocheader">Hot Chocolate</div> <div id="limited">(Oct. - Mar)</div> 
+        <div id="menuhotchoc"> 
+        
+        <div id="regormint">Regular or Mint</div> <li id="hotchocprice"> 
+        <div id="addins">Add-ins:<br></br>Cinnamon Chips or Mini-Marshmellows</div> 
+        <div id="wholehotchoc"><div id="glasshotchoc">12oz.</div>
+        <div id="hcp">...2.49</div></div></li>
+        </div>
+    </div>
+    </div>
 
-        <Image id="blueberryimage"
-        alt=""
-        src="/images/blueberry.png"
-        width={387}
-        height={320}
-        ></Image>
+    <div class="image-container">
+    <img id="croissantimage" src="/images/croissant.png" alt="Croissant"></img>
+    <div class="menu-content">
+      
+    <div id="croissantheader">Croissants</div>
+        <div id="menucroissant">
+        <div id="croissantflavors">
+        <li id="buttered">
+        <div id="croissantflavor">Buttered</div><div id="cp1">...2.95</div></li>  
+        <li id="ham">
+        <div id="croissantflavor">Ham and Swiss</div><div id="cp2">...5.75</div></li>
+        <li id="almond">
+        <div id="croissantflavor">Almond</div><div id="cp3">...3.95</div></li>
+        <li id="chocolate">
+        <div id="croissantflavor">Chocolate</div><div id="cp4">...3.25</div></li>
+       </div>
+       </div> 
+    </div>
+    </div>
 
+    <div class="image-container">
+    <img id="blueberryimage" src="/images/blueberry.png" alt="Scone"></img>
+    <div class="menu-content">
+    <div id="scones">Scones</div>
+      <div id="menuscone">
+      <li id="sconeprice"><div id="blueberry">Blueberry</div><div id="bp">...3.75</div></li>
+      </div>
+    </div>
+    </div>  
+
+    <div class="image-container">
+      <img id="brownimage" src="/images/brown.png" alt="Brown"></img> 
+      <div class="menu-content">
+      <div id="brownsugarcakeheader">Brown Sugar Walnut<br></br>Coffee Cake</div>
+      <div id="menubrownsugarcake"> <li id="cakeprice"><div id="slice">Per Slice</div><div id="sliceprice">...3.25</div></li> </div>
+      
+      </div>
+      </div>
+
+      <div class="image-container">
+        <img id="cheesedanishimage" src="/images/cheesedanish.png" alt="Cheese Danish"></img>
+        <div class="menu-content">
+          
+      <div id="cheesedanishheader">Cheese Danish</div>
+      <div id="menucheesedanish"> <li id="cheesedanishprice"><div id="slicecheese">Per Pastry</div><div id="slicepricecheese">...3.65</div></li> </div>
+  
+        </div>
+        </div>
+
+        <div class="image-container">
+          <img  id="raspberrydanishimage" src="/images/raspberrydanish.png" alt="Raspberry Danish"></img>
+          <div class="menu-content">
+            
+      <div id="raspberrydanishheader">Raspberry Danish</div>
+      <div id="menuraspberrydanish"> <li id="raspberrydanishprice"><div id="sliceraspberry">Per Pastry</div><div id="slicepriceraspberry">...3.75</div></li> </div>
+
+          </div>
+          </div>
+
+          <div class="image-container">
+            <img id="biscuitimage" src="/images/biscuit.jpg" alt="Biscuit"></img>
+            <div class="menu-content">
+              
+      <div id="biscuitheader">Build a Biscuit</div>
+      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.49</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
+
+            </div>
+            </div>
+
+            <div class="image-container">
+              <img id="bagelimage" src="/images/bagel.png" alt="Bagel"></img>
+              <div class="menu-content">
+      <div id="bagelheader">Build a Bagel</div>
+      <div id="menubagel"> <li id="bagelprice"><div id="bagelprice1">Plain Bagel w/ Butter<br></br><div id="cinbutter">(Substitute Cinnamon Butter  ...0.30)</div></div><div id="bagelprice2">...2.69</div></li> <li id="fixings2">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
               </div>
+              </div>
+
+              <div class="image-container">
+                <img id="oatmealimage" src="/images/oatmeal.jpg" alt="Oatmeal"></img>
+                <div class="menu-content">
+                <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
+      <div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.79</div>
+      </li> <div id="pecans">Add Choppped Pecans</div><div id="pecanprice">...0.65</div></div>
+                </div>
+                </div>
+</div>
+
+
 
       <div id="menucontents" style={{
           opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
           transition: 'opacity 0.5s ease-in-out',
         }}>
 
-        <div id="menucoffee"><h1 id="menucoffeeheader">Liberty House Special Brew:</h1>
-        <li className="coffeelist coffeelisttwelve">Hot<ul className="coffeelist subtwelvehot">(12oz.) ...2.95</ul><ul className="subtwelvecold">(16oz) ...3.95</ul></li><li className="coffeelistsix">Iced** <ul className="subsixhot">(12oz.) ...3.35</ul><ul className="subsixcold">(16oz.) ...4.25</ul></li>
-        <h2 id="milknote">Add Stroopwafel  ...1.15<br></br>**Iced coffee can be served<br></br> with condensed milk. Yum!</h2>
-       </div>
 
-        <div className="menutea">
-          <h1 className="tealist">Premium,<br></br> Organic Iced Tea</h1>
-          <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div><div id="teaprice">...2.29 </div></li>
-
-        </div>
-          <div id="menuorange"> <h1 id="orangeheader">Orange Juice</h1>
-          <li id="orangeprice"><div id="wholeorange"><div id="glass">By the glass</div><div id="op">...1.89</div></div></li>
-          </div>
-
-        <div id="menuwater"><h1 id="waterheader">Bottled Water</h1>
-        <li id="waterprice"><div id="wholewater"><div id="glasswater">By the bottle</div><div id="wp">...0.99</div></div></li>
-        </div>
-
-        <div id="menuhotchoc"> 
-        <h1 id="hotchocheader">Hot Chocolate</h1> <h3 id="limited">(Oct. - Mar)</h3> 
-        <li id="hotchocprice"> <h2 id="regormint">Regular or Mint<span> </span></h2> <h2 id="addins">Add-ins:<br></br>Cinnamon Chips <br></br>or<br></br> Mini-Marshmellows</h2> <div id="wholehotchoc"><div id="glasshotchoc">12oz.</div><div id="hcp">...2.49</div></div></li>
-        </div>
-
-        <div id="menucroissant"><h1 id="croissantheader">Croissants</h1>
-        <div id="croissantflavors">
-        <li id="buttered">
-        <div id="croissantflavor">Buttered</div><div id="cp">...2.95</div></li>  
-        <li id="ham">
-        <div id="croissantflavor">Ham and Swiss</div><div id="cp">...5.75</div></li>
-        <li id="almond">
-        <div id="croissantflavor">Almond</div><div id="cp">...3.95</div></li>
-        <li id="chocolate">
-        <div id="croissantflavor">Chocolate</div><div id="cp">...3.25</div></li>
-       </div>
-       </div> 
-       
-      <div id="menuscone"><h1 id="scones">Scones</h1>
-      <li id="sconeprice"><div id="blueberry">Blueberry</div><div id="bp">...3.75</div></li>
-      </div>
-      </div>
+      
+</div>
     </>
   );
 }
