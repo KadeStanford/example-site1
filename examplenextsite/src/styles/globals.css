@@ -27,35 +27,6 @@ body{
   overflow-x: hidden;
 }
 
-#menucontents{
-  font-family: 'Blacksword';
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  width: 100vw;
-}
-
-#menucoffeeheader, .tealist, 
-#orangeheader, #waterheader, 
-#hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
-#cheesedanishheader, #raspberrydanishheader, #biscuitheader,
-#bagelheader, #oatmealheader, #oatmealflavors{
-  font-family: 'Blacksword';
-  color: #baddbe;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 5px;
-  text-align: center;
-  margin-left: -0.5em;
-  width: 100vw;
-  font-size: 1.5em;
-}
-
 .image-container {
   position: relative;
 }
@@ -64,22 +35,6 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-}
-
-
-#menucoffee, .menutea,
-#menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
-#menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
-#menubagel, #menuoatmeal{
-  font-family: 'Blacksword';
-  color: #ffff;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  background-color: #a5c8a9;
-  border-radius: 10px;
-  width: 90vw;
-  font-size: 1.1em;
-  box-shadow: inset 0 0 10px #000000;
-  margin-left: 3vw;
 }
 
 #blueberryimage, #coffeeimage, #waterimage, 
@@ -111,30 +66,475 @@ li{
   display: flex;
   flex-direction: row;
 }
-#images{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
+@media screen  and (min-width: 500px) and (max-width: 1980px) {
+  body{
+    font-size: 1.5em;
+  }
+
+ #oatmealimage{
+  width: 114%;
+}
+
+#biscuitimage{
+  width: 109.5%;
+  margin-left: -1em;
+}
+
+#waterimage{
+  width: 95.9%;
+}
+
+#hotchocimage{
+  width: 103.9%;
+  margin-left: -1em;
+}
+
+  #images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: -1;
+    align-content: center;
+
+  }
+
+  .menu-content{
+    width: 1em;
+  }
+
+  #menucoffeeheader, .tealist, 
+#orangeheader, #waterheader, 
+#hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
+#cheesedanishheader, #raspberrydanishheader, #biscuitheader,
+#bagelheader, #oatmealheader, #oatmealflavors{
+  font-family: 'Blacksword';
+  color: #baddbe;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-left: -1.8em;
+  width: 20em;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  text-align: center;
   justify-content: center;
-  position: relative;
-  z-index: -1;
-  align-content: center;
+}
+
+#hotchocheader{
+  margin-left: -2.2em;
+}
+  
+#menucoffee, .menutea,
+#menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
+#menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
+#menubagel, #menuoatmeal{
+  font-family: 'Blacksword';
+  color: #ffff;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  background-color: #a5c8a9;
+  border-radius: 10px;
+  width: 20em;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 10px #000000;
+  margin-left: 1.9em;
+}
+
+#menucoffee{
+  margin-left: 1.4em;
+}
+
+#milknote{
+  text-align: center;
+  margin-top: -5em;
+}
+
+#stroop{
+  margin-top: 4em;
+}
+
+.subsixcold{
+  margin-left: 4em;
+}
+
+.subsixhot{
+  margin-left: 1em;
+}
+
+.subtwelvecold{
+  margin-left: 4.0em;
+}
+
+.subtwelvehot{
+  margin-left: 2.0em;
+}
+
+#hot{
+  margin-left: 1.9em;
+  margin-top: 1.9em;
+}
+
+#iced{
+  margin-left: 1.5em;
+  margin-top: 2.2em;
+}
+
+.menutea{
+  height: 4em;
+  margin-top: 3.9em;
+}
+
+#teasix{
+}
+
+#teatype{
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+#teaprice{
+  margin-top: 1.1em;
+  margin-left: 5em;
+}
+
+#menuorange{
+  margin-top: 6em;
+  height: 4em;
+}
+
+#glass{
+  margin-top: 1em;
+  margin-left: 2em;
+  font-size: 1.1em;
+}
+
+#op{
+  margin-top: -1.6em;
+  margin-left: 16em;
+}
+
+#menuwater{
+  margin-top: 6em;
+  height: 4em;
+}
+
+#glasswater{
+  margin-top: 1em;
+  margin-left: 2em;
+  font-size: 1.1em;
+}
+
+#wp{
+  margin-top: -1.6em;
+  margin-left: 16em;
+}
+
+#menuhotchoc{
+  margin-top: 3em;
+  margin-left: 0.8em;
+  height: auto;
+}
+
+#regormint{
+  text-align: center;
+}
+
+#addins{
+  text-align: center;
+  margin-top: 3em;
+  margin-left: 1.7em;
+}
+
+#glasshotchoc{
+  margin-top: 1em;
+  margin-left: -15em;
+  font-size: 1.1em;
+}
+
+#limited{
+  font-family: 'Blacksword';
+  color: #baddbe;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  margin-left: 8.8em;
+  width: max-content;
+}
+
+#hcp{
+  margin-top: -1.3em;
+  margin-left: -3em;
+}
+
+#menucroissant{
+  margin-top: 4.3em;
+  height: 7.9em;
+}
+
+#croissantflavors{
+  line-height: 2em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#cp1{
+  margin-top: 0em;
+  margin-left: 10.5em;
+}
+
+#cp2{
+  margin-left: 7.8em;
+}
+
+#cp3{
+  margin-left: 10.8em;
+}
+
+#cp4{
+  margin-left: 10em;
+}
+
+#menuscone{
+  margin-top: 6.3em;
+  height: 3.9em;
+}
+
+#blueberry{
+  margin-top: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#bp{
+  margin-top: 1em;
+  margin-left: 10em;
+}
+
+#slice{
+  margin-top: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#sliceprice{
+  margin-top: 1em;
+  margin-left: 10em;
+}
+
+#menubrownsugarcake{
+  margin-top: 4.1em;
+  height: 3.9em;
+}
+
+#menucheesedanish{
+  margin-top: 6.3em;
+  height: 3.9em;
+}
+
+#slicecheese{
+  margin-top: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#slicepricecheese{
+  margin-top: 1em;
+  margin-left: 9.4em;
+}
+
+#menuraspberrydanish{
+  margin-top: 6.3em;
+  height: 3.9em;
+}
+
+#sliceraspberry{
+  margin-top: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#slicepriceraspberry{
+  margin-top: 1em;
+  margin-left: 9.4em;
+}
+
+#menubiscuit{
+  margin-top: 2.3em;
+  margin-left: 0.6em;
+  height: auto;
+}
+
+#biscuitprice1{
+  margin-top: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#biscuitprice2{
+  margin-top: 1em;
+  margin-left: 2.4em;
+}
+
+#fixings{
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 3.8em;
+  margin-left: 0.6em;
+}
+
+#menubagel{
+  margin-top: 2.3em;
+  margin-left: 0.6em;
+  height: auto;
+}
+
+#bagelprice1{
+  margin-top: 1em;
+  margin-left: 2.5em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#bagelprice2{
+  margin-top: 1em;
+  margin-left: 4.8em;
+}
+
+#fixings2{
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 2em;
+  margin-left: 0.6em;
+}
+
+#menuoatmeal{
+  margin-top: 2.3em;
+  margin-left: 0.6em;
+  height: auto;
+}
+
+#oatmealprice1{
+  margin-top: 1em;
+  margin-left: 2.5em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#oatmealprice2{
+  margin-top: 1em;
+  margin-left: 8.8em;
+}
+
+#pecans{
+  font-size: 0.9em;
+  margin-top: 2em;
+  margin-left: 0.6em;
+}
+
+#pecanprice{
+  margin-top: -1.5em;
+  margin-left: 14.7em;
 }
 
 
 
-#menucontents{
-  margin: -545vh 0vw 0vw 0vh;
 }
+
+
 @media screen  and (min-width: 305px) and (max-width: 375px) {
   body{
     font-size: .9em;
   }
 
+  #menucoffee, .menutea,
+#menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
+#menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
+#menubagel, #menuoatmeal{
+  font-family: 'Blacksword';
+  color: #ffff;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  background-color: #a5c8a9;
+  border-radius: 10px;
+  width: 90vw;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 10px #000000;
+  margin-left: 3vw;
+}
+
+  #menucoffeeheader, .tealist, 
+#orangeheader, #waterheader, 
+#hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
+#cheesedanishheader, #raspberrydanishheader, #biscuitheader,
+#bagelheader, #oatmealheader, #oatmealflavors{
+  font-family: 'Blacksword';
+  color: #baddbe;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-left: -0.5em;
+  width: 100vw;
+  font-size: 1.5em;
+}
+
+  #images{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    align-content: center;
+  }
+  
+
 }
 
 
 @media screen and (min-width: 305px) and (max-width: 420px) {
+
+  #menucoffee, .menutea,
+  #menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
+  #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
+  #menubagel, #menuoatmeal{
+    font-family: 'Blacksword';
+    color: #ffff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+    background-color: #a5c8a9;
+    border-radius: 10px;
+    width: 90vw;
+    font-size: 1.1em;
+    box-shadow: inset 0 0 10px #000000;
+    margin-left: 3vw;
+  }
+
+  #menucoffeeheader, .tealist, 
+#orangeheader, #waterheader, 
+#hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
+#cheesedanishheader, #raspberrydanishheader, #biscuitheader,
+#bagelheader, #oatmealheader, #oatmealflavors{
+  font-family: 'Blacksword';
+  color: #baddbe;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-left: -0.5em;
+  width: 100vw;
+  font-size: 1.5em;
+}
+
+  #images{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    align-content: center;
+  }
+  
 
 #menucoffeeheader{
   position: relative;

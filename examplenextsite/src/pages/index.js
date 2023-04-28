@@ -75,6 +75,7 @@ export default function Home() {
 
     </div>
   </div>
+  </div>
 
     <div class="image-container">
     <img id="orangeimage" src="/images/orange.png" alt="Orange Juice"></img>
@@ -83,11 +84,10 @@ export default function Home() {
           <li id="orangeprice">
             <div id="wholeorange"><div id="glass">By the glass</div>
             <div id="op">...1.89</div></div></li>
-          </div>
-    </div>
-          
+          </div> 
     </div>
     </div>
+    
 
     <div class="image-container">
     <img id="waterimage" src="/images/water.png" alt="Water"></img>
@@ -156,7 +156,6 @@ export default function Home() {
       <div class="image-container">
         <img id="cheesedanishimage" src="/images/cheesedanish.png" alt="Cheese Danish"></img>
         <div class="menu-content">
-          
       <div id="cheesedanishheader">Cheese Danish</div>
       <div id="menucheesedanish"> <li id="cheesedanishprice"><div id="slicecheese">Per Pastry</div><div id="slicepricecheese">...3.65</div></li> </div>
   
@@ -187,7 +186,7 @@ export default function Home() {
               <img id="bagelimage" src="/images/bagel.png" alt="Bagel"></img>
               <div class="menu-content">
       <div id="bagelheader">Build a Bagel</div>
-      <div id="menubagel"> <li id="bagelprice"><div id="bagelprice1">Plain Bagel w/ Butter<br></br><div id="cinbutter">(Substitute Cinnamon Butter  ...0.30)</div></div><div id="bagelprice2">...2.69</div></li> <li id="fixings2">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
+      <div id="menubagel"> <li id="bagelprice"><div id="bagelprice1">Plain Bagel w/ Butter<br></br></div><div id="bagelprice2">...2.69</div></li> <li id="fixings2">(Substitute Cinnamon Butter  ...0.30) <br></br>Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
               </div>
               </div>
