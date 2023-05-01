@@ -9,21 +9,63 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Olivade Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Olivade Regular'), url('/Olivade-gxL6q.woff') format('woff');
+  }
+
 #headertext{
-  font-family: "Blacksword";
-  color: #ffff;
-  background-color: #a5c9a9;
+  font-family: "Olivade Regular";
+  color: #d0b155;
+  background-color: #353935;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: inset 0 0 10px #000000;
   text-align: center;
-  height: auto;
+  height: 10em;
   width: auto;
   font-size: 1.53em;
 }
 
+#call{
+  text-decoration: none;
+
+}
+
+
+
+#location{
+   position: relative;
+  z-index: 1;
+  margin-left: 11.9em;
+  margin-top: 0.1em;
+  width: max-content;
+  font-size: 1.5em;
+}
+
+.topbuttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 19.4em;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: max-content;
+}
+
+#house{
+  height: 30vh;
+  width: 20vw;
+  z-index: -1;
+  opacity: 0.5;
+  
+}
+
 body{
-  background-color: #baddbe;
+  background-color: #4c504d;
   overflow-x: hidden;
 }
 
@@ -46,20 +88,21 @@ body{
   margin:  1em 0em 0em 0em;
   width: 100%;
   height: 22em;
+  box-shadow: 2px 2px 7px 7px rgba(0, 0, 0, 0.6);
 }
 
 button{
   width: auto;
-  height: 2em;
+  height: 1.6em;
   border-radius: 10px;
   font-size: .9em;
-  background-color: #baddbe;
-  font-family: "Blacksword";
-  position: relative;
-  row-gap: 1em;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+  background-color: #323432;
+  color:#d0b155;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 10px #000000;
+  font-family: "Olivade Regular";
+  display: flex;
+  flex-direction: row;
 }
 
 li{
@@ -68,7 +111,16 @@ li{
 }
 
 @media screen  and (min-width: 500px) and (max-width: 1980px) {
-  body{
+ #title{
+  position: relative;
+  z-index: 1;
+  margin-left: 13.4em;
+  margin-top: 1.1em;
+  width: max-content;
+  font-size: 1.5em;
+} 
+
+body{
     font-size: 1.5em;
   }
 
@@ -96,8 +148,6 @@ li{
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    z-index: -1;
-    align-content: center;
 
   }
 
@@ -110,8 +160,8 @@ li{
 #hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
 #cheesedanishheader, #raspberrydanishheader, #biscuitheader,
 #bagelheader, #oatmealheader, #oatmealflavors{
-  font-family: 'Blacksword';
-  color: #baddbe;
+  font-family: "Olivade Regular";
+  color: #bb9733;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 5px;
@@ -132,10 +182,10 @@ li{
 #menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
 #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
 #menubagel, #menuoatmeal{
-  font-family: 'Blacksword';
+  font-family: "Olivade Regular";
   color: #ffff;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  background-color: #a5c8a9;
+  background-color: #45433e;
   border-radius: 10px;
   width: 20em;
   font-size: 1.1em;
@@ -255,7 +305,7 @@ li{
 }
 
 #limited{
-  font-family: 'Blacksword';
+  font-family: "Olivade Regular";
   color: #baddbe;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   margin-left: 8.8em;
@@ -494,14 +544,61 @@ li{
 
 @media screen and (min-width: 305px) and (max-width: 420px) {
 
+  #title{
+    margin-left: -3.2em;
+    margin-top: 1.7em;
+    font-size: 1.3em;
+  }
+
+  #location{
+    margin-left: 4.3em;
+    font-size: 0.8em;
+  }
+
+  #break{
+    flex-basis: 1%;
+    height: 0em;
+    width: 0em;
+  }
+
+  #about{
+    margin-left: 2.3em;
+    margin-top: 0.5em;
+  }
+
+  #menu{
+    margin-left: -4.9em;
+    margin-top: 0.5em;
+  }
+
+  #call{
+    margin-top: 0.3em;
+    margin-left: 1.9em;
+  }
+
+
+  #house{
+    height: 7em;
+    width: 7em;
+  }
+
+  .topbuttons{
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    height: 2.5em;
+    width: max-content;
+    flex-wrap: wrap;
+
+  }
+
   #menucoffee, .menutea,
   #menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
   #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
   #menubagel, #menuoatmeal{
-    font-family: 'Blacksword';
-    color: #ffff;
+    font-family: "Olivade Regular";
+    color: #ccbd49;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-    background-color: #a5c8a9;
+    background-color: #333633;
     border-radius: 10px;
     width: 90vw;
     font-size: 1.1em;
@@ -514,8 +611,8 @@ li{
 #hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
 #cheesedanishheader, #raspberrydanishheader, #biscuitheader,
 #bagelheader, #oatmealheader, #oatmealflavors{
-  font-family: 'Blacksword';
-  color: #baddbe;
+  font-family: "Olivade Regular";
+  color: #ffffff;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 5px;
@@ -549,17 +646,17 @@ li{
 }
 #hot{
   position: relative;
-  margin-top: 2em;
-  font-size: 1.4em;
-  margin-left: 1em;
+  margin-top: 1.4em;
+  font-size: 1.7em;
+  margin-left: 2em;
   
 }
 
 #iced{
   position: relative;
-  margin-top: 1em;
-  font-size: 1.4em;
-  margin-left: 00.7em;
+  margin-top: 0.7em;
+  font-size: 1.7em;
+  margin-left: 2em;
 
 }
 
@@ -586,7 +683,7 @@ li{
 }
 
 .subsixhot{
-  margin: 1em 0vw 0vh -1.9em;
+  margin: 1em 0vw 0vh -0.9em;
 }
 
 .subsixcold{
@@ -596,21 +693,21 @@ li{
 
 #milknote{
   position: relative;
-  margin-top: -2.05em;
+  margin-top: -1.05em;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 #stroop{
   position: relative;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   text-decoration: underline;
   text-underline-position: under;
 }
 
 #icednote{
   position: relative;
-  margin-top: -1.8em;
+  margin-top: 0.2em;
   text-align: center;
 }
 
@@ -629,8 +726,8 @@ li{
 
 #teatype{
   position: relative;
-  margin: 4vh 1vw 1vh 1vw;
-  font-size: 1.2em;
+  margin: 4vh 1vw 1vh 1.6em;
+  font-size: 1.4em;
 }
 
 #teaprice{
@@ -646,7 +743,7 @@ li{
 
 #glass{
   position: relative;
-  margin: 1vh 0vw 0vh 2vw;
+  margin: 1vh 0vw 0vh 2em;
   font-size: 1.5em;
   padding-bottom: 17px;
   padding-top: 4px;
@@ -664,36 +761,8 @@ li{
   margin-top: 12vh;
 }
 
-#waterheader{
-  position: relative;
-  margin-top: 3vh;
-  font-size: 2em;
-}
-
 #limited{
-  font-family: 'Blacksword';
-}
-
-#menuwater{
-  position: relative;
-  margin-top: 10vh;
-}
-
-#glasswater{
-  position: relative;
-  margin: 2vh 0vw 0vh 32vw;
-  font-size: 1.5em;
-}
-
-#wp{
-  position: relative;
-  margin: -3.8vh 6vw 0vh 100vw;
-}
-
-#waterprice{
-  position: relative;
-  margin: -1vh 0vw 0vh -30vw;
-  padding-bottom: 1.4vh;
+  font-family: 'Olivade Regular';
 }
 
 #hotchocheader{
@@ -704,26 +773,26 @@ li{
 
 #limited{
   position: relative;
-  color: #baddbe;
+  color: #ffffff;
   text-shadow: 2px 2px 1px #000000;
-  margin: -2vh 0vw 0vh 28vw;
+  margin: -2vh 0vw 0vh 35vw;
   font-size: 1.5em;
 }
 
 #regormint{
   font-size: 1.3em;
-  margin: 0vh 0vw 0vh 23vw;
+  margin: 0vh 0vw 0vh 5.4em;
 }
 
 #glasshotchoc{
   position: relative;
-  margin: 1vh 0vw 0vh -58vw;
-  font-size: 1.5em;
+  margin: 1vh 0vw 0vh -54vw;
+  font-size: 1.8em;
 }
 
 #hcp{
   position: relative;
-  margin: -3.8vh 6vw 0vh 8vw;
+  margin: -3.8vh 2em 0vh 1em;
 }
 
 #addins{
@@ -748,7 +817,7 @@ li{
 
 #cp1{
   position: relative;
-  margin: 0vh 0vw 0vh 41vw;
+  margin: 0vh 0vw 0vh 42vw;
 }
 #ham{
   position: relative;
@@ -758,7 +827,7 @@ li{
 
 #cp2{
   position: relative;
-  margin: -.03vh 0vw 0vh 33.8vw;
+  margin: -.03vh 0vw 0vh 34.8vw;
 } 
 
 #cp3{
@@ -768,13 +837,23 @@ li{
 
 #cp4{
   position: relative;
-  margin: 0vh 0vw 0vh 38vw;
+  margin: 0vh 0vw 0vh 40vw;
+}
+
+#spinach{
+  position: relative;
+  margin: 0vh 0vw 0vh -7.8vw;
+}
+
+#cp5{
+  position: relative;
+  margin: 0vh 0vw 0vh 6.5em;
 }
 
 #croissantflavors{
   text-align: center;
   position: relative;
-  margin: 2vh 0vw 0vh 8vw;
+  margin: 2vh 0vw 0vh 16vw;
   width: 100vw;
   font-size: 1.2em
 }
@@ -787,6 +866,7 @@ li{
 #scones{
   position: relative;
   margin-top: 1vh;
+  margin-left: -0.3em;
   font-size: 3em;
 }
 
@@ -798,13 +878,13 @@ li{
 
 #blueberry{
   position: relative;
-  margin: 1.3vh 0vw 0vh 2vw;
+  margin: 1.3vh 0vw 0vh 3.2em;
   font-size: 1.2em;
 }
 
 #bp{
   position: relative;
-  margin: 1.9vh 0vw 0vh 45vw;
+  margin: 0.6em 0vw 0vh 38vw;
 }
 
 #brownsugarcakeheader{
@@ -827,12 +907,12 @@ li{
 #slice{
   font-size: 1.1em;
   position: relative;
-  margin: .7vh -4vw 0vh 28vw;
+  margin: 0.6em -4vw 0vh 8em;
 }
 
 #sliceprice{
   position: relative;
-  margin: 1vh 0vw 0vh 50vw;
+  margin: 0.6em 0vw 0vh 50vw;
 }
 
 #cheesedanishheader{
@@ -849,12 +929,12 @@ li{
 
   #slicecheese{
     position: relative;
-    margin: 1.4vh -10vw 0vh 4vw;
+    margin: 1.4vh -10vw 0vh 4em;
     }
 
     #slicepricecheese{
     position: relative;
-    margin: 1.3vh 0vw 0vh 58vw;
+    margin: 1.3vh 0vw 0vh 50vw;
     }
 
   #raspberrydanishheader{
@@ -865,12 +945,13 @@ li{
 
   #sliceraspberry{
   position: relative;
-  margin: 1.4vh -10vw 0vh 4vw;
+  margin: 1.4vh -10vw 0vh 4em;
+  width: max-content;
   }
 
   #slicepriceraspberry{
   position: relative;
-  margin: 1.3vh 0vw 0vh 58vw;
+  margin: 1.3vh 0vw 0vh 50vw;
   }
 
 #menuraspberrydanish{
@@ -892,7 +973,7 @@ li{
   }
 
   #biscuitprice1{
-    margin-left: -7vw;
+    margin-left: 0.5em;
   }
 
   #biscuitprice2{
@@ -908,7 +989,8 @@ li{
 
   #fixings{
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 2.5em;
+    margin-left: 1.4em;
   }
 
   #bagelheader{
@@ -919,7 +1001,7 @@ li{
 
   #bagelprice{
     text-align: center;
-    margin-left: 10vw;
+    margin-left: 4em;
     padding-top: 10px;
     width: 100%;
   }
@@ -927,6 +1009,7 @@ li{
   #fixings2{
     text-align: center;
     margin-top: 6vh;
+    margin-left: 1.7em;
   }
 
   #bagelprice1{
@@ -962,24 +1045,24 @@ li{
 
   #oatmealprice1{
   position: relative;
-  margin: 1.9vh -150vw 0vh -0vw;
+  margin: 1.9vh -150vw 0vh 1.5em;
   width: 100vw;
   font-size: 1.3em;
   }
 
   #oatmealprice2{
   position: relative;
-  margin: 1.9vh 0vw 0vh 117vw;
+  margin: 1.9vh 0vw 0vh 25.6em;
   }
 
   #pecans{
   position: relative;
-  margin: 1.3vh 0vw 0vh 3vw;
+  margin: 1.3vh 0vw 0vh 1.2em;
   }
 
   #pecanprice{
   position: relative;
-  margin: -3.2vh 0vw 0vh 69vw;
+  margin: -3.2vh 0vw 0vh 16.7em;
 
   }
 

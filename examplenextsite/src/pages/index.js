@@ -27,7 +27,12 @@ export default function Home() {
       </Head>
      
       <div id="headertext">
-  <div id="title">Liberty House Specialties</div>
+        
+
+  <div class="image-container">
+    <img id="house" src="/images/house.png" alt="Tea"></img>
+    <div class="menu-content">
+    <div id="title">Liberty House Specialties</div>
   <div id="location">11652 Liberty Street, Clinton LA</div>
   <div className="topbuttons">
   <button  id="about" onClick={handleAboutButtonClick}>
@@ -36,11 +41,17 @@ export default function Home() {
   <button id="menu" onClick={handleMenuButtonClick}>
     Our Menu
   </button>
+<div id="break"></div>
+
   <a href="tel:+1234567890" id="call">
     <button  id="call">
       Call in your order
     </button>
   </a>
+  </div>
+
+      
+  </div>
   </div>
 </div>
 <div
@@ -82,23 +93,13 @@ export default function Home() {
     <div class="menu-content"><div id="orangeheader">Orange Juice</div>
           <div id="menuorange"> 
           <li id="orangeprice">
-            <div id="wholeorange"><div id="glass">By the glass</div>
+            <div id="wholeorange"><div id="glass">By the bottle</div>
             <div id="op">...1.89</div></div></li>
           </div> 
     </div>
     </div>
     
 
-    <div class="image-container">
-    <img id="waterimage" src="/images/water.png" alt="Water"></img>
-    <div class="menu-content">
-    <div id="waterheader">Bottled Water</div><div id="menuwater">
-        <li id="waterprice"><div id="wholewater">
-          <div id="glasswater">By the bottle</div>
-          <div id="wp">...0.99</div></div></li>
-        </div>
-    </div>
-    </div>
 
 <div class="image-container">
     <img id="hotchocimage" src="/images/hotchoc.png" alt="Hot Chocolate"></img>
@@ -125,6 +126,8 @@ export default function Home() {
         <div id="croissantflavor">Buttered</div><div id="cp1">...2.95</div></li>  
         <li id="ham">
         <div id="croissantflavor">Ham and Swiss</div><div id="cp2">...5.75</div></li>
+        <li id="spinach">
+        <div id="croissantflavor">Spinach and Feta</div><div id="cp5">...5.75</div></li>
         <li id="almond">
         <div id="croissantflavor">Almond</div><div id="cp3">...3.95</div></li>
         <li id="chocolate">
