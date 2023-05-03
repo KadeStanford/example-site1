@@ -26,12 +26,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      
-      <div id="headertext">
+      
         
 
   <div class="image-container">
-    <img id="house" src="/images/house.png" alt="Tea"></img>
-    <div class="menu-content">
+    <img id="house" src="/images/house.png" alt="house"></img>
+    <div class="menu-top">
     <div id="title">Liberty House Specialties</div>
   <div id="location">11652 Liberty Street, Clinton LA</div>
   <div className="topbuttons">
@@ -41,19 +41,17 @@ export default function Home() {
   <button id="menu" onClick={handleMenuButtonClick}>
     Our Menu
   </button>
-<div id="break"></div>
-
-  <a href="tel:+1234567890" id="call">
     <button  id="call">
-      Call in your order
+      <a href="tel:+1234567890" id="callb">
+      Call in your order</a>
     </button>
-  </a>
+  
   </div>
 
       
-  </div>
-  </div>
-</div>
+  </div></div>
+ 
+
 <div
         id="images"
         style={{
@@ -199,7 +197,7 @@ export default function Home() {
                 <div class="menu-content">
                 <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
       <div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.79</div>
-      </li> <div id="pecans">Add Choppped Pecans</div><div id="pecanprice">...0.65</div></div>
+      </li> <div id="pecans">Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
                 </div>
                 </div>
 </div>
