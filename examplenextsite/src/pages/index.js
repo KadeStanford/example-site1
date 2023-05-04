@@ -39,7 +39,7 @@ export default function Home() {
     Our Menu
   </button>
     <button  id="call">
-      <a href="tel:+1234567890" id="callb">
+      <a href="tel:+2256839342" id="callb">
       Call in your order</a>
     </button>
   
