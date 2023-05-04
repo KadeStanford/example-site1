@@ -49,14 +49,14 @@ export default function Home() {
   </div></div>
  
 
-<div
-id="images"
-style={{
-  display: aboutButtonClicked && !menuButtonClicked ? 'none' : 'block',
-  transition: 'display 0.5s ease-in-out',
-}}
-
-      >
+  <div
+  id="images"
+  style={{
+    opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
+    visibility: aboutButtonClicked && !menuButtonClicked ? 'hidden' : 'visible',
+    transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+  }}
+>
   <div class="image-container">
     <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
     <div class="menu-content">
@@ -219,7 +219,14 @@ style={{
 >
 
         <div id="aboutus"><div id="hours">Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
-          </br>Sat - 7AM to 12PM</div><h1 id="aboutblurb"><div id="textblurb">About us: <br></br>Liberty House, Circa 1868,
+          </br>Sat - 7AM to 12PM</div><h1 id="aboutblurb"><div id="textblurb">Thank you for allowing us to be
+          a part of your day!<br></br><br></br>
+          11652 Liberty Street<br></br>
+          Clinton, LA 70722
+          <br></br>
+          <a>(225) 683-9342</a>
+          <br></br>
+         <br></br>About us: <br></br>Liberty House, Circa 1868,
           housed the first general store in
           the Feliciana parishes. Standing
           tall, Liberty House still proudly
@@ -228,13 +235,7 @@ style={{
           products, service, and long-term
           relationships with the members
           of our community.
-          Thank you for allowing us to be
-          a part of your day!<br></br><br></br>
-          11652 Liberty Street<br></br>
-          Clinton, LA 70722
-          <br></br>
-          <a>(225) 683-9342</a>
-         <br></br>
+          
           </div></h1>
 
           
