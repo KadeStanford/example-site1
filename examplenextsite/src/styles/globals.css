@@ -15,6 +15,9 @@
   color: #d0b155;
 }
 
+
+
+
 #location{
    position: relative;
   z-index: 1;
@@ -27,9 +30,10 @@
 body{
   background-color: #4c504d;
   overflow-x: hidden;
+  overflow-x: hidden;
   background-size: 100vw;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .image-container {
@@ -63,58 +67,120 @@ li{
   flex-direction: row;
 }
 
+
+
 @media screen  and (min-width: 900px) and (max-width: 1980px) {
+  html, body {
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  
   #blueberryimage, #coffeeimage, #waterimage, 
   #orangeimage, #teaimage, #croissantimage, #hotchocimage, 
   #brownimage, #cheesedanishimage, #raspberrydanishimage, #biscuitimage,
-  #bagelimage, #oatmealimage{
+  #bagelimage, #oatmealimage, #eggimage{
     border-radius: 10px;
     opacity:  0.90;
     margin:  1em 0em 0em 0em;
     width: 25em;
     height: 22em;
-    box-shadow: 2px 2px 7px 7px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.6);
   }
+
+  #images {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; 
+    justify-content: space-between !important;
+    margin-left: 0em !important;
+    margin-top: 5em !important;
+    height: 10vh !important;
+  }
+  
+
+
+  #aboutus{
+    height: auto;
+    width: 50vw;
+    font-size: 6.3vw;
+    margin-left: 0.7em;
+    margin-top: 25vh;
+  }
+ 
+  #aboutblurb{
+    background-color: #333633;
+    border-radius: 10px;
+    padding-right: 0.8em;
+    padding-top: 20vh;
+    margin-top: -15vh;
+    margin-left: 1.3em;
+    text-align: center;
+    width: 70vw;
+    font-family: "Olivade Regular";
+    color: #bb9733;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    font-size: 5.5vw;
+  }
+
+  #textblurb{
+    margin-top: -5vh;
+    margin-left: .97em;
+    width: auto;
+  }
+  
+  #hours{
+    margin-top: -19vh;
+    margin-left: 3.4em;
+    text-align: center;
+    width: 50vw;
+    font-size: 4.7vw;
+    font-family: "Olivade Regular";
+    color: #bb9733;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 2vh;
+  }
+
+
   #title{
     font-family: "Olivade Regular";
-    color: #000000;
-    text-shadow: 2px 2px 1px rgba(240, 210, 35, 0.8);
-    margin-left: 5.8em;
-    margin-top: 30vh;
+    color: #c2ab39;
+    text-shadow: 6px 4px 1px rgba(0, 0, 0, 0.8);
+    margin-left: 30vw;
+    margin-top: 31vh;
     font-size: 5vw;
-    width: max-content;
   }
 
   .menu-top{
-    align-content: center;
+    width: 80vw;
+    height: auto;
   }
 
   #location{
     font-family: "Olivade Regular";
-    color: #000000;
-    text-shadow: 2px 2px 1px rgba(243, 200, 30, 0.8);
-    margin-left: 17.0em;
-    font-size: 1.7em;
-    width: max-content;
+    color: #c2ab39;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.8);
+    margin-left: 23.7em;
+    font-size: 1.7vw;
+    width: 80vw;
   }
   
   #house{
     border-radius: 10px;
-    opacity:  0.90;
-    margin:  1em 0em 0em 3.5em;
-    width: 40vw;
-    height: 15em;
-    box-shadow: inset 0px 2px 10px 4px rgba(0, 0, 0, 0.6);
-    height: auto;
-    padding-left: 20em;
-    padding-right: 20em;
+    opacity:  1;
+    margin:  1vh 0em 0em 35.2vw;
+    width: 33vw;
+    height: 50vh;
+    padding-bottom: 6em;
+    padding-left: 00vw;
+    padding-right: 0vw;
   }
 
   .topbuttons{
     display: flex;
     flex-direction: row;
-    margin-left: 33em;
-    margin-top: 10em;
+    margin-left: 38vw;
+    margin-top: 22vh;
     width: 100em;
     align-content: center;
   }
@@ -140,41 +206,34 @@ body{
   margin-right: -1.2em;
 }
 
-  #images{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-  }
-
   #about{
   font-size: 3vw;
-  margin-left: -7em;
+  margin-left: 0.3em;
   margin-top: -13vh;
   }
 
   #menu{
     font-size: 3vw;
-    margin-left: 3em;
+    margin-left: 0.1em;
     margin-top: -13vh;
   }
 
   #call{
     font-size: 3vw;
-    margin-left: 3em;
-    margin-top: -13vh;
+    margin-left: -7.89em;
+    margin-top: -2vh;
+    width: 24.8vw;
   }
 
   .menu-content{
     width: 1em;
   }
 
-  #menucoffeeheader, .tealist, 
+#menucoffeeheader, .tealist, 
 #orangeheader, #waterheader, 
 #hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
 #cheesedanishheader, #raspberrydanishheader, #biscuitheader,
-#bagelheader, #oatmealheader, #oatmealflavors{
+#bagelheader, #oatmealheader, #oatmealflavors, #eggheader{
   font-family: "Olivade Regular";
   color: #bb9733;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
@@ -196,7 +255,7 @@ body{
 #menucoffee, .menutea,
 #menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
 #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
-#menubagel, #menuoatmeal{
+#menubagel, #menuoatmeal, #menuegg{
   font-family: "Olivade Regular";
   color: #d4b03c;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
@@ -250,24 +309,40 @@ body{
 
 .menutea{
   height: 4em;
-  margin-top: 3.9em;
+  margin-top: 0.3em;
 }
 
 #teasix{
+  margin-left: 1.9em;
+  margin-top: 1.9em;
+}
+
+.tealist{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
 }
 
 #teatype{
-  margin-top: 1em;
-  margin-left: 1em;
+  margin-top: 1.3em;
+  margin-left: 0.4em;
 }
 
 #teaprice{
-  margin-top: 1.1em;
+  margin-top: 1.4em;
   margin-left: 5em;
 }
 
+#orangeheader{
+  margin-top: 1em;
+  margin-left: -3.7em;
+  text-align: center;
+  font-size: 2.1em;
+}
+
 #menuorange{
-  margin-top: 6em;
+  margin-top: 4.4em;
   height: 4em;
 }
 
@@ -278,12 +353,19 @@ body{
 }
 
 #op{
-  margin-top: -1.6em;
+  margin-top: -1.2em;
   margin-left: 16em;
 }
 
+#hotchocheader{
+  margin-top: 1em;
+  margin-left: -4.3em;
+  text-align: center;
+  font-size: 2.1em;
+}
+
 #menuhotchoc{
-  margin-top: 3em;
+  margin-top: 1em;
   margin-left: 0.8em;
   height: auto;
 }
@@ -295,30 +377,38 @@ body{
 #addins{
   text-align: center;
   margin-top: 3em;
-  margin-left: 1.7em;
+  margin-left: 3em;
 }
 
 #glasshotchoc{
   margin-top: 1em;
-  margin-left: -12em;
+  margin-left: -13em;
   font-size: 1.1em;
+}
+
+#croissantheader{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
 }
 
 #limited{
   font-family: "Olivade Regular";
-  color: #d2b345;
+  color: #ba9f3f;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  margin-left: 9.8em;
+  margin-left: 5.3em;
+  font-size: 2vw;
   width: max-content;
 }
 
 #hcp{
   margin-top: -1.3em;
-  margin-left: 1em;
+  margin-left: -0.3em;
 }
 
 #menucroissant{
-  margin-top: 2.7em;
+  margin-top: 1.0em;
   height: 9.9em;
 }
 
@@ -328,13 +418,23 @@ body{
   text-align: center;
 }
 
+#buttered{
+  margin-top: 1em;
+  margin-left: 0.2em;
+  text-align: center;
+}
+
+#ham{
+  margin-left: -0.6em;
+}
+
 #cp1{
   margin-top: 0em;
   margin-left: 10.5em;
 }
 
 #cp2{
-  margin-left: 7.8em;
+  margin-left: 8.5em;
 }
 
 #cp3{
@@ -355,8 +455,16 @@ body{
   margin: 0vh 0vw 0vh 8.1em;
 }
 
+#scones{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
+
+}
+
 #menuscone{
-  margin-top: 6.3em;
+  margin-top: 3.7em;
   height: 3.9em;
 }
 
@@ -371,6 +479,10 @@ body{
   margin-left: 10em;
 }
 
+#cakeprice{
+  margin-top: -2.7em;
+}
+
 #slice{
   margin-top: 1em;
   margin-left: 1.5em;
@@ -382,13 +494,27 @@ body{
   margin-left: 10em;
 }
 
+#brownsugarcakeheader{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
+}
+
 #menubrownsugarcake{
   margin-top: 4.1em;
   height: 3.9em;
 }
 
+#cheesedanishheader{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
+}
+
 #menucheesedanish{
-  margin-top: 6.3em;
+  margin-top: 3.8em;
   height: 3.9em;
 }
 
@@ -403,8 +529,15 @@ body{
   margin-left: 9.4em;
 }
 
+#raspberrydanishheader{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
+}
+
 #menuraspberrydanish{
-  margin-top: 6.3em;
+  margin-top: 3.8em;
   height: 3.9em;
 }
 
@@ -420,9 +553,16 @@ body{
 }
 
 #menubiscuit{
-  margin-top: 2.3em;
+  margin-top: 0.5em;
   margin-left: 1.5em;
   height: auto;
+}
+
+#biscuitheader{
+  margin-top: 1em;
+  margin-left: -4.0em;
+  text-align: center;
+  font-size: 2.1em;
 }
 
 #biscuitprice1{
@@ -433,18 +573,26 @@ body{
 
 #biscuitprice2{
   margin-top: 1em;
-  margin-left: 6em;
+  margin-left: 3.8em;
 }
 
 #fixings{
   text-align: center;
   font-size: 0.9em;
-  margin-top: 3.8em;
+  margin-top: 1.8em;
   margin-left: 2.4em;
+  padding-bottom: 40px;
+}
+
+#bagelheader{
+  margin-top: 1em;
+  margin-left: -3.6em;
+  text-align: center;
+  font-size: 2.1em;
 }
 
 #menubagel{
-  margin-top: 2.3em;
+  margin-top: 0.4em;
   margin-left: 2.3em;
   height: auto;
 }
@@ -464,14 +612,62 @@ body{
 #fixings2{
   text-align: center;
   font-size: 0.9em;
-  margin-top: 2em;
+  margin-top: 1.6em;
   margin-left: 2.4em;
+  padding-bottom: 15px;
 }
+
+#eggheader{
+  position: relative;
+  margin-top: 5.3vh;
+  margin-left: -4.3em;
+  font-size: 2.3em;
+  }
+
+  #menuegg{
+    height: auto;
+    margin-left: 1.4em;
+    margin-top: 2.5em;
+  }
+
+  #eggprice{
+    text-align: center;
+    margin-left: 3.3em;
+    margin-top: 7.5vh;
+  }
+
+  #eggprice1{    
+    margin-left: -1em;
+    margin-top: 1.5vh;
+  }
+
+  #eggprice2{
+    margin-left: 4.3em;
+    margin-top: 1.7vh;
+  }
+
+  #eggfixings{
+    text-align: center;
+    margin-left: 2.3em;
+    margin-top: 1.5vh;
+  }
 
 #menuoatmeal{
   margin-top: 2.3em;
   margin-left: 1.4em;
   height: 5em;
+}
+
+#oatmealheader{
+  margin-top: 1em;
+  margin-left: -4.3em;
+  font-size: 2.2em;
+}
+
+#oatmealflavors{
+  margin-top: -0.6em;
+  margin-left: -1.5em;
+  text-align: center;
 }
 
 #oatmealimage{
@@ -502,9 +698,54 @@ body{
 }
 }
 
+
+
 @media screen and (min-width: 280px) and (max-width: 499px) {
   html, body {
     overflow-x: hidden;
+    height: 100vh;
+  }
+
+  #aboutus{
+    height: auto;
+    width: 50vw;
+    font-size: 6.3vw;
+    margin-left: 0.7em;
+    margin-top: 25vh;
+  }
+ 
+  #aboutblurb{
+    background-color: #333633;
+    border-radius: 10px;
+    padding-right: 0.8em;
+    padding-top: 20vh;
+    margin-top: -15vh;
+    margin-left: 1.3em;
+    text-align: center;
+    width: 70vw;
+    font-family: "Olivade Regular";
+    color: #bb9733;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    font-size: 5.5vw;
+  }
+
+  #textblurb{
+    margin-top: -5vh;
+    margin-left: .97em;
+    width: auto;
+  }
+  
+  #hours{
+    margin-top: -19vh;
+    margin-left: 3.4em;
+    text-align: center;
+    width: 50vw;
+    font-size: 4.7vw;
+    font-family: "Olivade Regular";
+    color: #bb9733;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 2vh;
   }
 
   #images{
@@ -521,49 +762,52 @@ body{
 
   #title{
     font-family: "Olivade Regular";
-    color: #000000;
-    text-shadow: 2px 2px 1px rgba(240, 210, 35, 0.8);
-    margin-left: 1.0em;
-    font-size: 2.7em;
+    color: #c2ab39;
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.8);
+    margin-left: 1.2em;
+    margin-top: 26vh;
+    font-size: 9.76vw;
     width: max-content;
   }
 
   .menu-top{
     margin-left: -1em;
     margin-right: 1em;
-    margin-top: 1.6em;
-    margin-bottom: 1em;
-    width: 90em;
+    margin-top: 1.6vh;
+    margin-bottom: 1vh;
+    width: 90vw;
     font-size: 3.6vw;
     align-content: center;
   }
 
   #location{
     font-family: "Olivade Regular";
-    color: #000000;
-    text-shadow: 2px 2px 1px rgba(243, 200, 30, 0.8);
+    color: #c2ab39;
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.8);
     margin-top: .1em;
-    margin-left: 2.8em;
-    font-size: 1.7em;
-    width: max-content;
+    margin-left: 3.7em;
+    font-size: 5.7vw;
+    width: 80vw;
   }
   
   #house{
     border-radius: 10px;
-    opacity:  0.90;
-    margin:  1em 0em 0em 0.7em;
-    width: 90vw;
-    height: 15em;
-    box-shadow: inset 0px 2px 10px 4px rgba(0, 0, 0, 0.6);
-    height: auto;
+    opacity:  1.90;
+    margin:  1em 0em 0em .7vw;
+    width: 86vw;
+    height: 38vh;
+    padding-bottom: 5em;
+    padding-left: 1.9em;
+    padding-right: 1.45vw;
   }
 
   .topbuttons{
     display: flex;
     flex-direction: row;
-    margin-left: 13vw;
-    margin-top: 10em;
-    width: 100em;
+    margin-left: 2.8em;
+    margin-top: 4.7vh;
+    width: 100vw;
+    font-size: 3.3vw;
     align-content: center;
   }
 
@@ -580,19 +824,19 @@ body{
   }
 
   button{
-    font-size: 1.5em;
+    font-size: 6vw;
   }
   
 
   #blueberryimage, #coffeeimage, #waterimage, 
 #orangeimage, #teaimage, #croissantimage, #hotchocimage, 
 #brownimage, #cheesedanishimage, #raspberrydanishimage, #biscuitimage,
-#bagelimage, #oatmealimage{
+#bagelimage, #oatmealimage, #eggimage{
   border-radius: 10px;
   opacity:  0.90;
-  margin:  1em 0em 0em -1em;
+  margin:  1em 0em 0em -1vw;
   width: 90vw;
-  height: 22em;
+  height: 45vh;
   box-shadow: 2px 2px 7px 7px rgba(0, 0, 0, 0.6);
 }
 
@@ -601,7 +845,7 @@ body{
   #menucoffee, .menutea,
   #menuorange, #menuwater, #menuhotchoc, #menucroissant, #menuscone, 
   #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
-  #menubagel, #menuoatmeal{
+  #menubagel, #menuoatmeal, #menuegg{
     font-family: "Olivade Regular";
     color: #ccbd49;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
@@ -615,15 +859,16 @@ body{
 #orangeheader, #waterheader, 
 #hotchocheader, #croissantheader, #scones, #brownsugarcakeheader,
 #cheesedanishheader, #raspberrydanishheader, #biscuitheader,
-#bagelheader, #oatmealheader, #oatmealflavors{
+#bagelheader, #oatmealheader, #oatmealflavors, #eggheader{
   font-family: "Olivade Regular";
-  color: #ffffff;
+  color: #e1ba2c;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 5px;
   text-align: center;
   font-size: 4.4vw;
   width: 100%;
+  height: auto;
 }
 
   #images{
@@ -634,7 +879,8 @@ body{
     position: relative;
     z-index: -1;
     align-content: center;
-    margin-left: 47vw;
+    margin-top: 1vh;
+    margin-left: 4vw;
   }
   
 
@@ -648,14 +894,13 @@ body{
   
 #menucoffee{
   position: relative;
-  height: auto;
-  margin-left: 0.7vh;
+  margin-left: 3.9vw;
 }
 
 
 #hot{
   position: relative;
-  margin-top: 1.4em;
+  margin-top: 1.9vh;
   font-size: 7.4vw;
   margin-left: 1.5em;
   
@@ -663,42 +908,48 @@ body{
 
 #iced{
   position: relative;
-  margin-top: 0.7em;
+  margin-top: 1.7vh;
   font-size: 7.4vw;
   margin-left: 1.4em;
 
 }
 
+#coffeeimage{
+  height: auto;
+}
+
 .coffeelistsix{
-  position: relative;
-  width: 10em;
+  width: 10vw;
   font-size: 1em;
-  margin-top: 1vh;
+  margin-top: -2vh;
 }
 
 .coffeelisttwelve{
-  position: relative;
   margin-top: 1vh;
   width: 1em;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .subtwelvecold{
+  margin-top: 3vh;
   font-size: 4.4vw;
   margin-left: 0.9em;
 }
 
 .subtwelvehot{
+  margin-top: 3vh;
   font-size: 4.4vw;
   margin-left: 1em;
 }
 
 .subsixhot{
+  margin-top: 1vh;
   font-size: 4.4vw;
   margin-left: .5em;
 }
 
 .subsixcold{
+  margin-top: 1vh;
   font-size: 4.4vw;
   margin-left: 0.5em;
 }
@@ -706,9 +957,8 @@ body{
 
 #milknote{
   margin-top: 1vh;
-  position: relative;
   text-align: center;
-  font-size: 3.4vw;
+  font-size: 4.4vw;
   margin-left: -1em;
 }
 
@@ -716,13 +966,11 @@ body{
   margin-top: -3vh;
   text-decoration: underline;
   text-underline-position: under; 
-  font-size: 5.4vw;
   margin-left: 1.4em;
 }
 
 #icednote{
   text-align: center;
-  font-size: 4.4vw;
   margin-left: 1.4em;
 }
 
@@ -739,7 +987,7 @@ body{
   margin-top: 6vh;
   height: 100px;
   justify-content: center;
-  margin-left: 0.7vh;
+  margin-left: 1.9vh;
 }
 
 #teatype{
@@ -783,8 +1031,7 @@ body{
 #menuorange{
   position: relative;
   margin-top: 12vh;
-  
-  margin-left: 0.7vh;
+  margin-left: 1.9vh;
 }
 
 #limited{
@@ -801,7 +1048,7 @@ body{
 
 #limited{
   position: relative;
-  color: #ffffff;
+  color: #e1ba2c;
   text-shadow: 2px 2px 1px #000000;
   font-size: 5vw;
   margin-left: 6em;
@@ -839,7 +1086,7 @@ body{
   position: relative;
   margin-top:2vh;
   height: auto;
-  margin-left: 0.9vh;
+  margin-left: 1.9vh;
 }
 
 #croissantheader{
@@ -896,7 +1143,7 @@ body{
   position: relative;
   margin-top: 5vh;
   font-size: 4.4vw;
-  margin-left: 0.4em;
+  margin-left: 0.9em;
 }
 
 #scones{
@@ -911,8 +1158,7 @@ body{
   position: relative;
   margin-top: 8vh;
   height: 50px;
-  
-  margin-left: 0.9vh;
+  margin-left: 1.9vh;
 }
 
 #blueberry{
@@ -942,8 +1188,7 @@ body{
   position: relative;
   margin-top: 7vh;
   height: 50px;
-  
-  margin-left: 0.7vh;
+  margin-left: 1.9vh;
 }
 
 #cakeprice{
@@ -976,8 +1221,7 @@ body{
   position: relative;
   margin-top: 10vh;
   height: 50px;
-  
-  margin-left: 0.7vh;
+  margin-left: 1.9vh;
   }
 
   #slicecheese{
@@ -1020,13 +1264,13 @@ body{
   position: relative;
   margin-top: 10vh;
   height: 50px;
-  margin-left: 0.7vh;
+  margin-left: 1.9vh;
   }
 
   #biscuitheader{
   position: relative;
   margin-top: 1vh;
-  font-size: 1.9em;
+  font-size: 2.9em;
   }
 
   #biscuitprice{
@@ -1051,7 +1295,7 @@ body{
 #menubiscuit{
   position: relative;
   font-size: 4.23vw;
-  margin-left: 0.4em;
+  margin-left: 1em;
   margin-top: 5.5vh;
   height: auto;
   }
@@ -1066,13 +1310,13 @@ body{
   #bagelheader{
   position: relative;
   margin-top: 1vh;
-  font-size: 1.9em;
+  font-size: 2.9em;
   }
 
   #menubagel{
     height: auto;
     font-size: 4.23vw;
-    margin-left: 0.4em;
+    margin-left: 1em;
     margin-top: 1.5vh;
   }
 
@@ -1108,17 +1352,57 @@ body{
   }
 
 
+  #eggheader{
+  position: relative;
+  margin-top: 3vh;
+  font-size: 2.3em;
+  }
+
+  #menuegg{
+    height: auto;
+    font-size: 4.23vw;
+    margin-left: 1em;
+    margin-top: 1.5vh;
+  }
+
+  #eggprice{
+    text-align: center;
+    font-size: 4.53vw;
+    margin-left: 2.3em;
+    margin-top: 7.5vh;
+  }
+
+  #eggprice1{    
+    font-size: 5.23vw;
+    margin-left: -1em;
+    margin-top: 1.5vh;
+  }
+
+  #eggprice2{
+    font-size: 4.23vw;
+    margin-left: 4.3em;
+    margin-top: 1.5vh;
+  }
+
+  #eggfixings{
+    text-align: center;
+    font-size: 4.23vw;
+    margin-left: 1.7em;
+    margin-top: 1.5vh;
+  }
+
+
   #oatmealheader{
   position: relative;
   margin-top: 1vh;
-  font-size: 2.0em;
+  font-size: 12.0vw;
   }
 
 #menuoatmeal{
   position: relative;
   margin-top: 7vh;
   height: 6em;
-  margin-left: 0.7vh;
+  margin-left: 1em;
   }
 
   #oatmealprice{
@@ -1155,6 +1439,14 @@ body{
   font-size: 4.23vw;
   margin-left: 15.6em;
   margin-top: -2.7vh;
+
+  }
+
+  #oatmealflavors{
+  position: relative;
+  font-size: 8.23vw;
+  margin-left: .1em;
+  margin-top: -1vh;
 
   }
 

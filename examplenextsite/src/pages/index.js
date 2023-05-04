@@ -25,12 +25,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     
-      
-        
 
   <div class="image-container">
-    <img id="house" src="/images/house.png" alt="house"></img>
+    <img id="house" src="/images/house6.png" alt="house"></img>
     <div class="menu-top">
     <div id="title">Liberty House Specialties</div>
   <div id="location">11652 Liberty Street, Clinton LA</div>
@@ -53,11 +50,12 @@ export default function Home() {
  
 
 <div
-        id="images"
-        style={{
-          opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
-          transition: 'opacity 0.5s ease-in-out',
-        }}
+id="images"
+style={{
+  display: aboutButtonClicked && !menuButtonClicked ? 'none' : 'block',
+  transition: 'display 0.5s ease-in-out',
+}}
+
       >
   <div class="image-container">
     <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
@@ -177,8 +175,8 @@ export default function Home() {
             <img id="biscuitimage" src="/images/biscuit.jpg" alt="Biscuit"></img>
             <div class="menu-content">
               
-      <div id="biscuitheader">Build a Biscuit</div>
-      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.49</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
+      <div id="biscuitheader">Biscuits</div>
+      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.49</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
             </div>
             </div>
@@ -186,32 +184,63 @@ export default function Home() {
             <div class="image-container">
               <img id="bagelimage" src="/images/bagel.png" alt="Bagel"></img>
               <div class="menu-content">
-      <div id="bagelheader">Build a Bagel</div>
+      <div id="bagelheader">Bagels</div>
       <div id="menubagel"> <li id="bagelprice"><div id="bagelprice1">Plain Bagel w/ Butter<br></br></div><div id="bagelprice2">...2.69</div></li> <li id="fixings2">(Substitute Cinnamon Butter  ...0.30) <br></br>Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
               </div>
               </div>
 
               <div class="image-container">
-                <img id="oatmealimage" src="/images/oatmeal.jpg" alt="Oatmeal"></img>
+                <img id="eggimage" src="/images/egg.png" alt="Egg"></img>
                 <div class="menu-content">
-                <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
-      <div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.79</div>
-      </li> <div id="pecans">Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
-                </div>
-                </div>
+      <div id="eggheader">Egg Bites</div>
+      <div id="menuegg"> <li id="eggprice"><div id="eggprice1">Egg Bite* (2 per order)</div><div id="eggprice2">...5.99</div></li> <li id="eggfixings">*Options: 1. Ham and Cheddar Chili Pepper,
+<br></br>2. Prosciutto gruyere, 3. Spinach Feta</li></div>
+
+          </div>
+          </div>
+        <div class="image-container">
+          <img id="oatmealimage" src="/images/oatmeal.jpg" alt="Oatmeal"></img>
+          <div class="menu-content">
+          <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
+<div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.79</div>
+</li> <div id="pecans">Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
+          </div>
+          </div>
 </div>
 
+<div
+  id="aboutus1"
+  style={{
+    opacity: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 0 : 1,
+    visibility: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 'hidden' : 'visible',
+    transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+  }}
+>
 
+        <div id="aboutus"><div id="hours">Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
+          </br>Sat - 7AM to 12PM</div><h1 id="aboutblurb"><div id="textblurb">About us: <br></br>Liberty House, Circa 1868,
+          housed the first general store in
+          the Feliciana parishes. Standing
+          tall, Liberty House still proudly
+          serves the Feliciana parishes with
+          the same dedication to excellent
+          products, service, and long-term
+          relationships with the members
+          of our community.
+          Thank you for allowing us to be
+          a part of your day!<br></br><br></br>
+          11652 Liberty Street<br></br>
+          Clinton, LA 70722
+          <br></br>
+          <a>(225) 683-9342</a>
+         <br></br>
+          </div></h1>
 
-      <div id="menucontents" style={{
-          opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
-          transition: 'opacity 0.5s ease-in-out',
-        }}>
+          
+          </div>
 
-
-      
-</div>
+      </div>
     </>
   );
 }
