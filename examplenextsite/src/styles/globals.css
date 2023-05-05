@@ -40,6 +40,10 @@ body{
   position: relative;
 }
 
+.image-container1 {
+  position: relative;
+}
+
 .menu-content {
   position: absolute;
   top: 0;
@@ -93,7 +97,7 @@ li{
     flex-wrap: wrap !important; 
     justify-content: space-between !important;
     margin-left: 0em !important;
-    margin-top: 5em !important;
+    margin-top: 0.3em !important;
     height: 10vh !important;
   }
   
@@ -117,7 +121,7 @@ li{
     text-align: center;
     width: 70vw;
     font-family: "Olivade Regular";
-    color: #bb9733;
+    color: #f8c359;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
     font-size: 2.5vw;
   }
@@ -136,7 +140,7 @@ li{
     width: 50vw;
     font-size: 4.7vw;
     font-family: "Olivade Regular";
-    color: #bb9733;
+    color: #f8c359;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 2vh;
@@ -145,10 +149,10 @@ li{
 
   #title{
     font-family: "Olivade Regular";
-    color: #c2ab39;
-    text-shadow: 6px 4px 1px rgba(0, 0, 0, 0.8);
+    color: #f8c359;
+    text-shadow: 6px 4px 1px rgba(0, 0, 0, 0.9);
     margin-left: 30vw;
-    margin-top: 31vh;
+    margin-top: 2vh;
     font-size: 5vw;
   }
 
@@ -159,20 +163,27 @@ li{
 
   #location{
     font-family: "Olivade Regular";
-    color: #c2ab39;
-    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.8);
-    margin-left: 23.7em;
-    font-size: 1.7vw;
+    color: #f8c359;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.9);
+    margin-left: 20.3em;
+    font-size: 1.9vw;
     width: 80vw;
+    margin-top: -1.0vh;
+  }
+
+  .image-container1{
+    padding-bottom: 2vh;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 20px 5px rgba(0, 0, 0, 0.6);
   }
   
   #house{
     border-radius: 10px;
     opacity:  1;
-    margin:  1vh 0em 0em 35.2vw;
-    width: 33vw;
-    height: 50vh;
-    padding-bottom: 6em;
+    margin:  1vh 0em 0em 28.8vw;
+    width: 45vw;
+    height: 80vh;
+    padding-bottom: 0em;
     padding-left: 00vw;
     padding-right: 0vw;
   }
@@ -180,11 +191,14 @@ li{
   .topbuttons{
     display: flex;
     flex-direction: row;
-    margin-left: 38vw;
-    margin-top: 22vh;
+    margin-left: 23vw;
+    margin-top: 55vh;
     width: 100em;
+    scale: 70%;
     align-content: center;
   }
+
+
 
 #bagelimage{
   width: 25.3em;
@@ -236,8 +250,8 @@ body{
 #cheesedanishheader, #raspberrydanishheader, #biscuitheader,
 #bagelheader, #oatmealheader, #oatmealflavors, #eggheader{
   font-family: "Olivade Regular";
-  color: #bb9733;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 5px;
   text-align: center;
@@ -258,7 +272,7 @@ body{
 #menubrownsugarcake, #menucheesedanish, #menuraspberrydanish, #menubiscuit,
 #menubagel, #menuoatmeal, #menuegg{
   font-family: "Olivade Regular";
-  color: #d4b03c;
+  color: #f8c359;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
   background-color: #45433e;
   border-radius: 10px;
@@ -704,57 +718,40 @@ body{
 @media screen and (min-width: 280px) and (max-width: 499px) {
   html, body {
     overflow-x: hidden;
-    height: 100vh;
+    height: 100%;
   }
 
   #aboutus{
-    height: auto;
-    width: 50vw;
+    width: 85vw;
     font-size: 6.3vw;
-    margin-left: 0.7em;
-    margin-top: 25vh;
+    margin-left: 1.5em;
+    margin-top: -610vh !important;
+    font-size: .9em;
+    height: auto;
   }
  
   #aboutblurb{
     background-color: #333633;
     border-radius: 10px;
     padding-right: 0.8em;
-    padding-top: 20vh;
-    margin-top: -15vh;
-    margin-left: 1.3em;
+    margin-left: 0.2vw;
     text-align: center;
-    width: 70vw;
     font-family: "Olivade Regular";
     color: #bb9733;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
-    font-size: 5.5vw;
   }
 
   #textblurb{
-    margin-top: -5vh;
     margin-left: .97em;
     width: auto;
   }
-  
-  #hours{
-    margin-top: -19vh;
-    margin-left: 3.4em;
-    text-align: center;
-    width: 50vw;
-    font-size: 4.7vw;
-    font-family: "Olivade Regular";
-    color: #bb9733;
-    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 2vh;
-  }
+
 
   #images{
     width: 1.0em;
   }
 
   body{
-      background-color: #4c504d;
       overflow-x: hidden;
       background-image: url("/images/headerbacklong.jpeg");
       background-repeat: repeat-y;
@@ -763,10 +760,10 @@ body{
 
   #title{
     font-family: "Olivade Regular";
-    color: #c2ab39;
+    color: #f8c359;
     text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.8);
-    margin-left: 1.2em;
-    margin-top: 26vh;
+    margin-left: 0.8em;
+    margin-top: 0vh;
     font-size: 9.76vw;
     width: max-content;
   }
@@ -775,7 +772,6 @@ body{
     margin-left: -1em;
     margin-right: 1em;
     margin-top: 1.6vh;
-    margin-bottom: 1vh;
     width: 90vw;
     font-size: 3.6vw;
     align-content: center;
@@ -783,10 +779,10 @@ body{
 
   #location{
     font-family: "Olivade Regular";
-    color: #c2ab39;
+    color: #f8c359;
     text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.8);
-    margin-top: .1em;
-    margin-left: 3.7em;
+    margin-top: -0.2em;
+    margin-left: 3.0em;
     font-size: 5.7vw;
     width: 80vw;
   }
@@ -794,7 +790,7 @@ body{
   #house{
     border-radius: 10px;
     opacity:  1.90;
-    margin:  1em 0em 0em .7vw;
+    margin:  1em 0em 0em -4vw;
     width: 86vw;
     height: 38vh;
     padding-bottom: 5em;
@@ -805,8 +801,8 @@ body{
   .topbuttons{
     display: flex;
     flex-direction: row;
-    margin-left: 2.8em;
-    margin-top: 4.7vh;
+    margin-left: 1.8em;
+    margin-top: 30.7vh;
     width: 100vw;
     font-size: 3.3vw;
     align-content: center;
@@ -883,7 +879,13 @@ body{
     margin-top: 1vh;
     margin-left: 47vw;
   }
-  
+
+  .image-container1{
+    padding-bottom: -9vh;
+    border-radius: 10px;
+    width: 91vw;
+    margin-left: 0.8em;
+  }
 
 #menucoffeeheader{
   position: relative;

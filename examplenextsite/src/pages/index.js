@@ -26,8 +26,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-  <div class="image-container">
-    <img id="house" src="/images/house6.png" alt="house"></img>
+  <div class="image-container1">
+    <img id="house" src="/images/house11.png" alt="house"></img>
     <div class="menu-top">
     <div id="title">Liberty House Specialties</div>
   <div id="location">11652 Liberty Street, Clinton LA</div>
@@ -35,7 +35,7 @@ export default function Home() {
   <button  id="about" onClick={handleAboutButtonClick}>
     About Us
   </button>
-  <button id="menu" onClick={handleMenuButtonClick}>
+  <button id="menu" onClick={handleMenuButtonClick}> 
     Our Menu
   </button>
     <button  id="call">
@@ -210,18 +210,15 @@ export default function Home() {
 </div>
 
 <div
-  id="aboutus1"
+  id="aboutus"
   style={{
     opacity: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 0 : 1,
     visibility: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 'hidden' : 'visible',
     transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
   }}
->
-
-        <div id="aboutus"><div id="hours">Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
-          </br>Sat - 7AM to 12PM</div><h1 id="aboutblurb"><div id="textblurb">Thank you for allowing us to be
-          a part of your day!<br></br><br></br>
-          11652 Liberty Street<br></br>
+><h1 id="aboutblurb"><div id="textblurb">
+         Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
+          </br>Sat - 7AM to 12PM<br></br><br></br>11652 Liberty Street<br></br>
           Clinton, LA 70722
           <br></br>
           <a>(225) 683-9342</a>
@@ -234,14 +231,10 @@ export default function Home() {
           the same dedication to excellent
           products, service, and long-term
           relationships with the members
-          of our community.
-          
+          of our community. <br></br><br></br>Thank you for allowing us to be
+          a part of your day!
           </div></h1>
-
-          
           </div>
-
-      </div>
     </>
   );
 }
