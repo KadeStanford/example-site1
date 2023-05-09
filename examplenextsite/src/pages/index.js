@@ -4,17 +4,18 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 
 export default function Home() {
-  const [aboutButtonClicked, setAboutButtonClicked] = useState(false);
-  const [menuButtonClicked, setMenuButtonClicked] = useState(false);
+  const [currentPage, setCurrentPage] = useState("");
 
   const handleAboutButtonClick = () => {
-    setAboutButtonClicked(true);
-    setMenuButtonClicked(false);
+    setCurrentPage("about");
   };
 
   const handleMenuButtonClick = () => {
-    setMenuButtonClicked(true);
-    setAboutButtonClicked(false);
+    setCurrentPage("menu");
+  };
+
+  const handleEventButtonClick = () => {
+    setCurrentPage("events");
   };
 
   return (
@@ -36,10 +37,12 @@ export default function Home() {
     About Us
   </button>
   <button id="menu" onClick={handleMenuButtonClick}> 
-    Our Menu
+   Our  Menu
   </button>
+
+  <button id="events" onClick={handleEventButtonClick}>Events</button>
     <button  id="call">
-      <a href="tel:+2256839342" id="callb">
+      <a href="tel:+12256839342" id="callb">
       Call in your order</a>
     </button>
   
@@ -50,21 +53,21 @@ export default function Home() {
  
 
   <div
-  id="images"
-  style={{
-    opacity: aboutButtonClicked && !menuButtonClicked ? 0 : 1,
-    visibility: aboutButtonClicked && !menuButtonClicked ? 'hidden' : 'visible',
-    transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
-  }}
->
+        id="images"
+        style={{
+          opacity: currentPage == "" || currentPage === 'menu' ? 1 : 0,
+          visibility: currentPage == "" || currentPage === 'menu' ? 'visible' : 'hidden',
+          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+        }}
+      >
   <div class="image-container">
     <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
     <div class="menu-content">
     <div id="menucoffeeheader">Liberty House Special Brew:</div><div id="menucoffee">
         <li className="coffeelist coffeelisttwelve"><div id="hot">Hot</div><ul className="coffeelist subtwelvehot">(12oz.)<br></br>  ...2.95</ul>
         <ul className="subtwelvecold">(16oz) <br></br> ...3.95</ul></li>
-        <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.35</ul>
-        <ul className="subsixcold">(16oz.) <br></br> ...4.25</ul>
+        <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.45</ul>
+        <ul className="subsixcold">(16oz.) <br></br> ...4.35</ul>
         </li>
         <div id="milknote"><div id="stroop">Add Stroopwafel  ...1.15</div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
        </div>
@@ -78,7 +81,7 @@ export default function Home() {
        <div className="menutea">
           
           <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div>
-          <div id="teaprice">...2.29 </div></li>
+          <div id="teaprice">...2.39 </div></li>
 
     </div>
   </div>
@@ -121,7 +124,7 @@ export default function Home() {
         <li id="buttered">
         <div id="croissantflavor">Buttered</div><div id="cp1">...2.95</div></li>  
         <li id="ham">
-        <div id="croissantflavor">Ham and Swiss</div><div id="cp2">...5.75</div></li>
+        <div id="croissantflavor">Ham and Swiss</div><div id="cp2">...5.85</div></li>
         <li id="spinach">
         <div id="croissantflavor">Spinach and Feta</div><div id="cp5">...5.75</div></li>
         <li id="almond">
@@ -147,7 +150,7 @@ export default function Home() {
       <img id="brownimage" src="/images/brown.png" alt="Brown"></img> 
       <div class="menu-content">
       <div id="brownsugarcakeheader">Brown Sugar Walnut<br></br>Coffee Cake</div>
-      <div id="menubrownsugarcake"> <li id="cakeprice"><div id="slice">Per Slice</div><div id="sliceprice">...3.25</div></li> </div>
+      <div id="menubrownsugarcake"> <li id="cakeprice"><div id="slice">Per Slice</div><div id="sliceprice">...3.35</div></li> </div>
       
       </div>
       </div>
@@ -156,7 +159,7 @@ export default function Home() {
         <img id="cheesedanishimage" src="/images/cheesedanish.png" alt="Cheese Danish"></img>
         <div class="menu-content">
       <div id="cheesedanishheader">Cheese Danish</div>
-      <div id="menucheesedanish"> <li id="cheesedanishprice"><div id="slicecheese">Per Pastry</div><div id="slicepricecheese">...3.65</div></li> </div>
+      <div id="menucheesedanish"> <li id="cheesedanishprice"><div id="slicecheese">Per Pastry</div><div id="slicepricecheese">...3.75</div></li> </div>
   
         </div>
         </div>
@@ -176,7 +179,7 @@ export default function Home() {
             <div class="menu-content">
               
       <div id="biscuitheader">Biscuits</div>
-      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.49</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
+      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.59</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
             </div>
             </div>
@@ -203,22 +206,23 @@ export default function Home() {
           <img id="oatmealimage" src="/images/oatmeal.jpg" alt="Oatmeal"></img>
           <div class="menu-content">
           <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
-<div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.79</div>
+<div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.75</div>
 </li> <div id="pecans">Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
           </div>
           </div>
 </div>
 
 <div
-  id="aboutus"
-  style={{
-    opacity: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 0 : 1,
-    visibility: (!aboutButtonClicked && !menuButtonClicked) || (!aboutButtonClicked && menuButtonClicked) ? 'hidden' : 'visible',
-    transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
-  }}
-><h1 id="aboutblurb"><div id="textblurb">
+        id="aboutus"
+        style={{
+          opacity: currentPage === 'about' ? 1 : 0,
+          visibility: currentPage === 'about' ? 'visible' : 'hidden',
+          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+        }}
+      >
+<h1 id="aboutblurb"><div id="textblurb">
          Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
-          </br>Sat - 7AM to 12PM<br></br><br></br>11652 Liberty Street<br></br>
+          </br>Sat - 7AM to 12PM<br></br>Sun - Closed <br></br><br></br>11652 Liberty Street<br></br>
           Clinton, LA 70722
           <br></br>
           <a>(225) 683-9342</a>
@@ -235,6 +239,17 @@ export default function Home() {
           a part of your day!
           </div></h1>
           </div>
+
+          <div
+        id="eventpage"
+        style={{
+          opacity: currentPage === 'events' ? 1 : 0,
+          visibility: currentPage === 'events' ? 'visible' : 'hidden',
+          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+        }}
+      >
+            <div id="eventtext">Events Coming Soon...</div>
+            </div>
     </>
   );
 }
