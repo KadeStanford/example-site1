@@ -58,7 +58,7 @@ export default function Home() {
           opacity: currentPage == "" || currentPage === 'menu' ? 1 : 0,
           visibility: currentPage == "" || currentPage === 'menu' ? 'visible' : 'hidden',
           height: currentPage == "" || currentPage === 'menu' ? '10%' : '0%',
-          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          transition: 'height 0.5s ease-in-out, opacity 0.1s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
   <div className="image-container">
@@ -237,7 +237,7 @@ export default function Home() {
           opacity: currentPage === 'about' ? 1 : 0,
           visibility: currentPage === 'about' ? 'visible' : 'hidden',
           height: currentPage == "" || currentPage === 'about' ? '10%' : '0%',
-          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          transition: 'height 0.5s ease-in-out, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out',
         }}
       >
 <h1 id="aboutblurb"><div id="textblurb">
@@ -245,7 +245,7 @@ export default function Home() {
           </br>Sat - 7AM to 12PM<br></br>Sun - Closed <br></br><br></br><div id="drivethrunote">Drive-Thru Only</div><br></br><br></br>11652 Liberty Street<br></br>
           Clinton, LA 70722
           <br></br>
-          <a>(225) 683-9342</a>
+          <text>(225) 683-9342</text>
           <br></br>
          <br></br>About us: <br></br>Liberty House, Circa 1868,
           housed the first general store in
@@ -266,7 +266,7 @@ export default function Home() {
           opacity: currentPage === 'events' ? 1 : 0,
           visibility: currentPage === 'events' ? 'visible' : 'hidden',
           height: currentPage == "" || currentPage === 'events' ? '10%' : '0%',
-          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          transition: 'height 0.5s ease-in-out, opacity 0.1s ease-in-out, visibility 0.1s ease-in-out',
         
         }}
       >
