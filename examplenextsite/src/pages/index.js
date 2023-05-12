@@ -64,7 +64,7 @@ export default function Home() {
   <div className="image-container">
     <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
     <div className="menu-content">
-    <div id="menucoffeeheader">Liberty House Special Brew:</div><div id="menucoffee">
+    <div id="menucoffeeheader">Liberty House Special Brew</div><div id="menucoffee">
         <li className=" coffeelisttwelve"><div id="hot">Hot</div><ul className="coffeelist subtwelvehot">(12oz.)<br></br>  ...2.95</ul>
         <ul className="subtwelvecold">(16oz) <br></br> ...3.95</ul></li>
         <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.45</ul>
@@ -242,7 +242,7 @@ export default function Home() {
       >
 <h1 id="aboutblurb"><div id="textblurb">
          Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
-          </br>Sat - 7AM to 12PM<br></br>Sun - Closed <br></br><br></br>11652 Liberty Street<br></br>
+          </br>Sat - 7AM to 12PM<br></br>Sun - Closed <br></br><br></br><div id="drivethrunote">Drive-Thru Only</div><br></br><br></br>11652 Liberty Street<br></br>
           Clinton, LA 70722
           <br></br>
           <a>(225) 683-9342</a>
