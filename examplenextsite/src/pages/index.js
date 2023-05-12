@@ -57,8 +57,8 @@ export default function Home() {
         style={{
           opacity: currentPage == "" || currentPage === 'menu' ? 1 : 0,
           visibility: currentPage == "" || currentPage === 'menu' ? 'visible' : 'hidden',
-          display: currentPage == "" || currentPage === 'menu' ? 'block' : 'none',
-          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          height: currentPage == "" || currentPage === 'menu' ? '10%' : '0%',
+          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
   <div className="image-container">
@@ -236,8 +236,8 @@ export default function Home() {
         style={{
           opacity: currentPage === 'about' ? 1 : 0,
           visibility: currentPage === 'about' ? 'visible' : 'hidden',
-          display: currentPage == "" || currentPage === 'about' ? 'block' : 'none',
-          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          height: currentPage == "" || currentPage === 'about' ? '10%' : '0%',
+          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
 <h1 id="aboutblurb"><div id="textblurb">
@@ -265,7 +265,9 @@ export default function Home() {
         style={{
           opacity: currentPage === 'events' ? 1 : 0,
           visibility: currentPage === 'events' ? 'visible' : 'hidden',
-          transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+          height: currentPage == "" || currentPage === 'events' ? '10%' : '0%',
+          transition: 'height 1.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
+        
         }}
       >
             <div className="event-container">
