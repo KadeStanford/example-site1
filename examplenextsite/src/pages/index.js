@@ -27,69 +27,88 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-  <div class="image-container1">
+  <div className="image-container1">
     <img id="house" src="/images/house11.png" alt="house"></img>
-    <div class="menu-top">
+    <div className="menu-top">
     <div id="title">Liberty House Specialties</div>
   <div id="location">11652 Liberty Street, Clinton LA</div>
-  <div className="topbuttons">
-  <button  id="about" onClick={handleAboutButtonClick}>
-    About Us
-  </button>
-  <button id="menu" onClick={handleMenuButtonClick}> 
-   Our  Menu
-  </button>
-
-  <button id="events" onClick={handleEventButtonClick}>Events</button>
-    <button  id="call">
-      <a href="tel:+12256839342" id="callb">
-      Call in your order</a>
-    </button>
   
-  </div>
+    <div id="toprow">
+  <a  id="about" onClick={handleAboutButtonClick}>
+    About Us
+  </a>
+  <a id="menu" onClick={handleMenuButtonClick}> 
+   Our  Menu
+  </a>
 
-      
-  </div></div>
- 
+  <a id="events" onClick={handleEventButtonClick}>Events</a>
+   
+   <a id="call" href="tel:+12256839342">
+      Call in your order
+    </a></div> 
+    
+    <div id="egiftcardnote">Ask about our E-GiftCards!</div>
+
+  </div>
+  </div>
 
   <div
         id="images"
         style={{
           opacity: currentPage == "" || currentPage === 'menu' ? 1 : 0,
           visibility: currentPage == "" || currentPage === 'menu' ? 'visible' : 'hidden',
+          display: currentPage == "" || currentPage === 'menu' ? 'block' : 'none',
           transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
-  <div class="image-container">
+  <div className="image-container">
     <img id="coffeeimage" src="/images/coffee.png" alt="Coffee"></img>
-    <div class="menu-content">
+    <div className="menu-content">
     <div id="menucoffeeheader">Liberty House Special Brew:</div><div id="menucoffee">
-        <li className="coffeelist coffeelisttwelve"><div id="hot">Hot</div><ul className="coffeelist subtwelvehot">(12oz.)<br></br>  ...2.95</ul>
+        <li className=" coffeelisttwelve"><div id="hot">Hot</div><ul className="coffeelist subtwelvehot">(12oz.)<br></br>  ...2.95</ul>
         <ul className="subtwelvecold">(16oz) <br></br> ...3.95</ul></li>
         <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.45</ul>
         <ul className="subsixcold">(16oz.) <br></br> ...4.35</ul>
         </li>
-        <div id="milknote"><div id="stroop">Add Stroopwafel  ...1.15</div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
+        <div id="milknote"><div id="stroop">*Add Stroopwafel  ...1.15</div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
        </div>
     </div>
   </div>
 
-  <div class="image-container">
+  <div className="image-container">
+    <img id="stroopimage" src="/images/stroop.png" alt="Stroopwafel"></img>
+    <div className="menu-content">
+    <div id="stroopheader">Stroopwafel</div>
+        <div id="menustroop">
+        <li id="stroopprice">
+        <div id="wholestroop"><div id="perstroop">Per cookie</div>
+        <div id="sp">...1.15</div></div></li>
+        <div id="stroopnote">*Stroopwafel hails from the
+          Netherlands. It is a crispy, buttery,
+          caramel-filled, thin waffle cookie. <br></br>Set
+          it on top of your hot coffee and enjoy
+          what happens next!</div>
+        </div>
+    </div>
+    </div>
+
+
+  <div className="image-container">
     <img id="teaimage" src="/images/tea.png" alt="Tea"></img>
-    <div class="menu-content">
+    <div className="menu-content">
     <div className="tealist">Premium,<br></br> Organic Iced Tea</div> 
        <div className="menutea">
           
-          <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed </div>
+          <li id="teasix"><div id="teatype">Black/Hibiscus/Mixed (16oz.) </div>
           <div id="teaprice">...2.39 </div></li>
 
     </div>
   </div>
   </div>
 
-    <div class="image-container">
+    <div className="image-container">
     <img id="orangeimage" src="/images/orange.png" alt="Orange Juice"></img>
-    <div class="menu-content"><div id="orangeheader">Orange Juice</div>
+    <div className="menu-content"><div id="orangeheader">Orange Juice</div>
           <div id="menuorange"> 
           <li id="orangeprice">
             <div id="wholeorange"><div id="glass">By the bottle</div>
@@ -100,9 +119,9 @@ export default function Home() {
     
 
 
-<div class="image-container">
+<div className="image-container">
     <img id="hotchocimage" src="/images/hotchoc.png" alt="Hot Chocolate"></img>
-    <div class="menu-content">
+    <div className="menu-content">
     <div id="hotchocheader">Hot Chocolate</div> <div id="limited">(Oct. - Mar)</div> 
         <div id="menuhotchoc"> 
         
@@ -114,9 +133,9 @@ export default function Home() {
     </div>
     </div>
 
-    <div class="image-container">
+    <div className="image-container">
     <img id="croissantimage" src="/images/croissant.png" alt="Croissant"></img>
-    <div class="menu-content">
+    <div className="menu-content">
       
     <div id="croissantheader">Croissants</div>
         <div id="menucroissant">
@@ -136,9 +155,9 @@ export default function Home() {
     </div>
     </div>
 
-    <div class="image-container">
+    <div className="image-container">
     <img id="blueberryimage" src="/images/blueberry.png" alt="Scone"></img>
-    <div class="menu-content">
+    <div className="menu-content">
     <div id="scones">Scones</div>
       <div id="menuscone">
       <li id="sconeprice"><div id="blueberry">Blueberry</div><div id="bp">...3.75</div></li>
@@ -146,27 +165,27 @@ export default function Home() {
     </div>
     </div>  
 
-    <div class="image-container">
+    <div className="image-container">
       <img id="brownimage" src="/images/brown.png" alt="Brown"></img> 
-      <div class="menu-content">
+      <div className="menu-content">
       <div id="brownsugarcakeheader">Brown Sugar Walnut<br></br>Coffee Cake</div>
       <div id="menubrownsugarcake"> <li id="cakeprice"><div id="slice">Per Slice</div><div id="sliceprice">...3.35</div></li> </div>
       
       </div>
       </div>
 
-      <div class="image-container">
+      <div className="image-container">
         <img id="cheesedanishimage" src="/images/cheesedanish.png" alt="Cheese Danish"></img>
-        <div class="menu-content">
+        <div className="menu-content">
       <div id="cheesedanishheader">Cheese Danish</div>
       <div id="menucheesedanish"> <li id="cheesedanishprice"><div id="slicecheese">Per Pastry</div><div id="slicepricecheese">...3.75</div></li> </div>
   
         </div>
         </div>
 
-        <div class="image-container">
+        <div className="image-container">
           <img  id="raspberrydanishimage" src="/images/raspberrydanish.png" alt="Raspberry Danish"></img>
-          <div class="menu-content">
+          <div className="menu-content">
             
       <div id="raspberrydanishheader">Raspberry Danish</div>
       <div id="menuraspberrydanish"> <li id="raspberrydanishprice"><div id="sliceraspberry">Per Pastry</div><div id="slicepriceraspberry">...3.75</div></li> </div>
@@ -174,9 +193,9 @@ export default function Home() {
           </div>
           </div>
 
-          <div class="image-container">
+          <div className="image-container">
             <img id="biscuitimage" src="/images/biscuit.jpg" alt="Biscuit"></img>
-            <div class="menu-content">
+            <div className="menu-content">
               
       <div id="biscuitheader">Biscuits</div>
       <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.59</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
@@ -184,30 +203,30 @@ export default function Home() {
             </div>
             </div>
 
-            <div class="image-container">
+            <div className="image-container">
               <img id="bagelimage" src="/images/bagel.png" alt="Bagel"></img>
-              <div class="menu-content">
+              <div className="menu-content">
       <div id="bagelheader">Bagels</div>
       <div id="menubagel"> <li id="bagelprice"><div id="bagelprice1">Plain Bagel w/ Butter<br></br></div><div id="bagelprice2">...2.69</div></li> <li id="fixings2">(Substitute Cinnamon Butter  ...0.30) <br></br>Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
 
               </div>
               </div>
 
-              <div class="image-container">
+              <div className="image-container">
                 <img id="eggimage" src="/images/egg.png" alt="Egg"></img>
-                <div class="menu-content">
+                <div className="menu-content">
       <div id="eggheader">Egg Bites</div>
       <div id="menuegg"> <li id="eggprice"><div id="eggprice1">Egg Bite* (2 per order)</div><div id="eggprice2">...5.99</div></li> <li id="eggfixings">*Options: 1. Ham and Cheddar Chili Pepper,
 <br></br>2. Prosciutto gruyere, 3. Spinach Feta</li></div>
 
           </div>
           </div>
-        <div class="image-container">
+        <div className="image-container">
           <img id="oatmealimage" src="/images/oatmeal.jpg" alt="Oatmeal"></img>
-          <div class="menu-content">
+          <div className="menu-content">
           <div id="oatmealheader">Oatmeal</div> <div id="oatmealflavors">Brown Sugar or Maple</div>
 <div id="menuoatmeal"> <li id="oatmealprice"><div id="oatmealprice1">Per Bowl</div><div id="oatmealprice2">...3.75</div>
-</li> <div id="pecans">Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
+</li> <div id="pecans">*Add Chopped Pecans</div><div id="pecanprice">...0.65</div></div>
           </div>
           </div>
 </div>
@@ -217,6 +236,7 @@ export default function Home() {
         style={{
           opacity: currentPage === 'about' ? 1 : 0,
           visibility: currentPage === 'about' ? 'visible' : 'hidden',
+          display: currentPage == "" || currentPage === 'about' ? 'block' : 'none',
           transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
@@ -248,8 +268,22 @@ export default function Home() {
           transition: 'opacity 0.5s ease-in-out, visibility 0.5s ease-in-out',
         }}
       >
-            <div id="eventtext">Events Coming Soon...</div>
+            <div className="event-container">
+        <img id="icecreamnight" src="/images/icecream.png" alt="Ice Cream Nights Event"></img>
+        <div className="event-content">
+         <div id="icecreamheader">Ice Cream Nights</div> 
+         <div id="menuicecream">
+        
+        <div id="icecreamdate">Thursdays & Fridays | June 15th - August 31st</div>
+        <div id="icecreamtext">Keep your cool every Thursday and Friday evening from 6:00 pm - 8:00pm. 
+Enjoy an assortment of cake and ice cream, or ice cream and gourmet cookies with special flavors for the kids, or the kid in you!
+
+<br></br>Mix and match our <div id="chilly">chilly treats!</div> </div>
+       </div> </div>
+        </div>
+            
             </div>
+          
     </>
   );
 }
