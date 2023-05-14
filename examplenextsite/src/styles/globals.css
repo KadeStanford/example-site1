@@ -117,6 +117,15 @@ li{
     margin-top: 1em !important;
     height: 10vh !important;
   }
+
+  #drivethrunote{
+    font-family: "Olivade Regular";
+    color: #ffff;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+    font-size: 2.5vw;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
   
   #aboutus{
     height: auto;
@@ -390,13 +399,17 @@ padding-right: 1.9%;
   margin-top: 10%;
 }
 
+#coffeeflavors{
+  color: #ffff;
+}
 
 #menucoffee{
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 12.3%;
   width: 90%;
   height: 12.9em;
   font-size: 1.5vw;
+  padding-top: 10%;
 }
 
 .coffeelisttwelve{
@@ -420,33 +433,38 @@ padding-right: 1.9%;
 
 .subsixcold{
   margin-left: 15%;
+  margin-top: -6%;
 }
 
 .subsixhot{
   margin-left: 16%;
+  margin-top: -6%;
 }
 
 .subtwelvecold{
   margin-left: 16%;
+  margin-top: -6%;
 }
 
 .subtwelvehot{
   margin-left: 19%;
+  margin-top: -6%;
 }
 
 #hot{
   margin-left: 17%;
-  margin-top: 10%;
+  margin-top: -6%;
   padding-right: 1.1%;
 }
 
 #iced{
   margin-left: 17%;
   margin-top: 10%;
+  margin-top: -6%;
 }
 
 .menutea{
-  margin-top: 25%;
+  margin-top: 23%;
   margin-left: 12.3%;
   width: 90%;
   height: 3.9em;
@@ -469,7 +487,7 @@ width: max-content;
 }
 
 #menuorange{
-  margin-top: 32%;
+  margin-top: 28%;
   margin-left: 12.3%;
   width: 90%;
   height: 3.9em;
@@ -504,6 +522,7 @@ width: max-content;
   text-align: center;
   margin-top: 3em;
   margin-left: 12%;
+  color: #ffff;
 }
 
 #glasshotchoc{
@@ -577,7 +596,7 @@ width: max-content;
 }
 
 #menuscone{
-  margin-top: 30%;
+  margin-top: 34.3%;
   margin-left: 12.3%;
   width: 90%;
   height: 3.9em;
@@ -610,7 +629,7 @@ width: max-content;
 }
 
 #menubrownsugarcake{
-  margin-top: 40%;
+  margin-top: 38.4%;
   margin-left: 12.3%;
   width: 90%;
   height: 3.9em;
@@ -675,6 +694,7 @@ width: max-content;
   margin-top: 9.5%;
   margin-left: 5%;
   padding-bottom: 15px;
+  color: #ffff;
 }
 
 #menubagel{
@@ -702,6 +722,7 @@ width: max-content;
   margin-top: 1.6em;
   margin-left: 5.8%;
   padding-bottom: 15px;
+  color: #ffff;
 }
 
   #menuegg{
@@ -1075,10 +1096,11 @@ width: max-content;
 }
 
 #menucoffee{
-  margin-top: 13%;
-  margin-left: 12.3%;
+  margin-top: 1%;
+  margin-left: 13.8%;
   width: 90%;
   height: 73%;
+  padding-top: 7%;
 }
 
 .coffeelisttwelve{
@@ -1102,28 +1124,31 @@ width: max-content;
 
 #stroop{
   margin-top: 25%;
-  text-decoration: underline;
-  text-underline-position: under;
+  color: #ffff;
 }
 
 #icednote{
-  margin-top: -8%;
+  margin-top: -10%;
 }
 
 .subsixcold{
   margin-left: 0.6%;
+  margin-top: 5%;
 }
 
 .subsixhot{
   margin-left:-4%;
+  margin-top: 5%;
 }
 
 .subtwelvecold{
   margin-left: 0%;
+  margin-top: 3%;
 }
 
 .subtwelvehot{
   margin-left: 0%;
+  margin-top: 3%;
 }
 
 #hot{
@@ -1134,7 +1159,7 @@ width: max-content;
 
 #iced{
   margin-left: 17%;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 .menutea{
@@ -1192,6 +1217,7 @@ width: max-content;
   text-align: center;
   margin-top: 3em;
   margin-left: 12%;
+  color: #ffff;
 }
 
 #glasshotchoc{
@@ -1363,6 +1389,7 @@ width: max-content;
   margin-top: 9.5%;
   margin-left: 5%;
   padding-bottom: 15px;
+  color: #ffff;
 }
 
 #menubagel{
@@ -1390,6 +1417,7 @@ width: max-content;
   margin-top: 1.6%;
   margin-left: 5.8%;
   padding-bottom: 10px;
+  color: #ffff;
 }
 
   #menuegg{

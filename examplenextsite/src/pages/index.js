@@ -70,7 +70,7 @@ export default function Home() {
         <li className="coffeelistsix"><div id="iced">Iced**</div><ul className="subsixhot">(12oz.)<br></br> ...3.45</ul>
         <ul className="subsixcold">(16oz.) <br></br> ...4.35</ul>
         </li>
-        <div id="milknote"><div id="stroop">*Add Stroopwafel  ...1.15</div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
+        <div id="milknote"><div id="stroop"><div id="coffeeflavors">Coffee Flavors:<br></br>Mocha, Vanilla (regular or sugar-free), Caramel, White Chocolate</div></div><br></br><div id="icednote">**Iced coffee can be served with condensed milk. Yum!</div></div>
        </div>
     </div>
   </div>
