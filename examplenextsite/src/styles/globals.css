@@ -904,20 +904,27 @@ width: max-content;
 
   #about{
     padding: 2% 2% 2% 2%;
+    
+    width: fit-content;
   }
 
   #menu{
     padding: 2% 2% 2% 2%;
+    width: fit-content;
   }
 
   #call{
     padding: 2% 15% 2% 15%;
     margin-top: 2%;
     text-decoration: none;
+    
+    width: fit-content;
   }
 
   #events{
     padding: 2% 2% 2% 2%;
+    
+    width: fit-content;
   }
 
   .image-container1{
