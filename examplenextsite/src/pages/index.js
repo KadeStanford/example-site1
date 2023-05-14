@@ -198,7 +198,7 @@ export default function Home() {
             <div className="menu-content">
               
       <div id="biscuitheader">Biscuits</div>
-      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.59</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Cream Cheese ...0.99<br></br>Add Egg Bite* ...3.59</li></div>
+      <div id="menubiscuit"> <li id="biscuitprice"><div id="biscuitprice1">Large Buttermilk Biscuit w/ Butter</div><div id="biscuitprice2">...2.59</div></li> <li id="fixings">Add Preserves (Strawberry or Blackberry) ...0.59<br></br>Add Deer Sausage Patty ...1.99<br></br>Add Egg Bite* ...3.59</li></div>
 
             </div>
             </div>
