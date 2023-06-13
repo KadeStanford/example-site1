@@ -241,8 +241,12 @@ export default function Home() {
         }}
       >
 <h1 id="aboutblurb"><div id="textblurb">
-         Hours: <br></br>Mon-Fri - 6AM to 12PM<br>
-          </br>Sat - 7AM to 12PM<br></br>Sun - Closed <br></br><br></br><div id="drivethrunote">Drive-Thru Only</div><br></br><br></br>11652 Liberty Street<br></br>
+         Hours: <br></br>Morning<br></br>Tues-Fri - 6AM to 12PM <br>
+          </br>Sat - 7AM to 12PM<br></br>
+            <br></br>Afternoon<br></br>Wed, Thur, Fri, Sat<br>
+          </br>3PM - 7PM<br></br>
+            
+            Sun/Mon - Closed <br></br><br></br><div id="drivethrunote">Drive-Thru Only</div><br></br><br></br>11652 Liberty Street<br></br>
           Clinton, LA 70722
           <br></br>
           <text>(225) 683-9342</text>
