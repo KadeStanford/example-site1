@@ -194,7 +194,7 @@ export default function Home() {
           </div>
 
  <div className="image-container">
-          <img  id="raspberrydanishimage" src="/images/muffin.jgp" alt="Muffin"></img>
+          <img  id="raspberrydanishimage" src="/images/muffin.JPG" alt="Muffin"></img>
           <div className="menu-content">
             
       <div id="raspberrydanishheader">Morning Harvest Muffin</div>
