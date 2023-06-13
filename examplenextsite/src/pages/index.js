@@ -277,7 +277,7 @@ export default function Home() {
          <div id="menuicecream">
         
         <div id="icecreamdate">Check back soon for dates & times!</div>
-        <div id="icecreamtext">Keep your cool every Thursday and Friday evening from 6:00 pm - 8:00pm. 
+        <div id="icecreamtext">
 Enjoy an assortment of cake and ice cream, or ice cream and gourmet cookies with special flavors for the kids, or the kid in you!
 
 <br></br>Mix and match our <div id="chilly">chilly treats!</div> </div>
