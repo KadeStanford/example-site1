@@ -276,7 +276,7 @@ export default function Home() {
          <div id="icecreamheader">Ice Cream Nights</div> 
          <div id="menuicecream">
         
-        <div id="icecreamdate">Thursdays & Fridays | June 15th - August 31st</div>
+        <div id="icecreamdate">Check back soon for dates & times!</div>
         <div id="icecreamtext">Keep your cool every Thursday and Friday evening from 6:00 pm - 8:00pm. 
 Enjoy an assortment of cake and ice cream, or ice cream and gourmet cookies with special flavors for the kids, or the kid in you!
 
