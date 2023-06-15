@@ -1266,7 +1266,7 @@ width: max-content;
 
 #ham{
   margin-left: -0.6em;
-  max-width: max-content;
+  width: fit-content;
 }
 
 #cp1{
