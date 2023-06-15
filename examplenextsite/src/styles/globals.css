@@ -369,11 +369,12 @@ padding-right: 1.9%;
   font-family: "Olivade Regular";
   color: #f8c359;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  background-color: rbga(69, 67, 62, .9);
+  background-color: rbg(69, 67, 62);
   border-radius: 10px;
   font-size: 1.6vw;
   box-shadow: inset 0 0 10px #000000;
   margin-left: 1.9em;
+  opacity: 50%;
 }
 
 #menustroop{
