@@ -1062,7 +1062,7 @@ width: max-content;
   font-family: "Olivade Regular";
   color: #f8c359;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
-  background-color: #45433e;
+  background-color: rgba(69, 67, 62, .7);
   border-radius: 10px;
   font-size: 5.6vw;
   box-shadow: inset 0 0 10px #000000;
@@ -1248,7 +1248,7 @@ width: max-content;
   margin-top: 1%;
   margin-left: 12.3%;
   width: 90%;
-  height: 9em;
+  height: 10em;
 }
 
 #croissantflavors{
