@@ -72,11 +72,28 @@ li {
   flex-direction: row;
 }
 
+#flavorList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #f8ee94;
+}
+
 @media screen and (min-width: 901px) and (max-width: 1980px) {
   html,
   body {
     overflow-x: hidden;
     height: 100vh;
+  }
+
+  #flavorNames {
+    display: flex;
+    flex-direction: row;
+    gap: 1em 3em;
+    place-self: center;
+    justify-content: center;
   }
 
   #stroopimage,
@@ -855,6 +872,12 @@ li {
     will-change: transform;
   }
 
+  #flavorNames {
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+    justify-content: center;
+  }
   #eventpage {
     width: 80%;
     font-size: 6.3vw;
@@ -1476,26 +1499,26 @@ li {
 
   #menubagel {
     margin-top: 2.4%;
-    margin-left: 15.3%;
+    margin-left: 18.3%;
     padding-right: 4%;
     height: auto;
   }
 
   #bagelprice1 {
     margin-top: 1em;
-    margin-left: 10%;
+    margin-left: 1.8%;
     font-size: 0.9em;
     text-align: center;
   }
 
   #bagelprice2 {
     margin-top: 1em;
-    margin-left: 40%;
+    margin-left: 15%;
   }
 
   #fixings2 {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-top: 1.6%;
     margin-left: 5.8%;
     padding-bottom: 10px;
