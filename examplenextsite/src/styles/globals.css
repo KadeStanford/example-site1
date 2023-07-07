@@ -81,11 +81,37 @@ li {
   color: #f8ee94;
 }
 
+#menucoffee {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #f8c359 transparent;
+}
+
+#menucoffee::-webkit-scrollbar {
+  width: 8px;
+}
+
+#menucoffee::-webkit-scrollbar-thumb {
+  background-color: #f8c359;
+  border-radius: 10px;
+}
+
+#menucoffee::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 @media screen and (min-width: 901px) and (max-width: 1980px) {
   html,
   body {
     overflow-x: hidden;
     height: 100vh;
+  }
+
+  #coffee {
+    color: white;
+    margin-top: -2em;
+    margin-left: 4.5em;
+    padding: 5px;
   }
 
   #flavorNames {
@@ -860,6 +886,29 @@ li {
 }
 
 @media screen and (min-width: 10px) and (max-width: 900px) {
+  #menucoffee {
+    overflow-y: scroll;
+  }
+  #coffee {
+    color: white;
+    margin-top: -1em;
+    margin-left: 1.5em;
+    padding: 5px;
+  }
+
+  #menucoffee::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  #menucoffee::-webkit-scrollbar-thumb {
+    background-color: #f8c359;
+    border-radius: 10px;
+  }
+
+  #menucoffee::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
   html,
   body {
     overflow-x: hidden;
