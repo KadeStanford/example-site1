@@ -489,10 +489,10 @@ export default function Home() {
               We are a breakfast specialty cafe serving freshly made breakfast
               items, freshly ground hot brewed coffee and specialty iced
               coffees. We are also an evening scoop shop proudly serving The
-              Chocolate Shoppe&#39s super premium ice cream with over 30 flavors
-              available to our customers. Come wake up in the morning to your
-              favorite brew and chill out with us in the evenings with gourmet
-              desserts and ice cream like no other!
+              Chocolate Shoppe&#39;s super premium ice cream with over 30
+              flavors available to our customers. Come wake up in the morning to
+              your favorite brew and chill out with us in the evenings with
+              gourmet desserts and ice cream like no other!
               <br></br> <br></br>Liberty House, Circa 1868, housed the first
               general store in the Feliciana parishes. Standing tall, Liberty
               House still proudly serves the Feliciana parishes with the same
@@ -527,16 +527,18 @@ export default function Home() {
               alt="Ice Cream Nights Event"
             ></img>
             <div className="event-content">
-              <div id="icecreamheader">Ice Cream Nights</div>
+              <div id="icecreamheader">Ice Cream Evenings</div>
               <div id="menuicecream">
                 <div id="icecreamdate">
                   Starting July 27th, every Thur, Fri, & Sat from 3:30 to 7:30!
                 </div>
                 <img id="icecreamlogo" src="/chocLogo.png"></img>
                 <div id="icecreamtext">
-                  Enjoy an assortment of over 30 super premium flavors of ice
-                  cream including sugar free and dairy free options for
-                  Chocolate Shoppe Ice Cream!
+                  Enjoy an assortment of over 30 super premium ice cream flavors
+                  including sugar free and dairy free options from Chocolate
+                  Shoppe Ice Cream!
+                  <br></br>
+                  Mix and match with our gourmet cakes and cookies!
                 </div>
               </div>
             </div>
