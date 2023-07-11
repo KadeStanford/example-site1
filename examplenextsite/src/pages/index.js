@@ -467,7 +467,12 @@ export default function Home() {
         >
           <h1 id="aboutblurb">
             <div id="textblurb">
-              Hours: <br></br>Tues-Fri - 6AM to 12PM <br></br>Sat - 7AM to 12PM
+              Morning Hours: <br></br>Tues-Fri - 6AM to 12PM <br></br>Sat - 7AM
+              to 12PM
+              <br></br>
+              <br></br>
+              Evening Hours: <br></br>Thur - Sat - 3:30PM to 7:30PM
+              <br></br>
               <br></br>
               <br></br> Sun/Mon - Closed <br></br>
               <br></br>
@@ -478,10 +483,20 @@ export default function Home() {
               <br></br>
               <text>(225) 683-9342</text>
               <br></br>
-              <br></br>About us: <br></br>Liberty House, Circa 1868, housed the
-              first general store in the Feliciana parishes. Standing tall,
-              Liberty House still proudly serves the Feliciana parishes with the
-              same dedication to excellent products, service, and long-term
+              <br></br>
+              About us:
+              <br></br>
+              We are a breakfast specialty cafe serving freshly made breakfast
+              items, freshly ground hot brewed coffee and specialty iced
+              coffees. We are also an evening scoop shop proudly serving The
+              Chocolate Shoppe's super premium ice cream with over 30 flavors
+              available to our customers. Come wake up in the morning to your
+              favorite brew and chill out with us in the evenings with gourmet
+              desserts and ice cream like no other!
+              <br></br> <br></br>Liberty House, Circa 1868, housed the first
+              general store in the Feliciana parishes. Standing tall, Liberty
+              House still proudly serves the Feliciana parishes with the same
+              dedication to excellent products, service, and long-term
               relationships with the members of our community. <br></br>
               <br></br>Thank you for allowing us to be a part of your day!
               <p id="devCredit">
@@ -514,15 +529,16 @@ export default function Home() {
             <div className="event-content">
               <div id="icecreamheader">Ice Cream Nights</div>
               <div id="menuicecream">
-                <div id="icecreamdate">Check back soon for dates & times!</div>
-                <div id="icecreamtext">
-                  Enjoy an assortment of cake and ice cream, or ice cream and
-                  gourmet cookies with special flavors for the kids, or the kid
-                  in you!
-                  <br></br>Mix and match our{" "}
-                  <div id="chilly">chilly treats!</div>{" "}
+                <div id="icecreamdate">
+                  Starting July 27th, every Thur, Fri, & Sat from 3:30 to 7:30!
                 </div>
-              </div>{" "}
+                <img id="icecreamlogo" src="/chocLogo.png"></img>
+                <div id="icecreamtext">
+                  Enjoy an assortment of over 30 super premium flavors of ice
+                  cream including sugar free and dairy free options for
+                  Chocolate Shoppe Ice Cream!
+                </div>
+              </div>
             </div>
           </div>
         </div>

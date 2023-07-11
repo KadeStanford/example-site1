@@ -107,6 +107,11 @@ li {
     height: 100vh;
   }
 
+  #icecreamlogo {
+    width: 20%;
+    height: 20%;
+  }
+
   #coffee {
     color: white;
     margin-top: -2em;
@@ -316,7 +321,7 @@ li {
   .event-container {
     align-items: center;
     margin-left: -10%;
-    margin-top: 175vh;
+    margin-top: 117%;
   }
 
   .event-content {
@@ -883,9 +888,22 @@ li {
     text-align: center;
     color: #ffff;
   }
+
+  .main {
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 10px) and (max-width: 900px) {
+  .main {
+    height: 100%;
+  }
+
+  #icecreamlogo {
+    width: 30%;
+    height: 30%;
+  }
+
   #menucoffee {
     overflow-y: scroll;
   }
@@ -1111,7 +1129,7 @@ li {
   }
 
   #icecreamdate {
-    font-size: 4.7vw;
+    font-size: 4.3vw;
     color: rgb(255, 255, 255);
     text-shadow: #043d8e 2px 2px 2px;
   }
