@@ -489,7 +489,7 @@ export default function Home() {
               We are a breakfast specialty cafe serving freshly made breakfast
               items, freshly ground hot brewed coffee and specialty iced
               coffees. We are also an evening scoop shop proudly serving The
-              Chocolate Shoppe's super premium ice cream with over 30 flavors
+              Chocolate Shoppe&#39s super premium ice cream with over 30 flavors
               available to our customers. Come wake up in the morning to your
               favorite brew and chill out with us in the evenings with gourmet
               desserts and ice cream like no other!
