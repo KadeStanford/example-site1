@@ -484,6 +484,26 @@ li {
   #stroopnote {
     text-align: center;
     margin-top: 10%;
+    z-index: 1;
+  }
+
+  #checkEvent {
+    color: #ffffff;
+  }
+
+  #logo {
+    object-fit: contain;
+    width: 30%;
+    height: 0%;
+    margin-top: 3%;
+    z-index: 0;
+    margin-left: 35%;
+  }
+
+  #Icenote {
+    text-align: center;
+    font-size: 1.8rem;
+    z-index: 1;
   }
 
   #coffeeflavors {
@@ -1262,6 +1282,26 @@ li {
   #stroopnote {
     text-align: center;
     margin-top: 10%;
+    z-index: 1;
+  }
+
+  #checkEvent {
+    color: #ffffff;
+  }
+
+  #logo {
+    object-fit: contain;
+    width: 30%;
+    height: 0%;
+    margin-top: 3%;
+    z-index: 0;
+    margin-left: 35%;
+  }
+
+  #Icenote {
+    text-align: center;
+    font-size: 1.2rem;
+    z-index: 1;
   }
 
   #menucoffeeheader {

@@ -168,6 +168,32 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="image-container">
+            <img
+              id="stroopimage"
+              src="/images/icecream.png"
+              alt="ice Cream"
+            ></img>
+            <div className="menu-content">
+              <div id="stroopheader">Ice Cream</div>
+              <div id="menustroop">
+                <img
+                  id="logo"
+                  src="/chocLogo.png"
+                  alt="Chocolate Shoppe Logo"
+                />
+                <div id="Icenote">
+                  Enjoy an assortment of over 30 super premium ice cream flavors
+                  including sugar free and dairy free options from Chocolate
+                  Shoppe Ice Cream!
+                  <br></br>
+                  <span id="checkEvent">
+                    Check the events page for dates and times!
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="image-container">
             <img id="teaimage" src="/images/tea.png" alt="Tea"></img>
@@ -530,7 +556,7 @@ export default function Home() {
               <div id="icecreamheader">Ice Cream Evenings</div>
               <div id="menuicecream">
                 <div id="icecreamdate">
-                  Starting July 27th, every Thur, Fri, & Sat from 3:30 to 7:30!
+                  Starting July 29th, every Thur, Fri, & Sat from 3:30 to 7:30!
                 </div>
                 <img id="icecreamlogo" src="/chocLogo.png"></img>
                 <div id="icecreamtext">
