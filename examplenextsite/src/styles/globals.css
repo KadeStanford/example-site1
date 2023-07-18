@@ -9,6 +9,19 @@ html {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f8c359;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .menuBox {
   display: flex;
   flex-direction: column;
@@ -252,6 +265,125 @@ li {
   margin-top: 15%;
 }
 
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #494444;
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.aboutTextContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hoursContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutTitle {
+  font-size: calc(2.5rem + 1vw);
+  color: #f8c359;
+  text-shadow: 2px 2px 0px #000000;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 5%;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.aboutText {
+  font-size: calc(1.2rem + 0.5vw);
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  font-weight: 100;
+  text-align: center;
+  margin-top: -5%;
+  width: 90%;
+}
+
+.aboutText#big {
+  font-size: calc(1.4rem + 0.5vw);
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  font-weight: 100;
+  text-align: center;
+  width: 90%;
+  margin-top: 2%;
+}
+
+a {
+  color: #f8c359;
+  text-shadow: 2px 2px 0px #000000;
+  font-weight: 100;
+  font-size: calc(1.2rem + 0.5vw);
+}
+
+.eventsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.eventsBox#IceCream {
+  background-image: url("/images/icecream.png");
+}
+
+.eventsTextContainer {
+  background-color: rgba(51, 39, 39, 0.5);
+  box-shadow: inset 0px 0px 4px #000000;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+  font-size: calc(1.1rem + 0.5vw);
+  text-align: center;
+}
+
+.eventsTitle {
+  color: rgb(91, 231, 231);
+  text-shadow: 2px 2px 0px #2980bb;
+}
+
+.eventsText {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #2a95b6;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 2%;
+  width: 90%;
+  z-index: 1;
+}
+
+.logoImage {
+  width: 20%;
+  object-fit: contain;
+  height: auto;
+  z-index: 0;
+}
+
 @media screen and (max-width: 600px) {
   html {
     background-image: url("/images/headerbacklong.jpeg");
@@ -282,7 +414,41 @@ li {
     width: 90%;
   }
 
+  .eventsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 3%;
+    width: 90%;
+  }
+
+  .logoImage {
+    width: 40%;
+    object-fit: contain;
+    height: auto;
+    z-index: 0;
+  }
+
   .menuItemInfo {
+    background-color: rgba(51, 39, 39, 0.5);
+    box-shadow: inset 0px 0px 4px #000000;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    font-size: calc(1.1rem + 0.5vw);
+  }
+
+  .eventsTextContainer {
     background-color: rgba(51, 39, 39, 0.5);
     box-shadow: inset 0px 0px 4px #000000;
     border-radius: 10px;

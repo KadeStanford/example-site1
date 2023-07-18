@@ -259,6 +259,114 @@ function Menu() {
   );
 }
 
+function About() {
+  return (
+    <>
+      <div className="aboutContainer">
+        <div className="aboutTextContainer">
+          <div className="hoursContainer">
+            <h1 className="aboutTitle">Morning Hours</h1>
+            <p className="aboutText">
+              <span>Tues - Fri</span>
+              <br></br>
+              <span>6 AM - 12 PM</span>
+            </p>
+            <p className="aboutText">
+              <span>Sat</span>
+              <br></br>
+              <span>7 AM - 12 PM</span>
+            </p>
+          </div>
+          <div className="hoursContainer">
+            <h1 className="aboutTitle">Evening Hours</h1>
+            <p className="aboutText">
+              <span>Thur - Sat</span>
+              <br></br>
+              <span>3:30 PM - 7:30 PM</span>
+            </p>
+          </div>
+          <div className="hoursContainer">
+            <h1 className="aboutTitle">Closed</h1>
+            <p className="aboutText">
+              <span>Sun/Mon</span>
+            </p>
+          </div>
+        </div>
+        <div className="aboutTextContainer">
+          <h1 className="aboutTitle">About Us</h1>
+          <p className="aboutText" id="big">
+            We are a breakfast specialty cafe serving freshly made breakfast
+            items, freshly ground hot brewed coffee and specialty iced coffees.
+            We are also an evening scoop shop proudly serving The Chocolate
+            Shoppe&#39;s super premium ice cream with over 30 flavors available
+            to our customers. Come wake up in the morning to your favorite brew
+            and chill out with us in the evenings with gourmet desserts and ice
+            cream like no other!
+            <br></br> <br></br>Liberty House, Circa 1868, housed the first
+            general store in the Feliciana parishes. Standing tall, Liberty
+            House still proudly serves the Feliciana parishes with the same
+            dedication to excellent products, service, and long-term
+            relationships with the members of our community. <br></br>
+            <br></br>Thank you for allowing us to be a part of your day!
+          </p>
+        </div>
+
+        <div className="aboutTextContainer">
+          <h1 className="aboutTitle">Contact Us</h1>
+
+          <p className="aboutText">
+            <span>Phone: (225) 683-9342</span>
+            <br></br>
+            <span>Address: 11652 Liberty Street, Clinton, LA</span>
+          </p>
+        </div>
+
+        <div className="aboutTextContainer">
+          <h1 className="aboutTitle">Website Created By:</h1>
+          <p className="aboutText">
+            <span>Kade Stanford | Stanford Development Solutions</span>
+            <br></br>
+            <a href="https://stanforddev.vercel.app/">
+              Click here to view my website!
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Events() {
+  return (
+    <>
+      <div className="eventsBox" id="IceCream">
+        <h1 className="eventsTitle">Ice Cream Evenings</h1>
+        <div className="eventsTextContainer">
+          <p className="eventsText" id="date">
+            <span>
+              Starting July 29th, every Thur, Fri, & Sat from 3:30 to 7:30!
+            </span>
+          </p>
+          <img
+            src="/chocLogo.png"
+            alt="Chocolate Shoppe Logo"
+            className="logoImage"
+          />
+          <p className="eventsText" id="main">
+            <span>
+              Enjoy an assortment of over 30 super premium ice cream flavors
+              including sugar free and dairy free options from Chocolate Shoppe
+              Ice Cream!
+              <br></br>
+              Mix and match with our gourmet cakes and cookies!
+            </span>
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -292,7 +400,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.content}>
-          <Menu />
+          <Events />
         </div>
       </main>
     </>
