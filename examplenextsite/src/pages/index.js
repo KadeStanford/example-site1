@@ -110,6 +110,7 @@ function Menu() {
           </p>
           <p className="menuItemPrice">
             <span>Spinach & Feta</span>
+            <span id="limited">(Fri & Sat only!)</span>
             <span id="price">...5.95</span>
           </p>
           <p className="menuItemPrice">

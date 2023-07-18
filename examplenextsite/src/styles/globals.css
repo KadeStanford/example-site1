@@ -233,6 +233,11 @@ li {
   margin-bottom: -3%;
 }
 
+#limited {
+  font-size: calc(0.9rem + 0.5vw);
+  color: #ffffff;
+}
+
 #Croissant .menuItemPrice#top {
   margin-top: -3%;
 }
