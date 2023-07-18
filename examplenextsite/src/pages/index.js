@@ -81,6 +81,177 @@ function Menu() {
           </p>
         </div>
       </div>
+
+      <div className="menuBox" id="HotChocolate">
+        <h1 className="menuItemTitle">Hot Chocolate</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemDesc">Regular or Mint</p>
+          <p className="menuItemPrice">
+            <span>12oz.</span>
+            <span>...2.49</span>
+          </p>
+          <p className="menuItemDesc">
+            Add-ins<br></br>
+            Cinnamon Chips or Mini-Marshmellows
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="Croissant">
+        <h1 className="menuItemTitle">Croissant</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Buttered</span>
+            <span id="price">...2.95</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Ham & Swiss</span>
+            <span id="price">...5.95</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Spinach & Feta</span>
+            <span id="price">...5.95</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Almond</span>
+            <span id="price">...3.95</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Chocolate</span>
+            <span id="price">...3.75</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="Scones">
+        <h1 className="menuItemTitle">Scones</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Blueberry</span>
+            <span id="price">...3.89</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="BSWCC">
+        <h1 className="menuItemTitle">Brown Sugar Walnut Coffee Cake</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>By the slice</span>
+            <span id="price">...3.59</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="CheeseDanish">
+        <h1 className="menuItemTitle">Cheese Danish</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Pastry</span>
+            <span id="price">...3.75</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="RaspberryDanish">
+        <h1 className="menuItemTitle">Raspberry Danish</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Pastry</span>
+            <span id="price">...3.75</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="MorningHarvestMuffin">
+        <h1 className="menuItemTitle">Morning Harvest Muffin</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Muffin</span>
+            <span id="price">...3.39</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="ChocCookie">
+        <h1 className="menuItemTitle">Extra Lg.Choc Chunk Cookie</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Cookie</span>
+            <span id="price">...3.69</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="Biscuits">
+        <h1 className="menuItemTitle">Biscuits</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Large Buttermilk Biscuit w/ Butter</span>
+            <span id="price">...2.59</span>
+          </p>
+          <p className="menuItemDesc">
+            <span>
+              Add Preserves (Strawberry, Blackberry, Organic, Reduced Sugar
+              Cherry Blueberry) ...0.59
+            </span>
+            <br></br>
+            <span>Add Deer Sausage Patty ...1.99</span>
+            <br></br>
+            <span>Add Egg Bite* ...3.69</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="Bagels">
+        <h1 className="menuItemTitle">Bagels</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Plain Bagel w/ Butter</span>
+            <span id="price">...2.69</span>
+          </p>
+          <p className="menuItemDesc">
+            <span>(Substitute Cinnamon Butter ...0.30)</span>
+            <br></br>
+            <span>
+              Add Preserves (Strawberry, Blackberry, Organic, Reduced Sugar
+              Cherry Blueberry) ...0.59
+            </span>
+            <br></br>
+            <span>Add Deer Sausage Patty ...1.99</span>
+            <br></br>
+            <span>Add Egg Bite* ...3.69</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="EggBites">
+        <h1 className="menuItemTitle">Egg Bites</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Egg Bites (2 per order)</span>
+            <span id="price">...6.59</span>
+          </p>
+          <p className="menuItemDesc">
+            Flavor Options:<br></br> Ham & Cheese Chili Pepper<br></br>Spinach
+            Feta <br></br>Prosciutto gruyere
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="Oatmeal">
+        <h1 className="menuItemTitle">Oatmeal</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Bowl</span>
+            <span id="price">...3.75</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Add Chopped Pecans</span>
+            <span id="price">...0.65</span>
+          </p>
+        </div>
+      </div>
     </>
   );
 }

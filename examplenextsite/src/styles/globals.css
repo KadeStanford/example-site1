@@ -23,10 +23,15 @@ html {
   max-width: 500px;
   max-height: 50vh;
   min-height: 50vh;
+  box-shadow: 0px 0px 10px #000000;
 }
 
 .menuBox#Coffee {
   background-image: url("/images/coffee.png");
+}
+
+#Coffee .menuItemInfo {
+  overflow-y: scroll;
 }
 
 #flavorNames {
@@ -65,8 +70,63 @@ html {
   background-image: url("/images/orange.png");
 }
 
-#Coffee .menuItemInfo {
+.menuBox#HotChocolate {
+  background-image: url("/images/hotchoc.png");
+}
+
+.menuBox#Croissant {
+  background-image: url("/images/croissant.png");
+}
+
+.menuBox#Scones {
+  background-image: url("/images/blueberry.png");
+}
+
+.menuBox#BSWCC {
+  background-image: url("/images/brown.png");
+}
+
+.menuBox#CheeseDanish {
+  background-image: url("/images/cheesedanish.png");
+}
+
+.menuBox#RaspberryDanish {
+  background-image: url("/images/raspberrydanish.png");
+}
+
+.menuBox#MorningHarvestMuffin {
+  background-image: url("/images/muffin.jpg");
+}
+
+.menuBox#ChocCookie {
+  background-image: url("/images/cookie.png");
+}
+
+.menuBox#Biscuits {
+  background-image: url("/images/biscuit.jpg");
+}
+
+.menuBox#Bagels {
+  background-image: url("/images/bagel.png");
+}
+
+.menuBox#EggBites {
+  background-image: url("/images/egg.png");
+}
+
+.menuBox#Oatmeal {
+  background-image: url("/images/oatmeal.jpg");
+}
+
+#Croissant .menuItemInfo {
   overflow-y: scroll;
+}
+
+#Croissant .menuItemPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
 }
 
 .menuItemInfo {
@@ -87,6 +147,7 @@ html {
   color: #f8c359;
   text-shadow: 2px 2px 0px #000000;
   font-weight: 100;
+  text-align: center;
 }
 
 .menuItemPrice {
@@ -148,7 +209,8 @@ li {
     padding: 5px;
     min-width: 25%;
     max-width: 400px;
-    max-height: 30vh;
+    max-height: 40vh;
+    min-height: 40vh;
   }
 
   .menuItemInfo {
@@ -161,7 +223,7 @@ li {
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    max-height: 25vh;
+    max-height: 27vh;
     font-size: calc(1.1rem + 0.5vw);
   }
 }
