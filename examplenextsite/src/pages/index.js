@@ -85,6 +85,7 @@ function Menu() {
       <div className="menuBox" id="HotChocolate">
         <h1 className="menuItemTitle">Hot Chocolate</h1>
         <div className="menuItemInfo">
+          <p className="menuItemDesc">(Oct - Mar)</p>
           <p className="menuItemDesc">Regular or Mint</p>
           <p className="menuItemPrice">
             <span>12oz.</span>
