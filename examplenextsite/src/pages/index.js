@@ -368,6 +368,20 @@ function Events() {
 }
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState("menu");
+
+  const handleAboutButtonClick = () => {
+    setCurrentPage("about");
+  };
+
+  const handleMenuButtonClick = () => {
+    setCurrentPage("menu");
+  };
+
+  const handleEventButtonClick = () => {
+    setCurrentPage("events");
+  };
+
   return (
     <>
       <Head>
@@ -393,14 +407,29 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonBox}>
-            <button className={styles.button}>About Us</button>
-            <button className={styles.button}>Our Menu</button>
-            <button className={styles.button}>Events</button>
-            <button className={styles.button}>Call in your order!</button>
+            <button className={styles.button} onClick={handleAboutButtonClick}>
+              About Us
+            </button>
+            <button className={styles.button} onClick={handleMenuButtonClick}>
+              Our Menu
+            </button>
+            <button className={styles.button} onClick={handleEventButtonClick}>
+              Events
+            </button>
+            <button className={styles.button}>
+              <a id="call" href="tel:+12256839342">
+                Call in your order!
+              </a>
+            </button>
           </div>
         </div>
+        <div className={styles.egiftcard}>
+          <h1 className={styles.egiftcardTitle}>Ask about our E-Gift Cards!</h1>
+        </div>
         <div className={styles.content}>
-          <Events />
+          {currentPage === "menu" ? <Menu /> : null}
+          {currentPage === "about" ? <About /> : null}
+          {currentPage === "events" ? <Events /> : null}
         </div>
       </main>
     </>

@@ -273,7 +273,7 @@ li {
   background-color: #494444;
   border-radius: 10px;
   height: auto;
-  width: 100%;
+  width: 80%;
 }
 
 .aboutTextContainer {
@@ -383,6 +383,10 @@ a {
   object-fit: contain;
   height: auto;
   z-index: 0;
+}
+
+a#call {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
