@@ -62,6 +62,10 @@ html {
   background-image: url("/images/stroop.png");
 }
 
+#Stroopwafel .menuItemInfo {
+  overflow-y: scroll;
+}
+
 .menuBox#Tea {
   background-image: url("/images/tea.png");
 }
@@ -72,6 +76,10 @@ html {
 
 .menuBox#HotChocolate {
   background-image: url("/images/hotchoc.png");
+}
+
+#HotChocolate .menuItemPrice {
+  margin-top: -5%;
 }
 
 .menuBox#Croissant {
@@ -106,20 +114,48 @@ html {
   background-image: url("/images/biscuit.jpg");
 }
 
+#Biscuits .menuItemInfo {
+  overflow-y: scroll;
+}
+
+#Biscuits .menuItemPrice {
+  margin-top: -5%;
+}
+
+#Biscuits .menuScroll {
+  margin-top: -3%;
+}
+
 .menuBox#Bagels {
   background-image: url("/images/bagel.png");
+}
+
+#Bagels .menuItemInfo {
+  overflow-y: scroll;
+}
+
+#Bagels .menuItemPrice {
+  margin-top: -3%;
+}
+
+#Bagels .menuScroll {
+  margin-top: -3%;
 }
 
 .menuBox#EggBites {
   background-image: url("/images/egg.png");
 }
 
-.menuBox#Oatmeal {
-  background-image: url("/images/oatmeal.jpg");
+#EggBites .menuItemDesc {
+  margin-top: -3%;
 }
 
-#Croissant .menuItemInfo {
-  overflow-y: scroll;
+#EggBites .menuItemPrice {
+  margin-top: -2%;
+}
+
+.menuBox#Oatmeal {
+  background-image: url("/images/oatmeal.jpg");
 }
 
 #Croissant .menuItemPrice {
@@ -139,6 +175,7 @@ html {
   justify-content: flex-start;
   align-items: center;
   height: auto;
+  padding: 10px;
   font-size: calc(1.1rem + 0.5vw);
 }
 
@@ -161,7 +198,6 @@ html {
   justify-content: space-around;
   gap: 20px 20px;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .menuItemDesc {
@@ -180,12 +216,43 @@ li {
   color: #f8c359;
 }
 
-@media screen and (max-width: 600px) {
-  .menuBox {
-    margin-bottom: 3%;
-    width: 90%;
-  }
+#Croissant .menuItemPrice {
+  margin-bottom: -3%;
+}
 
+#Croissant .menuItemPrice#top {
+  margin-top: -3%;
+}
+
+#Tea .menuItemInfo {
+  margin-top: 15%;
+}
+
+#OrangeJuice .menuItemInfo {
+  margin-top: 15%;
+}
+
+#Scones .menuItemInfo {
+  margin-top: 12.5%;
+}
+
+#CheeseDanish .menuItemInfo {
+  margin-top: 12.5%;
+}
+
+#RaspberryDanish .menuItemInfo {
+  margin-top: 15%;
+}
+
+#MorningHarvestMuffin .menuItemInfo {
+  margin-top: 15%;
+}
+
+#ChocCookie .menuItemInfo {
+  margin-top: 15%;
+}
+
+@media screen and (max-width: 600px) {
   html {
     background-image: url("/images/headerbacklong.jpeg");
     background-repeat: repeat-y;
@@ -209,8 +276,10 @@ li {
     padding: 5px;
     min-width: 25%;
     max-width: 400px;
-    max-height: 40vh;
-    min-height: 40vh;
+    max-height: 45vh;
+    min-height: 45vh;
+    margin-bottom: 3%;
+    width: 90%;
   }
 
   .menuItemInfo {
@@ -223,7 +292,10 @@ li {
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    max-height: 27vh;
     font-size: calc(1.1rem + 0.5vw);
+  }
+
+  #Coffee .menuItemInfo {
+    max-height: 27vh;
   }
 }

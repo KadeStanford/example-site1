@@ -100,7 +100,7 @@ function Menu() {
       <div className="menuBox" id="Croissant">
         <h1 className="menuItemTitle">Croissant</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice">
+          <p className="menuItemPrice" id="top">
             <span>Buttered</span>
             <span id="price">...2.95</span>
           </p>
@@ -186,8 +186,9 @@ function Menu() {
       <div className="menuBox" id="Biscuits">
         <h1 className="menuItemTitle">Biscuits</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Large Buttermilk Biscuit w/ Butter</span>
+          <p className="menuScroll">Large Buttermilk Biscuit w/ Butter</p>
+          <p className="menuItemPrice" id="main">
+            <span>Per Biscuit</span>
             <span id="price">...2.59</span>
           </p>
           <p className="menuItemDesc">
@@ -206,8 +207,10 @@ function Menu() {
       <div className="menuBox" id="Bagels">
         <h1 className="menuItemTitle">Bagels</h1>
         <div className="menuItemInfo">
+          {" "}
+          <p className="menuScroll">Plain Bagel w/ Butter</p>
           <p className="menuItemPrice">
-            <span>Plain Bagel w/ Butter</span>
+            <span>Per Bagel</span>
             <span id="price">...2.69</span>
           </p>
           <p className="menuItemDesc">

@@ -108,7 +108,7 @@
   }
 
   .headerTitle {
-    font-size: calc(2em + 2vw);
+    font-size: calc(1.5em + 2vw);
     margin-top: 3%;
     text-shadow: 2px 2px 0px #000000;
   }
@@ -129,11 +129,12 @@
     border: none;
     border-radius: 10px;
     padding: 10px;
-    font-size: calc(1.1rem + 1vw);
+    font-size: calc(1rem + 0.8vw);
     font-family: "Olivade", sans-serif;
     cursor: pointer;
     box-shadow: inset 0px 0px 4px #000000;
     transition: all 0.3s;
-    flex: 1 1 40%;
+    flex: 1 1 30%;
+    max-height: 44px;
   }
 }
