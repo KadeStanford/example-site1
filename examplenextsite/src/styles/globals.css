@@ -365,6 +365,7 @@ a {
 .eventsTitle {
   color: rgb(91, 231, 231);
   text-shadow: 2px 2px 0px #2980bb;
+  font-size: calc(2.5rem + 0.5vw);
 }
 
 .eventsText {
