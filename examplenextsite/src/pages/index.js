@@ -52,10 +52,6 @@ export default function Home() {
               <a id="events" onClick={handleEventButtonClick}>
                 Events
               </a>
-
-              <a id="call" href="tel:+12256839342">
-                Call in your order
-              </a>
             </div>
 
             <div id="egiftcardnote">Ask about our E-GiftCards!</div>
