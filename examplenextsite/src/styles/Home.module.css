@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Olivade";
+  src: url("/Olivade.woff") format("woff");
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Olivade", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-family: "Olivade", sans-serif;
+  background-image: url("/images/house11.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.headerImage {
+  position: absolute;
+  z-index: -1;
+  width: 40%;
+  object-fit: fill;
+}
+
+.headerTitle {
+  font-size: calc(2.8em + 2vw);
+  color: #f8c359;
+  text-shadow: 5px 2px 0px #000000;
+  font-weight: 100;
+  margin-top: -2%;
+}
+
+.headerSubtitle {
+  font-size: calc(1.2rem + 1vw);
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #ffffff;
+  margin-top: -7%;
+  font-weight: 100;
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px 20px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 55%;
+}
+
+.button {
+  background-color: rgb(61, 60, 51);
+  color: #f8c359;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: calc(1.1rem + 1vw);
+  font-family: "Olivade", sans-serif;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 4px #000000;
+  transition: all 0.3s;
+}
+
+.headerTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Olivade", sans-serif;
+  margin-top: 5%;
+  background-color: aqua;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Olivade", sans-serif;
+    margin-top: 5%;
+    background-color: aqua;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .headerTitle {
+    font-size: calc(2em + 2vw);
+    margin-top: 3%;
+    text-shadow: 2px 2px 0px #000000;
+  }
+
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50%;
+  }
+
+  .button {
+    background-color: rgb(61, 60, 51);
+    color: #f8c359;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: calc(1.1rem + 1vw);
+    font-family: "Olivade", sans-serif;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 4px #000000;
+    transition: all 0.3s;
+    flex: 1 1 40%;
+  }
+}
