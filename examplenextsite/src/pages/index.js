@@ -678,9 +678,9 @@ function SeasonalFlavors() {
               width: "57%",
             }}
             src="/cream/smore.png"
-            alt="S'more to Love"
+            alt="S&#39;more to Love"
           />
-          <p className="iceCreamText">S'more to Love</p>
+          <p className="iceCreamText">S&#39;more to Love</p>
           <p className="iceCreamDesc">
             Crushed graham cracker ice cream with melty layers of chocolate and
             marshmallow.
