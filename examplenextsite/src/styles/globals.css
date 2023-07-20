@@ -446,21 +446,14 @@ a#call {
   text-shadow: 2px 2px 0px #000000;
   font-size: calc(1.1rem + 0.5vw);
   text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: -10%;
 }
 
 .iceCreamBoxOrganizer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-}
-
-.iceCreamBoxOrganizerCol {
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -482,16 +475,28 @@ a#call {
   margin-bottom: 2%;
 }
 
+.iceCreamBoxOrganizerCol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
 .iceCreamBoxRow {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 30%;
   height: auto;
   background-color: #413c3c;
   margin-bottom: 10px;
+  min-height: 350px;
+  max-height: 350px;
   border-radius: 10px;
 }
 
@@ -583,6 +588,42 @@ a#call {
     max-height: 340px;
     margin-bottom: 5%;
   }
+
+  .iceCreamBoxOrganizerCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+
+  .iceCreamBoxRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #413c3c;
+    margin-bottom: 10px;
+    min-height: 300px;
+    max-height: 350px;
+    border-radius: 10px;
+  }
+
+  .iceCreamDescRow {
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000000;
+    font-size: calc(1.1rem + 0.5vw);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -10%;
+  }
+
   .menuBox {
     display: flex;
     flex-direction: column;
