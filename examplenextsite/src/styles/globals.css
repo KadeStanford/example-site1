@@ -402,7 +402,6 @@ a#call {
   border-radius: 10px;
   padding: 10px;
   width: 80%;
-  margin-top: -10%;
 }
 
 .iceCreamSeasonal {
@@ -544,6 +543,17 @@ a#call {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+  }
+
+  .iceCreamContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    margin-top: -7%;
   }
 
   .iceCreamButton {
