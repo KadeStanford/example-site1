@@ -369,6 +369,1088 @@ function Events() {
   );
 }
 
+function SeasonalFlavors() {
+  return (
+    <>
+      <h1 className="iceCreamTitle">Flavors of the Season</h1>
+      <p className="iceCreamDesc">
+        This is a list of the current flavors we have to offer from The
+        Chocolate Shoppe! Check the{" "}
+        <span className="yellowText">All Flavors</span> tab to see a list of all
+        the flavors they have to offer
+      </p>
+
+      <div className="iceCreamBoxOrganizer">
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "60%",
+            }}
+            src="/cream/zanzibar.png"
+            alt="Zanzibar"
+          />
+          <p className="iceCreamText">Zanzibar Chocolate</p>
+          <p className="iceCreamDesc">
+            Award-winning, deep dark chocolate made with three kinds of cocoa
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "58%",
+            }}
+            src="/cream/serious.png"
+            alt="This $&@! Just Got Serious"
+          />
+          <p className="iceCreamText">This $&@! Just Got Serious</p>
+          <p className="iceCreamDesc">
+            Salted caramel ice cream with a sea salt fudge ripple and roasted
+            cashews
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "60%",
+            }}
+            src="/cream/birthdaycake.png"
+            alt="Birthday Cake"
+          />
+          <p className="iceCreamText">Birthday Cake</p>
+          <p className="iceCreamDesc">
+            This party in a pint is topped off with festive swirls of blue
+            buttercream frosting and bursts of colorful confetti sprinkles
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "55%",
+            }}
+            src="/cream/mintavalanche.png"
+            alt="Mint Avalanche"
+          />
+          <p className="iceCreamText">Mint Avalanche</p>
+          <p className="iceCreamDesc">
+            Mint ice cream loaded with Andes® Candies, Grasshopper® cookies, and
+            chocolate fudge
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/heapsoflove.png"
+            alt="Heaps of Love"
+          />
+          <p className="iceCreamText">Heaps of Love</p>
+          <p className="iceCreamDesc">
+            Vanilla ice cream packed with Oreos®, brownies, cookie dough,
+            pecans, caramel and chocolate swirls
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/kitty.png"
+            alt="Kitty Kitty Bang Bang"
+          />
+          <p className="iceCreamText">Kitty Kitty Bang Bang</p>
+          <p className="iceCreamDesc">
+            Cheesecake ice cream mixed with raspberry sauce, Oreos® and
+            chocolate chunks
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/fatelvis.png"
+            alt="Fat Elvis"
+          />
+          <p className="iceCreamText">Fat Elvis</p>
+          <p className="iceCreamDesc">
+            Banana ice cream all shook up with salty peanut butter and chocolate
+            chips
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/coconutalmond.png"
+            alt="Coconut Almond Bliss"
+          />
+          <p className="iceCreamText">Coconut Almond Bliss</p>
+          <p className="iceCreamDesc">
+            Coconut ice cream with chocolate flakes and roasted almonds
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/blueberrycheesecake.png"
+            alt="Blueberry Cheesecake"
+          />
+          <p className="iceCreamText">Blueberry Cheesecake</p>
+          <p className="iceCreamDesc">
+            Delectably smooth cheesecake ice cream topped off with a tangy
+            blueberry ripple and soft cheesecake chunks.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/cakebatterfudge.png"
+            alt="Cake Batter Fudge"
+          />
+          <p className="iceCreamText">Cake Batter Fudge</p>
+          <p className="iceCreamDesc">
+            Cake batter-base, thick chocolate frosting swirls and lush brownie
+            pieces
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/blackberrylemonbar.png"
+            alt="Blackberry Lemon Bar"
+          />
+          <p className="iceCreamText">Blackberry Lemon Bar</p>
+          <p className="iceCreamDesc">
+            Lemon ice cream folded with pound cake and blackberry sauce
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/pistachionut.png"
+            alt="Pistachio Nut"
+          />
+          <p className="iceCreamText">Pistachio Nut</p>
+          <p className="iceCreamDesc">
+            Irresistible almond-flavored ice cream churned with crisp pistachio
+            nuts
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/oatmealcookie.png"
+            alt="Oatmeal Cookie"
+          />
+          <p className="iceCreamText">Oatmeal Cookie</p>
+          <p className="iceCreamDesc">
+            Brown Sugar, cinnimon and vanilla vegan oat cream, mixed with
+            oatmeal cookie dough, chocolate and roasted pecans
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/mycoconutromance.png"
+            alt="My Coconut Romance"
+          />
+          <p className="iceCreamText">My Coconut Romance</p>
+          <p className="iceCreamDesc">
+            Chocolate coconut ice cream folded with Coconut Dream cookies and
+            gooey caramel.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/vanilla.png"
+            alt="Old Fashioned Vanilla"
+          />
+          <p className="iceCreamText">Old Fashioned Vanilla</p>
+          <p className="iceCreamDesc">
+            An award-winning and all-natural classic vanilla ice cream made with
+            Wisconsin cream, cane sugar and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/cherrychocolatechip.png"
+            alt="Cherry Chocolate Chip"
+          />
+          <p className="iceCreamText">Cherry Chocolate Chip</p>
+          <p className="iceCreamDesc">
+            Sweet vanilla ice cream loaded with big, red cherries and
+            melt-in-your-mouth chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/strawberry.png"
+            alt="Strawberry"
+          />
+          <p className="iceCreamText">Strawberry</p>
+          <p className="iceCreamDesc">
+            Award-winning and deliciously fresh strawberry ice cream loaded to
+            the brim with real, whole strawberries.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/peanutbuttercup.png"
+            alt="Peanut Butter Cup"
+          />
+          <p className="iceCreamText">Peanut Butter Cup</p>
+          <p className="iceCreamDesc">
+            Smooth chocolate ice cream brimming with mouthwatering peanut butter
+            ripples and rich peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/halleyscomet.png"
+            alt="Halley&#39;s Comet®"
+          />
+          <p className="iceCreamText">Halley&#39;s Comet®</p>
+          <p className="iceCreamDesc">
+            A perfect trio of flavors with rich milk chocolate and vanilla ice
+            creams swirled with caramel ribbons and caramel truffles.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/bourbonpecanpie.png"
+            alt="Bourbon Pecan Pie"
+          />
+          <p className="iceCreamText">Bourbon Pecan Pie</p>
+          <p className="iceCreamDesc">
+            Smooth bourbon ice cream swirled with a sea salt chocolate fudge
+            ripple and roasted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/ultimateoreo.png"
+            alt="Ultimate Oreo"
+          />
+          <p className="iceCreamText">Ultimate Oreo</p>
+          <p className="iceCreamDesc">
+            Scrumptious Oreo® crumb ice cream packed with boat-loads of whole
+            Oreo® cookies.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/smore.png"
+            alt="S'more to Love"
+          />
+          <p className="iceCreamText">S'more to Love</p>
+          <p className="iceCreamDesc">
+            Crushed graham cracker ice cream with melty layers of chocolate and
+            marshmallow.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/pomegranate.png"
+            alt="Pomegranate Swirl"
+          />
+          <p className="iceCreamText">Pomegranate Swirl</p>
+          <p className="iceCreamDesc">
+            Creamy, no-sugar-added vanilla ice cream brimming with delicious,
+            no-sugar-added blueberry and pomegranate ripples.
+          </p>
+        </div>
+        <div className="iceCreamBox">
+          <img
+            style={{
+              width: "57%",
+            }}
+            src="/cream/caramelcashew.png"
+            alt="Cashews & Caramel"
+          />
+          <p className="iceCreamText">Cashews & Caramel</p>
+          <p className="iceCreamDesc">
+            Creamy, no-sugar-added vanilla ice cream rippled with gooey,
+            sugar-free caramel and loaded with real cashews.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function AllFlavors() {
+  return (
+    <>
+      <h1 className="iceCreamTitle">All Flavors</h1>
+      <p className="iceCreamDesc">
+        {" "}
+        This is a list of all the flavors The Chocolate Shoppe has to offer!
+        Check the <span className="yellowText">Flavors of the Season</span> tab
+        to see what we have in stock!
+      </p>
+      <div className="iceCreamBoxOrganizerCol">
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Banana Cream Pie</h1>
+          <p className="iceCreamDescRow">
+            Your favorite comfort food now on a cone! Banana ice cream churned
+            with a marshmallow ripple and real Nilla Wafers®.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Birthday Cake</h1>
+          <p className="iceCreamDescRow">
+            This party in a pint is topped off with festive swirls of blue
+            buttercream frosting and bursts of colorful confetti sprinkles.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Cherry</h1>
+          <p className="iceCreamDescRow">
+            Simply sweet black cherry ice cream with boat-loads of whole black
+            cherries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Cherry Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Delectably sweet black cherry non-dairy frozen dessert bursting with
+            whole black cherries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Licorice</h1>
+          <p className="iceCreamDescRow">
+            Rich, creamy, and luxurious black licorice flavor balanced with the
+            right amount of sweetness.This flavor isn&#39;t for the masses, but
+            if black licorice is your thing, it&#39;s a cult favorite you cannot
+            miss.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Walnut</h1>
+          <p className="iceCreamDescRow">
+            Classic black walnut ice cream folded with crunchy walnuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blackberry Lemon Bar</h1>
+          <p className="iceCreamDescRow">
+            Fresh lemon ice cream folded with pound cake pieces and swirls of
+            blackberry sauce.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blue Moon</h1>
+          <p className="iceCreamDescRow">
+            Just like the milk in the bottom of a Fruit Loops bowl, this tasty
+            ice cream has a sweet Fruit Loops taste and a wacky blue color.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blue Moon Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Just like the milk in the bottom of a Fruit Loops bowl, this tasty
+            ice cream has a sweet Fruit Loops taste and a wacky blue color. Made
+            with vegan oat cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blueberry Cheesecake</h1>
+          <p className="iceCreamDescRow">
+            Delectably smooth cheesecake ice cream topped off with a tangy
+            blueberry ripple and soft cheesecake chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Bourbon Pecan Pie</h1>
+          <p className="iceCreamDescRow">
+            Smooth bourbon ice cream swirled with a sea salt chocolate fudge
+            ripple and roasted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Brownie Cascade</h1>
+          <p className="iceCreamDescRow">
+            Classic, creamy chocolate ice cream exploding with brownie pieces,
+            caramel cups and a sweet fudge ripple.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Butter Pecan</h1>
+          <p className="iceCreamDescRow">
+            Buttery pecan ice cream with boat-loads of crispy, lightly roasted
+            and salted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cake Batter Fudge</h1>
+          <p className="iceCreamDescRow">
+            With a scrumptious cake batter-base, thick chocolate frosting swirls
+            and brownie chunks, this ice cream settles all arguments over the
+            mixing spoon!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cappuccino Break</h1>
+          <p className="iceCreamDescRow">
+            Crisp coffee-infused ice cream churned with chocolate-covered toffee
+            and candy-coated almonds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Caramel Apple Pie</h1>
+          <p className="iceCreamDescRow">
+            Spicy cinnamon ice cream mixed with chunks of real apples, crispy
+            cinnamon shortbread pieces and a thick caramel ripple, available for
+            a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Caramel Chaos</h1>
+          <p className="iceCreamDescRow">
+            Sweet caramel ice cream packed with chocolate-covered caramel cups
+            and swirls of gooey caramel.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Carrot Cake</h1>
+          <p className="iceCreamDescRow">
+            Spiced carrot cake ice cream loaded with chunks of cake, roasted
+            pecans and a swirl of cream cheese frosting.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Carrot Mango Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat and bursting with sweet, tangy flavor with real
+            carrot (yes, we said carrot!) and fruit juices.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cashews & Caramel</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream rippled with gooey,
+            sugar-free caramel and loaded with real cashews.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cherry Chocolate Chip</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream loaded with big, red cherries and
+            melt-in-your-mouth chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Chocolate</h1>
+          <p className="iceCreamDescRow">
+            All-natural, classic chocolate ice cream made with real, rich
+            cocoas.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">
+            Chocolate Chip Oatmeal Cookie Oat Cream
+          </h1>
+          <p className="iceCreamDescRow">
+            Brown sugar, cinnamon and vanilla vegan oat cream mixed with oatmeal
+            cookie dough, chocolate and roasted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cinnamon Stick</h1>
+          <p className="iceCreamDescRow">
+            Our all natural, tantalizing spicy-yet-smooth cinnamon flavored ice
+            cream.
+          </p>
+        </div>{" "}
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Coconut</h1>
+          <p className="iceCreamDescRow">
+            Smooth, sweet, creamy and infused with coconut goodness.
+          </p>
+        </div>{" "}
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Coconut Almond Bliss</h1>
+          <p className="iceCreamDescRow">
+            Tropical coconut ice cream with tons of melt-in-your-mouth chocolate
+            flakes and crispy almond pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cotton Candy Twist</h1>
+          <p className="iceCreamDescRow">
+            Blue and pink cotton candy ice creams spun together for that
+            whimsical carnival sensation!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Door County Cherry</h1>
+          <p className="iceCreamDescRow">
+            All-natural vanilla ice cream loaded with tart Door County cherries
+            from Sister Bay, Wisconsin.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Dutch Maid Vanilla</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural made with Wisconsin cream, cane sugar
+            and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Egg Nog</h1>
+          <p className="iceCreamDescRow">
+            A holiday favorite! Decadently smooth ice cream brimming with
+            traditional eggnog flavor, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Electric Watermelon</h1>
+          <p className="iceCreamDescRow">
+            Refreshing watermelon Italian ice with a jolt of sour to leave you
+            feeling electric.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Espresso</h1>
+          <p className="iceCreamDescRow">
+            An all-natural ice cream blended with crisp coffee extracts and
+            sweet cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Espresso Oreo</h1>
+          <p className="iceCreamDescRow">
+            Crisp coffee-infused ice cream loaded with heaps of sweet Oreos.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Exhausted Parent®</h1>
+          <p className="iceCreamDescRow">
+            Bourbon-spiked espresso ice cream swirled with bittersweet chocolate
+            chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Fat Elvis</h1>
+          <p className="iceCreamDescRow">
+            Sweet banana ice cream all shook up with a salty peanut butter
+            ripple and rich chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Gumball</h1>
+          <p className="iceCreamDescRow">
+            Bubblegum glow up! Nostalgic gumball ice cream folded with pink,
+            edible bubblegum-esque pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Halley&#39;s Comet®</h1>
+          <p className="iceCreamDescRow">
+            A perfect trio of flavors with rich milk chocolate and vanilla ice
+            creams swirled with caramel ribbons and caramel truffles.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Heaps of Love</h1>
+          <p className="iceCreamDescRow">
+            Anything and everything you can want! Oreos, brownies, cookie dough,
+            pecans, caramel and chocolate ripples all packed into vanilla ice
+            cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Iced Latte-Da®</h1>
+          <p className="iceCreamDescRow">
+            Fantastic Wisconsin-made caffeinated espresso ice cream with fudge
+            swirls and chocolate chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Key Lime Pie</h1>
+          <p className="iceCreamDescRow">
+            Can you say pucker up? You will after this southern pie flavor made
+            with tart lime ice cream, sour lime candies and graham cracker
+            pieces, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Kitty Kitty Bang Bang</h1>
+          <p className="iceCreamDescRow">
+            Irresistibly smooth cheesecake ice cream mixed with a sweet
+            raspberry ripple, Oreo cookies and soft chocolate chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat tart lemon Italian ice, for any hot mid-summer
+            day.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Meringue</h1>
+          <p className="iceCreamDescRow">
+            Fresh lemon and fluffy marshmallow ice creams swirled together with
+            a tart lemon ripple, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Poppy Seed</h1>
+          <p className="iceCreamDescRow">
+            All-natural, fresh and bright lemon ice cream speckled with poppy
+            seeds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">London Fog</h1>
+          <p className="iceCreamDescRow">
+            Creamy and smooth Earl Grey tea latte reimagined as your new
+            favorite ice cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mackinac Island Fudge</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream with a melt-in-your-mouth chocolate fudge
+            ripple and chunks of rich chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Malt Amore</h1>
+          <p className="iceCreamDescRow">
+            Old-style malted milk ice cream packed with rich, malt flavor, soft
+            chocolate chips and ripples of sweet, chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Maple Nut</h1>
+          <p className="iceCreamDescRow">
+            Heavenly sweet maple ice cream brimming with fresh, crunchy walnuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Matcha Green Tea</h1>
+          <p className="iceCreamDescRow">
+            A Zen-inspiring treat of sweet cream infused with green tea
+            extracts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Avalanche</h1>
+          <p className="iceCreamDescRow">
+            A mint lover&#39;s paradise! Fresh mint ice cream loaded with Andes®
+            Candies and Grasshopper® cookies spun off with a chocolate fudge
+            swirl.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Chip</h1>
+          <p className="iceCreamDescRow">
+            Classic, fresh mint ice cream loaded with melt-in-your-mouth, rich
+            chocolate flakes.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Oreo Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Vegan mint oat cream packed with whole Oreo cookies.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Moose Tracks®</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream packed with mini chocolate peanut butter
+            cups and swirls of melt-in-your-mouth chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Munchie Madness</h1>
+          <p className="iceCreamDescRow">
+            Sweet cake batter ice cream swirled with a salted caramel ripple and
+            brimming with Oreos, M&M pieces and peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">My Coconut Romance</h1>
+          <p className="iceCreamDescRow">
+            Chocolate coconut ice cream folded with Coconut Dream cookies and
+            gooey caramel.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Old Fashioned Vanilla</h1>
+          <p className="iceCreamDescRow">
+            An award-winning and all-natural classic vanilla ice cream made with
+            Wisconsin cream, cane sugar and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Orange Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Refreshing sherbet bursting with orange flavor.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Party Animal</h1>
+          <p className="iceCreamDescRow">
+            Sugar cookie ice cream blended with pink and white frosted animal
+            cookies and rainbow sprinkles
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Passion Fruit Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Tart and refreshing passion fruit juice blended with our signature
+            Italian ice. Vegan, all-natural, and 100% crave-worthy on a sunny,
+            summer day.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">PB Hearts Chocolate®</h1>
+          <p className="iceCreamDescRow">
+            Creamy peanut butter ice cream swirled with a smooth chocolate
+            ripple and kissed with peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peach</h1>
+          <p className="iceCreamDescRow">
+            Fresh peach ice cream packed with real peaches to celebrate the warm
+            spring weather, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Buddy Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Salty peanut butter vegan oat cream spun with chocolate flakes.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Butter Cookie Dough</h1>
+          <p className="iceCreamDescRow">
+            Vanilla ice cream loaded with soft cookie dough chunks, rich
+            chocolate flakes, and a thick peanut butter ripple.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Butter Cup</h1>
+          <p className="iceCreamDescRow">
+            Smooth chocolate ice cream brimming with mouthwatering peanut butter
+            ripples and rich peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peppermint Stick</h1>
+          <p className="iceCreamDescRow">
+            Crisp, peppermint ice cream made with boat-loads of peppermint
+            candies and bursting with candy cane flavor in every bite.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pistachio Nut</h1>
+          <p className="iceCreamDescRow">
+            Irresistible almond-flavored ice cream churned with crisp pistachio
+            nuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pomegranate Swirl</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream brimming with delicious,
+            no-sugar-added blueberry and pomegranate ripples.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Praline Pecan</h1>
+          <p className="iceCreamDescRow">
+            Buttery maple ice cream topped with a gooey caramel ripple and loads
+            of crunchy, candy-coated pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pumpkin</h1>
+          <p className="iceCreamDescRow">
+            Smooth, spiced pumpkin ice cream flavored with pumpkin puree.
+            Available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rainbow Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Orange, Lime, and Raspberry flavored sherbets classically swirled
+            together.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Lemon Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat sweet raspberry and tart lemon Italian ices
+            swirled together for an irresistibly refreshing treat.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Rhapsody</h1>
+          <p className="iceCreamDescRow">
+            Black raspberry ice cream swirled with a sweet raspberry ripple and
+            heavenly chocolate covered raspberry cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Sweet and refreshing raspberry-flavored sherbet.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rhubarb Crumble</h1>
+          <p className="iceCreamDescRow">
+            Sweet, cream cheese frosting ice cream, spun with a bright rhubarb
+            jam and a buttery shortbread crumble.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rocky Road</h1>
+          <p className="iceCreamDescRow">
+            Swirls of rich, chocolate and fluffy marshmallow ice creams and
+            topped off with chocolate-covered almonds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Root Beer Float</h1>
+          <p className="iceCreamDescRow">
+            Creamy vanilla ice cream swirled with crisp root beer Italian ice
+            for a bold new twist on an old favorite, available for a limited
+            time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">S&#39;more to Love</h1>
+          <p className="iceCreamDescRow">
+            Crushed graham cracker ice cream with melty layers of chocolate and
+            marshmallow.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Salted Caramel</h1>
+          <p className="iceCreamDescRow">
+            A tantalizing blend of sweet, rich caramel and mouth-watering sea
+            salt.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Sticks & Stones®</h1>
+          <p className="iceCreamDescRow">
+            Soft cookie dough chunks, crunchy chocolate covered pretzels, and a
+            gooey salted caramel ripple all swirled into our rich chocolate ice
+            cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry</h1>
+          <p className="iceCreamDescRow">
+            Award-winning and deliciously fresh strawberry ice cream loaded to
+            the brim with real, whole strawberries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Cheesecake</h1>
+          <p className="iceCreamDescRow">
+            Cheesecake ice cream swirled with a strawberry ripple and loads of
+            gooey cheesecake pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Hibiscus Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Fresh strawberry puree balanced with infused hibiscus, and blended
+            into vegan italian ice.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Ripple</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream swirled with sweet and
+            tangy strawberry ribbons.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Super Human</h1>
+          <p className="iceCreamDescRow">
+            Meet your new kryptonite… Cherry, Blue Moon and Vanilla ice creams
+            combine forces to bring you one super scoop!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">This $&@! Just Got Serious®</h1>
+          <p className="iceCreamDescRow">
+            Award-winning, smooth salted caramel ice cream brimming with rich
+            sea salt fudge and salted cashews.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Turtle</h1>
+          <p className="iceCreamDescRow">
+            Classic vanilla ice cream with swirls of rich chocolate fudge, gooey
+            caramel and lightly roasted and salted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Ultimate Oreo</h1>
+          <p className="iceCreamDescRow">
+            Scrumptious Oreo crumb ice cream packed with boat-loads of whole
+            Oreo cookies.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Ultimate Oreo Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Oreo crumb non-dairy frozen dessert packed with whole Oreos.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Bean</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural ice cream made with Wisconsin cream,
+            cane sugar, pure vanilla extracts and vanilla bean flecks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Chocolate Chip Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Classic vanilla non-dairy frozen dessert made with delicious,
+            semi-sweet chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Custard</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural custard made with Wisconsin cream,
+            cane sugar, egg yolks and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Indulgently creamy non-dairy frozen dessert blended with oat milk
+            and vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Witches&#39; Brew</h1>
+          <p className="iceCreamDescRow">
+            Brewed espresso and spiced pumpkin ice creams swirled together to
+            put a spell on you in every scoop, available for a limited time
+            only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Yippee Skippee®</h1>
+          <p className="iceCreamDescRow">
+            Creamy peanut butter ice cream loaded with salted caramel ripples,
+            soft brownie chunks and crispy chocolate-covered pretzels.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zanzibar® Chocolate</h1>
+          <p className="iceCreamDescRow">
+            All-natural and award-winning chocolate ice cream made with three
+            kinds of cocoa for a rich, fudge brownie taste.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zanzimint®</h1>
+          <p className="iceCreamDescRow">
+            Zanzibar® chocolate ice cream swirled with crisp mint ice cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zoreo</h1>
+          <p className="iceCreamDescRow">
+            Zanzibar® chocolate ice cream swirled with crisp mint ice cream.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function IceCream() {
+  const [currentTab, setCurrentTab] = useState("seasonal");
+
+  const handleSeasonalButtonClick = () => {
+    setCurrentTab("seasonal");
+  };
+
+  const handleAllButtonClick = () => {
+    setCurrentTab("all");
+  };
+
+  return (
+    <>
+      <div className="iceCreamContainer">
+        <div className="iceCreamButtonContainer">
+          <button
+            className="iceCreamButton"
+            onClick={handleSeasonalButtonClick}
+          >
+            Flavors of the Season
+          </button>
+          <button className="iceCreamButton" onClick={handleAllButtonClick}>
+            All Flavors
+          </button>
+        </div>
+        <div className="iceCreamSeasonal">
+          {currentTab === "seasonal" ? <SeasonalFlavors /> : null}
+          {currentTab === "all" ? <AllFlavors /> : null}
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Home() {
   const [currentPage, setCurrentPage] = useState("menu");
 
@@ -382,6 +1464,10 @@ export default function Home() {
 
   const handleEventButtonClick = () => {
     setCurrentPage("events");
+  };
+
+  const handleIceCreamButtonClick = () => {
+    setCurrentPage("iceCream");
   };
 
   return (
@@ -418,6 +1504,12 @@ export default function Home() {
             <button className={styles.button} onClick={handleEventButtonClick}>
               Events
             </button>
+            <button
+              className={styles.button}
+              onClick={handleIceCreamButtonClick}
+            >
+              Ice Cream
+            </button>
             <button className={styles.button}>
               <a id="call" href="tel:+12256839342">
                 Call in your order!
@@ -432,6 +1524,7 @@ export default function Home() {
           {currentPage === "menu" ? <Menu /> : null}
           {currentPage === "about" ? <About /> : null}
           {currentPage === "events" ? <Events /> : null}
+          {currentPage === "iceCream" ? <IceCream /> : null}
         </div>
       </main>
     </>
