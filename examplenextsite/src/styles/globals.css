@@ -402,6 +402,7 @@ a#call {
   border-radius: 10px;
   padding: 10px;
   width: 80%;
+  margin-top: -10%;
 }
 
 .iceCreamSeasonal {
@@ -414,7 +415,7 @@ a#call {
   box-shadow: 0px 0px 10px #000000;
   background-color: #494444;
   width: 100%;
-  margin-top: 1%;
+  margin-top: 5%;
   height: auto;
 }
 
@@ -422,12 +423,14 @@ a#call {
   color: #f8c359;
   text-shadow: 2px 2px 0px #000000;
   font-size: calc(2.5rem + 0.5vw);
+  text-align: center;
 }
 
 .iceCreamText {
   color: #f8c359;
   text-shadow: 2px 2px 0px #000000;
   font-size: calc(1.2rem + 0.5vw);
+  text-align: center;
 }
 
 .iceCreamDesc {
@@ -533,6 +536,43 @@ a#call {
     margin: 0;
   }
 
+  .iceCreamBoxOrganizer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+
+  .iceCreamButton {
+    background-color: rgb(61, 60, 51);
+    color: #f8c359;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: calc(1rem + 1vw);
+    font-family: "Olivade", sans-serif;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 4px #000000;
+    margin-top: 10px;
+    flex: 1 1 0;
+  }
+
+  .iceCreamBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #000000;
+    width: 85%;
+    min-height: 340px;
+    max-height: 340px;
+    margin-bottom: 5%;
+  }
   .menuBox {
     display: flex;
     flex-direction: column;
