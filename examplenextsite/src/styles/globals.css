@@ -416,6 +416,13 @@ a#call {
 }
 
 .iceCreamTitle {
+  color: #3c3e41;
+  text-shadow: 2px 2px 3px #ffffff;
+  font-size: calc(2.5rem + 0.5vw);
+  text-align: center;
+}
+
+.iceCreamTitleTop {
   color: #f8c359;
   text-shadow: 2px 2px 3px #000000;
   font-size: calc(2.5rem + 0.5vw);
@@ -423,8 +430,8 @@ a#call {
 }
 
 .iceCreamText {
-  color: #f8c359;
-  text-shadow: 2px 2px 3px #000000;
+  color: #3c3e41;
+  text-shadow: 2px 2px 3px #ffffff;
   font-size: calc(1.2rem + 0.5vw);
   text-align: center;
 }
@@ -474,12 +481,12 @@ a#call {
   align-items: center;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0px 0px 0px 5px #f8c359;
+  box-shadow: 0px 0px 0px 5px #3c3e41;
+  background-color: #ffffff;
   width: 25%;
   min-height: 440px;
   max-height: 440px;
   margin-bottom: 2%;
-  background-color: #cacecf;
 }
 
 .iceCreamBoxOrganizerCol {
@@ -500,8 +507,8 @@ a#call {
   flex-wrap: wrap;
   width: 30%;
   height: auto;
-  background-color: #cacecf;
-  box-shadow: 0px 0px 0px 3px #f8c359;
+  box-shadow: 0px 0px 0px 5px #3c3e41;
+  background-color: #ffffff;
   margin-bottom: 10px;
   min-height: 350px;
   max-height: 350px;
@@ -608,7 +615,7 @@ a#call {
     min-height: 340px;
     max-height: 340px;
     margin-bottom: 5%;
-    background-color: #cacecf;
+    background-color: #ffffff;
     box-shadow: 0px 0px 0px 3px #f8c359;
   }
 

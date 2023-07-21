@@ -372,7 +372,7 @@ function Events() {
 function SeasonalFlavors() {
   return (
     <>
-      <h1 className="iceCreamTitle">Flavors of the Season</h1>
+      <h1 className="iceCreamTitleTop">Flavors of the Season</h1>
       <img src="/images/cone.svg" alt="cone" className="coneImage" />
       <p className="iceCreamDescTop">
         Carrying nearly 30 flavors of gourmet, super premium ice cream, we offer
@@ -724,7 +724,7 @@ function SeasonalFlavors() {
 function AllFlavors() {
   return (
     <>
-      <h1 className="iceCreamTitle">All Flavors</h1>
+      <h1 className="iceCreamTitleTop">All Flavors</h1>
       <img src="/images/cone.svg" alt="cone" className="coneImage" />
 
       <p className="iceCreamDescTop">
