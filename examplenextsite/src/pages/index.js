@@ -373,11 +373,13 @@ function SeasonalFlavors() {
   return (
     <>
       <h1 className="iceCreamTitle">Flavors of the Season</h1>
-      <p className="iceCreamDesc">
-        This is a list of the current flavors we have to offer from The
-        Chocolate Shoppe! Check the{" "}
-        <span className="yellowText">All Flavors</span> tab to see a list of all
-        the flavors they have to offer
+      <img src="/images/cone.svg" alt="cone" className="coneImage" />
+      <p className="iceCreamDescTop">
+        Carrying nearly 30 flavors of gourmet, super premium ice cream, we offer
+        a ready selection of flavors at any time, rotated seasonally to
+        continually offer you something new and fun! Be sure to check out the
+        <span className="yellowText"> All Flavors </span> tab to see our full
+        selection. Not all flavors last long, so we hope to see you soon!
       </p>
 
       <div className="iceCreamBoxOrganizer">
@@ -723,11 +725,21 @@ function AllFlavors() {
   return (
     <>
       <h1 className="iceCreamTitle">All Flavors</h1>
-      <p className="iceCreamDesc">
-        {" "}
-        This is a list of all the flavors The Chocolate Shoppe has to offer!
-        Check the <span className="yellowText">Flavors of the Season</span> tab
-        to see what we have in stock!
+      <img src="/images/cone.svg" alt="cone" className="coneImage" />
+
+      <p className="iceCreamDescTop">
+        With over 100 flavors in our ice cream rotation, there is something to
+        please every palate. We proudly serve award-winning,{" "}
+        <span className="yellowText">super-premium</span> ice cream from The
+        Chocolate Shoppe Ice Cream Company in Madison, Wisconsin, a five-time LA
+        International Dairy Competition Gold Medalist.
+        <br></br>
+        <br></br>
+        What is <span className="yellowText">“super-premium” </span>ice cream?
+        It&#39;s ice cream that doesn&#39;t skimp on cream and butterfat and
+        isn&#39;t “puffed up” with air. The result? A decadent, creamy, and
+        deliciously satisfying product you won&#39;t find in stores. Come try it
+        out and see for yourself!
       </p>
       <div className="iceCreamBoxOrganizerCol">
         <div className="iceCreamBoxRow">
