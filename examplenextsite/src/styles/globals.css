@@ -445,6 +445,10 @@ a#call {
   margin-top: -4%;
   min-height: 70px;
 }
+.iceCreamButtonSpan {
+  font-size: calc(0.5rem + 0.5vw);
+  color: #ffffff;
+}
 
 .iceCreamDescRow {
   color: #3c3e41;
@@ -530,6 +534,8 @@ a#call {
   box-shadow: inset 0px 0px 4px #000000;
   margin-top: 10px;
   min-width: 300px;
+  min-height: 70px;
+  line-height: 70%;
 }
 
 .iceCreamButtonContainer {

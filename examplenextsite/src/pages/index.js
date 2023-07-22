@@ -553,13 +553,13 @@ function SeasonalFlavors() {
             style={{
               width: "57%",
             }}
-            src="/cream/oatmealcookie.png"
-            alt="Oatmeal Cookie"
+            src="/cream/smore.png"
+            alt="S&#39;more to Love"
           />
-          <p className="iceCreamText">Oatmeal Cookie</p>
+          <p className="iceCreamText">S&#39;more to Love</p>
           <p className="iceCreamDesc">
-            Brown Sugar, cinnimon and vanilla vegan oat cream, mixed with
-            oatmeal cookie dough, chocolate and roasted pecans
+            Crushed graham cracker ice cream with melty layers of chocolate and
+            marshmallow.
           </p>
         </div>
         <div className="iceCreamBox">
@@ -679,13 +679,13 @@ function SeasonalFlavors() {
             style={{
               width: "57%",
             }}
-            src="/cream/smore.png"
-            alt="S&#39;more to Love"
+            src="/cream/vanillaoat.png"
+            alt="Vanilla Oat Cream"
           />
-          <p className="iceCreamText">S&#39;more to Love</p>
+          <h1 className="iceCreamText">Vanilla Oat Cream</h1>
           <p className="iceCreamDesc">
-            Crushed graham cracker ice cream with melty layers of chocolate and
-            marshmallow.
+            Indulgently creamy non-dairy frozen dessert blended with oat milk
+            and vanilla.
           </p>
         </div>
         <div className="iceCreamBox">
@@ -898,15 +898,6 @@ function AllFlavors() {
           <p className="iceCreamDescRow">
             All-natural, classic chocolate ice cream made with real, rich
             cocoas.
-          </p>
-        </div>
-        <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">
-            Chocolate Chip Oatmeal Cookie Oat Cream
-          </h1>
-          <p className="iceCreamDescRow">
-            Brown sugar, cinnamon and vanilla vegan oat cream mixed with oatmeal
-            cookie dough, chocolate and roasted pecans.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -1448,7 +1439,8 @@ function IceCream() {
             className="iceCreamButton"
             onClick={handleSeasonalButtonClick}
           >
-            Flavors of the Season
+            Flavors of the Season<br></br>
+            <span className="iceCreamButtonSpan">Current flavor selection</span>
           </button>
           <button className="iceCreamButton" onClick={handleAllButtonClick}>
             All Flavors
