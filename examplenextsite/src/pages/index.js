@@ -66,7 +66,7 @@ function Menu() {
         <h1 className="menuItemTitle">Premium Organic Iced Tea</h1>
         <div className="menuItemInfo">
           <p className="menuItemPrice">
-            <span>Black/Hibiscus/Mixed</span>
+            <span>Black/Hibiscus/Matcha</span>
             <span>(16oz) ...2.39</span>
           </p>
         </div>
@@ -199,7 +199,7 @@ function Menu() {
               Cherry Blueberry) ...0.59
             </span>
             <br></br>
-            <span>Add Deer Sausage Patty ...1.99</span>
+            <span>Add Deer Sausage/Bacon ...1.99</span>
             <br></br>
             <span>Add Egg Bite* ...3.69</span>
           </p>
@@ -210,7 +210,9 @@ function Menu() {
         <h1 className="menuItemTitle">Bagels</h1>
         <div className="menuItemInfo">
           {" "}
-          <p className="menuScroll">Plain Bagel w/ Butter</p>
+          <p className="menuScroll">
+            featuring flavors from New Yorker Bagels rotated weekly!
+          </p>
           <p className="menuItemPrice">
             <span>Per Bagel</span>
             <span id="price">...2.69</span>
@@ -223,8 +225,8 @@ function Menu() {
               Cherry Blueberry) ...0.59
             </span>
             <br></br>
-            <span>Add Deer Sausage Patty ...1.99</span>
-            <br></br>
+            <span>Add Deer Sausage/Bacon ...1.99</span>
+            <br></br>Add Cream Cheese ...0.99<br></br>
             <span>Add Egg Bite* ...3.69</span>
           </p>
         </div>
@@ -238,8 +240,7 @@ function Menu() {
             <span id="price">...6.59</span>
           </p>
           <p className="menuItemDesc">
-            Flavor Options:<br></br> Ham & Cheese Chili Pepper<br></br>Spinach
-            Feta <br></br>Prosciutto gruyere
+            Flavor Options:<br></br> Mushroom & Swiss<br></br>Prosciutto gruyere
           </p>
         </div>
       </div>
@@ -1458,22 +1459,6 @@ function IceCream() {
 export default function Home() {
   const [currentPage, setCurrentPage] = useState("menu");
 
-  const handleAboutButtonClick = () => {
-    setCurrentPage("about");
-  };
-
-  const handleMenuButtonClick = () => {
-    setCurrentPage("menu");
-  };
-
-  const handleEventButtonClick = () => {
-    setCurrentPage("events");
-  };
-
-  const handleIceCreamButtonClick = () => {
-    setCurrentPage("iceCream");
-  };
-
   return (
     <>
       <Head>
@@ -1499,18 +1484,27 @@ export default function Home() {
           </div>
 
           <div className={styles.buttonBox}>
-            <button className={styles.button} onClick={handleAboutButtonClick}>
+            <button
+              className={styles.button}
+              onClick={() => setCurrentPage("about")}
+            >
               About Us
             </button>
-            <button className={styles.button} onClick={handleMenuButtonClick}>
+            <button
+              className={styles.button}
+              onClick={() => setCurrentPage("menu")}
+            >
               Our Menu
             </button>
-            <button className={styles.button} onClick={handleEventButtonClick}>
+            <button
+              className={styles.button}
+              onClick={() => setCurrentPage("events")}
+            >
               Events
             </button>
             <button
               className={styles.button}
-              onClick={handleIceCreamButtonClick}
+              onClick={() => setCurrentPage("iceCream")}
             >
               Ice Cream
             </button>
