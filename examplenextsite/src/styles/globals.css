@@ -239,7 +239,9 @@ html {
   margin-top: -5%;
 }
 
-li {
+#flavorList {
+  color: #f8c359;
+  list-style: none;
 }
 
 #Croissant .menuItemPrice {
