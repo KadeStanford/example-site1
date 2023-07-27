@@ -251,6 +251,12 @@ li {
   color: #ffffff;
 }
 
+#New {
+  font-size: calc(1.2rem + 0.5vw);
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
 #Croissant .menuItemPrice#top {
   margin-top: -3%;
 }

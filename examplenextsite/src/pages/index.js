@@ -69,7 +69,7 @@ function Menu() {
             <span>Black/Hibiscus/Matcha</span>
             <span>(16oz) ...2.39</span>
           </p>
-          <span id="limited">*NEW!!* Try our Matcha Lattes!</span>
+          <span id="New">*NEW!!* Try our Matcha Lattes!</span>
         </div>
       </div>
 
