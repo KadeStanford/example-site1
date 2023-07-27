@@ -69,6 +69,7 @@ function Menu() {
             <span>Black/Hibiscus/Matcha</span>
             <span>(16oz) ...2.39</span>
           </p>
+          <span id="limited">*NEW!!* Try our Matcha Lattes!</span>
         </div>
       </div>
 
@@ -110,8 +111,8 @@ function Menu() {
             <span id="price">...5.95</span>
           </p>
           <p className="menuItemPrice">
-            <span>Spinach & Feta</span>
-            <span id="limited">(Fri & Sat only!)</span>
+            <span>Spinach & Feta*</span>
+            <span id="limited">(Fri & Sat only!)*</span>
             <span id="price">...5.95</span>
           </p>
           <p className="menuItemPrice">
@@ -193,16 +194,20 @@ function Menu() {
             <span>Per Biscuit</span>
             <span id="price">...2.59</span>
           </p>
-          <p className="menuItemDesc">
-            <span>
-              Add Preserves (Strawberry, Blackberry, Organic, Reduced Sugar
-              Cherry Blueberry) ...0.59
-            </span>
-            <br></br>
-            <span>Add Deer Sausage/Bacon ...1.99</span>
-            <br></br>
-            <span>Add Egg Bite* ...3.69</span>
-          </p>
+          <div className="menuItemList">
+            <ul>
+              <li>
+                Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
+                Sugar Cherry Blueberry) ...0.59
+              </li>
+              <li>Add Deer Sausage/Bacon ...1.99</li>
+              <li>
+                Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
+                Real American Cheese) ...0.59
+              </li>
+              <li>Add Egg Bite* ...3.69</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -217,18 +222,22 @@ function Menu() {
             <span>Per Bagel</span>
             <span id="price">...2.69</span>
           </p>
-          <p className="menuItemDesc">
-            <span>(Substitute Cinnamon Butter ...0.30)</span>
-            <br></br>
-            <span>
-              Add Preserves (Strawberry, Blackberry, Organic, Reduced Sugar
-              Cherry Blueberry) ...0.59
-            </span>
-            <br></br>
-            <span>Add Deer Sausage/Bacon ...1.99</span>
-            <br></br>Add Cream Cheese ...0.99<br></br>
-            <span>Add Egg Bite* ...3.69</span>
-          </p>
+          <div className="menuItemList">
+            <ul>
+              <li>Substitute Cinnamon Butter ...0.30</li>
+              <li>
+                Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
+                Sugar Cherry Blueberry) ...0.59
+              </li>
+              <li>Add Deer Sausage/Bacon ...1.99</li>
+              <li>Add Cream Cheese ...0.99</li>
+              <li>
+                Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
+                Real American Cheese) ...0.59
+              </li>
+              <li>Add Egg Bite* ...3.69</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -252,9 +261,8 @@ function Menu() {
             <span>Per Bowl</span>
             <span id="price">...3.75</span>
           </p>
-          <p className="menuItemPrice">
-            <span>Add Chopped Pecans</span>
-            <span id="price">...0.65</span>
+          <p className="aboutText">
+            <span>Ask about our layered oatmeal and toppings</span>
           </p>
         </div>
       </div>

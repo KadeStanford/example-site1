@@ -215,7 +215,7 @@ html {
 }
 
 .menuItemDesc {
-  color: #ffffff;
+  color: #e7e7e7;
   text-shadow: 2px 2px 0px #000000;
   font-weight: 100;
   width: 90%;
@@ -225,9 +225,21 @@ html {
   margin-top: 10px;
 }
 
+#limited {
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#Biscuits .menuItemPrice {
+  margin-top: 2%;
+}
+
+.menuItemList {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  margin-top: -5%;
+}
+
 li {
-  list-style-type: none;
-  color: #f8c359;
 }
 
 #Croissant .menuItemPrice {
@@ -235,7 +247,7 @@ li {
 }
 
 #limited {
-  font-size: calc(0.9rem + 0.5vw);
+  font-size: calc(0.7rem + 0.5vw);
   color: #ffffff;
 }
 
