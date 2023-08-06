@@ -108,6 +108,7 @@ function Menu() {
           </p>
           <p className="menuItemPrice">
             <span>Ham & Swiss</span>
+            <span id="limited">(Fri & Sat only!)*</span>
             <span id="price">...5.95</span>
           </p>
           <p className="menuItemPrice">
@@ -280,12 +281,12 @@ function About() {
             <p className="aboutText">
               <span>Tues - Fri</span>
               <br></br>
-              <span>6 AM - 12 PM</span>
+              <span>6:30 AM - 11:30 PM</span>
             </p>
             <p className="aboutText">
               <span>Sat</span>
               <br></br>
-              <span>7 AM - 12 PM</span>
+              <span>7 AM - 11:30 PM</span>
             </p>
           </div>
           <div className="hoursContainer">
