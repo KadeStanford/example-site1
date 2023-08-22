@@ -292,7 +292,12 @@ function About() {
           <div className="hoursContainer">
             <h1 className="aboutTitle">Evening Hours</h1>
             <p className="aboutText">
-              <span>Thur - Sat</span>
+              <span>Thur & Fri</span>
+              <br></br>
+              <span>3:00 PM - 7:30 PM</span>
+            </p>
+            <p className="aboutText">
+              <span>Sat</span>
               <br></br>
               <span>3:30 PM - 7:30 PM</span>
             </p>
