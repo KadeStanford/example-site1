@@ -116,10 +116,7 @@ function Menu() {
             <span id="limited">(Fri & Sat only!)*</span>
             <span id="price">...5.95</span>
           </p>
-          <p className="menuItemPrice">
-            <span>Almond</span>
-            <span id="price">...3.95</span>
-          </p>
+
           <p className="menuItemPrice">
             <span>Chocolate</span>
             <span id="price">...3.75</span>
@@ -133,16 +130,6 @@ function Menu() {
           <p className="menuItemPrice">
             <span>Blueberry</span>
             <span id="price">...3.89</span>
-          </p>
-        </div>
-      </div>
-
-      <div className="menuBox" id="BSWCC">
-        <h1 className="menuItemTitle">Brown Sugar Walnut Coffee Cake</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>By the slice</span>
-            <span id="price">...3.59</span>
           </p>
         </div>
       </div>
