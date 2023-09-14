@@ -63,13 +63,65 @@ html {
 }
 
 #cold {
-  margin-top: 0px;
+  margin-top: 20px;
+}
+
+#twentyoz {
+  margin-top: 30px;
+}
+
+#xpresso {
+  margin-top: 20px;
+}
+
+#coffeecenter {
+  text-align: center;
+}
+
+#hottwelve {
+  margin-left: 10%;
+}
+
+#twentyprice {
+  margin-left: 43%;
+}
+
+#soloiced {
+  margin-left: 2%;
+}
+
+#xpressotitle {
+  margin-left: 0.5%;
+}
+
+#xpressoprice {
+  margin-left: 40%;
+}
+
+@media screen and (min-width: 600px) {
+  #hot {
+    margin-bottom: 10%;
+    margin-top: -3%;
+  }
+
+  #cold {
+    margin-top: -20px;
+  }
+
+  #twentyoz {
+    margin-top: -5px;
+  }
+
+  #xpresso {
+    margin-top: 0px;
+  }
 }
 
 .menuScroll {
   color: #ffffff;
   text-shadow: 2px 2px 0px #000000;
   text-align: center;
+  margin-top: -5px;
 }
 
 .menuBox#Stroopwafel {
@@ -89,11 +141,15 @@ html {
 }
 
 .menuBox#HotChocolate {
-  background-image: url("/images/hotchoc.png");
+  background-image: url("/images/hotchoc.jpg");
 }
 
 #HotChocolate .menuItemPrice {
   margin-top: -5%;
+}
+
+#HotChocolate .menuItemInfo {
+  overflow-y: scroll;
 }
 
 .menuBox#Croissant {
@@ -109,7 +165,7 @@ html {
 }
 
 .menuBox#CheeseDanish {
-  background-image: url("/images/cheesedanish.png");
+  background-image: url("/images/jarritos.png");
 }
 
 .menuBox#RaspberryDanish {

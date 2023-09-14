@@ -12,13 +12,25 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuScroll">Scroll here to see our flavors!</p>
           <p className="menuItemPrice" id="hot">
-            <span>Hot</span> <span>(12oz.) ...2.95</span>
-            <span>(16oz) ...3.95</span>
+            <span>Hot</span> <span id="hottwelve">(12oz.) ...2.95</span>
+            <span id="hotsixteen">(16oz) ...3.95</span>
           </p>
           <p className="menuItemPrice" id="cold">
-            <span>Iced**</span> <span>(12oz.) ...3.45</span>
+            <span id="coffeecenter">
+              Iced/Hot<br></br>Latte
+            </span>{" "}
+            <span>(12oz.) ...3.45</span>
             <span>(16oz) ...4.45</span>
           </p>
+          <p className="menuItemPrice" id="twentyoz">
+            <span id="soloiced">Iced Latte</span>{" "}
+            <span id="twentyprice">(20oz.) ...5.25</span>
+          </p>
+          <p className="menuItemPrice" id="xpresso">
+            <span id="xpressotitle">Xtra Expresso Shot</span>{" "}
+            <span id="xpressoprice"> ...0.40</span>
+          </p>
+
           <div className="menuItemDesc">
             <div id="coffeeflavors">
               Coffee Flavors:
@@ -32,6 +44,7 @@ function Menu() {
                   <li>Caramel</li>
                   <li>White Chocolate</li>
                   <li>Almond</li>
+                  <li>Pumpkin Spice</li>
                 </div>
                 <div id="flavorList">
                   <li>Hazelnut *</li>
@@ -40,6 +53,7 @@ function Menu() {
                   <li>Cinnamon Bun</li>
                   <li>Almond Bliss</li>
                   <li>Wedding Cake</li>
+                  <li>Toffee Nut</li>
                 </div>
                 <p>**Iced coffee can be served with condensed milk. Yum!</p>
               </div>
@@ -74,11 +88,22 @@ function Menu() {
       </div>
 
       <div className="menuBox" id="OrangeJuice">
-        <h1 className="menuItemTitle">Orange Juice</h1>
+        <h1 className="menuItemTitle">Juice</h1>
         <div className="menuItemInfo">
+          <span className="menuItemPrice">Orange or Apple</span>
           <p className="menuItemPrice">
             <span>By the bottle</span>
             <span>...1.89</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="menuBox" id="CheeseDanish">
+        <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Per Drink</span>
+            <span id="price">...2.49</span>
           </p>
         </div>
       </div>
@@ -87,15 +112,32 @@ function Menu() {
         <h1 className="menuItemTitle">Hot Chocolate</h1>
         <div className="menuItemInfo">
           <p className="menuItemDesc">(Oct - Mar)</p>
-          <p className="menuItemDesc">Regular or Mint</p>
           <p className="menuItemPrice">
             <span>12oz.</span>
             <span>...2.49</span>
           </p>
-          <p className="menuItemDesc">
-            Add-ins<br></br>
-            Cinnamon Chips or Mini-Marshmellows
-          </p>
+
+          <div className="menuItemDesc">
+            <div id="coffeeflavors">
+              Hot Chocolate Flavors:
+              <br />
+              <div id="flavorNames">
+                <div id="flavorList">
+                  <li>Milk Chocolate</li>
+                  <li>Dark Chocolate</li>
+                  <li>Cinnamon Spice (Mexican Hot Chocolate)</li>
+                  <li>Peppermint</li>
+                  <li>White Chocolate</li>
+                </div>
+                Seasonal Flavors:
+                <div id="flavorList">
+                  <li>
+                    White or dark hot chocolate infused with Pumpkin Spice
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -130,16 +172,6 @@ function Menu() {
           <p className="menuItemPrice">
             <span>Blueberry</span>
             <span id="price">...3.89</span>
-          </p>
-        </div>
-      </div>
-
-      <div className="menuBox" id="CheeseDanish">
-        <h1 className="menuItemTitle">Cheese Danish</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Pastry</span>
-            <span id="price">...3.75</span>
           </p>
         </div>
       </div>
@@ -208,7 +240,7 @@ function Menu() {
           </p>
           <p className="menuItemPrice">
             <span>Per Bagel</span>
-            <span id="price">...2.69</span>
+            <span id="price">...2.89</span>
           </p>
           <div className="menuItemList">
             <ul>
@@ -221,7 +253,7 @@ function Menu() {
               <li>Add Cream Cheese ...0.99</li>
               <li>
                 Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese) ...0.59
+                Real American Cheese) ...0.79
               </li>
               <li>Add Egg Bite* ...3.69</li>
             </ul>
@@ -330,7 +362,7 @@ function About() {
           <p className="aboutText">
             <span>Kade Stanford | Stanford Development Solutions</span>
             <br></br>
-            <a href="https://stanforddev.vercel.app/">
+            <a href="https://www.stanforddevsolutions.com/">
               Click here to view my website!
             </a>
           </p>
@@ -1517,7 +1549,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.egiftcard}>
-          <h1 className={styles.egiftcardTitle}>Ask about our E-Gift Cards!</h1>
+          <h1 className={styles.egiftcardTitle}>Ask about our Gift Cards!</h1>
         </div>
         <div className={styles.content}>
           {currentPage === "menu" ? <Menu /> : null}
