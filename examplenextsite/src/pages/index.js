@@ -27,7 +27,7 @@ function Menu() {
             <span id="twentyprice">(20oz.) ...5.25</span>
           </p>
           <p className="menuItemPrice" id="xpresso">
-            <span id="xpressotitle">Xtra Expresso Shot</span>{" "}
+            <span id="xpressotitle">Xtra Espresso Shot</span>{" "}
             <span id="xpressoprice"> ...0.40</span>
           </p>
 
