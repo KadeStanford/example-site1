@@ -108,12 +108,23 @@ html {
     margin-top: -20px;
   }
 
+  #twentyprice {
+    margin-left: 39%;
+  }
+
   #twentyoz {
-    margin-top: -5px;
+    margin-top: 0px;
   }
 
   #xpresso {
     margin-top: 0px;
+  }
+  #soloiced {
+    font-size: 1.6rem;
+  }
+
+  #xpressotitle {
+    font-size: 1.6rem;
   }
 }
 
