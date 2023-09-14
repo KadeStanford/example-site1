@@ -39,10 +39,10 @@ function Menu() {
               <div id="flavorNames">
                 <div id="flavorList">
                   <li>Vanilla * </li>
-                  <li>French Vanilla </li>
+                  <li>French Vanilla *</li>
                   <li>Mocha</li>
                   <li>Caramel</li>
-                  <li>White Chocolate</li>
+                  <li>White Chocolate *</li>
                   <li>Almond</li>
                   <li>Pumpkin Spice</li>
                 </div>
@@ -223,7 +223,7 @@ function Menu() {
               <li>Add Deer Sausage/Bacon ...1.99</li>
               <li>
                 Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese) ...0.59
+                Real American Cheese) ...0.79
               </li>
               <li>Add Egg Bite* ...3.69</li>
             </ul>
