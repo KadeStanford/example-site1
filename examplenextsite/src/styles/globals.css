@@ -339,7 +339,15 @@ html {
 }
 
 #Scones .menuItemInfo {
-  margin-top: 12.5%;
+  margin-top: 0%;
+}
+
+#Scones #priceLong {
+  margin-left: -20%;
+}
+
+#Scones #priceShort {
+  margin-left: 12%;
 }
 
 #CheeseDanish .menuItemInfo {
