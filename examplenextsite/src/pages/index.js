@@ -874,20 +874,6 @@ function SeasonalFlavors() {
             style={{
               width: "57%",
             }}
-            src="/cream/bourbonpecanpie.png"
-            alt="Bourbon Pecan Pie"
-          />
-          <p className="iceCreamText">Bourbon Pecan Pie</p>
-          <p className="iceCreamDesc">
-            Smooth bourbon ice cream swirled with a sea salt chocolate fudge
-            ripple and roasted pecans.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
             src="/cream/ultimateoreo.png"
             alt="Ultimate Oreo"
           />
