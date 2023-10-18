@@ -383,6 +383,27 @@ function About() {
 function Events() {
   return (
     <>
+      <div className="eventsBox" id="Smoothie">
+        <h1 className="eventsTitle" id="Smoothie">
+          Smoothie Shoppe
+        </h1>
+        <div className="eventsTextContainer" id="Smoothie">
+          <p className="eventsText" id="Smoothie">
+            <span>
+              As a part of our "Phase Two", our Smoothie Shoppe will be coming
+              soon!
+              <br></br>
+              Delicious and Nutritious Smoothies made with organic fruits and
+              vegetables!
+              <br></br>
+              <br></br>
+              Follow us on Facebook for more upcoming updates about our Smoothie
+              Shoppe!
+            </span>
+          </p>
+        </div>
+      </div>
+
       <div className="eventsBox" id="IceCream">
         <h1 className="eventsTitle">Ice Cream Evenings</h1>
         <div className="eventsTextContainer">
