@@ -385,20 +385,22 @@ function Events() {
     <>
       <div className="eventsBox" id="Smoothie">
         <h1 className="eventsTitle" id="Smoothie">
-          Smoothie Shoppe
+          Coming soon! "The Smoothie Shoppe"
         </h1>
         <div className="eventsTextContainer" id="Smoothie">
           <p className="eventsText" id="Smoothie">
             <span>
-              As a part of our "Phase Two", our Smoothie Shoppe will be coming
-              soon!
+              Smoothies are a delicious way to increase your intake of fruits,
+              vegetables and other nutrient-rich foods that provide vitamins,
+              minerals, antioxidants and fiber to support a healthy body. Made
+              with organic fruits and vegetables, high quality nuts, with your
+              choice of milk products and milk alternatives, you can feel good
+              about making our smoothies a part of your day. Preservative-free
+              with no sugar added. Ever.
               <br></br>
-              Delicious and Nutritious Smoothies made with organic fruits and
-              vegetables!
               <br></br>
-              <br></br>
-              Follow us on Facebook for more upcoming updates about our Smoothie
-              Shoppe!
+              Stay tuned here and on Facebook as we move forward with our new
+              addition to Liberty House Specialties!
             </span>
           </p>
         </div>
