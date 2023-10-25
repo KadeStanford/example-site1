@@ -431,7 +431,7 @@ a {
   font-size: calc(1.2rem + 0.5vw);
 }
 
-.eventsBox {
+.eventsBox#IceCream {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -441,6 +441,7 @@ a {
   background-position: center;
   border-radius: 10px;
   padding: 10px;
+  width: 55%;
   box-shadow: 0px 0px 10px #000000;
 }
 
@@ -466,7 +467,6 @@ a {
 .eventsTitle {
   color: rgb(91, 231, 231);
   text-shadow: 2px 2px 0px #2980bb;
-  font-size: calc(2.5rem + 0.5vw);
 }
 
 .eventsText {
@@ -476,6 +476,57 @@ a {
   text-align: center;
   margin-top: 2%;
   width: 90%;
+  z-index: 1;
+}
+
+.eventsBox#Smoothie {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #000000;
+  height: 45rem;
+  width: 55%;
+  background-image: url("/images/smoothieBG.jpg");
+  background-size: cover;
+}
+
+.eventsTextContainer#Smoothie {
+  background-color: rgba(51, 39, 39, 0.3);
+  box-shadow: inset 0px 0px 4px #000000;
+  border-radius: 10px;
+  width: 95%;
+  margin-top: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.eventsTitle#Smoothie {
+  color: #f8c359;
+  text-align: center;
+  text-shadow: 4px 2px 2px rgb(61, 52, 52);
+  font-size: calc(2.5rem + 0.5vw);
+  background-color: rgba(5, 5, 5, 0.5);
+  box-shadow: inset 0px 0px 14px #1b1a1a;
+  border-radius: 10px;
+  width: 95%;
+}
+
+.eventsText#Smoothie {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #dd6b9e;
+  font-weight: 100;
+  font-size: calc(1.8rem + 0.5vw);
+  text-align: center;
+  width: 100%;
   z-index: 1;
 }
 
@@ -774,7 +825,7 @@ a#call {
     width: 90%;
   }
 
-  .eventsBox {
+  .eventsBox#IceCream {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -786,6 +837,7 @@ a#call {
     padding: 5px;
     margin-bottom: 3%;
     width: 90%;
+    margin-top: 4%;
   }
 
   .logoImage {
@@ -819,6 +871,57 @@ a#call {
     align-items: center;
     height: auto;
     font-size: calc(1.1rem + 0.5vw);
+  }
+
+  .eventsTextContainer#Smoothie {
+    background-color: rgba(51, 39, 39, 0.5);
+    box-shadow: inset 0px 0px 4px #000000;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35rem;
+    padding: 10px;
+    margin-top: -7%;
+    font-size: calc(1.1rem + 0.5vw);
+    text-align: center;
+  }
+
+  .eventsBox#Smoothie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #000000;
+    height: 45rem;
+    width: 90%;
+    background-image: url("/images/smoothieBGMobile.jpg");
+    background-size: cover;
+  }
+
+  .eventsTitle#Smoothie {
+    color: #f8c359;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+    font-size: calc(2.3rem + 0.5vw);
+  }
+
+  .eventsText#Smoothie {
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #dd6b9e;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 2%;
+    font-size: calc(1.3rem + 0.5vw);
+    width: 90%;
+    z-index: 1;
   }
 
   #Coffee .menuItemInfo {
