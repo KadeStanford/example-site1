@@ -98,6 +98,19 @@ function Menu() {
         </div>
       </div>
 
+      <div className="menuBox" id="Milk">
+        <h1 className="menuItemTitle">Milk</h1>
+        <div className="menuItemInfo">
+          <span className="menuItemPrice">
+            Regular<br></br>Chocolate<br></br>Organic Vanilla
+          </span>
+          <p className="menuItemPriceMilk" id="Milk">
+            <span></span>
+            <span>...1.89</span>
+          </p>
+        </div>
+      </div>
+
       <div className="menuBox" id="CheeseDanish">
         <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
         <div className="menuItemInfo">
@@ -144,10 +157,6 @@ function Menu() {
       <div className="menuBox" id="Croissant">
         <h1 className="menuItemTitle">Croissant</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice" id="top">
-            <span>Buttered</span>
-            <span id="price">...2.95</span>
-          </p>
           <p className="menuItemPrice">
             <span>Ham & Swiss*</span>
             <span id="limited">(Fri & Sat only!)*</span>
@@ -158,7 +167,11 @@ function Menu() {
             <span id="limited">(Fri & Sat only!)*</span>
             <span id="price">...5.95</span>
           </p>
-
+          <p className="menuItemPrice">
+            <span id="strawberryTitle">Strawberry Cream Cheese*</span>
+            <span id="limited">(Fri & Sat only!)*</span>
+            <span id="price">...5.95</span>
+          </p>
           <p className="menuItemPrice">
             <span>Chocolate</span>
             <span id="price">...3.75</span>
@@ -185,11 +198,11 @@ function Menu() {
       </div>
 
       <div className="menuBox" id="RaspberryDanish">
-        <h1 className="menuItemTitle">Raspberry Danish</h1>
+        <h1 className="menuItemTitle">Old Fashioned Buttermilk Donut Cake</h1>
         <div className="menuItemInfo">
           <p className="menuItemPrice">
             <span>Per Pastry</span>
-            <span id="price">...3.75</span>
+            <span id="price">...1.19</span>
           </p>
         </div>
       </div>
@@ -226,7 +239,7 @@ function Menu() {
             <ul>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry) ...0.59
+                Sugar Cherry Blueberry, Fig) ...0.59
               </li>
               <li>Add Deer Sausage/Bacon ...1.99</li>
               <li>
@@ -255,10 +268,15 @@ function Menu() {
               <li>Substitute Cinnamon Butter ...0.30</li>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry) ...0.59
+                Sugar Cherry Blueberry, Fig) ...0.59
               </li>
               <li>Add Deer Sausage/Bacon ...1.99</li>
-              <li>Add Cream Cheese ...0.99</li>
+              <li>
+                Add Cream Cheese (Regular, Lowfat, Strawberry, and Dairy-Free)
+                ...0.99
+              </li>
+              <li>Chocolate Hazelnut Spread ...0.99</li>
+              <li>Sunbutter ...0.99</li>
               <li>
                 Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
                 Real American Cheese) ...0.79
@@ -339,13 +357,13 @@ function About() {
         <div className="aboutTextContainer">
           <h1 className="aboutTitle">About Us</h1>
           <p className="aboutText" id="big">
-            We are a breakfast specialty cafe serving freshly made breakfast
-            items, freshly ground hot brewed coffee and specialty iced coffees.
-            We are also an evening scoop shop proudly serving The Chocolate
-            Shoppe&#39;s super premium ice cream with over 30 flavors available
-            to our customers. Come wake up in the morning to your favorite brew
-            and chill out with us in the evenings with gourmet desserts and ice
-            cream like no other!
+            We are a full-service coffee shop and specialty breakfast cafe
+            serving freshly made breakfast and brunch items as well as freshly
+            ground specialty and drip coffees. We are also an evening scoop shop
+            proudly serving The Chocolate Shoppe&#39;s super premium ice cream
+            with over 30 flavors available to our customers. Come wake up in the
+            morning to your favorite brew and chill out with us in the evenings
+            with gourmet desserts and ice cream like no other!
             <br></br> <br></br>Liberty House, Circa 1868, housed the first
             general store in the Feliciana parishes. Standing tall, Liberty
             House still proudly serves the Feliciana parishes with the same
