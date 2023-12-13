@@ -217,16 +217,6 @@ function Menu() {
         </div>
       </div>
 
-      <div className="menuBox" id="ChocCookie">
-        <h1 className="menuItemTitle">Extra Lg.Choc Chunk Cookie</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Cookie</span>
-            <span id="price">...3.69</span>
-          </p>
-        </div>
-      </div>
-
       <div className="menuBox" id="Biscuits">
         <h1 className="menuItemTitle">Biscuits</h1>
         <div className="menuItemInfo">
@@ -296,19 +286,6 @@ function Menu() {
           </p>
           <p className="menuItemDesc">
             Flavor Options:<br></br> Mushroom & Swiss<br></br>Prosciutto gruyere
-          </p>
-        </div>
-      </div>
-
-      <div className="menuBox" id="Oatmeal">
-        <h1 className="menuItemTitle">Oatmeal</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Bowl</span>
-            <span id="price">...3.75</span>
-          </p>
-          <p className="aboutText">
-            <span>Ask about our layered oatmeal and toppings</span>
           </p>
         </div>
       </div>
