@@ -12,23 +12,23 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuScroll">Scroll here to see our flavors!</p>
           <p className="menuItemPrice" id="hot">
-            <span>Hot</span> <span id="hottwelve">(12oz.) ...2.95</span>
-            <span id="hotsixteen">(16oz) ...3.95</span>
+            <span>Hot</span> <span id="hottwelve">(12oz.)</span>
+            <span id="hotsixteen">(16oz)</span>
           </p>
           <p className="menuItemPrice" id="cold">
             <span id="coffeecenter">
               Iced/Hot<br></br>Latte
             </span>{" "}
-            <span>(12oz.) ...3.45</span>
-            <span>(16oz) ...4.45</span>
+            <span>(12oz.) </span>
+            <span>(16oz) </span>
           </p>
           <p className="menuItemPrice" id="twentyoz">
             <span id="soloiced">Iced Latte</span>{" "}
-            <span id="twentyprice">(20oz.) ...5.25</span>
+            <span id="twentyprice">(20oz.)</span>
           </p>
           <p className="menuItemPrice" id="xpresso">
-            <span id="xpressotitle">Xtra Espresso Shot</span>{" "}
-            <span id="xpressoprice"> ...0.40</span>
+            <span id="xpressotitle">Add an extra Espresso Shot!</span>{" "}
+            <span id="xpressoprice"> </span>
           </p>
 
           <div className="menuItemDesc">
@@ -65,9 +65,6 @@ function Menu() {
       <div className="menuBox" id="Stroopwafel">
         <h1 className="menuItemTitle">Stroopwafel</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Cookie</span> <span>...1.15</span>
-          </p>
           <p className="menuItemDesc">
             *Stroopwafel hails from the Netherlands. It is a crispy, buttery,
             caramel-filled, thin waffle cookie.<br></br> Set it on top of your
@@ -81,7 +78,7 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuItemPrice">
             <span>Black/Hibiscus/Matcha</span>
-            <span>(16oz) ...2.39</span>
+            <span>(16oz) </span>
           </p>
           <span id="New">*NEW!!* Try our Matcha Lattes!</span>
         </div>
@@ -90,10 +87,12 @@ function Menu() {
       <div className="menuBox" id="OrangeJuice">
         <h1 className="menuItemTitle">Juice</h1>
         <div className="menuItemInfo">
-          <span className="menuItemPrice">Orange or Apple</span>
+          <span className="menuItemPrice" id="Fruit">
+            Orange or Apple
+          </span>
           <p className="menuItemPrice">
-            <span>By the bottle</span>
-            <span>...1.89</span>
+            <span></span>
+            <span></span>
           </p>
         </div>
       </div>
@@ -104,21 +103,11 @@ function Menu() {
           <span className="menuItemPrice">
             Regular<br></br>Chocolate<br></br>Organic Vanilla
           </span>
-          <p className="menuItemPriceMilk" id="Milk">
-            <span></span>
-            <span>...1.89</span>
-          </p>
         </div>
       </div>
 
       <div className="menuBox" id="CheeseDanish">
         <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Drink</span>
-            <span id="price">...2.49</span>
-          </p>
-        </div>
       </div>
 
       <div className="menuBox" id="HotChocolate">
@@ -127,7 +116,6 @@ function Menu() {
           <p className="menuItemDesc">(Oct - Mar)</p>
           <p className="menuItemPrice">
             <span>12oz.</span>
-            <span>...2.49</span>
           </p>
 
           <div className="menuItemDesc">
@@ -160,21 +148,21 @@ function Menu() {
           <p className="menuItemPrice">
             <span>Ham & Swiss*</span>
             <span id="limited">(Fri & Sat only!)*</span>
-            <span id="price">...5.95</span>
+            <span id="price"></span>
           </p>
           <p className="menuItemPrice">
             <span>Spinach & Feta*</span>
             <span id="limited">(Fri & Sat only!)*</span>
-            <span id="price">...5.95</span>
+            <span id="price"></span>
           </p>
           <p className="menuItemPrice">
             <span id="strawberryTitle">Strawberry Cream Cheese*</span>
             <span id="limited">(Fri & Sat only!)*</span>
-            <span id="price">...5.95</span>
+            <span id="price"></span>
           </p>
           <p className="menuItemPrice">
             <span>Chocolate</span>
-            <span id="price">...3.75</span>
+            <span id="price"></span>
           </p>
         </div>
       </div>
@@ -184,59 +172,41 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuItemPrice">
             <span>Blueberry</span>
-            <span id="priceShort">...3.89</span>
           </p>
           <p className="menuItemPrice">
             <span>Raspberry White Chocolate</span>
-            <span id="priceLong">...3.89</span>
           </p>
           <p className="menuItemPrice">
             <span>Cheddar Pepper</span>
-            <span id="price">...3.89</span>
           </p>
         </div>
       </div>
 
       <div className="menuBox" id="RaspberryDanish">
         <h1 className="menuItemTitle">Old Fashioned Buttermilk Donut Cake</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Pastry</span>
-            <span id="price">...1.19</span>
-          </p>
-        </div>
       </div>
 
       <div className="menuBox" id="MorningHarvestMuffin">
         <h1 className="menuItemTitle">Morning Harvest Muffin</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Per Muffin</span>
-            <span id="price">...3.39</span>
-          </p>
-        </div>
       </div>
 
       <div className="menuBox" id="Biscuits">
         <h1 className="menuItemTitle">Biscuits</h1>
         <div className="menuItemInfo">
           <p className="menuScroll">Large Buttermilk Biscuit w/ Butter</p>
-          <p className="menuItemPrice" id="main">
-            <span>Per Biscuit</span>
-            <span id="price">...2.59</span>
-          </p>
+
           <div className="menuItemList">
             <ul>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig) ...0.59
+                Sugar Cherry Blueberry, Fig)
               </li>
-              <li>Add Deer Sausage/Bacon ...1.99</li>
+              <li>Add Deer Sausage/Bacon</li>
               <li>
                 Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese) ...0.79
+                Real American Cheese)
               </li>
-              <li>Add Egg Bite* ...3.69</li>
+              <li>Add Egg Bite*</li>
             </ul>
           </div>
         </div>
@@ -249,29 +219,24 @@ function Menu() {
           <p className="menuScroll">
             featuring flavors from New Yorker Bagels rotated weekly!
           </p>
-          <p className="menuItemPrice">
-            <span>Per Bagel</span>
-            <span id="price">...2.89</span>
-          </p>
           <div className="menuItemList">
             <ul>
-              <li>Substitute Cinnamon Butter ...0.30</li>
+              <li>Substitute Cinnamon Butter</li>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig) ...0.59
+                Sugar Cherry Blueberry, Fig)
               </li>
-              <li>Add Deer Sausage/Bacon ...1.99</li>
+              <li>Add Deer Sausage/Bacon</li>
               <li>
                 Add Cream Cheese (Regular, Lowfat, Strawberry, and Dairy-Free)
-                ...0.99
               </li>
-              <li>Chocolate Hazelnut Spread ...0.99</li>
-              <li>Sunbutter ...0.99</li>
+              <li>Chocolate Hazelnut Spread</li>
+              <li>Sunbutter</li>
               <li>
                 Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese) ...0.79
+                Real American Cheese)
               </li>
-              <li>Add Egg Bite* ...3.69</li>
+              <li>Add Egg Bite*</li>
             </ul>
           </div>
         </div>
@@ -279,15 +244,6 @@ function Menu() {
 
       <div className="menuBox" id="EggBites">
         <h1 className="menuItemTitle">Egg Bites</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Egg Bites (2 per order)</span>
-            <span id="price">...6.59</span>
-          </p>
-          <p className="menuItemDesc">
-            Flavor Options:<br></br> Mushroom & Swiss<br></br>Prosciutto gruyere
-          </p>
-        </div>
       </div>
     </>
   );

@@ -45,6 +45,9 @@ html {
 
 #Coffee .menuItemInfo {
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 #flavorNames {
@@ -72,6 +75,10 @@ html {
 
 #xpresso {
   margin-top: 20px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #coffeecenter {
@@ -91,11 +98,11 @@ html {
 }
 
 #xpressotitle {
-  margin-left: 0.5%;
+  align-items: center;
 }
 
 #xpressoprice {
-  margin-left: 40%;
+  margin-left: 0%;
 }
 
 @media screen and (min-width: 600px) {
@@ -357,14 +364,29 @@ html {
   margin-top: 15%;
 }
 
+#OrangeJuice .menuItemPrice {
+  font-size: 1.5em;
+  margin-bottom: -1%;
+}
+
+#OrangeJuice .menuItemPrice#Fruit {
+  margin-top: 7%;
+  font-size: 1.8em;
+}
+
 #Milk .menuItemInfo {
-  margin-top: 15%;
+  margin-top: 10%;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #Milk .menuItemPrice {
-  margin-left: -45%;
   margin-top: 5%;
+  text-align: center;
+  font-size: 1.3em;
 }
 
 #strawberryTitle {
@@ -382,12 +404,8 @@ html {
   margin-top: 0%;
 }
 
-#Scones #priceLong {
-  margin-left: -20%;
-}
-
-#Scones #priceShort {
-  margin-left: 12%;
+#Scones .menuItemPrice {
+  margin-top: 0%;
 }
 
 #CheeseDanish .menuItemInfo {
