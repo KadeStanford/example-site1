@@ -45,6 +45,7 @@ function Menu() {
                   <li>White Chocolate *</li>
                   <li>Almond</li>
                   <li>Pumpkin Spice</li>
+                  <li>Butter Pecan</li>
                 </div>
                 <div id="flavorList">
                   <li>Hazelnut *</li>
@@ -54,6 +55,8 @@ function Menu() {
                   <li>Almond Bliss</li>
                   <li>Wedding Cake</li>
                   <li>Toffee Nut</li>
+                  <li>Pistachio Cream</li>
+                  <li>Irish Cream</li>
                 </div>
                 <p>**Iced coffee can be served with condensed milk. Yum!</p>
               </div>
@@ -115,7 +118,7 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuItemDesc">(Oct - Mar)</p>
           <p className="menuItemPrice">
-            <span>12oz.</span>
+            <span>12oz. / 16oz.</span>
           </p>
 
           <div className="menuItemDesc">
@@ -146,12 +149,12 @@ function Menu() {
         <h1 className="menuItemTitle">Croissant</h1>
         <div className="menuItemInfo">
           <p className="menuItemPrice">
-            <span>Ham & Swiss*</span>
+            <span id="ham">Ham & Swiss*</span>
             <span id="limited">(Fri & Sat only!)*</span>
             <span id="price"></span>
           </p>
           <p className="menuItemPrice">
-            <span>Spinach & Feta*</span>
+            <span id="spinach">Spinach & Feta*</span>
             <span id="limited">(Fri & Sat only!)*</span>
             <span id="price"></span>
           </p>
@@ -203,8 +206,7 @@ function Menu() {
               </li>
               <li>Add Deer Sausage/Bacon</li>
               <li>
-                Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese)
+                Add Cheese <br></br>(Pepperjack and Real White American Cheese)
               </li>
               <li>Add Egg Bite*</li>
             </ul>
@@ -221,7 +223,7 @@ function Menu() {
           </p>
           <div className="menuItemList">
             <ul>
-              <li>Substitute Cinnamon Butter</li>
+              <li>Cinnamon Butter</li>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
                 Sugar Cherry Blueberry, Fig)
@@ -233,8 +235,7 @@ function Menu() {
               <li>Chocolate Hazelnut Spread</li>
               <li>Sunbutter</li>
               <li>
-                Add Cheese <br></br>(Pepperjack, Gouda/Gruyere/Cheddar mix, and
-                Real American Cheese)
+                Add Cheese <br></br>(Pepperjack and Real White American Cheese)
               </li>
               <li>Add Egg Bite*</li>
             </ul>

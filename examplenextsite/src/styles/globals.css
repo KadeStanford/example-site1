@@ -400,6 +400,18 @@ html {
   text-shadow: 2px 2px 0px #000000;
 }
 
+#ham {
+  color: aliceblue;
+}
+
+#spinach {
+  color: aliceblue;
+}
+
+#strawberryTitle {
+  color: aliceblue;
+}
+
 #Scones .menuItemInfo {
   margin-top: 0%;
 }
