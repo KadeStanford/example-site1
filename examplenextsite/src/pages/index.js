@@ -38,17 +38,25 @@ function Menu() {
               Regular or Sugar-Free *
               <div id="flavorNames">
                 <div id="flavorList">
-                  <li>Vanilla * </li>
-                  <li>French Vanilla *</li>
+                  <li>
+                    Vanilla <span id="sugarfree">*</span>{" "}
+                  </li>
+                  <li>
+                    French Vanilla <span id="sugarfree">*</span>
+                  </li>
                   <li>Mocha</li>
                   <li>Caramel</li>
-                  <li>White Chocolate *</li>
+                  <li>
+                    White Chocolate <span id="sugarfree">*</span>
+                  </li>
                   <li>Almond</li>
                   <li>Pumpkin Spice</li>
                   <li>Butter Pecan</li>
                 </div>
                 <div id="flavorList">
-                  <li>Hazelnut *</li>
+                  <li>
+                    Hazelnut <span id="sugarfree">*</span>
+                  </li>
                   <li>Peppermint</li>
                   <li>Coconut</li>
                   <li>Cinnamon Bun</li>
