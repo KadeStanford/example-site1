@@ -408,6 +408,14 @@ html {
   color: aliceblue;
 }
 
+#frappe {
+  margin-top: -0.3%;
+}
+
+#frappe span {
+  margin-left: 5%;
+}
+
 #strawberryTitle {
   color: aliceblue;
 }
