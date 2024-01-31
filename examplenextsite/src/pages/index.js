@@ -26,6 +26,11 @@ function Menu() {
             <span id="soloiced">Iced Latte</span>{" "}
             <span id="twentyprice">(20oz.)</span>
           </p>
+          <p className="menuItemPrice" id="frappe">
+            <span id="coffeecenter">Frappe</span>
+            <span>(16oz.) </span>
+            <span>(20oz.) </span>
+          </p>
           <p className="menuItemPrice" id="xpresso">
             <span id="xpressotitle">Add an extra Espresso Shot!</span>{" "}
             <span id="xpressoprice"> </span>
