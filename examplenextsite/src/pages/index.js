@@ -67,10 +67,8 @@ function Menu() {
                 </li>
                 <li>Peanut Butter</li>
                 <li>Sun Butter (Sunflower Seeds)</li>
-                <li>
-                  Low Sugar Vanilla Yogurt (2 gm Sugar, Natural Vanilla
-                  Gluten-Free Sprouted Oats)
-                </li>
+                <li>Low Sugar Vanilla Yogurt (2 gm Sugar, Natural Vanilla)</li>
+                <li> Gluten-Free Sprouted Oats</li>
               </ul>
             </div>
             <p> Smoothie Bowl Fruit Toppings</p>
@@ -78,7 +76,8 @@ function Menu() {
               <ul className="proteinList">
                 <li>Banana</li>
                 <li>Strawberry</li>
-                <li>Blueberry Mango</li>
+                <li>Blueberry</li>
+                <li>Mango</li>
                 <li>Pineapple</li>
               </ul>
             </div>
@@ -121,6 +120,13 @@ function Menu() {
                 <li>Coconut Milk</li>
                 <li>Coconut Water</li>
                 <li>Orange/Apple Juice</li>
+              </ul>
+            </div>
+            <p>Add-ins</p>
+            <div className="NonDairyOptions">
+              <ul className="proteinList">
+                <li>FLax Seed</li>
+                <li>Hemp Seed</li>
               </ul>
             </div>
           </div>
@@ -166,8 +172,11 @@ function Menu() {
           <p>Jackfruit, Banana, Pineapple, Coconut Milk, and Honey</p>
           <p>Topped with Pineapple, Granola, and Honey</p>
 
-          <p id="SmoothieName">Papaya Protein Bowl</p>
-          <p>Papaya, Strawberry, Banana, Peanut Butter, Oat Milk</p>
+          <p id="SmoothieName">Passion Fruit Smoothie or Bowl</p>
+          <p>
+            Passion fruit, Dragon fruit, Banana and almond milk topped with
+            fresh fruit
+          </p>
 
           <p id="SmoothieName">Acai Bowl</p>
           <p>Acai Berries, Banana, Strawberry or Mixed Berries, Honey</p>
