@@ -7,6 +7,190 @@ import { Scrollbar } from "react-scrollbars-custom";
 function Menu() {
   return (
     <>
+      <div className="menuBox" id="Smoothies">
+        <h1 className="menuItemTitle">
+          Smoothie Shoppe Menu<br></br>Create Your Own
+        </h1>
+        <div className="menuItemInfo">
+          <p id="sizeOptions">Size Options</p>
+          <div className="SmoothieSizes">
+            <span>Smoothies - 16oz / 20oz</span>
+            <span>Smoothie Bowls - 16oz</span>
+          </div>
+          <div className="menuChoices">
+            <p id="fruit">Fruit Choices</p>
+            <div className="fruitChoice">
+              <ul>
+                <li>Strawberry</li>
+                <li>Raspberry</li>
+                <li>Blueberry</li>
+                <li>Banana</li>
+                <li>Pineapple</li>
+              </ul>
+              <ul>
+                <li>Peach</li>
+                <li>Pear</li>
+                <li>Orange</li>
+                <li>Dates</li>
+                <li>Avocado</li>
+              </ul>
+            </div>
+            <p id="super">Super Fruit Choices</p>
+            <div className="superfruitChoice">
+              <ul>
+                <li>Dragon Fruit (Pitaya)</li>
+                <li>Acai Berry</li>
+                <li>Passion Fruit</li>
+              </ul>
+              <ul>
+                <li>Jack Fruit</li>
+                <li>Mango</li>
+                <li>Plaintains</li>
+              </ul>
+            </div>
+            <div className="veggieChoice">
+              <p id="super">Veggie Choices</p>
+              <ul>
+                <li>Spinach</li>
+                <li>Rainbow Chard</li>
+                <li>Kale</li>
+              </ul>
+            </div>
+
+            <p>Protein Choices</p>
+            <div className="proteinChoice">
+              <ul className="proteinList">
+                <li>Almond Butter</li>
+                <li>
+                  Mixed Nut Butter (Almond, Cashews, Pumpkin Seeds, Chia Seeds,
+                  Flak Seeds)
+                </li>
+                <li>Peanut Butter</li>
+                <li>Sun Butter (Sunflower Seeds)</li>
+                <li>Low Sugar Vanilla Yogurt (2 gm Sugar, Natural Vanilla)</li>
+                <li> Gluten-Free Sprouted Oats</li>
+              </ul>
+            </div>
+            <p> Smoothie Bowl Fruit Toppings</p>
+            <div className="SmoothieBowlFruitToppings">
+              <ul className="proteinList">
+                <li>Banana</li>
+                <li>Strawberry</li>
+                <li>Blueberry</li>
+                <li>Mango</li>
+                <li>Pineapple</li>
+              </ul>
+            </div>
+            <p> Smoothie Bowl Toppings</p>
+            <div className="SmoothieBowlFruitToppings">
+              <ul className="proteinList">
+                <li>
+                  Coconut Flakes <br></br>(Naturally Sweet, Unsulphured)
+                </li>
+                <li>
+                  Goji Berries<br></br> (Fruity and Tangy. Good Source of Fiber
+                  and Iron)
+                </li>
+              </ul>
+            </div>
+            <p> Keto Granola</p>
+            <div className="KetoGranola">
+              <ul className="proteinList">
+                <li>Banana Nut</li>
+                <li>Coconut Cashew</li>
+              </ul>
+            </div>
+            <p>Grain-Free Granola</p>
+            <div className="GrainFreeGranola">
+              <ul className="proteinList">
+                <li>Dark Chocolate ALmond</li>
+              </ul>
+            </div>
+            <p>Whole-Grain Probiotic Granola</p>
+            <div className="ProbioticGranola">
+              <ul className="proteinList">
+                <li>(A Blend of Whole grains, Almonds, & Quinoa)</li>
+              </ul>
+            </div>
+            <p>Non-Dairy Options</p>
+            <div className="NonDairyOptions">
+              <ul className="proteinList">
+                <li>Almond Milk</li>
+                <li>Oat Milk</li>
+                <li>Coconut Milk</li>
+                <li>Coconut Water</li>
+                <li>Orange/Apple Juice</li>
+              </ul>
+            </div>
+            <p>Add-ins</p>
+            <div className="NonDairyOptions">
+              <ul className="proteinList">
+                <li>FLax Seed</li>
+                <li>Hemp Seed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="menuBox" id="HouseSpecialties">
+        <h1 className="menuItemTitle">
+          Smoothie Shoppe Menu<br></br>House Specialties
+        </h1>
+        <div className="menuItemInfo">
+          <p id="SmoothieName">Banana Almond Bowl</p>
+          <p>
+            Banana, Almond Butter, Low-Sugar Yogurt, Almond Milk, Honey or
+            Dates, Flax Seed. Topped with Almonds, Banana and Honey
+          </p>
+
+          <p id="SmoothieName">Tropical Sunrise 2-Layer Smoothie</p>
+          <p>1st Layer: Banana, Low-Sugar Yogurt, Mango, Orange, Almond Milk</p>
+          <p>2nd Layer: Mixed Berries, Yogurt & Honey</p>
+
+          <p id="SmoothieName">
+            Chocolate (Cacao) Smoothie OR Bowl (*Add Espresso)
+          </p>
+          <p>
+            Banana, Almond Butter, Coconut Milk or Almond Milk, Cacao (Organic
+            Unsweet Chocolate), Flax Seeds, Dates
+          </p>
+          <p>
+            Topped with Grain-Free Dark Chocolate Granola, Almond, and Banana
+          </p>
+
+          <p id="SmoothieName">Green Smoothie (*Add Matcha Tea)</p>
+          <p>
+            Spinach, Rainbow Chard, Kale, Avocado, Pineapple, Banana, Pear,
+            Honey
+          </p>
+
+          <p id="SmoothieName">Pitaya (Dragon Fruit) Smoothie Bowl</p>
+          <p>Dragon Fruit, Passion Fruit, Banana, Strawberry</p>
+          <p>Topped with Mango, Coconut Flakes, and Goji Berries</p>
+
+          <p id="SmoothieName">Jackfruit Smoothie or Bowl</p>
+          <p>Jackfruit, Banana, Pineapple, Coconut Milk, and Honey</p>
+          <p>Topped with Pineapple, Granola, and Honey</p>
+
+          <p id="SmoothieName">Passion Fruit Smoothie or Bowl</p>
+          <p>
+            Passion fruit, Dragon fruit, Banana and almond milk topped with
+            fresh fruit
+          </p>
+
+          <p id="SmoothieName">Acai Bowl</p>
+          <p>Acai Berries, Banana, Strawberry or Mixed Berries, Honey</p>
+          <p>Topped with Strawberry, Banana, & Goji Berries</p>
+
+          <p id="SmoothieName">Immunity Smoothie or Bowl</p>
+          <p>Dragon Fruit, Passion Fruit, and Mango</p>
+          <p>(Your choice of Toppings)</p>
+
+          <p id="SmoothieName">Mixed Fruit Smoothie</p>
+          <p>Strawberry, Banana, Peaches, Pineapple, & Jack Fruit</p>
+        </div>
+      </div>
+
       <div className="menuBox" id="Coffee">
         <h1 className="menuItemTitle">Liberty House Special Brew</h1>
         <div className="menuItemInfo">

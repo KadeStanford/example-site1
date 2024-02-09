@@ -22,6 +22,130 @@ html {
   background-color: transparent;
 }
 
+#Smoothies {
+  background-image: url("/images/smoothieBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Smoothies .menuItemInfo {
+  overflow-y: scroll;
+}
+
+.fruitChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.superfruitChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.proteinChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  text-align: center;
+}
+
+.proteinList {
+  list-style-type: none;
+}
+
+#Smoothies .menuChoices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.menuChoices ul {
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuChoices p {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #f8c359;
+}
+
+#sizeOptions {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #f8c359;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.SmoothieSizes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#HouseSpecialties {
+  background-image: url("/images/smoothieBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#HouseSpecialties .menuItemInfo {
+  overflow-y: scroll;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  text-align: center;
+}
+
+#SmoothieName {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #f8c359;
+}
+
+#HouseSpecialties .menuChoices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 0px #000000;
+}
+
 .menuBox {
   display: flex;
   flex-direction: column;
