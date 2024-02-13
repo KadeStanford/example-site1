@@ -752,6 +752,7 @@ a {
   width: 90%;
   background-image: url("/rabbits/Group.jpg");
   background-size: cover;
+  padding-bottom: 10px;
 }
 
 .eventsTextContainer#Rabbit {
