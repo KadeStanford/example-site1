@@ -695,6 +695,7 @@ a {
   background-position: center;
   border-radius: 10px;
   padding: 10px;
+  margin-top: 10px;
   box-shadow: 0px 0px 10px #000000;
   height: 45rem;
   width: 55%;
@@ -713,6 +714,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .eventsTitle#Smoothie {
@@ -727,6 +729,90 @@ a {
 }
 
 .eventsText#Smoothie {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #dd6b9e;
+  font-weight: 100;
+  font-size: calc(1.8rem + 0.5vw);
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.eventsBox#Rabbit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #000000;
+  height: 45rem;
+  width: 90%;
+  background-image: url("/rabbits/Group.jpg");
+  background-size: cover;
+  padding-bottom: 10px;
+}
+
+.eventsTextContainer#Rabbit {
+  background-color: rgba(51, 39, 39, 0.3);
+  box-shadow: inset 0px 0px 4px #000000;
+  border-radius: 10px;
+  width: 95%;
+  margin-top: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.eventsTitle#Rabbit {
+  color: #f8c359;
+  text-align: center;
+  text-shadow: 4px 2px 2px rgb(61, 52, 52);
+  font-size: calc(2.5rem + 0.5vw);
+  background-color: rgba(5, 5, 5, 0.5);
+  box-shadow: inset 0px 0px 14px #1b1a1a;
+  border-radius: 10px;
+  width: 95%;
+}
+
+.eventsText#Rabbit {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #dd6b9e;
+  font-weight: 100;
+  font-size: calc(1.8rem + 0.5vw);
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+#rabbitOrganizer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
+}
+
+#rabbitBox {
+  text-align: center;
+  width: 45%; /* Adjust as needed based on your design */
+  margin: 10px; /* Adjust margin as needed */
+}
+
+.rabbitImage {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 60%;
+  border: 3px solid #f8c359;
+  scale: 1.3;
+}
+
+.rabbitText {
   color: #ffffff;
   text-shadow: 2px 2px 0px #dd6b9e;
   font-weight: 100;
@@ -922,6 +1008,18 @@ a#call {
     height: 100vh;
     width: 100%;
     margin: 0;
+  }
+  #rabbitBox {
+    width: 90%; /* Adjust as needed for mobile layout */
+  }
+
+  .rabbitImage {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 60%;
+    border: 3px solid #f8c359;
+    scale: 1;
   }
 
   .iceCreamBoxOrganizer {

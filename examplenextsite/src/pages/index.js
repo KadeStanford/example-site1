@@ -532,6 +532,153 @@ function About() {
 function Events() {
   return (
     <>
+      <div className="eventsBox" id="Rabbit">
+        <h1 className="eventsTitle" id="Rabbit">
+          The Work Of Our Hands
+        </h1>
+        <div className="eventsTextContainer" id="Rabbit">
+          <p className="eventsText" id="Rabbit">
+            <span>
+              From time to time Liberty House Specialties will feature the "work
+              of the hands" of some of our friends in the art community. This
+              Spring we would like to introduce these hand stitched bunnies made
+              by our (81 years loved) artisan friend who does every stitch by
+              hand. They are felted, heirloom quality made to be handed down
+              from generation to generation. We commissioned "Silli"
+              specifically for "Our" girls. We hope you love them! Please call
+              for ordering/purchasing details. Thank you!
+            </span>
+          </p>
+          <div id="rabbitOrganizer">
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                id="Audrey"
+                src="/rabbits/Audrey.jpg"
+                alt="Audrey"
+              />
+              <p className="rabbitText">Audrey</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                id="Bridgette"
+                src="/rabbits/Bridgette.jpg"
+                alt="Bridgette"
+              />
+              <p className="rabbitText">Bridgette</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Clarice.jpg"
+                alt="Clarice"
+              />
+              <p className="rabbitText">Clarice</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Coco.jpg" alt="Coco" />
+              <p className="rabbitText">Coco</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Colleen.jpg"
+                alt="Colleen"
+              />
+              <p className="rabbitText">Colleen</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Duncan.jpg"
+                alt="Duncan"
+              />
+              <p className="rabbitText">Duncan</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Eileen.jpg"
+                alt="Eileen"
+              />
+              <p className="rabbitText">Eileen</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Fern.jpg" alt="Fern" />
+              <p className="rabbitText">Fern</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Jess.jpg" alt="Jess" />
+              <p className="rabbitText">Jess</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Joy.jpg" alt="Joy" />
+              <p className="rabbitText">Joy</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Kate.jpg" alt="Kate" />
+              <p className="rabbitText">Kate</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Lily.jpg" alt="Lily" />
+              <p className="rabbitText">Lily</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Louisa.jpg"
+                alt="Louisa"
+              />
+              <p className="rabbitText">Louisa</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Molly.jpg"
+                alt="Molly"
+              />
+              <p className="rabbitText">Molly</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Olive.jpg"
+                alt="Olive"
+              />
+              <p className="rabbitText">Olive</p>
+            </div>
+            <div id="rabbitBox">
+              <img className="rabbitImage" src="/rabbits/Rose.jpg" alt="Rose" />
+              <p className="rabbitText">Rose</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Silli.jpg"
+                alt="Silli"
+              />
+              <p className="rabbitText">Silli</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Victoria.jpg"
+                alt="Victoria"
+              />
+              <p className="rabbitText">Victoria</p>
+            </div>
+            <div id="rabbitBox">
+              <img
+                className="rabbitImage"
+                src="/rabbits/Vivian.jpg"
+                alt="Vivian"
+              />
+              <p className="rabbitText">Vivian</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="eventsBox" id="Smoothie">
         <h1 className="eventsTitle" id="Smoothie">
           Coming soon! "The Smoothie Shoppe"
