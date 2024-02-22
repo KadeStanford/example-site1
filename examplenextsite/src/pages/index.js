@@ -631,7 +631,9 @@ function Events() {
             </div>
             <div id="rabbitBox">
               <img className="rabbitImage" src="/rabbits/Lily.jpg" alt="Lily" />
-              <p className="rabbitText">Lily</p>
+              <p className="rabbitText">
+                Lily<br></br>(Sold!)
+              </p>
             </div>
             <div id="rabbitBox">
               <img
@@ -655,7 +657,9 @@ function Events() {
                 src="/rabbits/Olive.jpg"
                 alt="Olive"
               />
-              <p className="rabbitText">Olive</p>
+              <p className="rabbitText">
+                Olive<br></br>(Sold!)
+              </p>
             </div>
             <div id="rabbitBox">
               <img className="rabbitImage" src="/rabbits/Rose.jpg" alt="Rose" />
