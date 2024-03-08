@@ -629,7 +629,9 @@ function Events() {
             </div>
             <div id="rabbitBox">
               <img className="rabbitImage" src="/rabbits/Kate.jpg" alt="Kate" />
-              <p className="rabbitText">Kate</p>
+              <p className="rabbitText">
+                Kate<br></br>(Sold!)
+              </p>
             </div>
             <div id="rabbitBox">
               <img className="rabbitImage" src="/rabbits/Lily.jpg" alt="Lily" />
