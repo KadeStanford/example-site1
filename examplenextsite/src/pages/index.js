@@ -605,7 +605,9 @@ function Events() {
                 src="/rabbits/Duncan.jpg"
                 alt="Duncan"
               />
-              <p className="rabbitText">Duncan</p>
+              <p className="rabbitText">
+                Duncan<br></br>(Sold!)
+              </p>
             </div>
             <div id="rabbitBox">
               <img
@@ -691,7 +693,9 @@ function Events() {
                 src="/rabbits/Vivian.jpg"
                 alt="Vivian"
               />
-              <p className="rabbitText">Vivian</p>
+              <p className="rabbitText">
+                Vivian<br></br>(Sold!)
+              </p>
             </div>
           </div>
         </div>
