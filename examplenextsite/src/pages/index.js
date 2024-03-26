@@ -679,7 +679,9 @@ function Events() {
                 src="/rabbits/Silli.jpg"
                 alt="Silli"
               />
-              <p className="rabbitText">Silli</p>
+              <p className="rabbitText">
+                Silli<br></br>(Sold! - taking orders)
+              </p>
             </div>
             <div id="rabbitBox">
               <img
