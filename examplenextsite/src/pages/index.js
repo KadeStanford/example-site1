@@ -756,6 +756,234 @@ function Events() {
 }
 
 function SeasonalFlavors() {
+  const flavorsWithDescriptions = [
+    {
+      flavor: "Banana Cream Pie",
+      description:
+        "Your favorite comfort food now on a cone! Banana ice cream churned with a marshmallow ripple and real Nilla Wafers.",
+    },
+    {
+      flavor: "Birthday Cake",
+      description:
+        "This party in a pint is topped off with festive swirls of blue buttercream frosting and bursts of colorful confetti sprinkles.",
+    },
+    {
+      flavor: "Blackberry Lemon Bar",
+      description:
+        "Lemon ice cream folded with pound cake and blackberry sauce.",
+    },
+    {
+      flavor: "Black Walnut",
+      description:
+        "Classic black walnut ice cream folded with crunchy walnuts.",
+    },
+    {
+      flavor: "Blueberry Cheesecake",
+      description:
+        "Delectably smooth cheesecake ice cream topped off with a tangy blueberry ripple and soft cheesecake chunks.",
+    },
+    {
+      flavor: "Bourbon Pecan Pie",
+      description:
+        "Smooth bourbon ice cream swirled with a sea salt chocolate fudge ripple and roasted pecans.",
+    },
+    {
+      flavor: "Butter Pecan",
+      description:
+        "Buttery pecan ice cream with boat-loads of crispy, lightly roasted and salted pecans.",
+    },
+    {
+      flavor: "Caramel Chaos",
+      description:
+        "Sweet caramel ice cream packed with chocolate-covered caramel cups and swirls of gooey caramel.",
+    },
+    {
+      flavor: "Cashews & Caramel",
+      description:
+        "Creamy, no-sugar-added vanilla ice cream rippled with gooey, sugar-free caramel and loaded with real cashews.",
+    },
+    {
+      flavor: "Cherry Chocolate Chip",
+      description:
+        "Sweet vanilla ice cream loaded with big, red cherries and melt-in-your-mouth chocolate chips.",
+    },
+    {
+      flavor: "Chocolate",
+      description:
+        "All-natural, classic chocolate ice cream made with real, rich cocoas.",
+    },
+    {
+      flavor: "Coconut Almond Bliss",
+      description:
+        "Coconut ice cream with chocolate flakes and roasted almonds.",
+    },
+    {
+      flavor: "Cookie Dough",
+      description:
+        "Sweet cookie-flavored ice cream with heaps of soft chocolate chip cookie dough chunks and tons of rich chocolate chips.",
+    },
+    {
+      flavor: "Cotton Candy Twist",
+      description:
+        "Blue and pink cotton candy ice creams spun together for that whimsical carnival sensation!",
+    },
+    {
+      flavor: "Fat Elvis",
+      description:
+        "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
+    },
+    {
+      flavor: "Gumball",
+      description:
+        "Bubblegum glow up! Nostalgic gumball ice cream folded with pink, edible bubblegum-esque pieces.",
+    },
+    {
+      flavor: "Halley's Comet®",
+      description:
+        "A perfect trio of flavors with rich milk chocolate and vanilla ice creams swirled with caramel ribbons and caramel truffles.",
+    },
+    {
+      flavor: "Heaps of Love",
+      description:
+        "Vanilla ice cream packed with Oreos®, brownies, cookie dough, pecans, caramel and chocolate swirls.",
+    },
+    {
+      flavor: "Kitty Kitty Bang Bang",
+      description:
+        "Cheesecake ice cream mixed with raspberry sauce, Oreos® and chocolate chunks.",
+    },
+    {
+      flavor: "Lemon Poppy Seed",
+      description:
+        "All-natural, fresh and bright lemon ice cream speckled with poppy seeds.",
+    },
+    {
+      flavor: "Malt Amore",
+      description:
+        "Old-style malted milk ice cream packed with rich, malt flavor, soft chocolate chips and ripples of sweet, chocolate fudge.",
+    },
+    {
+      flavor: "Mint Avalanche",
+      description:
+        "Mint ice cream loaded with Andes® Candies, Grasshopper® cookies, and chocolate fudge.",
+    },
+    {
+      flavor: "Munchie Madness",
+      description:
+        "Sweet cake batter ice cream swirled with a salted caramel ripple and brimming with Oreos, M&M pieces and peanut butter cups.",
+    },
+    {
+      flavor: "Old Fashioned Vanilla",
+      description:
+        "An award-winning and all-natural classic vanilla ice cream made with Wisconsin cream, cane sugar and pure vanilla.",
+    },
+    {
+      flavor: "Peanut Butter Cup",
+      description:
+        "Smooth chocolate ice cream brimming with mouthwatering peanut butter ripples and rich peanut butter cups.",
+    },
+    {
+      flavor: "Pistachio Nut",
+      description:
+        "Irresistible almond-flavored ice cream churned with crisp pistachio nuts.",
+    },
+    {
+      flavor: "Pomegranate Swirl NSA",
+      description:
+        "Creamy, no-sugar-added vanilla ice cream brimming with delicious, no-sugar-added blueberry and pomegranate ripples.",
+    },
+    {
+      flavor: "Praline Pecan",
+      description:
+        "Buttery maple ice cream topped with a gooey caramel ripple and loads of crunchy, candy-coated pecans.",
+    },
+    {
+      flavor: "Rainbow Sherbet",
+      description:
+        "Orange, Lime, and Raspberry flavored sherbets classically swirled together.",
+    },
+    {
+      flavor: "Raspberry Lemon Italian Ice",
+      description:
+        "Non-dairy, non-fat sweet raspberry and tart lemon Italian ices swirled together for an irresistibly refreshing treat.",
+    },
+    {
+      flavor: "Rocky Road",
+      description:
+        "Swirls of rich, chocolate and fluffy marshmallow ice creams and topped off with chocolate-covered almonds.",
+    },
+    {
+      flavor: "S'more to Love",
+      description:
+        "Crushed graham cracker ice cream with melty layers of chocolate and marshmallow.",
+    },
+    {
+      flavor: "Sticks & Stones®",
+      description:
+        "Soft cookie dough chunks, crunchy chocolate covered pretzels, and a gooey salted caramel ripple all swirled into our rich chocolate ice cream.",
+    },
+    {
+      flavor: "Strawberry",
+      description:
+        "Award-winning and deliciously fresh strawberry ice cream loaded to the brim with real, whole strawberries.",
+    },
+    {
+      flavor: "Strawberry Cheesecake",
+      description:
+        "Cheesecake ice cream swirled with a strawberry ripple and loads of gooey cheesecake pieces.",
+    },
+    {
+      flavor: "Strawberry Ripple NSA",
+      description:
+        "Creamy, no-sugar-added vanilla ice cream swirled with sweet and tangy strawberry ribbons.",
+    },
+    {
+      flavor: "Super Human",
+      description:
+        "Meet your new kryptonite… Cherry, Blue Moon and Vanilla ice creams combine forces to bring you one super scoop!",
+    },
+    {
+      flavor: "This $&@! Just Got Serious",
+      description:
+        "Salted caramel ice cream with a sea salt fudge ripple and roasted cashews.",
+    },
+    {
+      flavor: "Ultimate Oreo",
+      description:
+        "Scrumptious Oreo® crumb ice cream packed with boat-loads of whole Oreo® cookies.",
+    },
+    {
+      flavor: "Ultimate Oreo Oat Cream",
+      description:
+        "Oreo® crumb non-dairy frozen dessert packed with whole Oreos.",
+    },
+    {
+      flavor: "Vanilla Chocolate Chip Oat Cream",
+      description:
+        "Classic vanilla non-dairy frozen dessert made with delicious, semi-sweet chocolate chips.",
+    },
+    {
+      flavor: "Vanilla Oat Cream",
+      description:
+        "Indulgently creamy non-dairy frozen dessert blended with oat milk and vanilla.",
+    },
+    {
+      flavor: "Yippee Skippee®",
+      description:
+        "Creamy peanut butter ice cream loaded with salted caramel ripples, soft brownie chunks and crispy chocolate-covered pretzels.",
+    },
+    {
+      flavor: "Zanzibar Chocolate",
+      description:
+        "Award-winning, deep dark chocolate made with three kinds of cocoa.",
+    },
+    {
+      flavor: "Zanzimint®",
+      description:
+        "Zanzibar® chocolate ice cream swirled with crisp mint ice cream.",
+    },
+  ];
+
   return (
     <>
       <h1 className="iceCreamTitleTop">Flavors of the Season</h1>
@@ -769,506 +997,21 @@ function SeasonalFlavors() {
       </p>
 
       <div className="iceCreamBoxOrganizer">
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/strawberrycheesecake.png"
-            alt="StrawberryCheesecake"
-          />
-          <p className="iceCreamText">Strawberry Cheesecake</p>
-          <p className="iceCreamDesc">
-            Cheesecake ice cream swirled with a strawberry ripple and loads of
-            gooey cheesecake pieces.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/snapolantern.png"
-            alt="Snap-O-Lantern®"
-          />
-          <p className="iceCreamText">Snap-O-Lantern®</p>
-          <p className="iceCreamDesc">
-            An award-winning combination of spicy pumpkin ice cream and heaps of
-            gingersnap cookies, available for a limited time only.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/zanzimint.png"
-            alt="Zanzimint®"
-          />
-          <p className="iceCreamText">Zanzimint®</p>
-          <p className="iceCreamDesc">
-            Zanzibar® chocolate ice cream swirled with crisp mint ice cream.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/maltamore.png"
-            alt="Malt Amore"
-          />
-          <p className="iceCreamText">Malt Amore</p>
-          <p className="iceCreamDesc">
-            Old-style malted milk ice cream packed with rich, malt flavor, soft
-            chocolate chips and ripples of sweet, chocolate fudge.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "53%",
-            }}
-            src="/cream/sticksandstones.png"
-            alt="Sticks & Stones®"
-          />
-          <p className="iceCreamText">Sticks & Stones®</p>
-          <p className="iceCreamDesc">
-            Soft cookie dough chunks, crunchy chocolate covered pretzels, and a
-            gooey salted caramel ripple all swirled into our rich chocolate ice
-            cream.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/maplenut.png"
-            alt="Maple Nut"
-          />
-          <p className="iceCreamText">Maple Nut</p>
-          <p className="iceCreamDesc">
-            Heavenly sweet maple ice cream brimming with fresh, crunchy walnuts.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/bananacreampie.png"
-            alt="Banana Cream Pie"
-          />
-          <p className="iceCreamText">Banana Cream Pie</p>
-          <p className="iceCreamDesc">
-            Your favorite comfort food now on a cone! Banana ice cream churned
-            with a marshmallow ripple and real Nilla Wafers.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/munchiemadness.png"
-            alt="Munchie Madness"
-          />
-          <p className="iceCreamText">Munchie Madness</p>
-          <p className="iceCreamDesc">
-            Sweet cake batter ice cream swirled with a salted caramel ripple and
-            brimming with Oreos, M&M pieces and peanut butter cups.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/icedlattee.png"
-            alt="Iced Latte-Da®"
-          />
-          <p className="iceCreamText">Iced Latte-Da®</p>
-          <p className="iceCreamDesc">
-            Fantastic Wisconsin-made caffeinated espresso ice cream with fudge
-            swirls and chocolate chunks.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/butterpecan.png"
-            alt="Butter Pecan"
-          />
-          <p className="iceCreamText">Butter Pecan</p>
-          <p className="iceCreamDesc">
-            Buttery pecan ice cream with boat-loads of crispy, lightly roasted
-            and salted pecans.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/caramelchaos.png"
-            alt="Caramel Chaos"
-          />
-          <p className="iceCreamText">Caramel Chaos</p>
-          <p className="iceCreamDesc">
-            Sweet caramel ice cream packed with chocolate-covered caramel cups
-            and swirls of gooey caramel.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/cookiedough.png"
-            alt="Cookie Dough"
-          />
-          <p className="iceCreamText">Cookie Dough</p>
-          <p className="iceCreamDesc">
-            Sweet cookie-flavored ice cream with heaps of soft chocolate chip
-            cookie dough chunks and tons of rich chocolate chips.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/cottoncandytwist.png"
-            alt="Cotton Candy Twist"
-          />
-          <p className="iceCreamText">Cotton Candy Twist</p>
-          <p className="iceCreamDesc">
-            Blue and pink cotton candy ice creams spun together for that
-            whimsical carnival sensation!
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/yippeeskippee.png"
-            alt="Yippee Skippee®"
-          />
-          <p className="iceCreamText">Yippee Skippee®</p>
-          <p className="iceCreamDesc">
-            Creamy peanut butter ice cream loaded with salted caramel ripples,
-            soft brownie chunks and crispy chocolate-covered pretzels.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/zanzibar.png"
-            alt="Zanzibar"
-          />
-          <p className="iceCreamText">Zanzibar Chocolate</p>
-          <p className="iceCreamDesc">
-            Award-winning, deep dark chocolate made with three kinds of cocoa
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "58%",
-            }}
-            src="/cream/serious.png"
-            alt="This $&@! Just Got Serious"
-          />
-          <p className="iceCreamText">This $&@! Just Got Serious</p>
-          <p className="iceCreamDesc">
-            Salted caramel ice cream with a sea salt fudge ripple and roasted
-            cashews
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "60%",
-            }}
-            src="/cream/birthdaycake.png"
-            alt="Birthday Cake"
-          />
-          <p className="iceCreamText">Birthday Cake</p>
-          <p className="iceCreamDesc">
-            This party in a pint is topped off with festive swirls of blue
-            buttercream frosting and bursts of colorful confetti sprinkles
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "55%",
-            }}
-            src="/cream/mintavalanche.png"
-            alt="Mint Avalanche"
-          />
-          <p className="iceCreamText">Mint Avalanche</p>
-          <p className="iceCreamDesc">
-            Mint ice cream loaded with Andes® Candies, Grasshopper® cookies, and
-            chocolate fudge
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/heapsoflove.png"
-            alt="Heaps of Love"
-          />
-          <p className="iceCreamText">Heaps of Love</p>
-          <p className="iceCreamDesc">
-            Vanilla ice cream packed with Oreos®, brownies, cookie dough,
-            pecans, caramel and chocolate swirls
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/kitty.png"
-            alt="Kitty Kitty Bang Bang"
-          />
-          <p className="iceCreamText">Kitty Kitty Bang Bang</p>
-          <p className="iceCreamDesc">
-            Cheesecake ice cream mixed with raspberry sauce, Oreos® and
-            chocolate chunks
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/fatelvis.png"
-            alt="Fat Elvis"
-          />
-          <p className="iceCreamText">Fat Elvis</p>
-          <p className="iceCreamDesc">
-            Banana ice cream all shook up with salty peanut butter and chocolate
-            chips
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/coconutalmond.png"
-            alt="Coconut Almond Bliss"
-          />
-          <p className="iceCreamText">Coconut Almond Bliss</p>
-          <p className="iceCreamDesc">
-            Coconut ice cream with chocolate flakes and roasted almonds
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/blueberrycheesecake.png"
-            alt="Blueberry Cheesecake"
-          />
-          <p className="iceCreamText">Blueberry Cheesecake</p>
-          <p className="iceCreamDesc">
-            Delectably smooth cheesecake ice cream topped off with a tangy
-            blueberry ripple and soft cheesecake chunks.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/cakebatterfudge.png"
-            alt="Cake Batter Fudge"
-          />
-          <p className="iceCreamText">Cake Batter Fudge</p>
-          <p className="iceCreamDesc">
-            Cake batter-base, thick chocolate frosting swirls and lush brownie
-            pieces
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/blackberrylemonbar.png"
-            alt="Blackberry Lemon Bar"
-          />
-          <p className="iceCreamText">Blackberry Lemon Bar</p>
-          <p className="iceCreamDesc">
-            Lemon ice cream folded with pound cake and blackberry sauce
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/pistachionut.png"
-            alt="Pistachio Nut"
-          />
-          <p className="iceCreamText">Pistachio Nut</p>
-          <p className="iceCreamDesc">
-            Irresistible almond-flavored ice cream churned with crisp pistachio
-            nuts
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/smore.png"
-            alt="S&#39;more to Love"
-          />
-          <p className="iceCreamText">S&#39;more to Love</p>
-          <p className="iceCreamDesc">
-            Crushed graham cracker ice cream with melty layers of chocolate and
-            marshmallow.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/vanilla.png"
-            alt="Old Fashioned Vanilla"
-          />
-          <p className="iceCreamText">Old Fashioned Vanilla</p>
-          <p className="iceCreamDesc">
-            An award-winning and all-natural classic vanilla ice cream made with
-            Wisconsin cream, cane sugar and pure vanilla.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/cherrychocolatechip.png"
-            alt="Cherry Chocolate Chip"
-          />
-          <p className="iceCreamText">Cherry Chocolate Chip</p>
-          <p className="iceCreamDesc">
-            Sweet vanilla ice cream loaded with big, red cherries and
-            melt-in-your-mouth chocolate chips.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/strawberry.png"
-            alt="Strawberry"
-          />
-          <p className="iceCreamText">Strawberry</p>
-          <p className="iceCreamDesc">
-            Award-winning and deliciously fresh strawberry ice cream loaded to
-            the brim with real, whole strawberries.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/peanutbuttercup.png"
-            alt="Peanut Butter Cup"
-          />
-          <p className="iceCreamText">Peanut Butter Cup</p>
-          <p className="iceCreamDesc">
-            Smooth chocolate ice cream brimming with mouthwatering peanut butter
-            ripples and rich peanut butter cups.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/halleyscomet.png"
-            alt="Halley&#39;s Comet®"
-          />
-          <p className="iceCreamText">Halley&#39;s Comet®</p>
-          <p className="iceCreamDesc">
-            A perfect trio of flavors with rich milk chocolate and vanilla ice
-            creams swirled with caramel ribbons and caramel truffles.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/ultimateoreo.png"
-            alt="Ultimate Oreo"
-          />
-          <p className="iceCreamText">Ultimate Oreo</p>
-          <p className="iceCreamDesc">
-            Scrumptious Oreo® crumb ice cream packed with boat-loads of whole
-            Oreo® cookies.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/vanillaoat.png"
-            alt="Vanilla Oat Cream"
-          />
-          <h1 className="iceCreamText">Vanilla Oat Cream</h1>
-          <p className="iceCreamDesc">
-            Indulgently creamy non-dairy frozen dessert blended with oat milk
-            and vanilla.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/pomegranate.png"
-            alt="Pomegranate Swirl"
-          />
-          <p className="iceCreamText">Pomegranate Swirl</p>
-          <p className="iceCreamDesc">
-            Creamy, no-sugar-added vanilla ice cream brimming with delicious,
-            no-sugar-added blueberry and pomegranate ripples.
-          </p>
-        </div>
-        <div className="iceCreamBox">
-          <img
-            style={{
-              width: "57%",
-            }}
-            src="/cream/caramelcashew.png"
-            alt="Cashews & Caramel"
-          />
-          <p className="iceCreamText">Cashews & Caramel</p>
-          <p className="iceCreamDesc">
-            Creamy, no-sugar-added vanilla ice cream rippled with gooey,
-            sugar-free caramel and loaded with real cashews.
-          </p>
-        </div>
+        {flavorsWithDescriptions.map((flavorObj, index) => (
+          <div className="iceCreamBox" key={index}>
+            <img
+              style={{
+                width: "60%",
+              }}
+              src={`/cream/${flavorObj.flavor
+                .toLowerCase()
+                .replace(/\s+/g, "")}.png`}
+              alt={flavorObj.flavor}
+            />
+            <p className="iceCreamText">{flavorObj.flavor}</p>
+            <p className="iceCreamDesc">{flavorObj.description}</p>
+          </div>
+        ))}
       </div>
     </>
   );
