@@ -903,16 +903,6 @@ function SeasonalFlavors() {
         "Orange, Lime, and Raspberry flavored sherbets classically swirled together.",
     },
     {
-      flavor: "Raspberry Lemon Italian Ice",
-      description:
-        "Non-dairy, non-fat sweet raspberry and tart lemon Italian ices swirled together for an irresistibly refreshing treat.",
-    },
-    {
-      flavor: "Rocky Road",
-      description:
-        "Swirls of rich, chocolate and fluffy marshmallow ice creams and topped off with chocolate-covered almonds.",
-    },
-    {
       flavor: "S'more to Love",
       description:
         "Crushed graham cracker ice cream with melty layers of chocolate and marshmallow.",
