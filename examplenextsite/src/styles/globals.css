@@ -33,6 +33,85 @@ html {
   overflow-y: scroll;
 }
 
+#Cones {
+  background-image: url("/cream/cones.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+#Cones .menuItemTitle {
+  font-size: calc(2.5rem + 0.5vw);
+  border: 2px solid #f8c359;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: inset 0px 0px 15px #000000;
+  background-color: rgba(61, 52, 52, 0.5);
+}
+
+#Balls {
+  background-image: url("/cream/balls.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+#Balls .menuItemTitle {
+  font-size: calc(2.5rem + 0.5vw);
+  border: 2px solid #f8c359;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: inset 0px 0px 15px #000000;
+  background-color: rgba(61, 52, 52, 0.5);
+}
+
+#Cones .menuItemPrice {
+  margin-bottom: 0px;
+  font-size: calc(1.3rem + 0.5vw);
+}
+
+#Balls .menuItemPrice {
+  margin-bottom: 20px;
+  font-size: calc(1.4rem + 0.5vw);
+}
+
+#Shakes {
+  background-image: url("/cream/shake.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#Shakes .menuItemTitle {
+  font-size: calc(2.5rem + 0.5vw);
+  border: 2px solid #f8c359;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: inset 0px 0px 15px #000000;
+  background-color: rgba(61, 52, 52, 0.5);
+}
+
+#Shakes .menuItemPrice {
+  margin-bottom: 0px;
+  font-size: calc(1.3rem + 0.5vw);
+  margin: 10px;
+}
+
+#Shakes .menuItemInfo {
+  margin-top: 20%;
+}
+
+#IceMiscOrganizer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 .fruitChoice {
   display: flex;
   flex-direction: row;

@@ -986,6 +986,50 @@ function SeasonalFlavors() {
         selection. Not all flavors last long, so we hope to see you soon!
       </p>
 
+      <div id="IceMiscOrganizer">
+        <div className="menuBox" id="Cones">
+          <h1 className="menuItemTitle">Cones</h1>
+          <div className="menuItemInfo">
+            <p className="menuItemPrice">
+              <span>Chocolate Chip Cone</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Sprinkle Cone</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Pretzel Cone</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Chocolate Cookie Cone</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="menuBox" id="Balls">
+          <h1 className="menuItemTitle">Cake Balls</h1>
+          <div className="menuItemInfo">
+            <p className="menuItemPrice">
+              <span>Birthday Cake</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Cookies & Cream</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Double Chocolate</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="menuBox" id="Shakes">
+          <h1 className="menuItemTitle">Shakes</h1>
+          <div className="menuItemInfo">
+            <p className="menuItemPrice">
+              <span id="milkshake">Milkshake</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="iceCreamBoxOrganizer">
         {flavorsWithDescriptions.map((flavorObj, index) => (
           <div className="iceCreamBox" key={index}>
