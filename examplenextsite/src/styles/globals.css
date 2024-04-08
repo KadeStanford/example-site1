@@ -69,12 +69,14 @@ html {
 
 #Cones .menuItemPrice {
   margin-bottom: 0px;
+  margin-top: 5px;
   font-size: calc(1.3rem + 0.5vw);
 }
 
 #Balls .menuItemPrice {
-  margin-bottom: 20px;
-  font-size: calc(1.4rem + 0.5vw);
+  margin-bottom: 0px;
+  margin-top: 5px;
+  font-size: calc(1.3rem + 0.5vw);
 }
 
 #Shakes {
@@ -95,12 +97,12 @@ html {
 
 #Shakes .menuItemPrice {
   margin-bottom: 0px;
+  margin-top: 5px;
   font-size: calc(1.3rem + 0.5vw);
-  margin: 10px;
 }
 
 #Shakes .menuItemInfo {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 #IceMiscOrganizer {
