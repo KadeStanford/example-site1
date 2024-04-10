@@ -1002,6 +1002,9 @@ function SeasonalFlavors() {
             <p className="menuItemPrice">
               <span>Chocolate Cookie Cone</span>
             </p>
+            <p className="menuItemPrice">
+              <span>Waffle Cone</span>
+            </p>
           </div>
         </div>
 

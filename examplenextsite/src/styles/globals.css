@@ -42,7 +42,7 @@ html {
 }
 
 #Cones .menuItemTitle {
-  font-size: calc(2.5rem + 0.5vw);
+  font-size: calc(2.3rem + 0.5vw);
   border: 2px solid #f8c359;
   border-radius: 10px;
   width: 70%;
