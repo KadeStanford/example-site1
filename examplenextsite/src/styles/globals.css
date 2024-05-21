@@ -654,9 +654,9 @@ html {
 }
 
 #GFPastries .menuItemInfo {
-  margin-top: -3%;
+  margin-top: -6%;
   padding: 0;
-  padding-top: 4%;
+  padding-top: 6%;
 }
 
 #GFPastries .menuItemTitle {
@@ -665,7 +665,8 @@ html {
 }
 
 #GFPastries .menuItemPrice {
-  margin-top: -2%;
+  margin-top: -5.4%;
+  padding-bottom: 5px;
 }
 
 #CheeseDanish .menuItemInfo {
