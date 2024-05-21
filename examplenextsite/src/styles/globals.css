@@ -255,6 +255,10 @@ html {
   align-content: center;
 }
 
+#Coffee .menuItemTitle {
+  font-size: 1.7rem;
+}
+
 #flavorNames {
   display: flex;
   flex-direction: row;
@@ -274,10 +278,6 @@ html {
   margin-top: 20px;
 }
 
-#twentyoz {
-  margin-top: 30px;
-}
-
 #xpresso {
   margin-top: 20px;
   align-items: center;
@@ -295,11 +295,11 @@ html {
 }
 
 #twentyprice {
-  margin-left: 43%;
+  margin-left: 0%;
 }
 
 #soloiced {
-  margin-left: 2%;
+  margin-left: 0%;
 }
 
 #xpressotitle {
@@ -387,6 +387,10 @@ html {
   background-image: url("/images/blueberry.png");
 }
 
+.menuBox#GFPastries {
+  background-image: url("/images/GFPastries.png");
+}
+
 .menuBox#BSWCC {
   background-image: url("/images/brown.png");
 }
@@ -403,12 +407,24 @@ html {
   background-image: url("/images/muffin.png");
 }
 
+#coffeenote {
+  margin-top: -5%;
+}
+
 .menuBox#ChocCookie {
   background-image: url("/images/cookie.png");
 }
 
 .menuBox#Biscuits {
   background-image: url("/images/biscuit.jpg");
+}
+
+#Biscuits li {
+  padding-bottom: 3%;
+}
+
+#Bagels li {
+  padding-bottom: 3%;
 }
 
 #Biscuits .menuItemInfo {
@@ -637,6 +653,21 @@ html {
   margin-top: 0%;
 }
 
+#GFPastries .menuItemInfo {
+  margin-top: -3%;
+  padding: 0;
+  padding-top: 4%;
+}
+
+#GFPastries .menuItemTitle {
+  margin-top: 0%;
+  text-shadow: 3px 2px 0px #000000;
+}
+
+#GFPastries .menuItemPrice {
+  margin-top: -2%;
+}
+
 #CheeseDanish .menuItemInfo {
   margin-top: 5.5%;
 }
@@ -728,7 +759,7 @@ a {
   background-position: center;
   border-radius: 10px;
   padding: 10px;
-  width: 55%;
+  width: 90%;
   box-shadow: 0px 0px 10px #000000;
 }
 

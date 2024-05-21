@@ -192,29 +192,35 @@ function Menu() {
       </div>
 
       <div className="menuBox" id="Coffee">
-        <h1 className="menuItemTitle">Liberty House Special Brew</h1>
+        <h1 className="menuItemTitle">
+          Hand Crafted and Blended Specialty Coffee
+        </h1>
         <div className="menuItemInfo">
           <p className="menuScroll">Scroll here to see our flavors!</p>
-          <p className="menuItemPrice" id="hot">
-            <span>Hot</span> <span id="hottwelve">(12oz.)</span>
-            <span id="hotsixteen">(16oz)</span>
+
+          <p className="menuItemPrice" id="">
+            <span id="">Drip Coffee</span>
+            <span>(12oz.) (16oz.) (20oz.)</span>
           </p>
-          <p className="menuItemPrice" id="cold">
-            <span id="coffeecenter">
-              Iced/Hot<br></br>Latte
+          <p className="menuItemPrice" id="">
+            <span>Iced Coffee</span> <span id="">(12oz.) (16oz.) (20oz.)</span>
+          </p>
+          <p className="menuItemPrice" id="">
+            <span id="">
+              Hot Latte<br></br>Cappuccino
             </span>{" "}
-            <span>(12oz.) </span>
-            <span>(16oz) </span>
+            <span id="">(12oz.) (16oz.) (20oz.)</span>
           </p>
-          <p className="menuItemPrice" id="twentyoz">
-            <span id="soloiced">Iced Latte</span>{" "}
-            <span id="twentyprice">(20oz.)</span>
+          <p className="menuItemPrice" id="">
+            <span id="coffeecenter">
+              Iced Latte<br></br>Macchiato
+            </span>{" "}
+            <span>(16oz.) (20oz.)</span>
           </p>
-          <p className="menuItemPrice" id="frappe">
-            <span id="coffeecenter">Frappe</span>
-            <span>(16oz.) </span>
-            <span>(20oz.) </span>
+          <p className="menuItemPrice" id="">
+            <span id="coffeecenter">Frappe</span> <span>(16oz.) (20oz.)</span>
           </p>
+
           <p className="menuItemPrice" id="xpresso">
             <span id="xpressotitle">Add an extra Espresso Shot!</span>{" "}
             <span id="xpressoprice"> </span>
@@ -233,7 +239,9 @@ function Menu() {
                   <li>
                     French Vanilla <span id="sugarfree">*</span>
                   </li>
-                  <li>Mocha</li>
+                  <li>
+                    Mocha <span id="sugarfree">*</span>
+                  </li>
                   <li>Caramel</li>
                   <li>
                     White Chocolate <span id="sugarfree">*</span>
@@ -241,12 +249,15 @@ function Menu() {
                   <li>Almond</li>
                   <li>Pumpkin Spice</li>
                   <li>Butter Pecan</li>
+                  <li>Macadamia Nut</li>
                 </div>
                 <div id="flavorList">
                   <li>
                     Hazelnut <span id="sugarfree">*</span>
                   </li>
-                  <li>Peppermint</li>
+                  <li>
+                    Peppermint <span id="sugarfree">*</span>
+                  </li>
                   <li>Coconut</li>
                   <li>Cinnamon Bun</li>
                   <li>Almond Bliss</li>
@@ -254,8 +265,12 @@ function Menu() {
                   <li>Toffee Nut</li>
                   <li>Pistachio Cream</li>
                   <li>Irish Cream</li>
+                  <li>Lavender</li>
                 </div>
-                <p>**Iced coffee can be served with condensed milk. Yum!</p>
+                <p>Your choice of milk or dairy-free alternatives</p>
+                <p id="coffeenote">
+                  **Iced coffee can be served with condensed milk. Yum!
+                </p>
               </div>
             </div>
           </div>
@@ -278,7 +293,7 @@ function Menu() {
         <div className="menuItemInfo">
           <p className="menuItemPrice">
             <span>Black/Hibiscus/Matcha</span>
-            <span>(16oz) </span>
+            <span>(16oz) (20oz) </span>
           </p>
           <span id="New">*NEW!!* Try our Matcha Lattes!</span>
         </div>
@@ -301,7 +316,7 @@ function Menu() {
         <h1 className="menuItemTitle">Milk</h1>
         <div className="menuItemInfo">
           <span className="menuItemPrice">
-            Regular<br></br>Chocolate<br></br>Organic Vanilla
+            Regular<br></br>Chocolate
           </span>
         </div>
       </div>
@@ -356,11 +371,6 @@ function Menu() {
             <span id="price"></span>
           </p>
           <p className="menuItemPrice">
-            <span id="strawberryTitle">Strawberry Cream Cheese*</span>
-            <span id="limited">(Fri & Sat only!)*</span>
-            <span id="price"></span>
-          </p>
-          <p className="menuItemPrice">
             <span>Chocolate</span>
             <span id="price"></span>
           </p>
@@ -376,14 +386,31 @@ function Menu() {
           <p className="menuItemPrice">
             <span>Raspberry White Chocolate</span>
           </p>
-          <p className="menuItemPrice">
-            <span>Cheddar Pepper</span>
-          </p>
         </div>
       </div>
 
-      <div className="menuBox" id="RaspberryDanish">
-        <h1 className="menuItemTitle">Old Fashioned Buttermilk Donut Cake</h1>
+      <div className="menuBox" id="GFPastries">
+        <h1 className="menuItemTitle">Gluten Free Pastries</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Chocolate Espresso Brownie</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Peanut Butter Blondie Brownie</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Raspberry Bar</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Lemon Bar</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Apple Pie Bar</span>
+          </p>
+          <p className="menuItemPrice">
+            <span>Oatmeal Cream Cookie</span>
+          </p>
+        </div>
       </div>
 
       <div className="menuBox" id="MorningHarvestMuffin">
@@ -457,12 +484,12 @@ function About() {
             <p className="aboutText">
               <span>Tues - Fri</span>
               <br></br>
-              <span>6:30 AM - 11:30 AM</span>
+              <span>7:00 AM - 11:00 AM</span>
             </p>
             <p className="aboutText">
               <span>Sat</span>
               <br></br>
-              <span>7 AM - 11:30 AM</span>
+              <span>7:00 AM - 11:00 AM</span>
             </p>
           </div>
           <div className="hoursContainer">
@@ -702,28 +729,6 @@ function Events() {
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="eventsBox" id="Smoothie">
-        <h1 className="eventsTitle" id="Smoothie">
-          Coming soon! "The Smoothie Shoppe"
-        </h1>
-        <div className="eventsTextContainer" id="Smoothie">
-          <p className="eventsText" id="Smoothie">
-            <span>
-              Smoothies are a delicious way to increase your intake of fruits,
-              vegetables and other nutrient-rich foods that provide vitamins,
-              minerals, antioxidants and fiber to support a healthy body. Made
-              with organic fruits and vegetables, high quality nuts, with your
-              choice of milk products and milk alternatives, you can feel good
-              about making our smoothies a part of your day. Preservative-free
-              with no sugar added. Ever.
-              <br></br>
-              <br></br>
-              Stay tuned here and on Facebook as we move forward with our new
-              addition to Liberty House Specialties!
-            </span>
-          </p>
         </div>
       </div>
 
