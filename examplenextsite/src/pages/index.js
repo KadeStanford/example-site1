@@ -482,12 +482,7 @@ function About() {
           <div className="hoursContainer">
             <h1 className="aboutTitle">Morning Hours</h1>
             <p className="aboutText">
-              <span>Tues - Fri</span>
-              <br></br>
-              <span>7:00 AM - 11:00 AM</span>
-            </p>
-            <p className="aboutText">
-              <span>Sat</span>
+              <span>Tues - Sat</span>
               <br></br>
               <span>7:00 AM - 11:00 AM</span>
             </p>
@@ -737,7 +732,12 @@ function Events() {
         <div className="eventsTextContainer">
           <p className="eventsText" id="date">
             <span>
-              Starting July 29th, every Thur, Fri, & Sat from 3:30 to 7:30!
+              Thursday & Friday <br></br>
+              3:00PM to 7:30PM
+              <br></br>
+              <br></br>
+              Saturday <br></br>
+              3:30PM to 7:30PM
             </span>
           </p>
           <img
@@ -750,8 +750,6 @@ function Events() {
               Enjoy an assortment of over 30 super premium ice cream flavors
               including sugar free and dairy free options from Chocolate Shoppe
               Ice Cream!
-              <br></br>
-              Mix and match with our gourmet cakes and cookies!
             </span>
           </p>
         </div>
