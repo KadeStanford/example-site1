@@ -388,7 +388,7 @@ html {
 }
 
 .menuBox#GFPastries {
-  background-image: url("/images/GFPastries.png");
+  background-image: url("/images/raspberrybar.jpg");
 }
 
 .menuBox#BSWCC {
@@ -440,7 +440,7 @@ html {
 }
 
 .menuBox#Bagels {
-  background-image: url("/images/bagel.png");
+  background-image: url("/images/bagels.jpg");
 }
 
 #Bagels .menuItemInfo {
