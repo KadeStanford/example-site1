@@ -886,24 +886,19 @@ function SeasonalFlavors() {
         "Smooth chocolate ice cream brimming with mouthwatering peanut butter ripples and rich peanut butter cups.",
     },
     {
+      flavor: "Peppermint",
+      description:
+        "Crisp, peppermint ice cream made with boat-loads of peppermint candies and bursting with candy cane flavor in every bite.",
+    },
+    {
       flavor: "Pistachio Nut",
       description:
         "Irresistible almond-flavored ice cream churned with crisp pistachio nuts.",
     },
     {
-      flavor: "Pomegranate Swirl NSA",
+      flavor: "Rocky Road",
       description:
-        "Creamy, no-sugar-added vanilla ice cream brimming with delicious, no-sugar-added blueberry and pomegranate ripples.",
-    },
-    {
-      flavor: "Praline Pecan",
-      description:
-        "Buttery maple ice cream topped with a gooey caramel ripple and loads of crunchy, candy-coated pecans.",
-    },
-    {
-      flavor: "Rainbow Sherbet",
-      description:
-        "Orange, Lime, and Raspberry flavored sherbets classically swirled together.",
+        "Swirls of rich, chocolate and fluffy marshmallow ice creams and topped off with chocolate-covered almonds.",
     },
     {
       flavor: "S'more to Love",
@@ -946,19 +941,14 @@ function SeasonalFlavors() {
         "Scrumptious Oreo® crumb ice cream packed with boat-loads of whole Oreo® cookies.",
     },
     {
-      flavor: "Ultimate Oreo Oat Cream",
+      flavor: "Ube Chai",
       description:
-        "Oreo® crumb non-dairy frozen dessert packed with whole Oreos.",
+        "This scrumptious blend features ube (sweet purple yam) ice cream with hints of coconut swirled with spiced chai ice cream.",
     },
     {
       flavor: "Vanilla Chocolate Chip Oat Cream",
       description:
         "Classic vanilla non-dairy frozen dessert made with delicious, semi-sweet chocolate chips.",
-    },
-    {
-      flavor: "Vanilla Oat Cream",
-      description:
-        "Indulgently creamy non-dairy frozen dessert blended with oat milk and vanilla.",
     },
     {
       flavor: "Yippee Skippee®",
@@ -969,11 +959,6 @@ function SeasonalFlavors() {
       flavor: "Zanzibar Chocolate",
       description:
         "Award-winning, deep dark chocolate made with three kinds of cocoa.",
-    },
-    {
-      flavor: "Zanzimint®",
-      description:
-        "Zanzibar® chocolate ice cream swirled with crisp mint ice cream.",
     },
   ];
 
