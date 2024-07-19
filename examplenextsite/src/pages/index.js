@@ -383,9 +383,6 @@ function Menu() {
           <p className="menuItemPrice">
             <span>Blueberry</span>
           </p>
-          <p className="menuItemPrice">
-            <span>Raspberry White Chocolate</span>
-          </p>
         </div>
       </div>
 
