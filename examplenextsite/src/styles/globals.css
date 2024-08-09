@@ -33,6 +33,17 @@ html {
   overflow-y: scroll;
 }
 
+#bagelshoppe {
+  background-image: url("/images/bagelshoppe.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bagelshoppe .menuItemInfo {
+  overflow-y: scroll;
+}
+
 #Cones {
   background-image: url("/cream/cones.png");
   background-size: contain;
@@ -162,6 +173,50 @@ html {
   color: #ffffff;
   text-align: center;
   text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe .menuChoices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe .bagelOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe p {
+  margin-bottom: 3%;
+}
+
+#bagelshoppe #sizeOptions {
+  margin: 0;
+}
+
+#bagelShoppe ul {
+  margin: 0;
+  text-align: center;
+}
+
+#bagelshoppe li {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline rgb(238, 210, 101);
+  text-underline-position: under;
 }
 
 .menuChoices ul {
