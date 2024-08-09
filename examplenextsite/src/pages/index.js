@@ -443,7 +443,7 @@ function Menu() {
               <li>Sesame</li>
               <li>Marble Rye</li>
               <li>Whole Wheat</li>
-              <li>Whole Wheat Everything</li>
+              <li id="wwe">Whole Wheat Everything</li>
               <li>Pumpernickel</li>
               <li>Poppy</li>
               <li>Christmas Bagel (seasonal)</li>
