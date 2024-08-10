@@ -40,6 +40,19 @@ html {
   background-position: center;
 }
 
+#dairyfreecheese {
+  background-image: url("/images/dairyfree.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dairyfreecheese ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 #bagelshoppe .menuItemInfo {
   overflow-y: scroll;
 }
@@ -203,6 +216,9 @@ html {
 
 #wwe {
   font-size: 1.3rem;
+}
+#wwe2 {
+  font-size: 1.1rem;
 }
 
 #bagelshoppe #sizeOptions {
