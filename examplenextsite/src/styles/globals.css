@@ -41,7 +41,7 @@ html {
 }
 
 #dairyfreecheese {
-  background-image: url("/images/dairyfree.png");
+  background-image: url("/images/dairyfree1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -551,6 +551,7 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  text-align: center;
 }
 
 #Croissant .menuItemInfo {
@@ -635,6 +636,7 @@ html {
 
 #Croissant .menuItemPrice {
   margin-bottom: -3%;
+  color: #f8c359;
 }
 
 #limited {
@@ -697,11 +699,9 @@ html {
 }
 
 #ham {
-  color: aliceblue;
 }
 
 #spinach {
-  color: aliceblue;
 }
 
 #frappe {
@@ -726,6 +726,7 @@ html {
 
 #Scones .menuItemPrice {
   margin-top: 0%;
+  color: #ffffff;
 }
 
 #GFPastries .menuItemInfo {
@@ -742,6 +743,7 @@ html {
 #GFPastries .menuItemPrice {
   margin-top: -5.4%;
   padding-bottom: 5px;
+  color: #ffffff;
 }
 
 #CheeseDanish .menuItemInfo {
