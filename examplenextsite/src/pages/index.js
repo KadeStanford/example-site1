@@ -320,6 +320,7 @@ function Menu() {
             <p id="fruit">Cream Cheese</p>
             <div className="fruitChoice">
               <ul>
+                <li>Regular</li>
                 <li>Low Fat</li>
                 <li>Blueberry</li>
                 <li>Strawberry</li>
@@ -491,24 +492,31 @@ function Menu() {
       <div className="menuBox" id="GFPastries">
         <h1 className="menuItemTitle">Gluten Free Pastries</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Chocolate Espresso Brownie</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Peanut Butter Blondie Brownie</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Raspberry Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Lemon Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Apple Pie Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Oatmeal Cream Cookie</span>
-          </p>
+          <div>
+            <p className="menuItemPrice">
+              <span>Chocolate Espresso Brownie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Peanut Butter Blondie Brownie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Raspberry Bar</span>
+            </p>
+          </div>
+          <div>
+            <p className="menuItemPrice">
+              <span>Lemon Bar</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Apple Pie Bar</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Oatmeal Cream Cookie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Cinnamon Roll</span>
+            </p>
+          </div>
         </div>
       </div>
       <div className="menuBox" id="MorningHarvestMuffin">
@@ -529,6 +537,8 @@ function Menu() {
               <li>
                 Add Cheese <br></br>(Pepperjack and Real White American Cheese)
               </li>
+
+              <li>Add Pepper Jelly</li>
               <li>Add Egg Bite*</li>
             </ul>
           </div>
