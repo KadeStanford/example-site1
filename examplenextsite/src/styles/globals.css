@@ -40,6 +40,51 @@ html {
   background-position: center;
 }
 
+#cinnamonroll {
+  background-image: url("/images/cinnamonrollBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flavorBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+#cinnamonroll h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 0%;
+  margin: 0%;
+  margin-bottom: 10px;
+  text-decoration: underline #f8c359;
+  text-underline-position: under;
+}
+
+.flavorBox p {
+  color: #f8c359;
+  text-shadow: 2px 2px 0px #000000;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#cinnaImg {
+  width: 55%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid #f8c359;
+  margin-bottom: 40px;
+}
+
+#cinnamonroll .menuItemInfo {
+  overflow-y: scroll;
+}
+
 #dairyfreecheese {
   background-image: url("/images/dairyfree1.png");
   background-size: cover;

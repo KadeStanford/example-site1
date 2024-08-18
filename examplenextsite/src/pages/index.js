@@ -326,7 +326,7 @@ function Menu() {
                 <li>Strawberry</li>
               </ul>
               <ul>
-                <li>Honey Pecan</li>
+                <li>Honey Pistachio</li>
                 <li>Onion Chive</li>
                 <li>Greek</li>
               </ul>
@@ -428,6 +428,98 @@ function Menu() {
           </span>
         </div>
       </div>
+      <div className="menuBox" id="cinnamonroll">
+        <h1 className="menuItemTitle">Cinnamon Rolls</h1>
+        <div className="menuItemInfo">
+          <h2 className="menuItemPrice">Regular or Gluten-Free</h2>
+          <br></br>
+          <h2 className="menuItemPrice">Flavors</h2>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Banana Split</p>
+            <img
+              id="cinnaImg"
+              src="/images/bananasplit.jpeg"
+              alt="Banana Split"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Blueberry Cobbler</p>
+            <img
+              id="cinnaImg"
+              src="/images/blueberrycobbler.png"
+              alt="Blueberry Cobbler"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Butter Pecan</p>
+            <img
+              id="cinnaImg"
+              src="/images/butterpecan.jpg"
+              alt="Butter Pecan"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Caramel Apple</p>
+            <img
+              id="cinnaImg"
+              src="/images/caramelapple.jpg"
+              alt="Caramel Apple"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Cherry Almond</p>
+            <img
+              id="cinnaImg"
+              src="/images/cherryalmond.jpg"
+              alt="Cherry Almond"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Cinnamon Cream</p>
+            <img
+              id="cinnaImg"
+              src="/images/cinnamoncream.jpg"
+              alt="cinnamonCream"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Maple Bacon Overload</p>
+            <img id="cinnaImg" src="/images/maplebacon.jpg" alt="Maple Bacon" />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Mocha Latte</p>
+            <img id="cinnaImg" src="/images/mochalatte.jpg" alt="Mocha Latte" />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Pumpkin Cheesecake</p>
+            <img
+              id="cinnaImg"
+              src="/images/pumpkincheesecake.jpg"
+              alt="Pumpkin Cheesecake"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Strawberries and Cream</p>
+            <img
+              id="cinnaImg"
+              src="/images/strawberriesandcream.jpg"
+              alt="strawberries and Cream"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">White Chocolate Caramel</p>
+            <img
+              id="cinnaImg"
+              src="/images/whitechocolatecaramel.jpg"
+              alt="White Chocolate Caramel"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">CinnaBits</p>
+            <img id="cinnaImg" src="/images/cinnabits.png" alt="CinnaBits" />
+          </div>
+        </div>
+      </div>
       <div className="menuBox" id="CheeseDanish">
         <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
       </div>
@@ -493,6 +585,9 @@ function Menu() {
         <h1 className="menuItemTitle">Gluten Free Pastries</h1>
         <div className="menuItemInfo">
           <div>
+            <p className="menuItemPrice">
+              <span>Cinnamon Roll</span>
+            </p>
             <p className="menuItemPrice">
               <span>Chocolate Espresso Brownie</span>
             </p>
