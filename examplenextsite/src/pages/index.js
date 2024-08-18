@@ -398,36 +398,6 @@ function Menu() {
           </div>
         </div>
       </div>
-      <div className="menuBox" id="Tea">
-        <h1 className="menuItemTitle">Premium Organic Iced Tea</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Black/Hibiscus/Matcha</span>
-            <span>(16oz) (20oz) </span>
-          </p>
-          <span id="New">*NEW!!* Try our Matcha Lattes!</span>
-        </div>
-      </div>
-      <div className="menuBox" id="OrangeJuice">
-        <h1 className="menuItemTitle">Juice</h1>
-        <div className="menuItemInfo">
-          <span className="menuItemPrice" id="Fruit">
-            Orange or Apple
-          </span>
-          <p className="menuItemPrice">
-            <span></span>
-            <span></span>
-          </p>
-        </div>
-      </div>
-      <div className="menuBox" id="Milk">
-        <h1 className="menuItemTitle">Milk</h1>
-        <div className="menuItemInfo">
-          <span className="menuItemPrice">
-            Regular<br></br>Chocolate
-          </span>
-        </div>
-      </div>
       <div className="menuBox" id="cinnamonroll">
         <h1 className="menuItemTitle">Cinnamon Rolls</h1>
         <div className="menuItemInfo">
@@ -522,6 +492,36 @@ function Menu() {
       </div>
       <div className="menuBox" id="CheeseDanish">
         <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
+      </div>
+      <div className="menuBox" id="Tea">
+        <h1 className="menuItemTitle">Premium Organic Iced Tea</h1>
+        <div className="menuItemInfo">
+          <p className="menuItemPrice">
+            <span>Black/Hibiscus/Matcha</span>
+            <span>(16oz) (20oz) </span>
+          </p>
+          <span id="New">*NEW!!* Try our Matcha Lattes!</span>
+        </div>
+      </div>
+      <div className="menuBox" id="OrangeJuice">
+        <h1 className="menuItemTitle">Juice</h1>
+        <div className="menuItemInfo">
+          <span className="menuItemPrice" id="Fruit">
+            Orange or Apple
+          </span>
+          <p className="menuItemPrice">
+            <span></span>
+            <span></span>
+          </p>
+        </div>
+      </div>
+      <div className="menuBox" id="Milk">
+        <h1 className="menuItemTitle">Milk</h1>
+        <div className="menuItemInfo">
+          <span className="menuItemPrice">
+            Regular<br></br>Chocolate
+          </span>
+        </div>
       </div>
       <div className="menuBox" id="HotChocolate">
         <h1 className="menuItemTitle">Hot Chocolate</h1>
