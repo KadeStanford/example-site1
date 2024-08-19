@@ -326,7 +326,7 @@ function Menu() {
                 <li>Strawberry</li>
               </ul>
               <ul>
-                <li>Honey Pistachio</li>
+                <li>Honey Pecan</li>
                 <li>Onion Chive</li>
                 <li>Greek</li>
               </ul>
@@ -392,7 +392,7 @@ function Menu() {
           <div className="proteinChoice">
             <ul className="proteinList">
               <li>Tomato Herb</li>
-              <li>Honey Pecan</li>
+              <li>Honey Pistachio</li>
               <li>Balsamic Fig</li>
             </ul>
           </div>
@@ -586,9 +586,6 @@ function Menu() {
         <div className="menuItemInfo">
           <div>
             <p className="menuItemPrice">
-              <span>Cinnamon Roll</span>
-            </p>
-            <p className="menuItemPrice">
               <span>Chocolate Espresso Brownie</span>
             </p>
             <p className="menuItemPrice">
@@ -626,7 +623,7 @@ function Menu() {
             <ul>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig)
+                Sugar Cherry Blueberry, Fig, Pepper Jelly)
               </li>
               <li>Add Deer Sausage/Bacon</li>
               <li>
