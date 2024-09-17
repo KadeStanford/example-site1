@@ -33,6 +33,75 @@ html {
   overflow-y: scroll;
 }
 
+#bagelshoppe {
+  background-image: url("/images/bagelshoppe.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cinnamonroll {
+  background-image: url("/images/cinnamonrollBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flavorBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+#cinnamonroll h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 0%;
+  margin: 0%;
+  margin-bottom: 10px;
+  text-decoration: underline #f8c359;
+  text-underline-position: under;
+}
+
+.flavorBox p {
+  color: #f8c359;
+  text-shadow: 2px 2px 0px #000000;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#cinnaImg {
+  width: 55%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid #f8c359;
+  margin-bottom: 40px;
+}
+
+#cinnamonroll .menuItemInfo {
+  overflow-y: scroll;
+}
+
+#dairyfreecheese {
+  background-image: url("/images/dairyfree1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#dairyfreecheese ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#bagelshoppe .menuItemInfo {
+  overflow-y: scroll;
+}
+
 #Cones {
   background-image: url("/cream/cones.png");
   background-size: contain;
@@ -162,6 +231,56 @@ html {
   color: #ffffff;
   text-align: center;
   text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe .menuChoices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe .bagelOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+#bagelshoppe p {
+  margin-bottom: 3%;
+}
+
+#wwe {
+  font-size: 1.3rem;
+}
+#wwe2 {
+  font-size: 1.1rem;
+}
+
+#bagelshoppe #sizeOptions {
+  margin: 0;
+}
+
+#bagelShoppe ul {
+  margin: 0;
+  text-align: center;
+}
+
+#bagelshoppe li {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  text-underline-position: under;
 }
 
 .menuChoices ul {
@@ -476,6 +595,7 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  text-align: center;
 }
 
 #Croissant .menuItemInfo {
@@ -485,8 +605,7 @@ html {
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   height: auto;
   padding: 10px;
   font-size: calc(1.1rem + 0.5vw);
@@ -560,6 +679,7 @@ html {
 
 #Croissant .menuItemPrice {
   margin-bottom: -3%;
+  color: #f8c359;
 }
 
 #limited {
@@ -622,11 +742,9 @@ html {
 }
 
 #ham {
-  color: aliceblue;
 }
 
 #spinach {
-  color: aliceblue;
 }
 
 #frappe {
@@ -651,12 +769,29 @@ html {
 
 #Scones .menuItemPrice {
   margin-top: 0%;
+  color: #ffffff;
 }
 
 #GFPastries .menuItemInfo {
   margin-top: -6%;
   padding: 0;
   padding-top: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#GFPastries .menuItemInfo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 0%;
+  padding: 0;
+  text-align: center;
+  text-decoration: underline rgb(238, 210, 101);
+  text-underline-position: under;
 }
 
 #GFPastries .menuItemTitle {
@@ -667,6 +802,8 @@ html {
 #GFPastries .menuItemPrice {
   margin-top: -5.4%;
   padding-bottom: 5px;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
 #CheeseDanish .menuItemInfo {
@@ -1124,6 +1261,16 @@ a#call {
   }
   #rabbitBox {
     width: 90%; /* Adjust as needed for mobile layout */
+  }
+
+  .bagelOptions ul {
+    width: 100%;
+    margin-left: -30px;
+  }
+
+  #wwe {
+    font-size: 0.9rem;
+    line-break: anywhere;
   }
 
   .rabbitImage {

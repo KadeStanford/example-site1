@@ -7,6 +7,7 @@ import { Scrollbar } from "react-scrollbars-custom";
 function Menu() {
   return (
     <>
+      {" "}
       <div className="menuBox" id="Smoothies">
         <h1 className="menuItemTitle">
           Smoothie Shoppe Menu<br></br>Create Your Own
@@ -190,7 +191,6 @@ function Menu() {
           <p>Strawberry, Banana, Peaches, Pineapple, & Jack Fruit</p>
         </div>
       </div>
-
       <div className="menuBox" id="Coffee">
         <h1 className="menuItemTitle">
           Hand Crafted and Blended Specialty Coffee
@@ -250,11 +250,13 @@ function Menu() {
                   <li>Pumpkin Spice</li>
                   <li>Butter Pecan</li>
                   <li>Macadamia Nut</li>
+                  <li>Butter Cookie</li>
                 </div>
                 <div id="flavorList">
                   <li>
                     Hazelnut <span id="sugarfree">*</span>
                   </li>
+                  Peppermint
                   <li>
                     Peppermint <span id="sugarfree">*</span>
                   </li>
@@ -276,7 +278,6 @@ function Menu() {
           </div>
         </div>
       </div>
-
       <div className="menuBox" id="Stroopwafel">
         <h1 className="menuItemTitle">Stroopwafel</h1>
         <div className="menuItemInfo">
@@ -287,7 +288,211 @@ function Menu() {
           </p>
         </div>
       </div>
+      <div className="menuBox" id="bagelshoppe">
+        <h1 className="menuItemTitle">The Bagel Shoppe</h1>
+        <div className="menuItemInfo">
+          <p id="sizeOptions">Bagel Options (Rotated Weekly)</p>
+          <div className="bagelOptions">
+            <ul>
+              <li>Plain</li>
+              <li>Blueberry</li>
+              <li>Everything</li>
+              <li>French Toast</li>
+              <li id="wwe">Jalapeno Red Pepper</li>
+              <li>Kalamata Olive</li>
+              <li>Apple Cinnamon</li>
+              <li id="wwe">Cranberry Energy</li>
+              <li>Quinoa Multigrain</li>
+            </ul>
+            <ul>
+              <li>Sesame</li>
+              <li>Marble Rye</li>
+              <li>Whole Wheat</li>
+              <li id="wwe">Whole Wheat Everything</li>
+              <li>Pumpernickel</li>
+              <li>Poppy Seed</li>
+              <li id="wwe2">Christmas Bagel (seasonal)</li>
+              <li>Bialys</li>
+            </ul>
+          </div>
 
+          <div className="menuChoices">
+            <p id="fruit">Cream Cheese</p>
+            <div className="fruitChoice">
+              <ul>
+                <li>Regular</li>
+                <li>Low Fat</li>
+                <li>Blueberry</li>
+                <li>Strawberry</li>
+              </ul>
+              <ul>
+                <li>Honey Pecan</li>
+                <li>Onion Chive</li>
+                <li>Greek</li>
+              </ul>
+            </div>
+
+            <p id="super">Goat Cheese</p>
+
+            <p>Dairy-Free Fromage Cheese</p>
+            <div className="proteinChoice">
+              <ul className="proteinList">
+                <li>Tomato Herb</li>
+                <li>Honey Pecan</li>
+                <li>Balsamic Fig</li>
+              </ul>
+            </div>
+            <p>Sliced Cheese</p>
+            <div className="SmoothieBowlFruitToppings">
+              <ul className="proteinList">
+                <li>White American</li>
+                <li>Pepper Jack</li>
+                <li>Smoked Provalone</li>
+              </ul>
+            </div>
+            <p>Eggs</p>
+            <div className="SmoothieBowlFruitToppings">
+              <ul className="proteinList">
+                <li>Poached</li>
+                <li>Mini Omelet</li>
+              </ul>
+            </div>
+            <p>Meats</p>
+            <div className="KetoGranola">
+              <ul className="proteinList">
+                <li>Bacon</li>
+                <li>Deer Sausage</li>
+                <li>Canadian Bacon</li>
+                <li>Ham (thinly sliced and grilled)</li>
+              </ul>
+            </div>
+            <p>Avocado</p>
+
+            <p>Tomato (Fresh or Sundried)</p>
+
+            <p>Jams and Jellies</p>
+            <div className="NonDairyOptions">
+              <ul className="proteinList">
+                <li>Strawberry</li>
+                <li>Blackberry</li>
+                <li>Fig</li>
+                <li>Orange Marmalade</li>
+                <li>Pepper Jelly</li>
+                <li>Onion Bacon Jam</li>
+                <li>Chili Bacon Jam</li>
+                <li>Low Sugar Blueberry Cherry</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="menuBox" id="dairyfreecheese">
+        <h1 className="menuItemTitle">Dairy-Free Fromage Cheese</h1>
+        <div className="menuItemInfo">
+          <div className="proteinChoice">
+            <ul className="proteinList">
+              <li>Tomato Herb</li>
+              <li>Honey Pistachio</li>
+              <li>Balsamic Fig</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="menuBox" id="cinnamonroll">
+        <h1 className="menuItemTitle">Cinnamon Rolls</h1>
+        <div className="menuItemInfo">
+          <h2 className="menuItemPrice">Regular or Gluten-Free</h2>
+          <br></br>
+          <h2 className="menuItemPrice">Flavors</h2>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Banana Split</p>
+            <img
+              id="cinnaImg"
+              src="/images/bananasplit.jpeg"
+              alt="Banana Split"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Blueberry Cobbler</p>
+            <img
+              id="cinnaImg"
+              src="/images/blueberrycobbler.png"
+              alt="Blueberry Cobbler"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Butter Pecan</p>
+            <img
+              id="cinnaImg"
+              src="/images/butterpecan.jpg"
+              alt="Butter Pecan"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Caramel Apple</p>
+            <img
+              id="cinnaImg"
+              src="/images/caramelapple.jpg"
+              alt="Caramel Apple"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Cherry Almond</p>
+            <img
+              id="cinnaImg"
+              src="/images/cherryalmond.jpg"
+              alt="Cherry Almond"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Cinnamon Cream</p>
+            <img
+              id="cinnaImg"
+              src="/images/cinnamoncream.jpg"
+              alt="cinnamonCream"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Maple Bacon Overload</p>
+            <img id="cinnaImg" src="/images/maplebacon.jpg" alt="Maple Bacon" />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Mocha Latte</p>
+            <img id="cinnaImg" src="/images/mochalatte.jpg" alt="Mocha Latte" />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Pumpkin Cheesecake</p>
+            <img
+              id="cinnaImg"
+              src="/images/pumpkincheesecake.jpg"
+              alt="Pumpkin Cheesecake"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Strawberries and Cream</p>
+            <img
+              id="cinnaImg"
+              src="/images/strawberriesandcream.jpg"
+              alt="strawberries and Cream"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">White Chocolate Caramel</p>
+            <img
+              id="cinnaImg"
+              src="/images/whitechocolatecaramel.jpg"
+              alt="White Chocolate Caramel"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">CinnaBits</p>
+            <img id="cinnaImg" src="/images/cinnabits.png" alt="CinnaBits" />
+          </div>
+        </div>
+      </div>
+      <div className="menuBox" id="CheeseDanish">
+        <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
+      </div>
       <div className="menuBox" id="Tea">
         <h1 className="menuItemTitle">Premium Organic Iced Tea</h1>
         <div className="menuItemInfo">
@@ -298,7 +503,6 @@ function Menu() {
           <span id="New">*NEW!!* Try our Matcha Lattes!</span>
         </div>
       </div>
-
       <div className="menuBox" id="OrangeJuice">
         <h1 className="menuItemTitle">Juice</h1>
         <div className="menuItemInfo">
@@ -311,7 +515,6 @@ function Menu() {
           </p>
         </div>
       </div>
-
       <div className="menuBox" id="Milk">
         <h1 className="menuItemTitle">Milk</h1>
         <div className="menuItemInfo">
@@ -320,11 +523,6 @@ function Menu() {
           </span>
         </div>
       </div>
-
-      <div className="menuBox" id="CheeseDanish">
-        <h1 className="menuItemTitle">Jarritos Sparkling Fruit Drinks</h1>
-      </div>
-
       <div className="menuBox" id="HotChocolate">
         <h1 className="menuItemTitle">Hot Chocolate</h1>
         <div className="menuItemInfo">
@@ -356,18 +554,17 @@ function Menu() {
           </div>
         </div>
       </div>
-
       <div className="menuBox" id="Croissant">
         <h1 className="menuItemTitle">Croissant</h1>
         <div className="menuItemInfo">
           <p className="menuItemPrice">
             <span id="ham">Ham & Swiss*</span>
-            <span id="limited">(Fri & Sat only!)*</span>
+            <span id="limited">(Friday only!)*</span>
             <span id="price"></span>
           </p>
           <p className="menuItemPrice">
             <span id="spinach">Spinach & Feta*</span>
-            <span id="limited">(Fri & Sat only!)*</span>
+            <span id="limited">(Friday only!)*</span>
             <span id="price"></span>
           </p>
           <p className="menuItemPrice">
@@ -376,7 +573,6 @@ function Menu() {
           </p>
         </div>
       </div>
-
       <div className="menuBox" id="Scones">
         <h1 className="menuItemTitle">Scones</h1>
         <div className="menuItemInfo">
@@ -385,35 +581,39 @@ function Menu() {
           </p>
         </div>
       </div>
-
       <div className="menuBox" id="GFPastries">
         <h1 className="menuItemTitle">Gluten Free Pastries</h1>
         <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span>Chocolate Espresso Brownie</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Peanut Butter Blondie Brownie</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Raspberry Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Lemon Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Apple Pie Bar</span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Oatmeal Cream Cookie</span>
-          </p>
+          <div>
+            <p className="menuItemPrice">
+              <span>Chocolate Espresso Brownie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Peanut Butter Blondie Brownie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Raspberry Bar</span>
+            </p>
+          </div>
+          <div>
+            <p className="menuItemPrice">
+              <span>Lemon Bar</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Apple Pie Bar</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Oatmeal Cream Cookie</span>
+            </p>
+            <p className="menuItemPrice">
+              <span>Cinnamon Roll</span>
+            </p>
+          </div>
         </div>
       </div>
-
       <div className="menuBox" id="MorningHarvestMuffin">
         <h1 className="menuItemTitle">Morning Harvest Muffin</h1>
       </div>
-
       <div className="menuBox" id="Biscuits">
         <h1 className="menuItemTitle">Biscuits</h1>
         <div className="menuItemInfo">
@@ -423,47 +623,19 @@ function Menu() {
             <ul>
               <li>
                 Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig)
+                Sugar Cherry Blueberry, Fig, Pepper Jelly)
               </li>
               <li>Add Deer Sausage/Bacon</li>
               <li>
                 Add Cheese <br></br>(Pepperjack and Real White American Cheese)
               </li>
+
+              <li>Add Pepper Jelly</li>
               <li>Add Egg Bite*</li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div className="menuBox" id="Bagels">
-        <h1 className="menuItemTitle">Bagels</h1>
-        <div className="menuItemInfo">
-          {" "}
-          <p className="menuScroll">
-            featuring flavors from New Yorker Bagels rotated weekly!
-          </p>
-          <div className="menuItemList">
-            <ul>
-              <li>Cinnamon Butter</li>
-              <li>
-                Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig)
-              </li>
-              <li>Add Deer Sausage/Bacon</li>
-              <li>
-                Add Cream Cheese (Regular, Lowfat, Strawberry, and Dairy-Free)
-              </li>
-              <li>Chocolate Hazelnut Spread</li>
-              <li>Sunbutter</li>
-              <li>
-                Add Cheese <br></br>(Pepperjack and Real White American Cheese)
-              </li>
-              <li>Add Egg Bite*</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <div className="menuBox" id="EggBites">
         <h1 className="menuItemTitle">Egg Bites</h1>
       </div>
@@ -997,13 +1169,7 @@ function SeasonalFlavors() {
           <h1 className="menuItemTitle">Cake Balls</h1>
           <div className="menuItemInfo">
             <p className="menuItemPrice">
-              <span>Birthday Cake</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Cookies & Cream</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Double Chocolate</span>
+              <span>Assorted Flavors</span>
             </p>
           </div>
         </div>
