@@ -940,14 +940,14 @@ function SeasonalFlavors() {
         "This party in a pint is topped off with festive swirls of blue buttercream frosting and bursts of colorful confetti sprinkles.",
     },
     {
-      flavor: "Blackberry Lemon Bar",
-      description:
-        "Lemon ice cream folded with pound cake and blackberry sauce.",
-    },
-    {
       flavor: "Black Walnut",
       description:
         "Classic black walnut ice cream folded with crunchy walnuts.",
+    },
+    {
+      flavor: "Blackberry Lemon Bar",
+      description:
+        "Lemon ice cream folded with pound cake and blackberry sauce.",
     },
     {
       flavor: "Blueberry Cheesecake",
@@ -1005,6 +1005,11 @@ function SeasonalFlavors() {
         "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
     },
     {
+      flavor: "Gingerbread Man",
+      description:
+        "Brown sugar gingerbread ice cream swirled with white icing glaze and festive holiday sprinkles.",
+    },
+    {
       flavor: "Gumball",
       description:
         "Bubblegum glow up! Nostalgic gumball ice cream folded with pink, edible bubblegum-esque pieces.",
@@ -1048,6 +1053,11 @@ function SeasonalFlavors() {
       flavor: "Old Fashioned Vanilla",
       description:
         "An award-winning and all-natural classic vanilla ice cream made with Wisconsin cream, cane sugar and pure vanilla.",
+    },
+    {
+      flavor: "Party Animal",
+      description:
+        "Sugar cookie ice cream blended with pink and white frosted animal cookies and rainbow sprinkles.",
     },
     {
       flavor: "Peanut Butter Cup",
@@ -1105,19 +1115,29 @@ function SeasonalFlavors() {
         "Salted caramel ice cream with a sea salt fudge ripple and roasted cashews.",
     },
     {
-      flavor: "Ultimate Oreo",
-      description:
-        "Scrumptious Oreo® crumb ice cream packed with boat-loads of whole Oreo® cookies.",
-    },
-    {
       flavor: "Ube Chai",
       description:
         "This scrumptious blend features ube (sweet purple yam) ice cream with hints of coconut swirled with spiced chai ice cream.",
     },
     {
+      flavor: "Ultimate Oreo",
+      description:
+        "Scrumptious Oreo® crumb ice cream packed with boat-loads of whole Oreo® cookies.",
+    },
+    {
+      flavor: "Ultimate Oreo Oat Cream",
+      description:
+        "Oreo crumb non-dairy frozen dessert packed with whole Oreos.",
+    },
+    {
       flavor: "Vanilla Chocolate Chip Oat Cream",
       description:
         "Classic vanilla non-dairy frozen dessert made with delicious, semi-sweet chocolate chips.",
+    },
+    {
+      flavor: "Vanilla Frozen Custard",
+      description:
+        "Sweet, classic and all-natural custard made with Wisconsin cream, cane sugar, egg yolks and pure vanilla.",
     },
     {
       flavor: "Yippee Skippee®",
@@ -1128,6 +1148,11 @@ function SeasonalFlavors() {
       flavor: "Zanzibar Chocolate",
       description:
         "Award-winning, deep dark chocolate made with three kinds of cocoa.",
+    },
+    {
+      flavor: "Zoreo",
+      description:
+        "Fudge-like Zanzibar® Chocolate ice cream swirled with gooey marshmallow, Oreos and bittersweet chocolate chunks.",
     },
   ];
 
