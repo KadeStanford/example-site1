@@ -288,6 +288,9 @@ function Menu() {
           </p>
         </div>
       </div>
+      <div className="menuBox" id="PotatoRoasti">
+        <h1 className="menuItemTitle">Potato Roasti</h1>
+      </div>
       <div className="menuBox" id="bagelshoppe">
         <h1 className="menuItemTitle">The Bagel Shoppe</h1>
         <div className="menuItemInfo">
@@ -348,6 +351,7 @@ function Menu() {
                 <li>White American</li>
                 <li>Pepper Jack</li>
                 <li>Smoked Provalone</li>
+                <li>Fresh Mozzarella Cheese</li>
               </ul>
             </div>
             <p>Eggs</p>
@@ -355,6 +359,7 @@ function Menu() {
               <ul className="proteinList">
                 <li>Poached</li>
                 <li>Mini Omelet</li>
+                <li>Egg Salad</li>
               </ul>
             </div>
             <p>Meats</p>
@@ -364,8 +369,17 @@ function Menu() {
                 <li>Deer Sausage</li>
                 <li>Canadian Bacon</li>
                 <li>Ham (thinly sliced and grilled)</li>
+                <li>Salmon (Lox)</li>
               </ul>
             </div>
+
+            <p>Infused Olive Oil/Balsamic Vinegar Drizzle</p>
+            <div className="GrainFreeGranola">
+              <ul className="proteinList">
+                <li>Assorted FLavors</li>
+              </ul>
+            </div>
+
             <p>Avocado</p>
 
             <p>Tomato (Fresh or Sundried)</p>
@@ -629,8 +643,6 @@ function Menu() {
               <li>
                 Add Cheese <br></br>(Pepperjack and Real White American Cheese)
               </li>
-
-              <li>Add Pepper Jelly</li>
               <li>Add Egg Bite*</li>
             </ul>
           </div>

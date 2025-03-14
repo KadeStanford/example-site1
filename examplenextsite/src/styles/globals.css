@@ -578,6 +578,15 @@ html {
   background-image: url("/images/egg.png");
 }
 
+.menuBox#PotatoRoasti {
+  background-image: url("/images/potato.jpg");
+}
+
+#PotatoRoasti .menuItemTitle {
+  text-shadow: #000000 3px 1px 1px;
+  font-size: 3rem;
+}
+
 #EggBites .menuItemDesc {
   margin-top: -3%;
 }
