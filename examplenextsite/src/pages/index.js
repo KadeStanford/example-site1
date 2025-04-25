@@ -952,11 +952,6 @@ function SeasonalFlavors() {
         "This party in a pint is topped off with festive swirls of blue buttercream frosting and bursts of colorful confetti sprinkles.",
     },
     {
-      flavor: "Black Walnut",
-      description:
-        "Classic black walnut ice cream folded with crunchy walnuts.",
-    },
-    {
       flavor: "Blackberry Lemon Bar",
       description:
         "Lemon ice cream folded with pound cake and blackberry sauce.",
@@ -970,6 +965,11 @@ function SeasonalFlavors() {
       flavor: "Bourbon Pecan Pie",
       description:
         "Smooth bourbon ice cream swirled with a sea salt chocolate fudge ripple and roasted pecans.",
+    },
+    {
+      flavor: "Brownie Cascade",
+      description:
+        "Classic, creamy chocolate ice cream exploding with brownie pieces, caramel cups and a sweet fudge ripple.",
     },
     {
       flavor: "Butter Pecan",
@@ -1012,14 +1012,14 @@ function SeasonalFlavors() {
         "Blue and pink cotton candy ice creams spun together for that whimsical carnival sensation!",
     },
     {
+      flavor: "Electric Watermelon",
+      description:
+        "Refreshing watermelon Italian ice with a jolt of sour to leave you feeling electric.",
+    },
+    {
       flavor: "Fat Elvis",
       description:
         "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
-    },
-    {
-      flavor: "Gingerbread Man",
-      description:
-        "Brown sugar gingerbread ice cream swirled with white icing glaze and festive holiday sprinkles.",
     },
     {
       flavor: "Gumball",
@@ -1070,6 +1070,11 @@ function SeasonalFlavors() {
       flavor: "Party Animal",
       description:
         "Sugar cookie ice cream blended with pink and white frosted animal cookies and rainbow sprinkles.",
+    },
+    {
+      flavor: "Peach",
+      description:
+        "Fresh peach ice cream packed with real peaches to celebrate the warm spring weather, available for a limited time only.",
     },
     {
       flavor: "Peanut Butter Cup",
