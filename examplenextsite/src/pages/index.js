@@ -1117,6 +1117,11 @@ function SeasonalFlavors() {
         "Cheesecake ice cream swirled with a strawberry ripple and loads of gooey cheesecake pieces.",
     },
     {
+      flavor: "Strawberry Hibiscus",
+      description:
+        "Fresh strawberry puree balanced with infused hibiscus, and blended into vegan italian ice.",
+    },
+    {
       flavor: "Strawberry Ripple NSA",
       description:
         "Creamy, no-sugar-added vanilla ice cream swirled with sweet and tangy strawberry ribbons.",
