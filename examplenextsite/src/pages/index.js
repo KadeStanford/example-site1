@@ -62,10 +62,6 @@ function Menu() {
             <div className="proteinChoice">
               <ul className="proteinList">
                 <li>Almond Butter</li>
-                <li>
-                  Mixed Nut Butter (Almond, Cashews, Pumpkin Seeds, Chia Seeds,
-                  Flak Seeds)
-                </li>
                 <li>Peanut Butter</li>
                 <li>Sun Butter (Sunflower Seeds)</li>
                 <li>Low Sugar Vanilla Yogurt (2 gm Sugar, Natural Vanilla)</li>
@@ -127,7 +123,6 @@ function Menu() {
             <div className="NonDairyOptions">
               <ul className="proteinList">
                 <li>FLax Seed</li>
-                <li>Hemp Seed</li>
               </ul>
             </div>
           </div>
@@ -418,14 +413,7 @@ function Menu() {
           <h2 className="menuItemPrice">Regular or Gluten-Free</h2>
           <br></br>
           <h2 className="menuItemPrice">Flavors</h2>
-          <div className="flavorBox">
-            <p className="menuItemPrice">Banana Split</p>
-            <img
-              id="cinnaImg"
-              src="/images/bananasplit.jpeg"
-              alt="Banana Split"
-            />
-          </div>
+
           <div className="flavorBox">
             <p className="menuItemPrice">Blueberry Cobbler</p>
             <img
@@ -470,10 +458,7 @@ function Menu() {
             <p className="menuItemPrice">Maple Bacon Overload</p>
             <img id="cinnaImg" src="/images/maplebacon.jpg" alt="Maple Bacon" />
           </div>
-          <div className="flavorBox">
-            <p className="menuItemPrice">Mocha Latte</p>
-            <img id="cinnaImg" src="/images/mochalatte.jpg" alt="Mocha Latte" />
-          </div>
+
           <div className="flavorBox">
             <p className="menuItemPrice">Pumpkin Cheesecake</p>
             <img
@@ -566,25 +551,6 @@ function Menu() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="menuBox" id="Croissant">
-        <h1 className="menuItemTitle">Croissant</h1>
-        <div className="menuItemInfo">
-          <p className="menuItemPrice">
-            <span id="ham">Ham & Swiss*</span>
-            <span id="limited">(Friday only!)*</span>
-            <span id="price"></span>
-          </p>
-          <p className="menuItemPrice">
-            <span id="spinach">Spinach & Feta*</span>
-            <span id="limited">(Friday only!)*</span>
-            <span id="price"></span>
-          </p>
-          <p className="menuItemPrice">
-            <span>Chocolate</span>
-            <span id="price"></span>
-          </p>
         </div>
       </div>
       <div className="menuBox" id="Scones">
