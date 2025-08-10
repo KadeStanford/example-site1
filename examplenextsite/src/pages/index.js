@@ -354,7 +354,6 @@ function Menu() {
               <ul className="proteinList">
                 <li>Poached</li>
                 <li>Mini Omelet</li>
-                <li>Egg Salad</li>
               </ul>
             </div>
             <p>Meats</p>
@@ -362,7 +361,6 @@ function Menu() {
               <ul className="proteinList">
                 <li>Bacon</li>
                 <li>Deer Sausage</li>
-                <li>Canadian Bacon</li>
                 <li>Ham (thinly sliced and grilled)</li>
                 <li>Salmon (Lox)</li>
               </ul>
@@ -377,7 +375,7 @@ function Menu() {
 
             <p>Avocado</p>
 
-            <p>Tomato (Fresh or Sundried)</p>
+            <p>Tomato (Fresh)</p>
 
             <p>Jams and Jellies</p>
             <div className="NonDairyOptions">
@@ -457,23 +455,6 @@ function Menu() {
           <div className="flavorBox">
             <p className="menuItemPrice">Maple Bacon Overload</p>
             <img id="cinnaImg" src="/images/maplebacon.jpg" alt="Maple Bacon" />
-          </div>
-
-          <div className="flavorBox">
-            <p className="menuItemPrice">Pumpkin Cheesecake</p>
-            <img
-              id="cinnaImg"
-              src="/images/pumpkincheesecake.jpg"
-              alt="Pumpkin Cheesecake"
-            />
-          </div>
-          <div className="flavorBox">
-            <p className="menuItemPrice">Strawberries and Cream</p>
-            <img
-              id="cinnaImg"
-              src="/images/strawberriesandcream.jpg"
-              alt="strawberries and Cream"
-            />
           </div>
           <div className="flavorBox">
             <p className="menuItemPrice">White Chocolate Caramel</p>
@@ -571,9 +552,6 @@ function Menu() {
             <p className="menuItemPrice">
               <span>Peanut Butter Blondie Brownie</span>
             </p>
-            <p className="menuItemPrice">
-              <span>Raspberry Bar</span>
-            </p>
           </div>
           <div>
             <p className="menuItemPrice">
@@ -581,9 +559,6 @@ function Menu() {
             </p>
             <p className="menuItemPrice">
               <span>Apple Pie Bar</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Oatmeal Cream Cookie</span>
             </p>
             <p className="menuItemPrice">
               <span>Cinnamon Roll</span>
