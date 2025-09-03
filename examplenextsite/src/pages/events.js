@@ -7,7 +7,7 @@ export default function EventsPage() {
   return (
     <>
       <Head>
-  <title>The Pottery Shoppe — Liberty House Specialties</title>
+        <title>The Pottery Shoppe — Liberty House Specialties</title>
       </Head>
       <main className={styles.main}>
         <Header />

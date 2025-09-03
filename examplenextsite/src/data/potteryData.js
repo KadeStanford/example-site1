@@ -36,7 +36,11 @@ function buildItemsFromFiles(folder, files) {
     const isGlazed = /Painted|Glazed/i.test(file);
     const baseOriginal = normalizeBase(file);
     const key = baseOriginal.toLowerCase(); // case-insensitive pairing
-    const entry = map.get(key) || { bisque: null, glazed: [], displayBase: null };
+    const entry = map.get(key) || {
+      bisque: null,
+      glazed: [],
+      displayBase: null,
+    };
     if (isGlazed) {
       entry.glazed.push(`${folder}/${file}`);
       if (!entry.displayBase) entry.displayBase = baseOriginal;
@@ -67,7 +71,10 @@ function buildItemsFromFiles(folder, files) {
     });
   }
   // stable sort by sku then title
-  items.sort((a, b) => (a.sku || "").localeCompare(b.sku || "") || a.title.localeCompare(b.title));
+  items.sort(
+    (a, b) =>
+      (a.sku || "").localeCompare(b.sku || "") || a.title.localeCompare(b.title)
+  );
   return items;
 }
 
@@ -226,16 +233,23 @@ const STONEWARE_FILES = [
 export const potteryCategories = [
   {
     key: "Assorted Forms",
-    items: buildItemsFromFiles(`${CB_ROOT}/Assorted%20Forms`, ASSORTED_FORMS_FILES)
-      .filter((it) => !/\bbank\b/i.test(it.title)),
+    items: buildItemsFromFiles(
+      `${CB_ROOT}/Assorted%20Forms`,
+      ASSORTED_FORMS_FILES
+    ).filter((it) => !/\bbank\b/i.test(it.title)),
   },
   {
     key: "Banks",
     items: [
       ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
-      ...buildItemsFromFiles(`${CB_ROOT}/Assorted%20Forms`, ASSORTED_FORMS_FILES).filter((it) => /\bbank\b/i.test(it.title)),
+      ...buildItemsFromFiles(
+        `${CB_ROOT}/Assorted%20Forms`,
+        ASSORTED_FORMS_FILES
+      ).filter((it) => /\bbank\b/i.test(it.title)),
     ].sort(
-      (a, b) => (a.sku || "").localeCompare(b.sku || "") || a.title.localeCompare(b.title)
+      (a, b) =>
+        (a.sku || "").localeCompare(b.sku || "") ||
+        a.title.localeCompare(b.title)
     ),
   },
   {
@@ -245,14 +259,24 @@ export const potteryCategories = [
   {
     key: "Christmas",
     items: (() => {
-      const items = buildItemsFromFiles(`${CB_ROOT}/Christmas`, CHRISTMAS_FILES);
+      const items = buildItemsFromFiles(
+        `${CB_ROOT}/Christmas`,
+        CHRISTMAS_FILES
+      );
 
       // 1) Wicker Trees: Attach the "All Sizes" glazed image to each size
-      const allSizes = items.find((it) => /Wicker Trees All Sizes/i.test(it.title));
-      const allSizesGlaze = allSizes && allSizes.glazed && allSizes.glazed.length > 0 ? allSizes.glazed[0] : null;
+      const allSizes = items.find((it) =>
+        /Wicker Trees All Sizes/i.test(it.title)
+      );
+      const allSizesGlaze =
+        allSizes && allSizes.glazed && allSizes.glazed.length > 0
+          ? allSizes.glazed[0]
+          : null;
       let tweaked = items.map((it) => {
         if (
-          /Wicker Tree/i.test(it.title) && /(Small|Medium|Large)/i.test(it.title) && allSizesGlaze
+          /Wicker Tree/i.test(it.title) &&
+          /(Small|Medium|Large)/i.test(it.title) &&
+          allSizesGlaze
         ) {
           const existing = Array.isArray(it.glazed) ? it.glazed : [];
           const nextGlazed = existing.includes(allSizesGlaze)
@@ -263,36 +287,51 @@ export const potteryCategories = [
         return it;
       });
       // Remove the standalone "Wicker Trees All Sizes" entry if present
-      tweaked = tweaked.filter((it) => !/Wicker Trees All Sizes/i.test(it.title));
+      tweaked = tweaked.filter(
+        (it) => !/Wicker Trees All Sizes/i.test(it.title)
+      );
 
       // 2) Pair Round Ball Ornament bisque with Example Kid's Ornament as glazed
       const isKids = (it) => /kid'?s\s+ornament/i.test(`${it.sku} ${it.title}`);
       const kids = items.find(isKids);
-      const kidsImg = kids ? (kids.glazed?.[0] || kids.bisque || null) : null;
+      const kidsImg = kids ? kids.glazed?.[0] || kids.bisque || null : null;
       tweaked = tweaked.map((it) => {
-        const isRoundBall = /round\s+ball\s+ornament/i.test(`${it.sku} ${it.title}`);
+        const isRoundBall = /round\s+ball\s+ornament/i.test(
+          `${it.sku} ${it.title}`
+        );
         if (isRoundBall && kidsImg) {
           const existing = Array.isArray(it.glazed) ? it.glazed : [];
-          const nextGlazed = existing.includes(kidsImg) ? existing : [...existing, kidsImg];
+          const nextGlazed = existing.includes(kidsImg)
+            ? existing
+            : [...existing, kidsImg];
           return { ...it, glazed: nextGlazed };
         }
         return it;
       });
       // Remove the standalone Example Kid's Ornament entry if present (match by its original title)
       const kidsTitle = kids?.title || null;
-      tweaked = tweaked.filter((it) => (kidsTitle ? it.title !== kidsTitle : true));
+      tweaked = tweaked.filter((it) =>
+        kidsTitle ? it.title !== kidsTitle : true
+      );
 
       // Keep stable sort by sku then title
       tweaked.sort(
-        (a, b) => (a.sku || "").localeCompare(b.sku || "") || a.title.localeCompare(b.title)
+        (a, b) =>
+          (a.sku || "").localeCompare(b.sku || "") ||
+          a.title.localeCompare(b.title)
       );
 
       // Place Round Ball Ornament right after Large Wicker Tree (MB1583)
-      const idxRound = tweaked.findIndex((it) => /round\s+ball\s+ornament/i.test(`${it.sku} ${it.title}`));
-      const idxLargeTree = tweaked.findIndex((it) => /large\s+wicker\s+tree/i.test(`${it.sku} ${it.title}`));
+      const idxRound = tweaked.findIndex((it) =>
+        /round\s+ball\s+ornament/i.test(`${it.sku} ${it.title}`)
+      );
+      const idxLargeTree = tweaked.findIndex((it) =>
+        /large\s+wicker\s+tree/i.test(`${it.sku} ${it.title}`)
+      );
       if (idxRound !== -1 && idxLargeTree !== -1) {
         const [roundItem] = tweaked.splice(idxRound, 1);
-        const insertAt = idxLargeTree < tweaked.length ? idxLargeTree + 1 : tweaked.length;
+        const insertAt =
+          idxLargeTree < tweaked.length ? idxLargeTree + 1 : tweaked.length;
         tweaked.splice(insertAt, 0, roundItem);
       }
       return tweaked;
@@ -308,8 +347,10 @@ export const potteryCategories = [
   },
   {
     key: "Faceted",
-    items: buildItemsFromFiles(`${CB_ROOT}/Faceted%20Ceramic%20Bisque`, FACETED_FILES)
-      .filter((it) => (it.sku || '').toLowerCase() !== 'sb137-sample3'),
+    items: buildItemsFromFiles(
+      `${CB_ROOT}/Faceted%20Ceramic%20Bisque`,
+      FACETED_FILES
+    ).filter((it) => (it.sku || "").toLowerCase() !== "sb137-sample3"),
   },
   {
     key: "Stoneware",
@@ -318,9 +359,12 @@ export const potteryCategories = [
 ];
 
 // Glazes
-const GJ_ROOT = "/images/Pottery/Glazes%20(Part%202)/Glazes%20(Part%202)/Jungle%20Gems";
-const SC_ROOT = "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Stroke%20&%20Coat";
-const EL_ROOT = "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Elemental%20and%20Elemental%20Chunkies";
+const GJ_ROOT =
+  "/images/Pottery/Glazes%20(Part%202)/Glazes%20(Part%202)/Jungle%20Gems";
+const SC_ROOT =
+  "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Stroke%20&%20Coat";
+const EL_ROOT =
+  "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Elemental%20and%20Elemental%20Chunkies";
 
 const JUNGLE_GEMS_FILES = [
   "cg-1000 Mardi Gras.jpg",
@@ -549,15 +593,25 @@ function toGlazeObj(root, f) {
 }
 
 function sortByColorThenCode(a, b) {
-  const byColor = (a.color || "").localeCompare(b.color || "", undefined, { sensitivity: "base" });
+  const byColor = (a.color || "").localeCompare(b.color || "", undefined, {
+    sensitivity: "base",
+  });
   if (byColor !== 0) return byColor;
-  return (a.code || "").localeCompare(b.code || "", undefined, { sensitivity: "base" });
+  return (a.code || "").localeCompare(b.code || "", undefined, {
+    sensitivity: "base",
+  });
 }
 
 export const glazeSwatches = {
-  jungleGems: JUNGLE_GEMS_FILES.map((f) => toGlazeObj(GJ_ROOT, f)).sort(sortByColorThenCode),
-  strokeCoat: STROKE_COAT_FILES.map((f) => toGlazeObj(SC_ROOT, f)).sort(sortByColorThenCode),
-  elemental: ELEMENTAL_FILES.map((f) => toGlazeObj(EL_ROOT, f)).sort(sortByColorThenCode),
+  jungleGems: JUNGLE_GEMS_FILES.map((f) => toGlazeObj(GJ_ROOT, f)).sort(
+    sortByColorThenCode
+  ),
+  strokeCoat: STROKE_COAT_FILES.map((f) => toGlazeObj(SC_ROOT, f)).sort(
+    sortByColorThenCode
+  ),
+  elemental: ELEMENTAL_FILES.map((f) => toGlazeObj(EL_ROOT, f)).sort(
+    sortByColorThenCode
+  ),
 };
 
 export default { potteryCategories, glazeSwatches };
