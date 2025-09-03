@@ -7,6 +7,7 @@ html {
   height: 100vh;
   width: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -356,11 +357,48 @@ html {
   background-position: center;
   border-radius: 10px;
   padding: 10px;
-  min-width: 500px;
+  min-width: 320px;
   max-width: 500px;
   max-height: 50vh;
   min-height: 50vh;
   box-shadow: 0px 0px 10px #000000;
+}
+
+@media screen and (max-width: 600px) {
+  .menuBox {
+    min-width: 300px;
+    max-width: 95vw;
+    min-height: auto;
+    max-height: none;
+  }
+}
+
+/* Pottery Shoppe specific overrides to ensure header and links match site accent and are centered */
+#PotteryShoppe .eventsTitle,
+.eventsBox#PotteryShoppe .eventsTitle {
+  color: #f8c359 !important;
+  text-shadow: 3px 2px 0 #000000 !important;
+  text-align: center !important;
+  display: block;
+  margin: 6px auto 12px auto;
+}
+
+/* Ensure links inside Pottery content use site accent, not default blue */
+#PotteryShoppe a,
+.eventsBox#PotteryShoppe a,
+.eventsTextContainer#PotteryShoppe a {
+  color: #f8c359 !important;
+  text-decoration: underline !important;
+}
+
+/* Make sure the Pottery content container is centered and not full-bleed */
+.eventsBox#PotteryShoppe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .menuBox#Coffee {
@@ -750,11 +788,7 @@ html {
   text-shadow: 2px 2px 0px #000000;
 }
 
-#ham {
-}
-
-#spinach {
-}
+/* removed empty selectors #ham and #spinach (unused) to satisfy linting */
 
 #frappe {
   margin-top: -0.3%;
@@ -1260,10 +1294,10 @@ a#call {
 @media screen and (max-width: 600px) {
   html {
     background-image: url("/images/headerbacklong.jpeg");
-    background-repeat: repeat-y;
-    background-size: 300vw;
-    background-position: center;
-    background-attachment: fixed;
+  background-repeat: repeat-y; /* keep tiling vertically */
+  background-size: contain; /* match desktop to prevent narrow overlay */
+  background-position: center;
+  background-attachment: scroll; /* avoid mobile repaint/dup bugs */
     height: 100vh;
     width: 100%;
     margin: 0;
