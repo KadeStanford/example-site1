@@ -898,10 +898,7 @@ export function Events() {
 
             <div className={styles.potteryColumn}>
               <h2>Tools & Brushes</h2>
-              <p className={styles.potterySubtext}>
-                All brushes, sponges, carving tools, and stencils will be
-                available for purchase or use in-studio.
-              </p>
+              <p className={styles.potterySubtext}></p>
               <div className={styles.itemGrid}>
                 {[1, 2, 3, 4].map((n) => (
                   <div className={styles.itemCard} key={n}>
