@@ -387,7 +387,8 @@ export const potteryCategories = [
       const isKids = (it) => /kid'?s\s+ornament/i.test(`${it.sku} ${it.title}`);
       // Try to find the explicit Example Kid's Ornament entry; if not present,
       // fallback to any item with "kid" in the title (robust to small filename variants).
-      let kids = items.find(isKids) || items.find((it) => /\bkid\b/i.test(it.title));
+      let kids =
+        items.find(isKids) || items.find((it) => /\bkid\b/i.test(it.title));
       let kidsImg = kids ? kids.glazed?.[0] || kids.bisque || null : null;
       // Extra fallback: sometimes the example shows up as a glazed-only item and
       // may not be discoverable by the above; try scanning for any item whose
@@ -419,16 +420,19 @@ export const potteryCategories = [
       // or similar; remove entries whose title or image paths contain 'kid' or
       // that explicitly match 'example kid'. This avoids leaving a blank lone card.
       tweaked = tweaked.filter((it) => {
-        const title = (it.title || '').toLowerCase();
-        const bisquePath = (it.bisque || '').toLowerCase();
-        const glazedPaths = (it.glazed || []).join(' ').toLowerCase();
+        const title = (it.title || "").toLowerCase();
+        const bisquePath = (it.bisque || "").toLowerCase();
+        const glazedPaths = (it.glazed || []).join(" ").toLowerCase();
         // Remove the explicit "Example Kid's Ornament" entry if present
         if (/^example\s*kid'?s?\s*ornament$/i.test(title)) return false;
         // Also remove items that only contain a single image and that image path
         // contains 'kid' (likely the orphan example). Do not remove items that
         // legitimately include 'kid' in their names but have multiple images.
         const totalImages = (it.glazed || []).length + (it.bisque ? 1 : 0);
-        if (totalImages === 1 && (bisquePath.includes('kid') || glazedPaths.includes('kid'))) {
+        if (
+          totalImages === 1 &&
+          (bisquePath.includes("kid") || glazedPaths.includes("kid"))
+        ) {
           return false;
         }
         return true;

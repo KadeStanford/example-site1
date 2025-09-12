@@ -1151,7 +1151,7 @@ a#call {
   color: #3c3e41;
   text-shadow: 2px 2px 3px #ffffff;
   /* constrain title size so it scales but never grows excessively */
-  font-size: clamp(1.2rem, calc(2.0rem + 0.5vw), 2.6rem);
+  font-size: clamp(1.2rem, calc(2rem + 0.5vw), 2.6rem);
   text-align: center;
   line-height: 1.05;
   margin: 6px 0 8px 0;
@@ -1248,7 +1248,8 @@ a#call {
 
 /* Responsive tweaks for narrow screens so title and description share space */
 @media screen and (max-width: 900px) {
-  .iceCreamBox, .iceCreamBoxRow {
+  .iceCreamBox,
+  .iceCreamBoxRow {
     width: 100%;
     min-height: auto;
     max-height: none;
