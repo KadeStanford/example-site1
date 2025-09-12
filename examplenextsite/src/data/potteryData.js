@@ -2,7 +2,28 @@
 // Includes helpers to parse filenames, pair bisque and glazed examples ("Painted" -> display as "Glazed"), and extract SKUs and dimensions
 
 function encodePath(p) {
-  return p.replace(/ /g, "%20");
+  // Encode each path segment safely without double-encoding existing percent
+  // escapes. For example "/images/Brushes%20and%20Tools/file name.jpg"
+  // should become "/images/Brushes%20and%20Tools/file%20name.jpg" and not
+  // double-encode the % as %25.
+  if (typeof p !== "string") return p;
+  const leading = p.startsWith("/") ? "/" : "";
+  const parts = p.split("/");
+  const encoded = parts
+    .map((seg) => {
+      if (!seg) return "";
+      try {
+        // decode first to normalize any existing %XX sequences, then re-encode
+        const decoded = decodeURIComponent(seg);
+        return encodeURIComponent(decoded);
+      } catch (e) {
+        // If decoding fails, fall back to encoding the raw segment
+        return encodeURIComponent(seg);
+      }
+    })
+    .join("/");
+  // If original had leading slash, ensure it remains.
+  return leading + encoded.replace(/^\//, "");
 }
 
 function splitSkuAndTitle(name) {
@@ -10,8 +31,29 @@ function splitSkuAndTitle(name) {
   if (parts.length === 0) return { sku: "", title: name };
   // If first token looks like an SKU (letters/numbers/hyphen), take it
   const first = parts[0];
-  if (/^[A-Za-z0-9-]+$/.test(first)) {
-    return { sku: first, title: name.slice(first.length).trim() };
+  // Only treat the first token as an SKU when it contains a digit (e.g. SB103,
+  // MB1115). This avoids classifying words like "Example" or "Round" as SKUs.
+  if (/[0-9]/.test(first) && /^[A-Za-z0-9-]+$/.test(first)) {
+    // normalize letter prefixes: if the prefix is exactly two letters, uppercase it
+    // e.g., sb137 -> SB137, md-123 -> MD-123; leave longer alpha prefixes as-is
+    let sku = first;
+    const m = first.match(/^([A-Za-z]{1,})(.*)$/);
+    if (m) {
+      const letters = m[1];
+      const rest = m[2] || "";
+      if (/^[A-Za-z]{2}$/.test(letters)) {
+        sku = `${letters.toUpperCase()}${rest}`;
+      } else {
+        // preserve original casing for other prefixes but normalize common hyphen spacing
+        sku = `${letters}${rest}`;
+      }
+    }
+    // Normalize variant suffixes for grouping: treat SB103-P as SB103
+    const normalized = sku.replace(/-([A-Za-z])$/i, (m, g1) => {
+      // only strip single-letter suffixes like -P, -G commonly used for variants
+      return "";
+    });
+    return { sku: normalized, title: name.slice(first.length).trim() };
   }
   return { sku: "", title: name };
 }
@@ -24,8 +66,8 @@ function extractDimensions(name) {
 function normalizeBase(name) {
   // remove extension
   let base = name.replace(/\.(jpe?g|png)$/i, "");
-  // strip Painted/Glazed markers and trailing variants like (1) (2)
-  base = base.replace(/\s*(Painted|Glazed)\b.*$/i, "");
+  // strip Painted/Glazed/Example markers and trailing variants like (1) (2)
+  base = base.replace(/\s*(Painted|Glazed|Example|Unglazed)\b.*$/i, "");
   base = base.replace(/\s*\([^)]*\)\s*$/, ""); // strip trailing (dim) for pairing
   return base.trim();
 }
@@ -33,25 +75,55 @@ function normalizeBase(name) {
 function buildItemsFromFiles(folder, files) {
   const map = new Map();
   for (const file of files) {
-    const isGlazed = /Painted|Glazed/i.test(file);
-    const baseOriginal = normalizeBase(file);
-    const key = baseOriginal.toLowerCase(); // case-insensitive pairing
+    // Allow files to be either plain filenames (e.g. "MB1115 ...jpg") or
+    // full public paths (e.g. "/images/Additional Ceramics/Dinnerware/MB1115 ...jpg").
+    const hasDir = /[\\/]/.test(file);
+    const fileBasename = hasDir ? file.replace(/^.*[\\/]/, "") : file;
+    // treat files labeled Painted, Glazed, or Example as glazed examples
+    const isGlazed = /Painted|Glazed|Example/i.test(fileBasename);
+    // Build two variants:
+    // - pairingBase: stripped of parenthetical dims so bisque/glazed pair even if one has dims
+    // - displayBase: preserves parenthetical dims for showing in the UI
+    const baseNoExt = fileBasename.replace(/\.(jpe?g|png)$/i, "");
+    const baseNoPaint = baseNoExt
+      .replace(/\s*(Painted|Glazed|Example|Unglazed)\b.*$/i, "")
+      .trim();
+    const pairingBase = baseNoPaint.replace(/\s*\([^)]*\)\s*$/, "").trim();
+    const displayBase = baseNoPaint.trim();
+    // Normalize the leading SKU for pairing so variants like SB103 and SB103-P
+    // collapse to the same key. Use splitSkuAndTitle which already strips -P.
+    const { sku: pairingSku, title: pairingTitle } =
+      splitSkuAndTitle(pairingBase);
+    const key = `${(pairingSku || "").toLowerCase()}|${(
+      pairingTitle || ""
+    ).toLowerCase()}`;
     const entry = map.get(key) || {
       bisque: null,
       glazed: [],
       displayBase: null,
     };
     if (isGlazed) {
-      entry.glazed.push(`${folder}/${file}`);
-      if (!entry.displayBase) entry.displayBase = baseOriginal;
+      // If file provided a full path, use it as-is; otherwise prepend the folder
+      const path = hasDir
+        ? file.startsWith("/")
+          ? file
+          : `/${file}`
+        : `${folder}/${file}`;
+      entry.glazed.push(path);
+      if (!entry.displayBase) entry.displayBase = displayBase;
     } else {
       // prefer JPG/JPEG over PNG if multiple; keep first non-painted as bisque if not set
       if (!entry.bisque || /\.jpe?g$/i.test(file)) {
-        entry.bisque = `${folder}/${file}`;
-        // Prefer bisque name casing for display metadata
-        entry.displayBase = baseOriginal;
+        const path = hasDir
+          ? file.startsWith("/")
+            ? file
+            : `/${file}`
+          : `${folder}/${file}`;
+        entry.bisque = path;
+        // Prefer bisque name casing for display metadata, preserve dimensions
+        entry.displayBase = displayBase;
       } else if (!entry.displayBase) {
-        entry.displayBase = baseOriginal;
+        entry.displayBase = displayBase;
       }
     }
     map.set(key, entry);
@@ -61,7 +133,14 @@ function buildItemsFromFiles(folder, files) {
   for (const [, imgs] of map.entries()) {
     const baseForMeta = imgs.displayBase || "";
     const dims = extractDimensions(baseForMeta);
-    const { sku, title } = splitSkuAndTitle(baseForMeta);
+    const { sku, title: rawTitle } = splitSkuAndTitle(baseForMeta);
+    // If dimensions were detected in the filename (e.g. "(8 x 6)") and the
+    // raw title doesn't already include them, append them for display.
+    const dimsText = dims ? `(${dims})` : "";
+    const title =
+      dims && !rawTitle.includes(`(${dims})`) && rawTitle
+        ? `${rawTitle} ${dimsText}`
+        : rawTitle;
     items.push({
       sku,
       title,
@@ -103,6 +182,7 @@ const ASSORTED_FORMS_FILES = [
   "mb1489 Hedgehog Planter.jpg",
   "mb1537 Llama Container Painted.jpg",
   "mb1537 Llama Container.jpg",
+  "/images/Additional Ceramics/Assorted Forms/29206 Rimmed Butter Dish.jpeg",
 ];
 
 const BANKS_FILES = [
@@ -158,6 +238,7 @@ const CUPS_MUGS_FILES = [
   "CCX3134 Deer Mug.jpg",
   "CCX549 Assorted Flower Dishes (Set of 4).png",
   "mb-1560 Hobnail Mug Painted.jpg",
+  "mb-1560 Hobnail Mug.png",
   "MB1455 Stemless Wine Tumbler.jpg",
 ];
 
@@ -176,11 +257,16 @@ const DINNERWARE_FILES = [
   "MB1307 Handled Platter Painted.jpg",
   "MB1307 Handled Platter.jpg",
   "MB1371 Dancing Teapot.jpg",
+  // Additional Dinnerware from Additional Ceramics/Dinnerware
+  "/images/Additional Ceramics/Dinnerware/MB1113 Casualware Cereal-Dessert Bowl (1.75 x 6.5).jpg",
+  "/images/Additional Ceramics/Dinnerware/MB1114 Casualware Serving Bowl (2.25 x 8.5).jpg",
+  "/images/Additional Ceramics/Dinnerware/MB1115 Casualware Salad Plate (8 Inch Dia.).jpg",
+  "/images/Additional Ceramics/Dinnerware/Round Spoon Rest (5.25 inch Dia).png",
+  "/images/Additional Ceramics/Dinnerware/SB102 Casserole Dish (9 x 9).jpg",
+  "/images/Additional Ceramics/Dinnerware/SB141 Wide Rim Soup Bowl (9.5 x 9.5 x 2 ).jpg",
 ];
 
 const FACETED_FILES = [
-  "mb-1538 Faceted Unicorn Painted.jpg",
-  "mb-1538 Faceted Unicorn.jpg",
   "mb-1548 Faceted T-Rex Painted.jpg",
   "mb-1548 Faceted T-Rex.jpg",
   "mb-1563 Owl Facetini Painted.jpg",
@@ -201,6 +287,11 @@ const FACETED_FILES = [
   "MB1637 Elephant Facetini.jpg",
   "MB1638 Lion Facetini Painted.jpg",
   "MB1638 Lion Facetini.jpg",
+  // Added explicit files present in public/images/.../Faceted Ceramic Bisque
+  "MB1574 Bee Facetini.jpg",
+  "MB1574 Bee Facetini Example.JPG",
+  "MB1639 Faceted Unicorn.jpg",
+  "MB1639 Faceted Unicorn Example.jpg",
   "sb137-sample3.jpg",
 ];
 
@@ -228,34 +319,35 @@ const STONEWARE_FILES = [
   "sb161 Medium Vintage Mixing Bowl Painted.jpg",
   "sb162 Small Vintage Mixing Bowl (8L x 8W x 4.25H).jpg",
   "sb162 Small Vintage Mixing Bowl Painted.jpg",
+  // Additional Stoneware from Additional Ceramics/Stoneware
+  "/images/Additional Ceramics/Stoneware/CXS114 Stoneware Round Charcuterie Server.png",
+  "/images/Additional Ceramics/Stoneware/Large Nesting Bowl (8.5 x 6.5).jpg",
+  "/images/Additional Ceramics/Stoneware/Medium Nesting Bowl (7.5 x 5.75).jpg",
+  "/images/Additional Ceramics/Stoneware/Modern Bowl (7 x 3).jpg",
+  "/images/Additional Ceramics/Stoneware/SB101-E Pie Plate.jpg",
+  "/images/Additional Ceramics/Stoneware/SB102 Casserole Dish Unglazed (9 x 9).jpg",
+  "/images/Additional Ceramics/Stoneware/SB103 Wavy Mug.jpg",
+  "/images/Additional Ceramics/Stoneware/SB103-P Wavy Mug Glazed (5.5 x 4.25).jpg",
+  "/images/Additional Ceramics/Stoneware/SB138 Joe Mug (5.5  x 3.75 x 3.75).jpg",
+  "/images/Additional Ceramics/Stoneware/SB138 Joe Mug Glazed.jpg",
+  "/images/Additional Ceramics/Stoneware/SB142 Loaf Pan (10.5 x 5.25 x 3).jpg",
+  "/images/Additional Ceramics/Stoneware/Small Nesting Bowl (6.5 x 5).jpg",
 ];
 
 export const potteryCategories = [
   {
     key: "Assorted Forms",
-    items: buildItemsFromFiles(
-      `${CB_ROOT}/Assorted%20Forms`,
-      ASSORTED_FORMS_FILES
-    ).filter((it) => !/\bbank\b/i.test(it.title)),
-  },
-  {
-    key: "Banks",
+    // Combine the base assorted forms with Banks and Boxes so all are shown together
     items: [
-      ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
       ...buildItemsFromFiles(
         `${CB_ROOT}/Assorted%20Forms`,
         ASSORTED_FORMS_FILES
-      ).filter((it) => /\bbank\b/i.test(it.title)),
-    ].sort(
-      (a, b) =>
-        (a.sku || "").localeCompare(b.sku || "") ||
-        a.title.localeCompare(b.title)
-    ),
+      ),
+      ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
+      ...buildItemsFromFiles(`${CB_ROOT}/Boxes`, BOXES_FILES),
+    ],
   },
-  {
-    key: "Boxes",
-    items: buildItemsFromFiles(`${CB_ROOT}/Boxes`, BOXES_FILES),
-  },
+  // Banks and Boxes merged into Assorted Forms per request
   {
     key: "Christmas",
     items: (() => {
@@ -293,8 +385,23 @@ export const potteryCategories = [
 
       // 2) Pair Round Ball Ornament bisque with Example Kid's Ornament as glazed
       const isKids = (it) => /kid'?s\s+ornament/i.test(`${it.sku} ${it.title}`);
-      const kids = items.find(isKids);
-      const kidsImg = kids ? kids.glazed?.[0] || kids.bisque || null : null;
+      // Try to find the explicit Example Kid's Ornament entry; if not present,
+      // fallback to any item with "kid" in the title (robust to small filename variants).
+      let kids = items.find(isKids) || items.find((it) => /\bkid\b/i.test(it.title));
+      let kidsImg = kids ? kids.glazed?.[0] || kids.bisque || null : null;
+      // Extra fallback: sometimes the example shows up as a glazed-only item and
+      // may not be discoverable by the above; try scanning for any item whose
+      // glazed or bisque path contains "kid" as a last resort.
+      if (!kidsImg) {
+        const maybe = items.find((it) => {
+          const paths = [...(it.glazed || []), it.bisque || ""].join(" ");
+          return /kid/i.test(paths);
+        });
+        if (maybe) {
+          kids = maybe;
+          kidsImg = maybe.glazed?.[0] || maybe.bisque || null;
+        }
+      }
       tweaked = tweaked.map((it) => {
         const isRoundBall = /round\s+ball\s+ornament/i.test(
           `${it.sku} ${it.title}`
@@ -308,11 +415,24 @@ export const potteryCategories = [
         }
         return it;
       });
-      // Remove the standalone Example Kid's Ornament entry if present (match by its original title)
-      const kidsTitle = kids?.title || null;
-      tweaked = tweaked.filter((it) =>
-        kidsTitle ? it.title !== kidsTitle : true
-      );
+      // Remove any leftover example/kid items. Some filenames use "Example Kid's Ornament"
+      // or similar; remove entries whose title or image paths contain 'kid' or
+      // that explicitly match 'example kid'. This avoids leaving a blank lone card.
+      tweaked = tweaked.filter((it) => {
+        const title = (it.title || '').toLowerCase();
+        const bisquePath = (it.bisque || '').toLowerCase();
+        const glazedPaths = (it.glazed || []).join(' ').toLowerCase();
+        // Remove the explicit "Example Kid's Ornament" entry if present
+        if (/^example\s*kid'?s?\s*ornament$/i.test(title)) return false;
+        // Also remove items that only contain a single image and that image path
+        // contains 'kid' (likely the orphan example). Do not remove items that
+        // legitimately include 'kid' in their names but have multiple images.
+        const totalImages = (it.glazed || []).length + (it.bisque ? 1 : 0);
+        if (totalImages === 1 && (bisquePath.includes('kid') || glazedPaths.includes('kid'))) {
+          return false;
+        }
+        return true;
+      });
 
       // Keep stable sort by sku then title
       tweaked.sort(
@@ -365,6 +485,11 @@ const SC_ROOT =
   "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Stroke%20&%20Coat";
 const EL_ROOT =
   "/images/Pottery/Glazes%20(Part%203)/Glazes%20(Part%201)/Elemental%20and%20Elemental%20Chunkies";
+
+// Additional resources added by user
+const ADDL_GLAZES_ROOT = "/images/Additional%20Glazes%20Categories";
+const BRUSHES_ROOT = "/images/Brushes%20and%20Tools";
+const EXAMPLES_ROOT = "/images/Examples";
 
 const JUNGLE_GEMS_FILES = [
   "cg-1000 Mardi Gras.jpg",
@@ -530,6 +655,149 @@ const STROKE_COAT_FILES = [
   "sc-99 Char-Ming.jpg",
 ];
 
+// SPECKLED stroke & coat files live in a nested Glazes folder provided by the user
+const SPECKLED_ROOT =
+  "/images/Pottery/Glazes%20(Part%201)/Glazes%20(Part%203)/Speckled%20Stroke%20&%20Coat";
+const SPECKLED_STROKE_COAT_FILES = [
+  "sp-201 Speckled Pink-A-Boo.jpg",
+  "sp-206 Speckled Sunkissed.jpg",
+  "sp-209 Speckled Jaded.jpg",
+  "sp-210 Speckled Teal Next Time.jpg",
+  "sp-211 Speckled Blue Yonder.jpg",
+  "sp-212 Speckled Moody Blue.jpg",
+  "sp-213 Speckled Grapel.jpg",
+  "sp-215 Speckled Tuxedo.jpg",
+  "sp-216 Speckled Cotton Tail.jpg",
+  "sp-226 Speckled Green Thumb.jpg",
+  "sp-227 Speckled Sour Apple.jpg",
+  "sp-231 Speckled The Blues.jpg",
+  "sp-245 Speckled My Blue Heaven.jpg",
+  "sp-253 Speckled Purple Haze.jpg",
+  "sp-254 Speckled Vanilla Dip.jpg",
+  "sp-260 Speckled Silver Lining.jpg",
+  "sp-270 Speckled Pink-A-Dot.jpg",
+  "sp-274 Speckled Hot Tamale.jpg",
+  "sp-275 Speckled Orange-A-Peel.jpg",
+  "sp-288 Speckled Tu Tu Tango.jpg",
+];
+
+// Additional Glaze categories (user-supplied)
+const FOUNDATIONS_FILES = [
+  "fn-01 White.jpg",
+  "fn-02 Yellow.jpg",
+  "fn-03 Orange.jpg",
+  "fn-04 Red.jpg",
+  "fn-05 Pink.jpg",
+  "fn-055 Bubblegum.jpg",
+  "fn-056 Heather.jpg",
+  "fn-057 Periwinkle.jpg",
+  "fn-058 Green Apple.jpg",
+  "fn-059 Cashmere.jpg",
+  "fn-06 Blue.jpg",
+  "fn-060 Mushroom.jpg",
+  "fn-07 Green.jpg",
+  "fn-08 Brown.jpg",
+  "fn-09 Black.jpg",
+  "fn-10 Tree Green.jpg",
+  "fn-11 Light Blue.jpg",
+  "fn-12 Lavender.jpg",
+  "fn-13 Light Yellow.jpg",
+  "fn-14 Antique White.jpg",
+  "fn-15 Brick Red.jpg",
+  "fn-16 Harvest Orange.jpg",
+  "fn-17 Purple.jpg",
+  "fn-18 Bright Blue.jpg",
+  "fn-19 Dark Blue.jpg",
+  "fn-20 Medium Green.jpg",
+  "fn-201 Golden Clear.jpg",
+  "fn-202 Yadro.jpg",
+  "fn-205 Saddle Tan.jpg",
+  "fn-209 Floral Pink.jpg",
+  "fn-21 Olive Green.jpg",
+  "fn-211 Sheer Blue.jpg",
+  "fn-212 Blue Diamond.jpg",
+  "fn-213 Saffire Blue.jpg",
+  "fn-214 Pastel Jade.jpg",
+  "fn-216 Sea Glass.jpg",
+  "fn-22 Tan.jpg",
+  "fn-220 Sooty Grey.jpg",
+  "fn-221 Milk Glass White.jpg",
+  "fn-23 Cinnamon.jpg",
+  "fn-230 Poppy.jpg",
+  "fn-231 Clearly Jade.jpg",
+  "fn-232 Sun Yellow.jpg",
+  "fn-233 Ruby Red.jpg",
+  "FN-234 Royal Purple.jpg",
+  "FN-235 Celadon.jpg",
+  "FN-236 Miami Pink.jpg",
+  "fn-24 Gray.jpg",
+  "fn-25 Raspberry Whip.jpg",
+  "fn-27 Glade Green.jpg",
+  "fn-28 Wisteria Purple.jpg",
+  "fn-29 Rich Chocolate.jpg",
+  "fn-301 Marshmallow White.jpg",
+  "fn-302 Ivory Cream.jpg",
+  "fn-304  Black Velvet.jpg",
+  "fn-31 Corn Flower Blue.jpg",
+  "fn-32 Canton Jade.jpg",
+  "fn-33 Mediterranean Teal.jpg",
+  "fn-34 Big Sky Blue.jpg",
+  "fn-35 Deep Red.jpg",
+  "fn-36 Grape.jpg",
+  "fn-37 Chartreuse.jpg",
+  "fn-38 Sand.jpg",
+  "fn-39 Light Gray.jpg",
+  "fn-40 Pumpkin.jpg",
+  "fn-41 Medium Blue.jpg",
+  "fn-42 Teal Blue.jpg",
+  "fn-43 Bright Jade.jpg",
+  "fn-44 Yellow-Orange.jpg",
+  "fn-45 Taupe.jpg",
+  "fn-46 Sage.jpg",
+  "fn-47 Light Pink.jpg",
+  "fn-48 Bright Pink.jpg",
+  "fn-49 Flamingo.jpg",
+  "fn-51 Strawberry.jpg",
+  "fn-52 Tangerine.jpg",
+  "fn-53 Mint.jpg",
+  "fn-54 Pistachio.jpg",
+  "fn061 Ivory Speck.jpg",
+];
+
+const PCF_FILES = [
+  "PCF-18 Honeydew.jpg",
+  "PCF-19 Cirrus Flow.jpg",
+  "PCF-3 Midnight Run.jpg",
+  "PCF-54 Flux Blossom.jpg",
+  "PCF-74 River Birch.jpg",
+  "PCF-75 Moss Mist.jpg",
+];
+
+// Brushes & Tools filenames discovered in the folder
+const BRUSHES_AND_TOOLS_FILES = [
+  "ac219 Designer Bottle with Writer Tip (3-Pack).jpg",
+  "bk601 Deluxe Beginner Kit.jpg",
+  "Eye of the Tiger Angles Set C.jpg",
+  "Eye of the Tiger Fan # 6.jpg",
+  "Eye of the Tiger Filbert Set D.jpg",
+  "Eye of the Tiger Glaze #1.jpg",
+  "Eye of the Tiger Rounds Set B.jpg",
+  "Eye of the Tiger Shader Set A.jpg",
+  "Eye of the Tiger Shader Set E.jpg",
+];
+
+// Examples for the background collage (user-supplied)
+const EXAMPLES_FILES = [
+  "MB1633 Giraffe Facetini Painted.jpg",
+  "Optional (2).png",
+  "Optional.png",
+  "0209408a089f7edf2e2faaa6e9eb7139.jpg",
+  "Example 1.webp",
+  "Example 2.png",
+  "image1.png",
+  "mb-1604 Monkey Facetini Painted.jpg",
+];
+
 const ELEMENTAL_FILES = [
   "el-101 Oyster Shell.jpg",
   "el-103 Sea Spray.jpg",
@@ -580,13 +848,23 @@ const ELEMENTAL_FILES = [
   "fn-219 Lustre Green.jpg",
 ];
 
+// (previous placeholder removed; actual SPECKLED_STROKE_COAT_FILES are defined further above)
+
 function toGlazeObj(root, f) {
   const base = f.replace(/\.(jpe?g|png)$/i, "");
   const [code, ...rest] = base.split(" ");
   const color = rest.join(" ").trim();
+  // Normalize two-letter alphabetic prefixes on the code (e.g., 'cg-1000' stays,
+  // but if someone used 'cg1000' this will uppercase a 2-letter prefix segment).
+  let normalizedCode = code;
+  const cm = code.match(/^([A-Za-z]{2})(.*)$/);
+  if (cm) {
+    normalizedCode = `${cm[1].toUpperCase()}${cm[2] || ""}`;
+  }
+  const displayName = `${normalizedCode}${color ? ` ${color}` : ""}`;
   return {
-    code,
-    name: base, // keep full "code color" for display
+    code: normalizedCode,
+    name: displayName, // full "code color" for display (with normalized code)
     color, // use color part for sorting
     src: encodePath(`${root}/${f}`),
   };
@@ -609,9 +887,34 @@ export const glazeSwatches = {
   strokeCoat: STROKE_COAT_FILES.map((f) => toGlazeObj(SC_ROOT, f)).sort(
     sortByColorThenCode
   ),
-  elemental: ELEMENTAL_FILES.map((f) => toGlazeObj(EL_ROOT, f)).sort(
+  // renamed to Elements & Element Chunkies
+  elements: ELEMENTAL_FILES.map((f) => toGlazeObj(EL_ROOT, f)).sort(
     sortByColorThenCode
   ),
+  speckledStrokeCoat: SPECKLED_STROKE_COAT_FILES.map((f) =>
+    toGlazeObj(SPECKLED_ROOT, f)
+  ).sort(sortByColorThenCode),
+  foundations: FOUNDATIONS_FILES.map((f) =>
+    toGlazeObj(`${ADDL_GLAZES_ROOT}/Foundations`, f)
+  ).sort(sortByColorThenCode),
+  pottersChoiceFlux: PCF_FILES.map((f) =>
+    toGlazeObj(`${ADDL_GLAZES_ROOT}/Potter's Choice Flux`, f)
+  ).sort(sortByColorThenCode),
+  // any additional glazes from the user-provided folder (if you add filenames)
+  additional: [],
 };
 
-export default { potteryCategories, glazeSwatches };
+// Export examples for the collage and brushes/tools for the Tools column
+export const examples = EXAMPLES_FILES.map((f) =>
+  encodePath(`${EXAMPLES_ROOT}/${f}`)
+);
+// Export brushes and tools as objects with src and name so we can render labels
+export const brushesAndTools = BRUSHES_AND_TOOLS_FILES.map((f) => {
+  const base = f.replace(/\.(jpe?g|png)$/i, "");
+  return {
+    src: encodePath(`${BRUSHES_ROOT}/${f}`),
+    name: base,
+  };
+});
+
+export default { potteryCategories, glazeSwatches, examples, brushesAndTools };

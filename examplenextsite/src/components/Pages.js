@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { potteryCategories, glazeSwatches } from "@/data/potteryData";
+import {
+  potteryCategories,
+  glazeSwatches,
+  examples,
+  brushesAndTools,
+} from "@/data/potteryData";
 import styles from "@/styles/Home.module.css";
 
 export function Menu() {
@@ -637,7 +642,7 @@ export function About() {
             morning to your favorite brew and chill out with us in the evenings
             with gourmet desserts and ice cream like no other!
             <br></br> <br></br>Liberty House, Circa 1868, housed the first
-            general store in the Feliciana parishes. Standing tall, Liberty
+            general store in the Feliciana parishesS. Standing tall, Liberty
             House still proudly serves the Feliciana parishes with the same
             dedication to excellent products, service, and long-term
             relationships with the members of our community. <br></br>
@@ -674,6 +679,7 @@ export function Events() {
   const [viewer, setViewer] = useState({ open: false, src: "", alt: "" });
   // Category selection using real items (no pagination; show all)
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
+  const [activeGlazeTab, setActiveGlazeTab] = useState("jungleGems");
 
   const activeCategory = potteryCategories[activeCategoryIndex];
   const itemsToRender = activeCategory?.items || [];
@@ -710,38 +716,48 @@ export function Events() {
           <div className={styles.potteryHeaderBox}>
             <h1 className={styles.eventsTitle}>The Pottery Shoppe</h1>
             <p
-              className={styles.eventsText}
+              className={`${styles.eventsText} ${styles.potterySubtitle}`}
               style={{ marginTop: 0, marginBottom: 8, fontStyle: "italic" }}
             >
               The Work of Our Hands
             </p>
+            {/* Background image is now handled in CSS (potteryHeaderBox) */}
             <p className={`${styles.eventsText} ${styles.potteryLead}`}>
-              Liberty House now offers a Paint-Your-Own Pottery experience
-              called "The Pottery Shoppe." We supply ready-to-paint pieces, all
-              paints, glazes, brushes and tools. Browse the items below, then
-              call or text to order. Pickup is available via our drive-thru, and
-              you may return your piece to us after glazing so we can perform
-              the final firing.
+              Welcome to "The Pottery Shoppe" at Liberty House Specialties where
+              you can have fun, get creative and make memories!
             </p>
-
-            {/* Order & Pickup moved into header box */}
-            <div className={styles.contactOrder}>
-              <h2 className={styles.orderPickupHeader}>Order & Pickup</h2>
-              <p
-                className={`${styles.potterySubtext} ${styles.orderPickupText}`}
-              >
-                Call or text to order:{" "}
-                <a href="tel:+12256839342">(225) 683-9342</a>
+            <ol
+              className={styles.potterySubtext}
+              style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}
+            >
+              <li>Choose your ready-to-paint bisque form</li>
+              <li>Choose your paints, glazes, and tools</li>
+              <li>Call us with your order (225-683-9342)</li>
+              <li>
+                Pick up and start enjoying a fulfilling pottery painting
+                experience
                 <br />
-                Pickup at our drive-thru. After you've painted your piece,
-                return it to us for glazing; we will schedule the final firing.
+                right at home, creating fun and functional art pieces!
+              </li>
+            </ol>
+            {/* Center Order & Pickup text if present */}
+            <div style={{ textAlign: "center", marginTop: 8 }}>
+              <p className={styles.orderPickupText}>
+                Call us to place orders or schedule pickups: (225) 683-9342
               </p>
+              <a
+                className={styles.callNowButton}
+                href="tel:2256839342"
+                aria-label="Call now"
+              >
+                Call Now
+              </a>
             </div>
           </div>
 
           <div className={styles.potteryOverview}>
             <div className={styles.potteryColumn}>
-              <h2>Items (Ready-to-Paint)</h2>
+              <h2>Ceramic Forms (Ready-to-Paint)</h2>
               <p className={styles.potterySubtext}></p>
 
               {/* Category tabs */}
@@ -800,9 +816,7 @@ export function Events() {
                         {item.sku ? `${item.sku} ` : ""}
                         {item.title}
                       </p>
-                      {item.dimensions ? (
-                        <p className={styles.itemMeta}>{item.dimensions}</p>
-                      ) : null}
+                      {/* dimensions shown in title parentheses; removed separate meta line */}
                     </div>
                   );
                 })}
@@ -817,6 +831,20 @@ export function Events() {
               <div className={styles.itemGrid}>
                 {withGlazeItems.map((item, i) => {
                   const hasGlaze = item.glazed && item.glazed.length > 0;
+                  // If bisque is missing or equals the placeholder, use the first glazed
+                  // image as the main image so the card shows only one image.
+                  const placeholder = "/images/placeholder.png";
+                  const mainSrc =
+                    item.bisque && item.bisque !== placeholder
+                      ? item.bisque
+                      : hasGlaze
+                      ? item.glazed[0]
+                      : placeholder;
+                  const mainAlt =
+                    mainSrc === item.bisque || !hasGlaze
+                      ? `${item.title} (Bisque)`
+                      : `${item.title} (Glazed)`;
+
                   return (
                     <div
                       className={`${styles.itemCard} ${
@@ -825,8 +853,8 @@ export function Events() {
                       key={`${item.sku || item.title}-glaze-${i}`}
                     >
                       <img
-                        src={item.bisque || "/images/placeholder.png"}
-                        alt={`${item.title} (Bisque)`}
+                        src={mainSrc || placeholder}
+                        alt={mainAlt}
                         className={`${styles.bisqueImg} ${styles.clickable}`}
                         style={{
                           width: 90,
@@ -837,8 +865,8 @@ export function Events() {
                         onClick={() =>
                           setViewer({
                             open: true,
-                            src: item.bisque || "/images/placeholder.png",
-                            alt: `${item.title} (Bisque)`,
+                            src: mainSrc || placeholder,
+                            alt: mainAlt,
                           })
                         }
                       />
@@ -846,48 +874,48 @@ export function Events() {
                         {item.sku ? `${item.sku} ` : ""}
                         {item.title}
                       </p>
-                      {item.dimensions ? (
-                        <p className={styles.itemMeta}>{item.dimensions}</p>
-                      ) : null}
-                      {hasGlaze && (
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: 6,
-                            marginTop: 8,
-                            flexWrap: "wrap",
-                            justifyContent: "center",
-                          }}
-                        >
+                      {/* dimensions shown in title parentheses; removed separate meta line */}
+                      {hasGlaze &&
+                        item.glazed[0] &&
+                        mainSrc !== item.glazed[0] && (
                           <div
                             style={{
                               display: "flex",
-                              flexDirection: "column",
-                              alignItems: "center",
+                              gap: 6,
+                              marginTop: 8,
+                              flexWrap: "wrap",
+                              justifyContent: "center",
                             }}
                           >
-                            <img
-                              src={item.glazed[0]}
-                              alt={`${item.title} (Glazed)`}
-                              className={`${styles.glazeThumb} ${styles.clickable}`}
+                            <div
                               style={{
-                                width: 90,
-                                height: 90,
-                                objectFit: "cover",
-                                display: "block",
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
                               }}
-                              onClick={() =>
-                                setViewer({
-                                  open: true,
-                                  src: item.glazed[0],
-                                  alt: `${item.title} (Glazed)`,
-                                })
-                              }
-                            />
-                            <span className={styles.badge}>Glazed</span>
+                            >
+                              <img
+                                src={item.glazed[0]}
+                                alt={`${item.title} (Glazed)`}
+                                className={`${styles.glazeThumb} ${styles.clickable}`}
+                                style={{
+                                  width: 90,
+                                  height: 90,
+                                  objectFit: "cover",
+                                  display: "block",
+                                }}
+                                onClick={() =>
+                                  setViewer({
+                                    open: true,
+                                    src: item.glazed[0],
+                                    alt: `${item.title} (Glazed)`,
+                                  })
+                                }
+                              />
+                              <span className={styles.badge}>Glazed</span>
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
                     </div>
                   );
                 })}
@@ -896,89 +924,212 @@ export function Events() {
               {/* Pagination removed: all items are shown */}
             </div>
 
+            {/* Glazes with tabs */}
+            <div className={styles.potteryColumn}>
+              <h2>Glazes & Paints</h2>
+              <div className={styles.glazeTabs}>
+                {[
+                  { key: "jungleGems", label: "Jungle Gems" },
+                  { key: "strokeCoat", label: "Stroke & Coat" },
+                  {
+                    key: "speckledStrokeCoat",
+                    label: "Speckled Stroke & Coat",
+                  },
+                  { key: "elements", label: "Elements & Element Chunkies" },
+                  { key: "foundations", label: "Foundations" },
+                  { key: "pottersChoiceFlux", label: "Potter's Choice Flux" },
+                ].map((t) => (
+                  <button
+                    key={t.key}
+                    className={styles.paginationButton}
+                    onClick={() => setActiveGlazeTab(t.key)}
+                    style={{
+                      margin: 4,
+                      background:
+                        activeGlazeTab === t.key ? "#f8c359" : "#3d3c33",
+                      color: activeGlazeTab === t.key ? "#000" : "#f8c359",
+                    }}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+              <div className={styles.itemGrid}>
+                {(glazeSwatches[activeGlazeTab] || []).map((g) => (
+                  <div
+                    className={`${styles.itemCard} ${styles.glazeItemCard}`}
+                    key={g.src}
+                  >
+                    <img
+                      src={g.src}
+                      alt={g.name}
+                      className={`${styles.productPlaceholder} ${styles.clickable}`}
+                      onClick={() =>
+                        setViewer({
+                          open: true,
+                          src: g.src,
+                          alt: g.name,
+                          type: "image",
+                        })
+                      }
+                    />
+                    <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Brushes moved below Glazes */}
             <div className={styles.potteryColumn}>
               <h2>Tools & Brushes</h2>
               <p className={styles.potterySubtext}></p>
               <div className={styles.itemGrid}>
-                {[1, 2, 3, 4].map((n) => (
-                  <div className={styles.itemCard} key={n}>
+                {(brushesAndTools && brushesAndTools.length > 0
+                  ? brushesAndTools
+                  : [
+                      { src: "/images/placeholder.png", name: "Placeholder" },
+                      { src: "/images/placeholder.png", name: "Placeholder" },
+                    ]
+                ).map((tool, idx) => (
+                  <div
+                    className={`${styles.itemCard} ${styles.toolItemCard}`}
+                    key={idx}
+                  >
                     <img
-                      src="/images/placeholder.png"
-                      alt={`Tool ${n}`}
-                      className={styles.productPlaceholder}
+                      src={tool.src}
+                      alt={tool.name || `Tool ${idx + 1}`}
+                      className={`${styles.productPlaceholder} ${styles.clickable}`}
+                      onClick={() =>
+                        setViewer({
+                          open: true,
+                          src: tool.src,
+                          alt: tool.name || `Tool ${idx + 1}`,
+                          type: "tool",
+                        })
+                      }
+                      onError={(e) => {
+                        // replace broken images with placeholder
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "/images/placeholder.png";
+                      }}
                     />
-                    <p>Tool #{n}</p>
+                    <p>{tool.name || `Tool #${idx + 1}`}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className={styles.potteryColumn}>
-              <h2>Paints & Glazes</h2>
-              <h3 style={{ color: "#f8c359", textAlign: "center" }}>
-                Jungle Gems
-              </h3>
-              <div className={styles.itemGrid}>
-                {glazeSwatches.jungleGems.map((g) => (
-                  <div className={styles.itemCard} key={g.src}>
-                    <img
-                      src={g.src}
-                      alt={g.name}
-                      className={`${styles.productPlaceholder} ${styles.clickable}`}
-                      onClick={() =>
-                        setViewer({ open: true, src: g.src, alt: g.name })
-                      }
-                    />
-                    <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
-                  </div>
-                ))}
-              </div>
-              <h3
-                style={{ color: "#f8c359", textAlign: "center", marginTop: 12 }}
-              >
-                Stroke & Coat
-              </h3>
-              <div className={styles.itemGrid}>
-                {glazeSwatches.strokeCoat.map((g) => (
-                  <div className={styles.itemCard} key={g.src}>
-                    <img
-                      src={g.src}
-                      alt={g.name}
-                      className={`${styles.productPlaceholder} ${styles.clickable}`}
-                      onClick={() =>
-                        setViewer({ open: true, src: g.src, alt: g.name })
-                      }
-                    />
-                    <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
-                  </div>
-                ))}
-              </div>
-              <h3
-                style={{ color: "#f8c359", textAlign: "center", marginTop: 12 }}
-              >
-                Elemental
-              </h3>
-              <div className={styles.itemGrid}>
-                {glazeSwatches.elemental.map((g) => (
-                  <div className={styles.itemCard} key={g.src}>
-                    <img
-                      src={g.src}
-                      alt={g.name}
-                      className={`${styles.productPlaceholder} ${styles.clickable}`}
-                      onClick={() =>
-                        setViewer({ open: true, src: g.src, alt: g.name })
-                      }
-                    />
-                    <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Removed duplicate expanded Glazes column - single tabbed Glazes section above is used */}
           </div>
 
           {/* Project Guides section removed per request */}
 
           {/* Removed footer note per request */}
+        </div>
+      </div>
+      {/* FAQ section appended per request */}
+      <div className={styles.potteryColumn} style={{ marginTop: 18 }}>
+        <h2 className={styles.faqTitle}>Frequently asked questions</h2>
+        <div style={{ textAlign: "center", maxWidth: 1000, margin: "0 auto" }}>
+          <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+            <p
+              className={styles.faqQuestion}
+              style={{
+                color: "#f8c359",
+                fontSize: "1.8rem",
+                fontWeight: 700,
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>Q:</strong> how long will it take to fire my item?
+            </p>
+            <p
+              className={styles.faqAnswer}
+              style={{
+                color: "#ffffff",
+                fontSize: "1.45rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>A:</strong> kilns must be full in order to fire. firing
+              time is based on the number of items to fire. after firing, the
+              kilns must cool down before opening so please allow 3-14 days for
+              your item to be ready for pick-up.
+            </p>
+
+            <p
+              className={styles.faqQuestion}
+              style={{
+                color: "#f8c359",
+                fontSize: "1.6rem",
+                fontWeight: 700,
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>Q:</strong> what if i have never worked with ceramics
+              before and need technical help?
+            </p>
+            <p
+              className={styles.faqAnswer}
+              style={{
+                color: "#ffffff",
+                fontSize: "1.45rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>A:</strong> we are here to help! call us tuesday-saturday,
+              11am-4pm with technical or creative questions and we will be happy
+              to assist.
+            </p>
+
+            <p
+              className={styles.faqQuestion}
+              style={{
+                color: "#f8c359",
+                fontSize: "1.6rem",
+                fontWeight: 700,
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>Q:</strong> what if i want to purchase items as a gift?
+            </p>
+            <p
+              className={styles.faqAnswer}
+              style={{
+                color: "#ffffff",
+                fontSize: "1.45rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>A:</strong> we will put together a gift box with the
+              item(s) of your choosing. your recipient simply completes the
+              item(s) and drops them off for final firing, which is included in
+              gift packages.
+            </p>
+
+            <p
+              className={styles.faqQuestion}
+              style={{
+                color: "#f8c359",
+                fontSize: "1.6rem",
+                fontWeight: 700,
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>Q:</strong> do you supply schools and community art
+              projects?
+            </p>
+            <p
+              className={styles.faqAnswer}
+              style={{
+                color: "#ffffff",
+                fontSize: "1.45rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>A:</strong> yes — we can provide bulk orders and supplies.
+            </p>
+          </div>
         </div>
       </div>
       {viewer.open ? (
@@ -992,7 +1143,11 @@ export function Events() {
           <img
             src={viewer.src}
             alt={viewer.alt}
-            className={styles.lightboxImage}
+            className={
+              viewer.type === "tool"
+                ? styles.lightboxImageTool
+                : styles.lightboxImage
+            }
             onClick={(e) => e.stopPropagation()}
           />
           <button
@@ -1340,7 +1495,679 @@ export function AllFlavors() {
         out and see for yourself!
       </p>
       <div className="iceCreamBoxOrganizerCol">
-        {/* ...keeping full list as in original file; omitted here for brevity but preserved in the component file in full */}
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Banana Cream Pie</h1>
+          <p className="iceCreamDescRow">
+            Your favorite comfort food now on a cone! Banana ice cream churned
+            with a marshmallow ripple and real Nilla Wafers®.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Birthday Cake</h1>
+          <p className="iceCreamDescRow">
+            This party in a pint is topped off with festive swirls of blue
+            buttercream frosting and bursts of colorful confetti sprinkles.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Cherry</h1>
+          <p className="iceCreamDescRow">
+            Simply sweet black cherry ice cream with boat-loads of whole black
+            cherries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Cherry Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Delectably sweet black cherry non-dairy frozen dessert bursting with
+            whole black cherries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Licorice</h1>
+          <p className="iceCreamDescRow">
+            Rich, creamy, and luxurious black licorice flavor balanced with the
+            right amount of sweetness.This flavor isn&#39;t for the masses, but
+            if black licorice is your thing, it&#39;s a cult favorite you cannot
+            miss.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Black Walnut</h1>
+          <p className="iceCreamDescRow">
+            Classic black walnut ice cream folded with crunchy walnuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blackberry Lemon Bar</h1>
+          <p className="iceCreamDescRow">
+            Fresh lemon ice cream folded with pound cake pieces and swirls of
+            blackberry sauce.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blue Moon</h1>
+          <p className="iceCreamDescRow">
+            Just like the milk in the bottom of a Fruit Loops bowl, this tasty
+            ice cream has a sweet Fruit Loops taste and a wacky blue color.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blue Moon Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Just like the milk in the bottom of a Fruit Loops bowl, this tasty
+            ice cream has a sweet Fruit Loops taste and a wacky blue color. Made
+            with vegan oat cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Blueberry Cheesecake</h1>
+          <p className="iceCreamDescRow">
+            Delectably smooth cheesecake ice cream topped off with a tangy
+            blueberry ripple and soft cheesecake chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Bourbon Pecan Pie</h1>
+          <p className="iceCreamDescRow">
+            Smooth bourbon ice cream swirled with a sea salt chocolate fudge
+            ripple and roasted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Brownie Cascade</h1>
+          <p className="iceCreamDescRow">
+            Classic, creamy chocolate ice cream exploding with brownie pieces,
+            caramel cups and a sweet fudge ripple.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Butter Pecan</h1>
+          <p className="iceCreamDescRow">
+            Buttery pecan ice cream with boat-loads of crispy, lightly roasted
+            and salted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cake Batter Fudge</h1>
+          <p className="iceCreamDescRow">
+            With a scrumptious cake batter-base, thick chocolate frosting swirls
+            and brownie chunks, this ice cream settles all arguments over the
+            mixing spoon!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cappuccino Break</h1>
+          <p className="iceCreamDescRow">
+            Crisp coffee-infused ice cream churned with chocolate-covered toffee
+            and candy-coated almonds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Caramel Apple Pie</h1>
+          <p className="iceCreamDescRow">
+            Spicy cinnamon ice cream mixed with chunks of real apples, crispy
+            cinnamon shortbread pieces and a thick caramel ripple, available for
+            a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Caramel Chaos</h1>
+          <p className="iceCreamDescRow">
+            Sweet caramel ice cream packed with chocolate-covered caramel cups
+            and swirls of gooey caramel.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Carrot Cake</h1>
+          <p className="iceCreamDescRow">
+            Spiced carrot cake ice cream loaded with chunks of cake, roasted
+            pecans and a swirl of cream cheese frosting.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Carrot Mango Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat and bursting with sweet, tangy flavor with real
+            carrot (yes, we said carrot!) and fruit juices.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cashews & Caramel</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream rippled with gooey,
+            sugar-free caramel and loaded with real cashews.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cherry Chocolate Chip</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream loaded with big, red cherries and
+            melt-in-your-mouth chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Chocolate</h1>
+          <p className="iceCreamDescRow">
+            All-natural, classic chocolate ice cream made with real, rich
+            cocoas.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cinnamon Stick</h1>
+          <p className="iceCreamDescRow">
+            Our all natural, tantalizing spicy-yet-smooth cinnamon flavored ice
+            cream.
+          </p>
+        </div>{" "}
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Coconut</h1>
+          <p className="iceCreamDescRow">
+            Smooth, sweet, creamy and infused with coconut goodness.
+          </p>
+        </div>{" "}
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Coconut Almond Bliss</h1>
+          <p className="iceCreamDescRow">
+            Tropical coconut ice cream with tons of melt-in-your-mouth chocolate
+            flakes and crispy almond pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Cotton Candy Twist</h1>
+          <p className="iceCreamDescRow">
+            Blue and pink cotton candy ice creams spun together for that
+            whimsical carnival sensation!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Door County Cherry</h1>
+          <p className="iceCreamDescRow">
+            All-natural vanilla ice cream loaded with tart Door County cherries
+            from Sister Bay, Wisconsin.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Dutch Maid Vanilla</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural made with Wisconsin cream, cane sugar
+            and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Egg Nog</h1>
+          <p className="iceCreamDescRow">
+            A holiday favorite! Decadently smooth ice cream brimming with
+            traditional eggnog flavor, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Electric Watermelon</h1>
+          <p className="iceCreamDescRow">
+            Refreshing watermelon Italian ice with a jolt of sour to leave you
+            feeling electric.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Espresso</h1>
+          <p className="iceCreamDescRow">
+            An all-natural ice cream blended with crisp coffee extracts and
+            sweet cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Espresso Oreo</h1>
+          <p className="iceCreamDescRow">
+            Crisp coffee-infused ice cream loaded with heaps of sweet Oreos.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Exhausted Parent®</h1>
+          <p className="iceCreamDescRow">
+            Bourbon-spiked espresso ice cream swirled with bittersweet chocolate
+            chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Fat Elvis</h1>
+          <p className="iceCreamDescRow">
+            Sweet banana ice cream all shook up with a salty peanut butter
+            ripple and rich chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Gumball</h1>
+          <p className="iceCreamDescRow">
+            Bubblegum glow up! Nostalgic gumball ice cream folded with pink,
+            edible bubblegum-esque pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Halley&#39;s Comet®</h1>
+          <p className="iceCreamDescRow">
+            A perfect trio of flavors with rich milk chocolate and vanilla ice
+            creams swirled with caramel ribbons and caramel truffles.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Heaps of Love</h1>
+          <p className="iceCreamDescRow">
+            Anything and everything you can want! Oreos, brownies, cookie dough,
+            pecans, caramel and chocolate ripples all packed into vanilla ice
+            cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Iced Latte-Da®</h1>
+          <p className="iceCreamDescRow">
+            Fantastic Wisconsin-made caffeinated espresso ice cream with fudge
+            swirls and chocolate chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Key Lime Pie</h1>
+          <p className="iceCreamDescRow">
+            Can you say pucker up? You will after this southern pie flavor made
+            with tart lime ice cream, sour lime candies and graham cracker
+            pieces, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Kitty Kitty Bang Bang</h1>
+          <p className="iceCreamDescRow">
+            Irresistibly smooth cheesecake ice cream mixed with a sweet
+            raspberry ripple, Oreo cookies and soft chocolate chunks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat tart lemon Italian ice, for any hot mid-summer
+            day.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Meringue</h1>
+          <p className="iceCreamDescRow">
+            Fresh lemon and fluffy marshmallow ice creams swirled together with
+            a tart lemon ripple, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Lemon Poppy Seed</h1>
+          <p className="iceCreamDescRow">
+            All-natural, fresh and bright lemon ice cream speckled with poppy
+            seeds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">London Fog</h1>
+          <p className="iceCreamDescRow">
+            Creamy and smooth Earl Grey tea latte reimagined as your new
+            favorite ice cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mackinac Island Fudge</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream with a melt-in-your-mouth chocolate fudge
+            ripple and chunks of rich chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Malt Amore</h1>
+          <p className="iceCreamDescRow">
+            Old-style malted milk ice cream packed with rich, malt flavor, soft
+            chocolate chips and ripples of sweet, chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Maple Nut</h1>
+          <p className="iceCreamDescRow">
+            Heavenly sweet maple ice cream brimming with fresh, crunchy walnuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Matcha Green Tea</h1>
+          <p className="iceCreamDescRow">
+            A Zen-inspiring treat of sweet cream infused with green tea
+            extracts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Avalanche</h1>
+          <p className="iceCreamDescRow">
+            A mint lover&#39;s paradise! Fresh mint ice cream loaded with Andes®
+            Candies and Grasshopper® cookies spun off with a chocolate fudge
+            swirl.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Chip</h1>
+          <p className="iceCreamDescRow">
+            Classic, fresh mint ice cream loaded with melt-in-your-mouth, rich
+            chocolate flakes.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mint Oreo Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Vegan mint oat cream packed with whole Oreo cookies.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Moose Tracks®</h1>
+          <p className="iceCreamDescRow">
+            Sweet vanilla ice cream packed with mini chocolate peanut butter
+            cups and swirls of melt-in-your-mouth chocolate fudge.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Munchie Madness</h1>
+          <p className="iceCreamDescRow">
+            Sweet cake batter ice cream swirled with a salted caramel ripple and
+            brimming with Oreos, M&M pieces and peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">My Coconut Romance</h1>
+          <p className="iceCreamDescRow">
+            Chocolate coconut ice cream folded with Coconut Dream cookies and
+            gooey caramel.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Old Fashioned Vanilla</h1>
+          <p className="iceCreamDescRow">
+            An award-winning and all-natural classic vanilla ice cream made with
+            Wisconsin cream, cane sugar and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Orange Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Refreshing sherbet bursting with orange flavor.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Party Animal</h1>
+          <p className="iceCreamDescRow">
+            Sugar cookie ice cream blended with pink and white frosted animal
+            cookies and rainbow sprinkles
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Passion Fruit Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Tart and refreshing passion fruit juice blended with our signature
+            Italian ice. Vegan, all-natural, and 100% crave-worthy on a sunny,
+            summer day.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">PB Hearts Chocolate®</h1>
+          <p className="iceCreamDescRow">
+            Creamy peanut butter ice cream swirled with a smooth chocolate
+            ripple and kissed with peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peach</h1>
+          <p className="iceCreamDescRow">
+            Fresh peach ice cream packed with real peaches to celebrate the warm
+            spring weather, available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Buddy Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Salty peanut butter vegan oat cream spun with chocolate flakes.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Butter Cookie Dough</h1>
+          <p className="iceCreamDescRow">
+            Vanilla ice cream loaded with soft cookie dough chunks, rich
+            chocolate flakes, and a thick peanut butter ripple.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peanut Butter Cup</h1>
+          <p className="iceCreamDescRow">
+            Smooth chocolate ice cream brimming with mouthwatering peanut butter
+            ripples and rich peanut butter cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Peppermint Stick</h1>
+          <p className="iceCreamDescRow">
+            Crisp, peppermint ice cream made with boat-loads of peppermint
+            candies and bursting with candy cane flavor in every bite.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pistachio Nut</h1>
+          <p className="iceCreamDescRow">
+            Irresistible almond-flavored ice cream churned with crisp pistachio
+            nuts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pomegranate Swirl</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream brimming with delicious,
+            no-sugar-added blueberry and pomegranate ripples.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Praline Pecan</h1>
+          <p className="iceCreamDescRow">
+            Buttery maple ice cream topped with a gooey caramel ripple and loads
+            of crunchy, candy-coated pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Pumpkin</h1>
+          <p className="iceCreamDescRow">
+            Smooth, spiced pumpkin ice cream flavored with pumpkin puree.
+            Available for a limited time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rainbow Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Orange, Lime, and Raspberry flavored sherbets classically swirled
+            together.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Lemon Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat sweet raspberry and tart lemon Italian ices
+            swirled together for an irresistibly refreshing treat.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Rhapsody</h1>
+          <p className="iceCreamDescRow">
+            Black raspberry ice cream swirled with a sweet raspberry ripple and
+            heavenly chocolate covered raspberry cups.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Raspberry Sherbet</h1>
+          <p className="iceCreamDescRow">
+            Sweet and refreshing raspberry-flavored sherbet.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rhubarb Crumble</h1>
+          <p className="iceCreamDescRow">
+            Sweet, cream cheese frosting ice cream, spun with a bright rhubarb
+            jam and a buttery shortbread crumble.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Rocky Road</h1>
+          <p className="iceCreamDescRow">
+            Swirls of rich, chocolate and fluffy marshmallow ice creams and
+            topped off with chocolate-covered almonds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Root Beer Float</h1>
+          <p className="iceCreamDescRow">
+            Creamy vanilla ice cream swirled with crisp root beer Italian ice
+            for a bold new twist on an old favorite, available for a limited
+            time only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">S&#39;more to Love</h1>
+          <p className="iceCreamDescRow">
+            Crushed graham cracker ice cream with melty layers of chocolate and
+            marshmallow.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Salted Caramel</h1>
+          <p className="iceCreamDescRow">
+            A tantalizing blend of sweet, rich caramel and mouth-watering sea
+            salt.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Sticks & Stones®</h1>
+          <p className="iceCreamDescRow">
+            Soft cookie dough chunks, crunchy chocolate covered pretzels, and a
+            gooey salted caramel ripple all swirled into our rich chocolate ice
+            cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry</h1>
+          <p className="iceCreamDescRow">
+            Award-winning and deliciously fresh strawberry ice cream loaded to
+            the brim with real, whole strawberries.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Cheesecake</h1>
+          <p className="iceCreamDescRow">
+            Cheesecake ice cream swirled with a strawberry ripple and loads of
+            gooey cheesecake pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Hibiscus Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Fresh strawberry puree balanced with infused hibiscus, and blended
+            into vegan italian ice.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Strawberry Ripple</h1>
+          <p className="iceCreamDescRow">
+            Creamy, no-sugar-added vanilla ice cream swirled with sweet and
+            tangy strawberry ribbons.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Super Human</h1>
+          <p className="iceCreamDescRow">
+            Meet your new kryptonite… Cherry, Blue Moon and Vanilla ice creams
+            combine forces to bring you one super scoop!
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">This $&@! Just Got Serious®</h1>
+          <p className="iceCreamDescRow">
+            Award-winning, smooth salted caramel ice cream brimming with rich
+            sea salt fudge and salted cashews.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Turtle</h1>
+          <p className="iceCreamDescRow">
+            Classic vanilla ice cream with swirls of rich chocolate fudge, gooey
+            caramel and lightly roasted and salted pecans.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Ultimate Oreo</h1>
+          <p className="iceCreamDescRow">
+            Scrumptious Oreo crumb ice cream packed with boat-loads of whole
+            Oreo cookies.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Ultimate Oreo Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Oreo crumb non-dairy frozen dessert packed with whole Oreos.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Bean</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural ice cream made with Wisconsin cream,
+            cane sugar, pure vanilla extracts and vanilla bean flecks.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Chocolate Chip Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Classic vanilla non-dairy frozen dessert made with delicious,
+            semi-sweet chocolate chips.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Custard</h1>
+          <p className="iceCreamDescRow">
+            Sweet, classic and all-natural custard made with Wisconsin cream,
+            cane sugar, egg yolks and pure vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Vanilla Oat Cream</h1>
+          <p className="iceCreamDescRow">
+            Indulgently creamy non-dairy frozen dessert blended with oat milk
+            and vanilla.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Witches&#39; Brew</h1>
+          <p className="iceCreamDescRow">
+            Brewed espresso and spiced pumpkin ice creams swirled together to
+            put a spell on you in every scoop, available for a limited time
+            only.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Yippee Skippee®</h1>
+          <p className="iceCreamDescRow">
+            Creamy peanut butter ice cream loaded with salted caramel ripples,
+            soft brownie chunks and crispy chocolate-covered pretzels.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zanzibar® Chocolate</h1>
+          <p className="iceCreamDescRow">
+            All-natural and award-winning chocolate ice cream made with three
+            kinds of cocoa for a rich, fudge brownie taste.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zanzimint®</h1>
+          <p className="iceCreamDescRow">
+            Zanzibar® chocolate ice cream swirled with crisp mint ice cream.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Zoreo</h1>
+          <p className="iceCreamDescRow">
+            Zanzibar® chocolate ice cream swirled with crisp mint ice cream.
+          </p>
+        </div>
       </div>
     </>
   );

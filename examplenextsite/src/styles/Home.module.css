@@ -94,7 +94,7 @@
 }
 
 .button {
-  background-color: rgb(61, 60, 51);
+  background-color: #3c3b3b;
   color: #f8c359;
   border: none;
   border-radius: 10px;
@@ -178,7 +178,7 @@
   }
 
   .button {
-    background-color: rgb(61, 60, 51);
+    background-color: #bdbdbd;
     color: #f8c359;
     border: none;
     border-radius: 10px;
@@ -239,12 +239,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.25);
+  /* provide white card area behind the content for readability */
+  background: #ffffff;
   padding: 10px 8px;
   border-radius: 8px;
   text-align: center;
-  color: #f8c359;
-  box-shadow: inset 0 0 6px #000000, 0 2px 6px rgba(0, 0, 0, 0.35);
+  color: #222222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), inset 0 0 6px rgba(0, 0, 0, 0.02);
   font-size: 0.95rem;
   min-height: 180px;
   border: 1px solid rgba(248, 195, 89, 0.25);
@@ -291,7 +292,7 @@
 .eventsButton {
   margin-top: 8px;
   padding: 8px 12px;
-  background: rgb(61, 60, 51);
+  background: #bdbdbd;
   color: #f8c359;
   border-radius: 6px;
   border: none;
@@ -321,7 +322,7 @@
   flex-wrap: wrap;
 }
 .paginationButton {
-  background: rgb(61, 60, 51);
+  background: #bdbdbd;
   color: #f8c359;
   border: none;
   padding: 8px 12px;
@@ -400,18 +401,55 @@
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
 }
 
+/* Subtitle inside pottery header - white and underlined for emphasis */
+.potterySubtitle {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-decoration-color: #f8c359; /* gold underline */
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  font-weight: 600;
+}
+
 /* Lead paragraph under the header */
 .potteryLead {
-  font-size: 1.5rem; /* increased */
+  font-size: 2.6rem; /* larger welcome paragraph */
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
 }
 
 /* Enlarged subtext paragraphs explicitly marked in the UI */
 .potterySubtext {
-  font-size: 1.32rem; /* increased */
+  font-size: 2rem; /* larger list text for strong visibility */
   line-height: 1.6;
   color: #f8c359;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+}
+
+/* Responsive reductions for smaller screens so the text doesn't overflow */
+/* Responsive reductions so large desktop sizes remain usable on smaller screens */
+@media screen and (max-width: 1200px) {
+  .potteryLead {
+    font-size: 2.2rem;
+  }
+  .potterySubtext {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .potteryLead {
+    font-size: 1.9rem;
+  }
+  .potterySubtext {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .potteryLead {
+    font-size: 1.6rem;
+  }
+  .potterySubtext {
+    font-size: 1.2rem;
+  }
 }
 
 .sectionSubtitle {
@@ -435,6 +473,14 @@
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
 }
 
+/* glaze tabs */
+.glazeTabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0 12px 0;
+  flex-wrap: wrap;
+}
 /* Specific style for Order & Pickup header inside the box */
 .orderPickupHeader {
   color: #ffffff !important;
@@ -447,6 +493,71 @@
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
 }
 
+/* Make the order/pickup line white and add a Call Now button style */
+.orderPickupText {
+  color: #ffffff;
+}
+
+.callNowButton {
+  display: inline-block;
+  margin-top: 10px;
+  background: #bdbdbd;
+  color: #000 !important;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  text-shadow: none !important;
+}
+.callNowButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Stronger button rules to guarantee visibility */
+.callNowButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  position: relative;
+  z-index: 5 !important;
+  font-size: 1rem;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.potteryHeaderBox > div {
+  margin-top: 6px;
+}
+
+.callNowButton {
+  /* high-contrast visible button */
+  background: #494949 !important; /* neutral grey background */
+  color: #000 !important; /* black text */
+  border: 2px solid #f8c359;
+  padding: 12px 18px;
+  font-size: 1.05rem;
+}
+
+/* Center list numbers and list items for the pottery intro */
+.potterySubtext {
+  list-style-position: inside; /* put numbers inside the centered block */
+  padding-left: 0; /* remove extra left padding */
+}
+.potterySubtext li {
+  text-align: center; /* center each numbered line */
+}
+
+/* make the list text yellow and the numeric markers white */
+.potterySubtext li {
+  color: #f8c359 !important;
+}
+.potterySubtext li::marker {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .eventsText a,
 .contactOrder a,
 .guideBox a {
@@ -455,6 +566,34 @@
   margin-top: 0;
   max-width: 100%;
   min-width: 0;
+
+  /* FAQ styles */
+  .faqQuestion {
+    color: #f8c359 !important; /* yellow accent for questions */
+    font-size: 1.8rem !important; /* larger question size */
+    font-weight: 700 !important;
+    margin: 0.6rem 0 0.2rem 0 !important;
+    font-family: inherit !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .faqAnswer {
+    color: #ffffff !important; /* white for answers */
+    font-size: 1.35rem !important; /* increased for readability */
+    line-height: 1.5 !important;
+    margin: 0 0 0.8rem 0 !important;
+    font-family: inherit !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    .faqQuestion {
+      font-size: 1.35rem;
+    }
+    .faqAnswer {
+      font-size: 1.05rem;
+    }
+  }
   word-break: break-word;
   overflow-wrap: anywhere;
 }
@@ -466,28 +605,40 @@
   word-break: break-word;
   overflow-wrap: anywhere;
   line-height: 1.2;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
+  /* remove drop-shadow from card text: make names and labels crisp */
+  text-shadow: none !important;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Noto Sans", "Liberation Sans", sans-serif;
 }
 
+/* Pottery/item title; make these explicitly black to match user request. */
 .itemTitle {
-  display: -webkit-box;
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 2.4em;
+  color: #000000 !important;
+  font-weight: 700;
+  margin: 8px 0 0 0;
+  line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  /* ensure no text-shadow for item titles */
+  text-shadow: none !important;
 }
 
-.itemMeta {
-  color: #f8c359;
-  opacity: 0.95;
-  font-size: 0.82rem;
-  margin-top: 4px;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Noto Sans", "Liberation Sans", sans-serif;
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* provide slightly translucent white card area behind the content for readability */
+  background: rgba(255, 255, 255, 0.92);
+  padding: 10px 8px;
+  border-radius: 8px;
+  text-align: center;
+  color: #222222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), inset 0 0 6px rgba(0, 0, 0, 0.02);
+  font-size: 0.95rem;
+  min-height: 180px;
+  border: 1px solid rgba(248, 195, 89, 0.25);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  width: 150px; /* fixed tile width for consistent wrapping */
 }
 
 .badge {
@@ -508,11 +659,43 @@
 
 /* Pottery header dark box */
 .potteryHeaderBox {
+  position: relative;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(248, 195, 89, 0.35);
   border-radius: 10px;
   padding: 12px 16px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Collage background inside the header box */
+.potteryHeaderBox {
+  background-image: url("/images/backgroundPottery.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* overlay to keep header text readable over the background image */
+.potteryHeaderBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.46);
+  z-index: 0;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.potteryHeaderBox > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure header content sits above the collage */
+.potteryHeaderBox > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Reduce default link blue site-wide inside content areas */
@@ -548,11 +731,19 @@
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
   border: 2px solid #f8c359;
 }
+.lightboxImageTool {
+  /* Larger display for tools & brushes */
+  max-width: 98vw;
+  max-height: 96vh;
+  border-radius: 6px;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.7);
+  border: 3px solid #f8c359;
+}
 .lightboxClose {
   position: absolute;
   top: 12px;
   right: 16px;
-  background: #f8c359;
+  background: #bdbdbd;
   color: #000;
   border: none;
   border-radius: 50%;
@@ -562,6 +753,42 @@
   line-height: 36px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Center glaze image and name vertically within the fixed-height card */
+.glazeItemCard {
+  justify-content: center; /* vertical centering for column layout */
+}
+
+/* Tools & Brushes: center content vertically within the fixed-height card */
+.toolItemCard {
+  justify-content: center; /* center vertically for column layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glaze and paint swatch names inside the glaze cards should not have drop shadows */
+.glazeItemCard p,
+.glazeItemCard .productPlaceholder + p,
+.itemCard .productPlaceholder + p {
+  text-shadow: none !important;
+  color: #222222; /* slightly darker label for legibility against white card */
+  font-weight: 700;
+  margin-top: 6px;
+  font-size: 0.88rem;
+}
+
+/* FAQ heading styling: sentence case and centered */
+.potteryColumn h2.faqTitle {
+  text-transform: none;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.faqTitle {
+  text-transform: none;
+  text-align: center;
 }
 
 /* Mobile responsiveness for Pottery Shoppe */
