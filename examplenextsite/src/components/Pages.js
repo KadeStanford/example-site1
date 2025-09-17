@@ -732,7 +732,7 @@ export function Events() {
             >
               <li>Choose your ready-to-paint bisque form</li>
               <li>Choose your paints, glazes, and tools</li>
-              <li>Call us with your order (225-683-9342)</li>
+              <li>Call us for pricing and ordering (225-683-9342)</li>
               <li>
                 Pick up and start enjoying a fulfilling pottery painting
                 experience
@@ -741,24 +741,14 @@ export function Events() {
               </li>
             </ol>
             {/* Center Order & Pickup text if present */}
-            <div style={{ textAlign: "center", marginTop: 8 }}>
-              <p className={styles.orderPickupText}>
-                Call us to place orders or schedule pickups: (225) 683-9342
-              </p>
-              <a
-                className={styles.callNowButton}
-                href="tel:2256839342"
-                aria-label="Call now"
-              >
-                Call Now
-              </a>
-            </div>
+            {/* Order/pickup call-to-action removed per request */}
           </div>
 
           <div className={styles.potteryOverview}>
             <div className={styles.potteryColumn}>
-              <h2>Ceramic Forms (Ready-to-Paint)</h2>
-              <p className={styles.potterySubtext}></p>
+              <h2 className={styles.potteryTitle}>
+                Ceramic Forms (Ready-to-Paint)
+              </h2>
 
               {/* Category tabs */}
               <div
@@ -843,7 +833,7 @@ export function Events() {
                   const mainAlt =
                     mainSrc === item.bisque || !hasGlaze
                       ? `${item.title} (Bisque)`
-                      : `${item.title} (Glazed)`;
+                      : `${item.title} (Example)`;
 
                   return (
                     <div
@@ -896,7 +886,7 @@ export function Events() {
                             >
                               <img
                                 src={item.glazed[0]}
-                                alt={`${item.title} (Glazed)`}
+                                alt={`${item.title} (Example)`}
                                 className={`${styles.glazeThumb} ${styles.clickable}`}
                                 style={{
                                   width: 90,
@@ -908,11 +898,11 @@ export function Events() {
                                   setViewer({
                                     open: true,
                                     src: item.glazed[0],
-                                    alt: `${item.title} (Glazed)`,
+                                    alt: `${item.title} (Example)`,
                                   })
                                 }
                               />
-                              <span className={styles.badge}>Glazed</span>
+                              <span className={styles.badge}>Example</span>
                             </div>
                           </div>
                         )}
@@ -982,40 +972,70 @@ export function Events() {
             {/* Tools & Brushes moved below Glazes */}
             <div className={styles.potteryColumn}>
               <h2>Tools & Brushes</h2>
-              <p className={styles.potterySubtext}></p>
               <div className={styles.itemGrid}>
-                {(brushesAndTools && brushesAndTools.length > 0
-                  ? brushesAndTools
-                  : [
-                      { src: "/images/placeholder.png", name: "Placeholder" },
-                      { src: "/images/placeholder.png", name: "Placeholder" },
-                    ]
-                ).map((tool, idx) => (
-                  <div
-                    className={`${styles.itemCard} ${styles.toolItemCard}`}
-                    key={idx}
-                  >
-                    <img
-                      src={tool.src}
-                      alt={tool.name || `Tool ${idx + 1}`}
-                      className={`${styles.productPlaceholder} ${styles.clickable}`}
-                      onClick={() =>
-                        setViewer({
-                          open: true,
-                          src: tool.src,
-                          alt: tool.name || `Tool ${idx + 1}`,
-                          type: "tool",
-                        })
-                      }
-                      onError={(e) => {
-                        // replace broken images with placeholder
-                        e.currentTarget.onerror = null;
-                        e.currentTarget.src = "/images/placeholder.png";
-                      }}
-                    />
-                    <p>{tool.name || `Tool #${idx + 1}`}</p>
-                  </div>
-                ))}
+                {(
+                  brushesAndTools && brushesAndTools.length > 0
+                    ? // produce a new array where Eye of the Tiger items are grouped and
+                      // sorted by their trailing letter/number, and non-Eye items keep order
+                      (() => {
+                        const eyeItems = [];
+                        const otherItems = [];
+                        (brushesAndTools || []).forEach((b) => {
+                          if (/^Eye of the Tiger/i.test(b.name || "")) {
+                            eyeItems.push(b);
+                          } else {
+                            otherItems.push(b);
+                          }
+                        });
+                        // sort Eye items by last letter/number after the final word (A, B, C, D, E, 6, etc.)
+                        eyeItems.sort((a, b) => {
+                          const trailing = (s) => {
+                            const m = (s || "").match(/([A-Za-z0-9])\s*$/);
+                            if (m) return m[1].toUpperCase();
+                            // fallback: last char of string
+                            return (s || "").slice(-1).toUpperCase();
+                          };
+                          const ta = trailing(a.name);
+                          const tb = trailing(b.name);
+                          // put letters A-Z before numbers
+                          const isNum = (c) => /[0-9]/.test(c);
+                          if (isNum(ta) !== isNum(tb)) return isNum(ta) ? 1 : -1;
+                          return ta.localeCompare(tb, undefined, { sensitivity: "base" });
+                        });
+                        return [...otherItems, ...eyeItems];
+                      })()
+                    : [
+                        { src: "/images/placeholder.png", name: "Placeholder" },
+                        { src: "/images/placeholder.png", name: "Placeholder" },
+                      ]
+                ).map((tool, idx) => {
+                  // Always render images for tools (including Eye of the Tiger items).
+                  return (
+                    <div
+                      className={`${styles.itemCard} ${styles.toolItemCard}`}
+                      key={idx}
+                    >
+                      <img
+                        src={tool.src}
+                        alt={tool.name || `Tool ${idx + 1}`}
+                        className={`${styles.productPlaceholder} ${styles.clickable}`}
+                        onClick={() =>
+                          setViewer({
+                            open: true,
+                            src: tool.src,
+                            alt: tool.name || `Tool ${idx + 1}`,
+                            type: "tool",
+                          })
+                        }
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = "/images/placeholder.png";
+                        }}
+                      />
+                      <p>{tool.name || `Tool #${idx + 1}`}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

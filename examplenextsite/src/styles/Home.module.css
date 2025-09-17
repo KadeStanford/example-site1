@@ -219,7 +219,7 @@
   max-width: 1100px; /* wider than mobile, but still a single centered column */
   background: rgba(61, 60, 51, 0.6);
   color: #ffffff;
-  padding: 12px;
+  padding: 12px 14px; /* small horizontal padding to avoid clipping */
   border-radius: 8px;
   box-shadow: inset 0 0 10px #000000;
   text-align: center;
@@ -232,6 +232,7 @@
   gap: 10px;
   align-items: flex-start;
   margin-top: 12px;
+  padding: 0 6px; /* small inner padding so items don't touch the right edge */
   justify-content: center; /* centers each row, including the last */
 }
 
@@ -251,6 +252,7 @@
   border: 1px solid rgba(248, 195, 89, 0.25);
   transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
   width: 150px; /* fixed tile width for consistent wrapping */
+  box-sizing: border-box; /* ensure padding/border included in width to prevent overflow */
 }
 
 .itemCard.hasGlaze {
@@ -415,12 +417,15 @@
 .potteryLead {
   font-size: 2.6rem; /* larger welcome paragraph */
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Enlarged subtext paragraphs explicitly marked in the UI */
 .potterySubtext {
+  padding-top: 10%;
   font-size: 2rem; /* larger list text for strong visibility */
-  line-height: 1.6;
+  line-height: 1.9;
   color: #f8c359;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 1);
 }
@@ -478,7 +483,7 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin: 8px 0 12px 0;
+  margin: 0 0 6px 0; /* top margin removed so tabs sit flush with header */
   flex-wrap: wrap;
 }
 /* Specific style for Order & Pickup header inside the box */
@@ -552,6 +557,7 @@
 /* make the list text yellow and the numeric markers white */
 .potterySubtext li {
   color: #f8c359 !important;
+  line-height: calc(2.9rem + 0.2rem);
 }
 .potterySubtext li::marker {
   color: #ffffff;
@@ -664,16 +670,38 @@
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(248, 195, 89, 0.35);
   border-radius: 10px;
-  padding: 12px 16px;
+  margin-bottom: 0; /* remove gap with tabs */
+  padding: 8px 12px 6px 12px; /* minimal vertical padding so tabs sit flush */
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box; /* include padding in width calculations to avoid overflow */
 }
 
 /* Collage background inside the header box */
 .potteryHeaderBox {
   background-image: url("/images/backgroundPottery.png");
+  /* prefer cover so the collage fills the header and avoids visible gaps */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+/* Extra spacing for header text elements to sit nicely within the taller header */
+.potteryHeaderBox .eventsTitle {
+  margin-top: 8px; /* tighten title spacing */
+  margin-bottom: 6px; /* tightened for smaller header */
+}
+
+.potteryHeaderBox .potterySubtitle {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+.potteryHeaderBox .potteryLead {
+  margin-top: 4px;
+  margin-bottom: 8px; /* tightened to fit the smaller header */
+}
+.potteryHeaderBox .potterySubtext {
+  margin-top: 6px;
+  margin-bottom: 8px;
 }
 
 /* overlay to keep header text readable over the background image */
@@ -687,9 +715,73 @@
   pointer-events: none;
 }
 
+@media screen and (max-width: 900px) {
+  .potteryHeaderBox {
+    min-height: 240px;
+    padding: 10px 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Mobile-only: make the pottery header shorter and force the background to fill the box */
+@media screen and (max-width: 480px) {
+  .potteryHeaderBox {
+    /* keep the compact header structure but make it much shorter */
+    min-height: 100px; /* significantly shorter on very small phones */
+    padding: 6px 8px; /* minimal padding so text fits */
+    margin-bottom: 8px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.45), 0 1px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .potteryOverview h2 {
+    font-size: 1.7rem; /* increased */
+  } /* Collage background inside the header box should fill */
+  .potteryHeaderBox {
+    background-image: url("/images/backgroundPottery.png");
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Tighter spacing for header text elements on tiny screens */
+  .potteryHeaderBox .eventsTitle {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 1.6rem;
+  }
+  .potteryHeaderBox .potterySubtitle {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  .potteryHeaderBox .potteryLead {
+    margin-bottom: 0px;
+    font-size: 1.15rem;
+  }
+  .potteryHeaderBox .potterySubtext {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+
+  .potterySubtext {
+    list-style-position: inside; /* keep numbers inside */
+    padding-left: 0; /* remove extra left padding */
+  }
+  .potterySubtext li {
+    text-align: center; /* center each numbered line */
+    color: #f8c359 !important;
+    margin-top: -5%;
+    margin-bottom: 0px; /* small spacing between list items */
+  }
+}
+
 .potteryHeaderBox > * {
   position: relative;
   z-index: 1;
+  margin-top: 0; /* remove extra internal top spacing */
+  margin-bottom: 0; /* remove extra internal bottom spacing */
 }
 
 /* Ensure header content sits above the collage */
@@ -767,6 +859,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* Text-only tool card for Eye of the Tiger entries: remove image slot and center the label */
+/* no additional text-only tool style needed; images will be shown for all tools */
 
 /* Glaze and paint swatch names inside the glaze cards should not have drop shadows */
 .glazeItemCard p,

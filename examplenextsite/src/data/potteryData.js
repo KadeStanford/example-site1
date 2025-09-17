@@ -172,6 +172,8 @@ const ASSORTED_FORMS_FILES = [
   "44381 Footed Planter Painted.jpg",
   "44381 Footed Planter.png",
   "CCX835 Glam Kitty.jpg",
+  "/images/Additional Example Images/MB1592 Mushroom Footed Container.jpg",
+  "/images/Additional Example Images/MB1592 Mushroom Footed Container Example.jpg",
   "mb-1622 Ceramic Bisque Curly Mushroom.jpg",
   "mb-1623 Ceramic Bisque Ribbed Mushroom.jpg",
   "mb-1624 Ceramic Bisque Ribbed Mushroom.jpg",
@@ -183,6 +185,30 @@ const ASSORTED_FORMS_FILES = [
   "mb1537 Llama Container Painted.jpg",
   "mb1537 Llama Container.jpg",
   "/images/Additional Ceramics/Assorted Forms/29206 Rimmed Butter Dish.jpeg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1548 Faceted T-Rex Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1548 Faceted T-Rex.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1563 Owl Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1563 Owl Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1565 Bunny Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1565 Bunny Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1566 Fawn Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1566 Fawn Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1566 Fox Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1566 Fox Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1604 Monkey Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1604 Monkey Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1637 Elephant Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1637 Elephant Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1638 Lion Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1638 Lion Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1574 Bee Facetini.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1574 Bee Facetini Example.JPG",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1639 Faceted Unicorn Example.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1639 Faceted Unicorn.jpg",
 ];
 
 const BANKS_FILES = [
@@ -218,17 +244,21 @@ const CHRISTMAS_FILES = [
   "mb1462 Jolly Christmas Tree.jpg",
   "MB1473 Vintage Snowman Painted.jpg",
   "MB1473 Vintage Snowman.jpg",
+  // Small Wicker Tree: keep original bisque; example images will be attached
   "MB1581 Small Wicker Tree.jpg",
+  // The project has a single "Wicker Trees All Sizes" painted/glazed image - keep it
   "MB1581 Wicker Trees All Sizes Painted.JPG",
+  // Medium Wicker Tree: keep original bisque; example images will be attached
   "MB1582 Medium Wicker Tree.jpg",
+  // Large Wicker Tree (already had its own image)
   "MB1583 Large Wicker Tree.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Cups and Mugs/35968 Mitten Ornament.jpeg",
 ];
 
 const CUPS_MUGS_FILES = [
   "21437 Ceramic Bisque 12 oz Mug.jpeg",
   "21452 Small Pet Food Dish.jpeg",
   "27156 Snack Mug with Spoon.jpeg",
-  "35968 Mitten Ornament.jpeg",
   "35982 Cozy Sweater.jpeg",
   "35987 Reindeer Mug.jpeg",
   "35989 Santa Mug.jpeg",
@@ -266,34 +296,7 @@ const DINNERWARE_FILES = [
   "/images/Additional Ceramics/Dinnerware/SB141 Wide Rim Soup Bowl (9.5 x 9.5 x 2 ).jpg",
 ];
 
-const FACETED_FILES = [
-  "mb-1548 Faceted T-Rex Painted.jpg",
-  "mb-1548 Faceted T-Rex.jpg",
-  "mb-1563 Owl Facetini Painted.jpg",
-  "mb-1563 Owl Facetini.jpg",
-  "mb-1565 Bunny Facetini Painted.jpg",
-  "mb-1565 Bunny Facetini.jpg",
-  "mb-1566 Fawn Facetini Painted.jpg",
-  "mb-1566 Fawn Facetini.jpg",
-  "mb-1566 Fox Facetini Painted.jpg",
-  "mb-1566 Fox Facetini.jpg",
-  "mb-1604 Monkey Facetini Painted.jpg",
-  "mb-1604 Monkey Facetini.jpg",
-  "mb1497 Faceted Tree Painted.jpg",
-  "mb1497 Faceted Tree.jpg",
-  "MB1633 Giraffe Facetini Painted.jpg",
-  "MB1633 Giraffe Facetini.jpg",
-  "mb1637 Elephant Facetini Painted.jpg",
-  "MB1637 Elephant Facetini.jpg",
-  "MB1638 Lion Facetini Painted.jpg",
-  "MB1638 Lion Facetini.jpg",
-  // Added explicit files present in public/images/.../Faceted Ceramic Bisque
-  "MB1574 Bee Facetini.jpg",
-  "MB1574 Bee Facetini Example.JPG",
-  "MB1639 Faceted Unicorn.jpg",
-  "MB1639 Faceted Unicorn Example.jpg",
-  "sb137-sample3.jpg",
-];
+const FACETED_FILES = [];
 
 const STONEWARE_FILES = [
   "sb110 Dessert Bowl Painted.jpg",
@@ -338,14 +341,41 @@ export const potteryCategories = [
   {
     key: "Assorted Forms",
     // Combine the base assorted forms with Banks and Boxes so all are shown together
-    items: [
-      ...buildItemsFromFiles(
-        `${CB_ROOT}/Assorted%20Forms`,
-        ASSORTED_FORMS_FILES
-      ),
-      ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
-      ...buildItemsFromFiles(`${CB_ROOT}/Boxes`, BOXES_FILES),
-    ],
+    items: (() => {
+      const items = [
+        ...buildItemsFromFiles(`${CB_ROOT}/Assorted%20Forms`, ASSORTED_FORMS_FILES),
+        ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
+        ...buildItemsFromFiles(`${CB_ROOT}/Boxes`, BOXES_FILES),
+      ];
+
+      // Attach additional example images provided in the "Additional Example Images" folder.
+      // Some example files don't include SKU prefixes, so we match by title substrings.
+      const curlyExample = encodePath(
+        "/images/Additional Example Images/Curly Mushroom Example.jpg"
+      );
+      const ribbedExample = encodePath(
+        "/images/Additional Example Images/Ribbed Mushroom Example.jpg"
+      );
+
+      // Find the Curly Mushroom (mb-1622) by SKU or by title and attach example if missing
+      const curly = items.find(
+        (it) => (it.sku || "").toLowerCase() === "mb1622" || /curly\s+mushroom/i.test(it.title || "")
+      );
+      if (curly) {
+        curly.glazed = Array.isArray(curly.glazed) ? curly.glazed : [];
+        if (!curly.glazed.includes(curlyExample)) curly.glazed.push(curlyExample);
+      }
+
+      // Attach Ribbed Mushroom example to only one ribbed mushroom entry (leave one without)
+      const ribbeds = items.filter((it) => /ribbed\s+mushroom/i.test(it.title || ""));
+      if (ribbeds && ribbeds.length > 0) {
+        const target = ribbeds[0];
+        target.glazed = Array.isArray(target.glazed) ? target.glazed : [];
+        if (!target.glazed.includes(ribbedExample)) target.glazed.push(ribbedExample);
+      }
+
+      return items;
+    })(),
   },
   // Banks and Boxes merged into Assorted Forms per request
   {
@@ -382,6 +412,30 @@ export const potteryCategories = [
       tweaked = tweaked.filter(
         (it) => !/Wicker Trees All Sizes/i.test(it.title)
       );
+
+      // Attach explicit Small/Medium example images (moved from standalone entries)
+      const smallExample = encodePath(
+        "/images/Additional Example Images/Small Wicker Tree Example.jpg"
+      );
+      const mediumExample = encodePath(
+        "/images/Additional Example Images/Medium Wicker Tree Example.jpg"
+      );
+      // Use the painted "Wicker Trees All Sizes" file in the Christmas folder
+      const largeExample = encodePath(`${CB_ROOT}/Christmas/MB1581 Wicker Trees All Sizes Painted.JPG`);
+      // Force the wicker tree glazed/example images to the exact example files
+      tweaked = tweaked.map((it) => {
+        const sku = (it.sku || "").toLowerCase();
+        const title = it.title || "";
+        if (sku === "mb1581" || /small\s+wicker\s+tree/i.test(title)) {
+          // Replace glazed array so the example image is used
+          it.glazed = [smallExample];
+        } else if (sku === "mb1582" || /medium\s+wicker\s+tree/i.test(title)) {
+          it.glazed = [mediumExample];
+        } else if (sku === "mb1583" || /large\s+wicker\s+tree/i.test(title)) {
+          it.glazed = [largeExample];
+        }
+        return it;
+      });
 
       // 2) Pair Round Ball Ornament bisque with Example Kid's Ornament as glazed
       const isKids = (it) => /kid'?s\s+ornament/i.test(`${it.sku} ${it.title}`);
@@ -470,15 +524,51 @@ export const potteryCategories = [
     items: buildItemsFromFiles(`${CB_ROOT}/Dinnerware`, DINNERWARE_FILES),
   },
   {
-    key: "Faceted",
-    items: buildItemsFromFiles(
-      `${CB_ROOT}/Faceted%20Ceramic%20Bisque`,
-      FACETED_FILES
-    ).filter((it) => (it.sku || "").toLowerCase() !== "sb137-sample3"),
-  },
-  {
     key: "Stoneware",
-    items: buildItemsFromFiles(`${CB_ROOT}/Stoneware`, STONEWARE_FILES),
+    items: (() => {
+      let items = buildItemsFromFiles(`${CB_ROOT}/Stoneware`, STONEWARE_FILES);
+
+      // Helper to reorder a small group of items into the requested order
+      const reorderGroup = (orderRegexes) => {
+        const snap = items.slice();
+        const group = orderRegexes
+          .map((re) => snap.find((it) => re.test(it.title || "")))
+          .filter(Boolean);
+        if (group.length !== orderRegexes.length) return; // not all present
+
+        // Remove any of the group items from the original list
+        const rest = items.filter(
+          (it) => !orderRegexes.some((re) => re.test(it.title || ""))
+        );
+
+        // Find insert position as the smallest original index of the group
+        const insertAt = Math.min(
+          ...orderRegexes.map((re) =>
+            snap.findIndex((it) => re.test(it.title || ""))
+          )
+        );
+
+        // Splice group (in requested order) back into the array at insertAt
+        rest.splice(insertAt, 0, ...group);
+        items = rest;
+      };
+
+      // Reorder Vintage Mixing Bowls: Small -> Medium -> Large
+      reorderGroup([
+        /Small\s+Vintage\s+Mixing\s+Bowl/i,
+        /Medium\s+Vintage\s+Mixing\s+Bowl/i,
+        /Large\s+Vintage\s+Mixing\s+Bowl/i,
+      ]);
+
+      // Reorder Nesting Bowls from Additional Ceramics: Small -> Medium -> Large
+      reorderGroup([
+        /Small\s+Nesting\s+Bowl/i,
+        /Medium\s+Nesting\s+Bowl/i,
+        /Large\s+Nesting\s+Bowl/i,
+      ]);
+
+      return items;
+    })(),
   },
 ];
 
@@ -781,6 +871,8 @@ const PCF_FILES = [
 const BRUSHES_AND_TOOLS_FILES = [
   "ac219 Designer Bottle with Writer Tip (3-Pack).jpg",
   "bk601 Deluxe Beginner Kit.jpg",
+  // ...existing non-Eye-of-the-Tiger tools remain above
+  // Eye of the Tiger brush sets (grouped alphabetically and placed at the end)
   "Eye of the Tiger Angles Set C.jpg",
   "Eye of the Tiger Fan # 6.jpg",
   "Eye of the Tiger Filbert Set D.jpg",
