@@ -199,6 +199,8 @@ const ASSORTED_FORMS_FILES = [
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1604 Monkey Facetini.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree Painted.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree.jpg",
+  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch).jpg",
+  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch) Example.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini Painted.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1637 Elephant Facetini Painted.jpg",
@@ -381,6 +383,13 @@ export const potteryCategories = [
         target.glazed = Array.isArray(target.glazed) ? target.glazed : [];
         if (!target.glazed.includes(ribbedExample))
           target.glazed.push(ribbedExample);
+      }
+
+      // Mark mb1497 as the 7-inch faceted tree in the UI without changing file paths
+      const mb1497 = items.find((it) => (it.sku || "").toLowerCase() === "mb1497" || /mb1497/i.test(it.title || ""));
+      if (mb1497) {
+        mb1497.title = (mb1497.title || "").replace(/\s*\(.*\)\s*$/, "");
+        mb1497.title = `${mb1497.title} (7 inch)`;
       }
 
       return items;
