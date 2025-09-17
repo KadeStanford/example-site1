@@ -973,41 +973,42 @@ export function Events() {
             <div className={styles.potteryColumn}>
               <h2>Tools & Brushes</h2>
               <div className={styles.itemGrid}>
-                {(
-                  brushesAndTools && brushesAndTools.length > 0
-                    ? // produce a new array where Eye of the Tiger items are grouped and
-                      // sorted by their trailing letter/number, and non-Eye items keep order
-                      (() => {
-                        const eyeItems = [];
-                        const otherItems = [];
-                        (brushesAndTools || []).forEach((b) => {
-                          if (/^Eye of the Tiger/i.test(b.name || "")) {
-                            eyeItems.push(b);
-                          } else {
-                            otherItems.push(b);
-                          }
+                {(brushesAndTools && brushesAndTools.length > 0
+                  ? // produce a new array where Eye of the Tiger items are grouped and
+                    // sorted by their trailing letter/number, and non-Eye items keep order
+                    (() => {
+                      const eyeItems = [];
+                      const otherItems = [];
+                      (brushesAndTools || []).forEach((b) => {
+                        if (/^Eye of the Tiger/i.test(b.name || "")) {
+                          eyeItems.push(b);
+                        } else {
+                          otherItems.push(b);
+                        }
+                      });
+                      // sort Eye items by last letter/number after the final word (A, B, C, D, E, 6, etc.)
+                      eyeItems.sort((a, b) => {
+                        const trailing = (s) => {
+                          const m = (s || "").match(/([A-Za-z0-9])\s*$/);
+                          if (m) return m[1].toUpperCase();
+                          // fallback: last char of string
+                          return (s || "").slice(-1).toUpperCase();
+                        };
+                        const ta = trailing(a.name);
+                        const tb = trailing(b.name);
+                        // put letters A-Z before numbers
+                        const isNum = (c) => /[0-9]/.test(c);
+                        if (isNum(ta) !== isNum(tb)) return isNum(ta) ? 1 : -1;
+                        return ta.localeCompare(tb, undefined, {
+                          sensitivity: "base",
                         });
-                        // sort Eye items by last letter/number after the final word (A, B, C, D, E, 6, etc.)
-                        eyeItems.sort((a, b) => {
-                          const trailing = (s) => {
-                            const m = (s || "").match(/([A-Za-z0-9])\s*$/);
-                            if (m) return m[1].toUpperCase();
-                            // fallback: last char of string
-                            return (s || "").slice(-1).toUpperCase();
-                          };
-                          const ta = trailing(a.name);
-                          const tb = trailing(b.name);
-                          // put letters A-Z before numbers
-                          const isNum = (c) => /[0-9]/.test(c);
-                          if (isNum(ta) !== isNum(tb)) return isNum(ta) ? 1 : -1;
-                          return ta.localeCompare(tb, undefined, { sensitivity: "base" });
-                        });
-                        return [...otherItems, ...eyeItems];
-                      })()
-                    : [
-                        { src: "/images/placeholder.png", name: "Placeholder" },
-                        { src: "/images/placeholder.png", name: "Placeholder" },
-                      ]
+                      });
+                      return [...otherItems, ...eyeItems];
+                    })()
+                  : [
+                      { src: "/images/placeholder.png", name: "Placeholder" },
+                      { src: "/images/placeholder.png", name: "Placeholder" },
+                    ]
                 ).map((tool, idx) => {
                   // Always render images for tools (including Eye of the Tiger items).
                   return (

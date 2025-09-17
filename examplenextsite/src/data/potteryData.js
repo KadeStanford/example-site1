@@ -343,7 +343,10 @@ export const potteryCategories = [
     // Combine the base assorted forms with Banks and Boxes so all are shown together
     items: (() => {
       const items = [
-        ...buildItemsFromFiles(`${CB_ROOT}/Assorted%20Forms`, ASSORTED_FORMS_FILES),
+        ...buildItemsFromFiles(
+          `${CB_ROOT}/Assorted%20Forms`,
+          ASSORTED_FORMS_FILES
+        ),
         ...buildItemsFromFiles(`${CB_ROOT}/Banks`, BANKS_FILES),
         ...buildItemsFromFiles(`${CB_ROOT}/Boxes`, BOXES_FILES),
       ];
@@ -359,19 +362,25 @@ export const potteryCategories = [
 
       // Find the Curly Mushroom (mb-1622) by SKU or by title and attach example if missing
       const curly = items.find(
-        (it) => (it.sku || "").toLowerCase() === "mb1622" || /curly\s+mushroom/i.test(it.title || "")
+        (it) =>
+          (it.sku || "").toLowerCase() === "mb1622" ||
+          /curly\s+mushroom/i.test(it.title || "")
       );
       if (curly) {
         curly.glazed = Array.isArray(curly.glazed) ? curly.glazed : [];
-        if (!curly.glazed.includes(curlyExample)) curly.glazed.push(curlyExample);
+        if (!curly.glazed.includes(curlyExample))
+          curly.glazed.push(curlyExample);
       }
 
       // Attach Ribbed Mushroom example to only one ribbed mushroom entry (leave one without)
-      const ribbeds = items.filter((it) => /ribbed\s+mushroom/i.test(it.title || ""));
+      const ribbeds = items.filter((it) =>
+        /ribbed\s+mushroom/i.test(it.title || "")
+      );
       if (ribbeds && ribbeds.length > 0) {
         const target = ribbeds[0];
         target.glazed = Array.isArray(target.glazed) ? target.glazed : [];
-        if (!target.glazed.includes(ribbedExample)) target.glazed.push(ribbedExample);
+        if (!target.glazed.includes(ribbedExample))
+          target.glazed.push(ribbedExample);
       }
 
       return items;
@@ -421,7 +430,9 @@ export const potteryCategories = [
         "/images/Additional Example Images/Medium Wicker Tree Example.jpg"
       );
       // Use the painted "Wicker Trees All Sizes" file in the Christmas folder
-      const largeExample = encodePath(`${CB_ROOT}/Christmas/MB1581 Wicker Trees All Sizes Painted.JPG`);
+      const largeExample = encodePath(
+        `${CB_ROOT}/Christmas/MB1581 Wicker Trees All Sizes Painted.JPG`
+      );
       // Force the wicker tree glazed/example images to the exact example files
       tweaked = tweaked.map((it) => {
         const sku = (it.sku || "").toLowerCase();
