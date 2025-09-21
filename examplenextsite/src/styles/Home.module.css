@@ -861,6 +861,53 @@
   align-items: center;
 }
 
+/* Stoneware Glazing Guide special card */
+.stonewareGuideCard {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  min-width: 80%;
+}
+.stonewareDownload {
+  transition: transform 0.12s ease;
+  color: #000 !important; /* force link text to black */
+  text-decoration: none !important;
+}
+.stonewareDownload:hover {
+  transform: translateY(-3px);
+}
+
+/* Wrapper class to make the stoneware guide card wider than other tiles
+   - On desktop: take roughly double width to fully show the included picture
+   - On tablet/phone: collapse to full width (stacked) for good responsiveness */
+.stonewareGuideWrapper {
+  /* match itemCard vertical rhythm but override width to be larger */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px; /* wider than the standard 150px tile */
+  min-height: 240px;
+  box-sizing: border-box;
+  margin: 0 6px; /* small breathing room between tiles */
+}
+
+@media screen and (min-width: 900px) {
+  /* On larger screens, prefer an even wider look so the background picture can show */
+  .stonewareGuideWrapper {
+    width: 520px; /* wide card on desktop */
+    min-height: 280px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* On medium and small screens make it full width so it reads like a hero card */
+  .stonewareGuideWrapper {
+    width: 100%;
+    min-height: 220px;
+    margin: 0; /* remove horizontal margins when stacked */
+  }
+}
+
 /* Text-only tool card for Eye of the Tiger entries: remove image slot and center the label */
 /* no additional text-only tool style needed; images will be shown for all tools */
 

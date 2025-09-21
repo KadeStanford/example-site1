@@ -197,10 +197,8 @@ const ASSORTED_FORMS_FILES = [
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1566 Fox Facetini.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1604 Monkey Facetini Painted.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb-1604 Monkey Facetini.jpg",
-  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree Painted.jpg",
-  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree.jpg",
-  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch).jpg",
-  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch) Example.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini Painted.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/MB1633 Giraffe Facetini.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1637 Elephant Facetini Painted.jpg",
@@ -254,6 +252,11 @@ const CHRISTMAS_FILES = [
   "MB1582 Medium Wicker Tree.jpg",
   // Large Wicker Tree (already had its own image)
   "MB1583 Large Wicker Tree.jpg",
+  // Faceted Trees (moved from Assorted Forms to Christmas as requested)
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree Painted.jpg",
+  "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Faceted Ceramic Bisque/mb1497 Faceted Tree.jpg",
+  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch).jpg",
+  "/images/Pottery/Ceramic Bisque Faceted Tree/MB1498 Faceted Tree (10 Inch) Example.jpg",
   "/images/Pottery/Ceramic Bisques/Ceramic Bisques/Cups and Mugs/35968 Mitten Ornament.jpeg",
 ];
 
@@ -319,11 +322,9 @@ const STONEWARE_FILES = [
   "sb157 Curvy Vase (3.25L x 3.25W x 7.5H ).jpg",
   "sb157 Curvy Vase Painted.jpg",
   "sb159 Fluted Cup.jpg",
-  "sb160 Large Vintage Mixing Bowl (11.25L x 11.25W x 5.75H).jpg",
-  "sb161 Medium Vintage Mixing Bowl (9.75L x 9.75W x 5H).jpg",
-  "sb161 Medium Vintage Mixing Bowl Painted.jpg",
-  "sb162 Small Vintage Mixing Bowl (8L x 8W x 4.25H).jpg",
-  "sb162 Small Vintage Mixing Bowl Painted.jpg",
+  // Vintage Mixing Bowls moved to the end of this list so they appear together
+  // (sb162 Small, sb161 Medium, sb160 Large). Painted example for sb160
+  // will be appended at the end as well.
   // Additional Stoneware from Additional Ceramics/Stoneware
   "/images/Additional Ceramics/Stoneware/CXS114 Stoneware Round Charcuterie Server.png",
   "/images/Additional Ceramics/Stoneware/Large Nesting Bowl (8.5 x 6.5).jpg",
@@ -337,6 +338,13 @@ const STONEWARE_FILES = [
   "/images/Additional Ceramics/Stoneware/SB138 Joe Mug Glazed.jpg",
   "/images/Additional Ceramics/Stoneware/SB142 Loaf Pan (10.5 x 5.25 x 3).jpg",
   "/images/Additional Ceramics/Stoneware/Small Nesting Bowl (6.5 x 5).jpg",
+  // Vintage Mixing Bowls (moved here so the group sits at the end)
+  "sb162 Small Vintage Mixing Bowl (8L x 8W x 4.25H).jpg",
+  "sb162 Small Vintage Mixing Bowl Painted.jpg",
+  "sb161 Medium Vintage Mixing Bowl (9.75L x 9.75W x 5H).jpg",
+  "sb161 Medium Vintage Mixing Bowl Painted.jpg",
+  "sb160 Large Vintage Mixing Bowl (11.25L x 11.25W x 5.75H).jpg",
+  "sb160 Large Vintage Mixing Bowl Painted.jpg",
 ];
 
 export const potteryCategories = [
@@ -1022,6 +1030,19 @@ export const glazeSwatches = {
   ).sort(sortByColorThenCode),
   // any additional glazes from the user-provided folder (if you add filenames)
   additional: [],
+  // Stoneware Glazing Guide: special single-entry tab with background image and PDF
+  stonewareGuide: [
+    {
+      code: "SG-1",
+      name: "Stoneware Glazing Guide",
+      src: encodePath(
+        "/images/Pottery/stone guide/Stoneware Guide Picture.png"
+      ),
+      pdf: encodePath(
+        "/images/Pottery/stone guide/Stoneware Glazing Guide.pdf"
+      ),
+    },
+  ],
 };
 
 // Export examples for the collage and brushes/tools for the Tools column

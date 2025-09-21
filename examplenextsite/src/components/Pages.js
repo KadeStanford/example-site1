@@ -928,6 +928,7 @@ export function Events() {
                   { key: "elements", label: "Elements & Element Chunkies" },
                   { key: "foundations", label: "Foundations" },
                   { key: "pottersChoiceFlux", label: "Potter's Choice Flux" },
+                  { key: "stonewareGuide", label: "Stoneware Glazing Guide" },
                 ].map((t) => (
                   <button
                     key={t.key}
@@ -945,27 +946,76 @@ export function Events() {
                 ))}
               </div>
               <div className={styles.itemGrid}>
-                {(glazeSwatches[activeGlazeTab] || []).map((g) => (
-                  <div
-                    className={`${styles.itemCard} ${styles.glazeItemCard}`}
-                    key={g.src}
-                  >
-                    <img
-                      src={g.src}
-                      alt={g.name}
-                      className={`${styles.productPlaceholder} ${styles.clickable}`}
-                      onClick={() =>
-                        setViewer({
-                          open: true,
-                          src: g.src,
-                          alt: g.name,
-                          type: "image",
-                        })
-                      }
-                    />
-                    <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
-                  </div>
-                ))}
+                {activeGlazeTab === "stonewareGuide"
+                  ? // Render a larger single card with background image and a download link
+                    (glazeSwatches.stonewareGuide || []).map((g) => (
+                      <div
+                        key={g.code}
+                        className={styles.stonewareGuideWrapper}
+                      >
+                        <div
+                          className={`${styles.itemCard} ${styles.glazeItemCard} ${styles.stonewareGuideCard}`}
+                          style={{
+                            backgroundImage: `url(${g.src})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            minHeight: 260,
+                          }}
+                        >
+                          <a
+                            href={g.pdf}
+                            download
+                            className={styles.stonewareDownload}
+                            style={{
+                              background: "rgba(248,195,89,0.95)",
+                              padding: "10px 18px",
+                              borderRadius: 8,
+                              color: "#000",
+                              fontWeight: 800,
+                              textDecoration: "none",
+                              display: "inline-block",
+                            }}
+                            aria-label="Download Stoneware Glazing Guide (PDF)"
+                          >
+                            <span
+                              style={{
+                                color: "#000",
+                                WebkitTextFillColor: "#eee7e7ff",
+                                fontSize: "1.6rem",
+                                lineHeight: 1,
+                              }}
+                            >
+                              Download Stoneware Glazing Guide (PDF)
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    ))
+                  : (glazeSwatches[activeGlazeTab] || []).map((g) => (
+                      <div
+                        className={`${styles.itemCard} ${styles.glazeItemCard}`}
+                        key={g.src}
+                      >
+                        <img
+                          src={g.src}
+                          alt={g.name}
+                          className={`${styles.productPlaceholder} ${styles.clickable}`}
+                          onClick={() =>
+                            setViewer({
+                              open: true,
+                              src: g.src,
+                              alt: g.name,
+                              type: "image",
+                            })
+                          }
+                        />
+                        <p style={{ fontSize: "0.82rem" }}>{g.name}</p>
+                      </div>
+                    ))}
               </div>
             </div>
 
