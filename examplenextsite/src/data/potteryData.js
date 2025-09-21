@@ -386,7 +386,11 @@ export const potteryCategories = [
       }
 
       // Mark mb1497 as the 7-inch faceted tree in the UI without changing file paths
-      const mb1497 = items.find((it) => (it.sku || "").toLowerCase() === "mb1497" || /mb1497/i.test(it.title || ""));
+      const mb1497 = items.find(
+        (it) =>
+          (it.sku || "").toLowerCase() === "mb1497" ||
+          /mb1497/i.test(it.title || "")
+      );
       if (mb1497) {
         mb1497.title = (mb1497.title || "").replace(/\s*\(.*\)\s*$/, "");
         mb1497.title = `${mb1497.title} (7 inch)`;
