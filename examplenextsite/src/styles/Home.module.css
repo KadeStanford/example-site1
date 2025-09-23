@@ -446,6 +446,7 @@
   }
   .potterySubtext {
     font-size: 1.6rem;
+    margin-bottom: 11px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -454,6 +455,7 @@
   }
   .potterySubtext {
     font-size: 1.2rem;
+    margin-bottom: 11px;
   }
 }
 
@@ -774,7 +776,7 @@
     text-align: center; /* center each numbered line */
     color: #f8c359 !important;
     margin-top: -5%;
-    margin-bottom: 0px; /* small spacing between list items */
+    margin-bottom: 7px; /* small spacing between list items */
   }
 }
 
