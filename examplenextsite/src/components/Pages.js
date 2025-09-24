@@ -1200,6 +1200,29 @@ export function Events() {
             >
               <strong>A:</strong> yes — we can provide bulk orders and supplies.
             </p>
+            
+            <p
+              className={styles.faqQuestion}
+              style={{
+                color: "#f8c359",
+                fontSize: "1.6rem",
+                fontWeight: 700,
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>Q:</strong> Do you provide a "Firing Only" service?
+            </p>
+            <p
+              className={styles.faqAnswer}
+              style={{
+                color: "#ffffff",
+                fontSize: "1.45rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.6)",
+              }}
+            >
+              <strong>A:</strong> We do not. For liability reasons, we only
+              fire items sold by Liberty House Specialties.
+            </p>
           </div>
         </div>
       </div>
