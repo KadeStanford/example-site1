@@ -8,6 +8,12 @@ html {
   width: 100%;
   margin: 0;
   overflow-x: hidden;
+  /* Unified menu box sizing variables */
+  --menu-box-width: 520px;
+  --menu-box-min-height: 420px; /* base minimum visual size */
+  --menu-box-max-height: 560px; /* cap before internal scroll engages */
+  --menu-box-radius: 10px;
+  --menu-box-gap: 40px;
 }
 
 ::-webkit-scrollbar {
@@ -249,11 +255,21 @@ html {
 #bagelshoppe .bagelOptions {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center; /* center the two columns */
+  gap: 40px; /* space between the two lists */
   width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* allow wrap if narrow */
   color: #ffffff;
   text-shadow: 2px 2px 0px #000000;
+  margin: 0 auto;
+}
+
+#bagelshoppe .bagelOptions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* keep list text aligned while columns centered */
 }
 
 #bagelshoppe p {
@@ -268,7 +284,8 @@ html {
 }
 
 #bagelshoppe #sizeOptions {
-  margin: 0;
+  /* Add space below the header before the bagel lists */
+  margin: 0 0 18px 0;
 }
 
 #bagelShoppe ul {
@@ -355,21 +372,93 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
-  padding: 10px;
-  min-width: 320px;
-  max-width: 500px;
-  max-height: 50vh;
-  min-height: 50vh;
+  border-radius: var(--menu-box-radius);
+  padding: 14px 14px 16px 14px;
+  width: var(--menu-box-width);
+  max-width: var(--menu-box-width);
+  min-width: var(--menu-box-width);
+  /* Uniform fixed height for all menu boxes */
+  height: var(--menu-box-max-height);
+  min-height: var(--menu-box-max-height);
+  max-height: var(--menu-box-max-height);
   box-shadow: 0px 0px 10px #000000;
+  box-sizing: border-box;
+  overflow: hidden; /* keep internal content managed */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .menuBox {
-    min-width: 300px;
-    max-width: 95vw;
-    min-height: auto;
-    max-height: none;
+    width: 92vw;
+    max-width: 92vw;
+    min-width: 92vw;
+    height: var(--menu-box-max-height);
+    min-height: var(--menu-box-max-height);
+    max-height: var(--menu-box-max-height);
+  }
+}
+
+/* Internal content scrolling area without resizing outer box */
+/* Unified internal scroll area: always scroll if content exceeds reserved space */
+.menuBox .menuItemInfo {
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 6px;
+  max-height: calc(var(--menu-box-max-height) - 120px);
+  -webkit-overflow-scrolling: touch;
+  /* Vertical centering inside fixed-height parent */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Juice (OrangeJuice) should not be scrollable and should size naturally within fixed outer box */
+#OrangeJuice .menuItemInfo {
+  overflow: visible;
+  max-height: none;
+  padding-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Hot Chocolate: subtle spacing before Seasonal Flavors after inserted <br/> already handled by markup; adjust if needed */
+#HotChocolate #flavorNames {
+  row-gap: 10px;
+}
+
+/* Center the single Blueberry scone text */
+#Scones .menuItemInfo {
+  text-align: center;
+}
+#Scones .menuItemInfo span {
+  display: inline-block;
+}
+
+/* Biscuits: add top padding, center list items, remove bullets */
+#Biscuits .menuItemInfo {
+  padding-top: 18px;
+}
+#Biscuits .menuItemInfo .menuItemList ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  text-align: center;
+}
+#Biscuits .menuItemInfo .menuItemList li {
+  margin-bottom: 10px;
+}
+#Biscuits .menuItemInfo .menuItemList li:last-child {
+  margin-bottom: 0;
+}
+
+/* Fixed-height scrollable menu boxes (desktop + larger) */
+
+/* Prevent scrollbar from shrinking layout on Webkit by adding overlay behavior where supported */
+@supports (overflow: overlay) {
+  .menuBox .menuItemInfo {
+    overflow-y: overlay;
   }
 }
 

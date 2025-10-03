@@ -525,7 +525,12 @@ export function Menu() {
                   <li>Peppermint</li>
                   <li>White Chocolate</li>
                 </div>
-                Seasonal Flavors:
+              </div>
+            </div>
+            <div id="coffeeflavors">
+              SeasonalFlavors:
+              <br />
+              <div id="flavorNames">
                 <div id="flavorList">
                   <li>
                     White or dark hot chocolate infused with Pumpkin Spice
