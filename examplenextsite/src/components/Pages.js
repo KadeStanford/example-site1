@@ -1280,11 +1280,6 @@ function SeasonalFlavors() {
         "Delectably smooth cheesecake ice cream topped off with a tangy blueberry ripple and soft cheesecake chunks.",
     },
     {
-      flavor: "Bourbon Pecan Pie",
-      description:
-        "Smooth bourbon ice cream swirled with a sea salt chocolate fudge ripple and roasted pecans.",
-    },
-    {
       flavor: "Brownie Cascade",
       description:
         "Classic, creamy chocolate ice cream exploding with brownie pieces, caramel cups and a sweet fudge ripple.",
@@ -1298,11 +1293,6 @@ function SeasonalFlavors() {
       flavor: "Caramel Chaos",
       description:
         "Sweet caramel ice cream packed with chocolate-covered caramel cups and swirls of gooey caramel.",
-    },
-    {
-      flavor: "Cashews & Caramel",
-      description:
-        "Creamy, no-sugar-added vanilla ice cream rippled with gooey, sugar-free caramel and loaded with real cashews.",
     },
     {
       flavor: "Cherry Chocolate Chip",
@@ -1340,11 +1330,6 @@ function SeasonalFlavors() {
         "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
     },
     {
-      flavor: "Gumball",
-      description:
-        "Bubblegum glow up! Nostalgic gumball ice cream folded with pink, edible bubblegum-esque pieces.",
-    },
-    {
       flavor: "Halley's Comet®",
       description:
         "A perfect trio of flavors with rich milk chocolate and vanilla ice creams swirled with caramel ribbons and caramel truffles.",
@@ -1358,11 +1343,6 @@ function SeasonalFlavors() {
       flavor: "Kitty Kitty Bang Bang",
       description:
         "Cheesecake ice cream mixed with raspberry sauce, Oreos® and chocolate chunks.",
-    },
-    {
-      flavor: "Lemon Poppy Seed",
-      description:
-        "All-natural, fresh and bright lemon ice cream speckled with poppy seeds.",
     },
     {
       flavor: "Malt Amore",
@@ -1388,16 +1368,6 @@ function SeasonalFlavors() {
       flavor: "Party Animal",
       description:
         "Sugar cookie ice cream blended with pink and white frosted animal cookies and rainbow sprinkles.",
-    },
-    {
-      flavor: "Peach",
-      description:
-        "Fresh peach ice cream packed with real peaches to celebrate the warm spring weather, available for a limited time only.",
-    },
-    {
-      flavor: "Peanut Butter Cup",
-      description:
-        "Smooth chocolate ice cream brimming with mouthwatering peanut butter ripples and rich peanut butter cups.",
     },
     {
       flavor: "Peppermint",
@@ -1439,11 +1409,7 @@ function SeasonalFlavors() {
       description:
         "Fresh strawberry puree balanced with infused hibiscus, and blended into vegan italian ice.",
     },
-    {
-      flavor: "Strawberry Ripple NSA",
-      description:
-        "Creamy, no-sugar-added vanilla ice cream swirled with sweet and tangy strawberry ribbons.",
-    },
+
     {
       flavor: "Super Human",
       description:
@@ -1470,11 +1436,6 @@ function SeasonalFlavors() {
         "Oreo crumb non-dairy frozen dessert packed with whole Oreos.",
     },
     {
-      flavor: "Vanilla Chocolate Chip Oat Cream",
-      description:
-        "Classic vanilla non-dairy frozen dessert made with delicious, semi-sweet chocolate chips.",
-    },
-    {
       flavor: "Vanilla Frozen Custard",
       description:
         "Sweet, classic and all-natural custard made with Wisconsin cream, cane sugar, egg yolks and pure vanilla.",
@@ -1489,12 +1450,28 @@ function SeasonalFlavors() {
       description:
         "Award-winning, deep dark chocolate made with three kinds of cocoa.",
     },
+    // Newly added seasonal flavors (ensure alphabetical sort below)
     {
-      flavor: "Zoreo",
+      flavor: "Pomegranate Swirl NSA",
       description:
-        "Fudge-like Zanzibar® Chocolate ice cream swirled with gooey marshmallow, Oreos and bittersweet chocolate chunks.",
+        "Creamy, no-sugar-added vanilla ice cream brimming with delicious, no-sugar-added blueberry and pomegranate ripples.",
+    },
+    {
+      flavor: "Turtle",
+      description:
+        "Classic vanilla ice cream with swirls of rich chocolate fudge, gooey caramel and lightly roasted and salted pecans.",
+    },
+    {
+      flavor: "PB Hearts Chocolate",
+      description:
+        "Creamy peanut butter ice cream swirled with a smooth chocolate ripple and kissed with peanut butter cups.",
     },
   ];
+
+  // Sort flavors alphabetically by flavor name (case-insensitive) so new additions land correctly
+  const seasonalFlavors = [...flavorsWithDescriptions].sort((a, b) =>
+    a.flavor.localeCompare(b.flavor, undefined, { sensitivity: "base" })
+  );
 
   return (
     <>
@@ -1550,7 +1527,7 @@ function SeasonalFlavors() {
       </div>
 
       <div className="iceCreamBoxOrganizer">
-        {flavorsWithDescriptions.map((flavorObj, index) => (
+        {seasonalFlavors.map((flavorObj, index) => (
           <div className="iceCreamBox" key={index}>
             <img
               style={{ width: "60%" }}
@@ -1659,13 +1636,6 @@ export function AllFlavors() {
           <p className="iceCreamDescRow">
             Delectably smooth cheesecake ice cream topped off with a tangy
             blueberry ripple and soft cheesecake chunks.
-          </p>
-        </div>
-        <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">Bourbon Pecan Pie</h1>
-          <p className="iceCreamDescRow">
-            Smooth bourbon ice cream swirled with a sea salt chocolate fudge
-            ripple and roasted pecans.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -2157,13 +2127,6 @@ export function AllFlavors() {
           <p className="iceCreamDescRow">
             Fresh strawberry puree balanced with infused hibiscus, and blended
             into vegan italian ice.
-          </p>
-        </div>
-        <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">Strawberry Ripple</h1>
-          <p className="iceCreamDescRow">
-            Creamy, no-sugar-added vanilla ice cream swirled with sweet and
-            tangy strawberry ribbons.
           </p>
         </div>
         <div className="iceCreamBoxRow">
