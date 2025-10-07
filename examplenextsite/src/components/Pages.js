@@ -1325,11 +1325,6 @@ function SeasonalFlavors() {
         "Blue and pink cotton candy ice creams spun together for that whimsical carnival sensation!",
     },
     {
-      flavor: "Electric Watermelon",
-      description:
-        "Refreshing watermelon Italian ice with a jolt of sour to leave you feeling electric.",
-    },
-    {
       flavor: "Fat Elvis",
       description:
         "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
@@ -1424,11 +1419,6 @@ function SeasonalFlavors() {
       flavor: "This $&@! Just Got Serious",
       description:
         "Salted caramel ice cream with a sea salt fudge ripple and roasted cashews.",
-    },
-    {
-      flavor: "Ube Chai",
-      description:
-        "This scrumptious blend features ube (sweet purple yam) ice cream with hints of coconut swirled with spiced chai ice cream.",
     },
     {
       flavor: "Ultimate Oreo",
