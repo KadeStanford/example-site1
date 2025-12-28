@@ -18,9 +18,9 @@ export default function Header() {
         <Link href="/menu">
           <button className={styles.button}>Our Menu</button>
         </Link>
-        <Link href="/events">
+        {/* <Link href="/events">
           <button className={styles.button}>Pottery</button>
-        </Link>
+        </Link> */}
         <Link href="/icecream">
           <button className={styles.button}>Ice Cream</button>
         </Link>
