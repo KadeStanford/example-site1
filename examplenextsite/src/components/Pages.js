@@ -334,14 +334,6 @@ export function Menu() {
 
             <p id="super">Goat Cheese</p>
 
-            <p>Dairy-Free Fromage Cheese</p>
-            <div className="proteinChoice">
-              <ul className="proteinList">
-                <li>Tomato Herb</li>
-                <li>Honey Pecan</li>
-                <li>Balsamic Fig</li>
-              </ul>
-            </div>
             <p>Sliced Cheese</p>
             <div className="SmoothieBowlFruitToppings">
               <ul className="proteinList">
@@ -392,18 +384,6 @@ export function Menu() {
                 <li>Low Sugar Blueberry Cherry</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="menuBox" id="dairyfreecheese">
-        <h1 className="menuItemTitle">Dairy-Free Fromage Cheese</h1>
-        <div className="menuItemInfo">
-          <div className="proteinChoice">
-            <ul className="proteinList">
-              <li>Tomato Herb</li>
-              <li>Honey Pistachio</li>
-              <li>Balsamic Fig</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -554,14 +534,6 @@ export function Menu() {
         <div className="menuItemInfo">
           <div>
             <p className="menuItemPrice">
-              <span>Chocolate Espresso Brownie</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Peanut Butter Blondie Brownie</span>
-            </p>
-          </div>
-          <div>
-            <p className="menuItemPrice">
               <span>Lemon Bar</span>
             </p>
             <p className="menuItemPrice">
@@ -572,9 +544,6 @@ export function Menu() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="menuBox" id="MorningHarvestMuffin">
-        <h1 className="menuItemTitle">Morning Harvest Muffin</h1>
       </div>
       <div className="menuBox" id="Biscuits">
         <h1 className="menuItemTitle">Biscuits</h1>
@@ -611,7 +580,7 @@ export function About() {
           <div className="hoursContainer">
             <h1 className="aboutTitle">Morning Hours</h1>
             <p className="aboutText">
-              <span>Tues - Sat</span>
+              <span>Wed - Sat</span>
               <br></br>
               <span>7:00 AM - 11:00 AM</span>
             </p>
