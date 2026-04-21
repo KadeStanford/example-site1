@@ -340,7 +340,6 @@ export function Menu() {
                 <li>White American</li>
                 <li>Pepper Jack</li>
                 <li>Smoked Provalone</li>
-                <li>Fresh Mozzarella Cheese</li>
               </ul>
             </div>
             <p>Eggs</p>
@@ -355,7 +354,6 @@ export function Menu() {
               <ul className="proteinList">
                 <li>Bacon</li>
                 <li>Deer Sausage</li>
-                <li>Ham (thinly sliced and grilled)</li>
                 <li>Salmon (Lox)</li>
               </ul>
             </div>
@@ -601,7 +599,7 @@ export function About() {
           <div className="hoursContainer">
             <h1 className="aboutTitle">Closed</h1>
             <p className="aboutText">
-              <span>Sun/Mon</span>
+              <span>Sun/Mon/Tues</span>
             </p>
           </div>
         </div>
