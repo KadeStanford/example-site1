@@ -1292,11 +1292,6 @@ function SeasonalFlavors() {
         "Blue and pink cotton candy ice creams spun together for that whimsical carnival sensation!",
     },
     {
-      flavor: "Fat Elvis",
-      description:
-        "Banana ice cream all shook up with salty peanut butter and chocolate chips.",
-    },
-    {
       flavor: "Halley's Comet®",
       description:
         "A perfect trio of flavors with rich milk chocolate and vanilla ice creams swirled with caramel ribbons and caramel truffles.",
@@ -1357,11 +1352,6 @@ function SeasonalFlavors() {
         "Crushed graham cracker ice cream with melty layers of chocolate and marshmallow.",
     },
     {
-      flavor: "Sticks & Stones®",
-      description:
-        "Soft cookie dough chunks, crunchy chocolate covered pretzels, and a gooey salted caramel ripple all swirled into our rich chocolate ice cream.",
-    },
-    {
       flavor: "Strawberry",
       description:
         "Award-winning and deliciously fresh strawberry ice cream loaded to the brim with real, whole strawberries.",
@@ -1371,12 +1361,6 @@ function SeasonalFlavors() {
       description:
         "Cheesecake ice cream swirled with a strawberry ripple and loads of gooey cheesecake pieces.",
     },
-    {
-      flavor: "Strawberry Hibiscus",
-      description:
-        "Fresh strawberry puree balanced with infused hibiscus, and blended into vegan italian ice.",
-    },
-
     {
       flavor: "Super Human",
       description:
@@ -1403,21 +1387,11 @@ function SeasonalFlavors() {
         "Sweet, classic and all-natural custard made with Wisconsin cream, cane sugar, egg yolks and pure vanilla.",
     },
     {
-      flavor: "Yippee Skippee®",
-      description:
-        "Creamy peanut butter ice cream loaded with salted caramel ripples, soft brownie chunks and crispy chocolate-covered pretzels.",
-    },
-    {
       flavor: "Zanzibar Chocolate",
       description:
         "Award-winning, deep dark chocolate made with three kinds of cocoa.",
     },
     // Newly added seasonal flavors (ensure alphabetical sort below)
-    {
-      flavor: "Pomegranate Swirl NSA",
-      description:
-        "Creamy, no-sugar-added vanilla ice cream brimming with delicious, no-sugar-added blueberry and pomegranate ripples.",
-    },
     {
       flavor: "Turtle",
       description:
@@ -1427,6 +1401,46 @@ function SeasonalFlavors() {
       flavor: "PB Hearts Chocolate",
       description:
         "Creamy peanut butter ice cream swirled with a smooth chocolate ripple and kissed with peanut butter cups.",
+    },
+    {
+      flavor: "Electric Watermelon Italian Ice",
+      description:
+        "Refreshing watermelon Italian ice with a jolt of sour to leave you feeling electric.",
+    },
+    {
+      flavor: "Kiwi Italian Ice",
+      description:
+        "Non-dairy, non-fat kiwi Italian ice bursting with bright, tropical kiwi flavor.",
+    },
+    {
+      flavor: "Me Want Cookie",
+      description:
+        "Cookie monster-inspired blue cookie cream ice cream loaded with heaps of chocolate chip cookie pieces.",
+    },
+    {
+      flavor: "Mackinac Island Fudge",
+      description:
+        "Sweet vanilla ice cream with a melt-in-your-mouth chocolate fudge ripple and chunks of rich chocolate fudge.",
+    },
+    {
+      flavor: "Scotcheroo",
+      description:
+        "Rich butterscotch ice cream loaded with crispy rice, peanut butter ribbons and a chocolate fudge swirl inspired by the classic bar treat.",
+    },
+    {
+      flavor: "Espresso Almond Fudge",
+      description:
+        "Bold espresso ice cream swirled with a rich chocolate fudge ripple and loaded with crunchy roasted almonds.",
+    },
+    {
+      flavor: "Rainbow Sherbet",
+      description:
+        "Orange, lime, and raspberry flavored sherbets classically swirled together.",
+    },
+    {
+      flavor: "Lemon Meringue Pie",
+      description:
+        "Fresh lemon and fluffy marshmallow ice creams swirled together with a tart lemon ripple.",
     },
   ];
 
@@ -1529,10 +1543,24 @@ export function AllFlavors() {
       </p>
       <div className="iceCreamBoxOrganizerCol">
         <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Apple Cider Donut</h1>
+          <p className="iceCreamDescRow">
+            Warm spiced apple cider ice cream packed with cinnamon sugar donut
+            pieces and a caramel apple swirl.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
           <h1 className="iceCreamTitle">Banana Cream Pie</h1>
           <p className="iceCreamDescRow">
             Your favorite comfort food now on a cone! Banana ice cream churned
             with a marshmallow ripple and real Nilla Wafers®.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Belgium Daydream</h1>
+          <p className="iceCreamDescRow">
+            Creamy Belgian waffle ice cream swirled with a sweet maple ripple
+            and loaded with crunchy waffle cone pieces.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -1742,6 +1770,13 @@ export function AllFlavors() {
           </p>
         </div>
         <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Espresso Almond Fudge</h1>
+          <p className="iceCreamDescRow">
+            Bold espresso ice cream swirled with a rich chocolate fudge ripple
+            and loaded with crunchy roasted almonds.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
           <h1 className="iceCreamTitle">Espresso Oreo</h1>
           <p className="iceCreamDescRow">
             Crisp coffee-infused ice cream loaded with heaps of sweet Oreos.
@@ -1791,11 +1826,17 @@ export function AllFlavors() {
           </p>
         </div>
         <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">Key Lime Pie</h1>
+          <h1 className="iceCreamTitle">Key Lime Cheesecake</h1>
           <p className="iceCreamDescRow">
-            Can you say pucker up? You will after this southern pie flavor made
-            with tart lime ice cream, sour lime candies and graham cracker
-            pieces, available for a limited time only.
+            Creamy cheesecake ice cream swirled with a tart key lime ripple and
+            loaded with crunchy graham cracker pieces.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Kiwi Italian Ice</h1>
+          <p className="iceCreamDescRow">
+            Non-dairy, non-fat kiwi Italian ice bursting with bright, tropical
+            kiwi flavor.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -1848,6 +1889,13 @@ export function AllFlavors() {
           </p>
         </div>
         <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Mango Untamed</h1>
+          <p className="iceCreamDescRow">
+            Bold and tropical mango ice cream bursting with juicy mango pieces
+            and a bright mango ripple.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
           <h1 className="iceCreamTitle">Maple Nut</h1>
           <p className="iceCreamDescRow">
             Heavenly sweet maple ice cream brimming with fresh, crunchy walnuts.
@@ -1858,6 +1906,13 @@ export function AllFlavors() {
           <p className="iceCreamDescRow">
             A Zen-inspiring treat of sweet cream infused with green tea
             extracts.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Me Want Cookie</h1>
+          <p className="iceCreamDescRow">
+            Cookie monster-inspired blue cookie cream ice cream loaded with
+            heaps of chocolate chip cookie pieces.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -1896,13 +1951,6 @@ export function AllFlavors() {
           </p>
         </div>
         <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">My Coconut Romance</h1>
-          <p className="iceCreamDescRow">
-            Chocolate coconut ice cream folded with Coconut Dream cookies and
-            gooey caramel.
-          </p>
-        </div>
-        <div className="iceCreamBoxRow">
           <h1 className="iceCreamTitle">Old Fashioned Vanilla</h1>
           <p className="iceCreamDescRow">
             An award-winning and all-natural classic vanilla ice cream made with
@@ -1938,10 +1986,10 @@ export function AllFlavors() {
           </p>
         </div>
         <div className="iceCreamBoxRow">
-          <h1 className="iceCreamTitle">Peach</h1>
+          <h1 className="iceCreamTitle">Peach Lavender</h1>
           <p className="iceCreamDescRow">
-            Fresh peach ice cream packed with real peaches to celebrate the warm
-            spring weather, available for a limited time only.
+            Sweet peach ice cream infused with delicate lavender for a floral
+            and fruity twist, available for a limited time only.
           </p>
         </div>
         <div className="iceCreamBoxRow">
@@ -2060,6 +2108,14 @@ export function AllFlavors() {
           <p className="iceCreamDescRow">
             A tantalizing blend of sweet, rich caramel and mouth-watering sea
             salt.
+          </p>
+        </div>
+        <div className="iceCreamBoxRow">
+          <h1 className="iceCreamTitle">Scotcheroo</h1>
+          <p className="iceCreamDescRow">
+            Rich butterscotch ice cream loaded with crispy rice, peanut butter
+            ribbons and a chocolate fudge swirl inspired by the classic bar
+            treat.
           </p>
         </div>
         <div className="iceCreamBoxRow">
