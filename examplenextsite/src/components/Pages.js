@@ -1332,11 +1332,6 @@ function SeasonalFlavors() {
         "Sugar cookie ice cream blended with pink and white frosted animal cookies and rainbow sprinkles.",
     },
     {
-      flavor: "Peppermint",
-      description:
-        "Crisp, peppermint ice cream made with boat-loads of peppermint candies and bursting with candy cane flavor in every bite.",
-    },
-    {
       flavor: "Pistachio Nut",
       description:
         "Irresistible almond-flavored ice cream churned with crisp pistachio nuts.",
@@ -1375,16 +1370,6 @@ function SeasonalFlavors() {
       flavor: "Ultimate Oreo",
       description:
         "Scrumptious Oreo® crumb ice cream packed with boat-loads of whole Oreo® cookies.",
-    },
-    {
-      flavor: "Ultimate Oreo Oat Cream",
-      description:
-        "Oreo crumb non-dairy frozen dessert packed with whole Oreos.",
-    },
-    {
-      flavor: "Vanilla Frozen Custard",
-      description:
-        "Sweet, classic and all-natural custard made with Wisconsin cream, cane sugar, egg yolks and pure vanilla.",
     },
     {
       flavor: "Zanzibar Chocolate",
@@ -1436,11 +1421,6 @@ function SeasonalFlavors() {
       flavor: "Rainbow Sherbet",
       description:
         "Orange, lime, and raspberry flavored sherbets classically swirled together.",
-    },
-    {
-      flavor: "Lemon Meringue Pie",
-      description:
-        "Fresh lemon and fluffy marshmallow ice creams swirled together with a tart lemon ripple.",
     },
   ];
 
