@@ -337,7 +337,7 @@ export function Menu() {
             <p>Sliced Cheese</p>
             <div className="SmoothieBowlFruitToppings">
               <ul className="proteinList">
-                <li>White American</li>
+                <li>American</li>
                 <li>Pepper Jack</li>
                 <li>Smoked Provalone</li>
               </ul>
@@ -358,16 +358,7 @@ export function Menu() {
               </ul>
             </div>
 
-            <p>Infused Olive Oil/Balsamic Vinegar Drizzle</p>
-            <div className="GrainFreeGranola">
-              <ul className="proteinList">
-                <li>Assorted FLavors</li>
-              </ul>
-            </div>
-
             <p>Avocado</p>
-
-            <p>Tomato (Fresh)</p>
 
             <p>Jams and Jellies</p>
             <div className="NonDairyOptions">
@@ -375,11 +366,10 @@ export function Menu() {
                 <li>Strawberry</li>
                 <li>Blackberry</li>
                 <li>Fig</li>
-                <li>Orange Marmalade</li>
                 <li>Pepper Jelly</li>
                 <li>Onion Bacon Jam</li>
                 <li>Chili Bacon Jam</li>
-                <li>Low Sugar Blueberry Cherry</li>
+                <li>Blueberry Preserves</li>
               </ul>
             </div>
           </div>
@@ -530,16 +520,39 @@ export function Menu() {
       <div className="menuBox" id="GFPastries">
         <h1 className="menuItemTitle">Gluten Free Pastries</h1>
         <div className="menuItemInfo">
-          <div>
-            <p className="menuItemPrice">
-              <span>Lemon Bar</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Apple Pie Bar</span>
-            </p>
-            <p className="menuItemPrice">
-              <span>Cinnamon Roll</span>
-            </p>
+          <h2 className="menuItemPrice">Flavors</h2>
+
+          <div className="flavorBox">
+            <p className="menuItemPrice">Lemon Bar</p>
+            <img
+              id="cinnaImg"
+              src="/images/gluten-free-lemon-bar.webp"
+              alt="Gluten free lemon bar"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Apple Crumb Tart</p>
+            <img
+              id="cinnaImg"
+              src="/images/gluten-free-apple-crumb-tart.webp"
+              alt="Gluten free apple crumb tart"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Raspberry Almond Tart</p>
+            <img
+              id="cinnaImg"
+              src="/images/gluten-free-raspberry-almond-tart.webp"
+              alt="Gluten free raspberry almond tart"
+            />
+          </div>
+          <div className="flavorBox">
+            <p className="menuItemPrice">Cinnamon Roll</p>
+            <img
+              id="cinnaImg"
+              src="/images/gluten-free-cinnamon-roll.jpg"
+              alt="Gluten free cinnamon roll"
+            />
           </div>
         </div>
       </div>
@@ -551,12 +564,12 @@ export function Menu() {
           <div className="menuItemList">
             <ul>
               <li>
-                Add Preserves<br></br> (Strawberry, Blackberry, Organic, Reduced
-                Sugar Cherry Blueberry, Fig, Pepper Jelly)
+                Add Preserves<br></br> (Strawberry, Blackberry, Blueberry, Fig,
+                Pepper Jelly)
               </li>
               <li>Add Deer Sausage/Bacon</li>
               <li>
-                Add Cheese <br></br>(Pepperjack and Real White American Cheese)
+                Add Cheese <br></br>(Pepperjack, American, and Cheddar)
               </li>
               <li>Add Egg Bite*</li>
             </ul>
