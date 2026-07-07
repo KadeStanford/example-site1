@@ -550,6 +550,7 @@ export function Menu() {
             <p className="menuItemPrice">Cinnamon Roll</p>
             <img
               id="cinnaImg"
+              className="gfCinnamonRollImg"
               src="/images/gluten-free-cinnamon-roll.jpg"
               alt="Gluten free cinnamon roll"
             />
